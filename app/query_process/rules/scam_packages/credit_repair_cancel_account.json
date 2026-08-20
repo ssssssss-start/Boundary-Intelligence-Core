@@ -1,0 +1,106 @@
+{
+  "scam_id": "scam_credit_repair_cancel_account",
+  "name": "征信修复/注销账户诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "征信修复",
+    "注销校园贷",
+    "注销账户",
+    "取消会员",
+    "百万保障",
+    "影响征信",
+    "关闭额度"
+  ],
+  "features": [
+    {
+      "feature_name": "征信会员恐吓",
+      "keywords": [
+        "影响征信",
+        "征信异常",
+        "百万保障",
+        "会员扣费",
+        "不取消会扣费"
+      ],
+      "weight": 40,
+      "explanation": "用征信或自动扣费恐吓用户。"
+    },
+    {
+      "feature_name": "注销账户修复征信",
+      "keywords": [
+        "注销账户",
+        "注销校园贷",
+        "修复征信",
+        "关闭额度",
+        "清除记录"
+      ],
+      "weight": 40,
+      "explanation": "征信不能由陌生客服私下修复。"
+    },
+    {
+      "feature_name": "转账刷流水验证",
+      "keywords": [
+        "刷流水",
+        "转账验证",
+        "安全账户",
+        "资金清查",
+        "认证金"
+      ],
+      "weight": 48,
+      "explanation": "刷流水或安全账户是高危资金转移话术。"
+    },
+    {
+      "feature_name": "征信客服屏幕共享",
+      "keywords": [
+        "屏幕共享",
+        "会议软件",
+        "远程协助",
+        "共享屏幕",
+        "我教你关闭"
+      ],
+      "weight": 50,
+      "explanation": "屏幕共享会暴露账户和验证码。"
+    },
+    {
+      "feature_name": "征信客服索要验证码",
+      "keywords": [
+        "验证码",
+        "短信码",
+        "动态码",
+        "支付密码"
+      ],
+      "weight": 48,
+      "explanation": "验证码等同账户授权。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_CREDIT_REPAIR_HIGH_001",
+      "rule_name": "征信修复/注销账户诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "征信会员恐吓"
+        ],
+        "any": [
+          "注销账户修复征信",
+          "转账刷流水验证",
+          "征信客服屏幕共享",
+          "征信客服索要验证码"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 96,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "征信、注销、会员扣费恐吓叠加转账/屏幕共享/验证码，触发高危劝阻。",
+      "suggested_action": "停止转账刷流水，不共享屏幕，通过官方金融机构或平台核实。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html"
+  ]
+}

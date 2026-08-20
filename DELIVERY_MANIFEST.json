@@ -1,0 +1,17 @@
+{
+  "package_name": "anti_fraud_project_delivery_20260608",
+  "created_at": "2026-06-08T20:19:54",
+  "includes_database_snapshot": true,
+  "includes_bge_m3_model_files": false,
+  "model_downloads": [
+    "MODEL_DOWNLOADS.md"
+  ],
+  "excluded": [
+    ".env",
+    ".venv",
+    "logs",
+    "output",
+    "runtime_*.log",
+    "models"
+  ]
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "domain": "gov.cn",
+    "label": "中国政府网及政务域名",
+    "scope": "suffix",
+    "risk_adjustment": -20,
+    "source_refs": ["src_gov_cn"]
+  },
+  {
+    "domain": "mps.gov.cn",
+    "label": "公安部官网",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -20,
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "domain": "npc.gov.cn",
+    "label": "中国人大网",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -20,
+    "source_refs": ["src_anti_fraud_law"]
+  },
+  {
+    "domain": "12321.cn",
+    "label": "12321 网络不良与垃圾信息举报受理中心",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -20,
+    "source_refs": ["src_12321"]
+  },
+  {
+    "domain": "qq.com",
+    "label": "腾讯常见域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "weixin.qq.com",
+    "label": "微信官网",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "alipay.com",
+    "label": "支付宝常见域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "taobao.com",
+    "label": "淘宝常见域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "tmall.com",
+    "label": "天猫常见域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "jd.com",
+    "label": "京东常见域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "unionpay.com",
+    "label": "银联常见域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "95516.com",
+    "label": "银联客服相关域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -12,
+    "source_refs": ["src_operator_review"]
+  },
+  {
+    "domain": "deepseek.com",
+    "label": "常见 AI 服务域名",
+    "scope": "exact_or_subdomain",
+    "risk_adjustment": -8,
+    "source_refs": ["src_negative_sample_review"]
+  }
+]

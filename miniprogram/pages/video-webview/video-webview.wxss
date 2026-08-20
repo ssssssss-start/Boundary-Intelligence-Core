@@ -1,0 +1,6 @@
+.video-webview-empty {
+  padding: 80rpx 32rpx;
+  color: #777777;
+  font-size: 28rpx;
+  text-align: center;
+}

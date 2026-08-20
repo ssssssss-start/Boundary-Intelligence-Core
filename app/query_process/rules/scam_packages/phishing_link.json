@@ -1,0 +1,69 @@
+{
+  "scam_id": "scam_phishing_link",
+  "name": "钓鱼链接诈骗",
+  "version": "1.0",
+  "aliases": [
+    "钓鱼链接",
+    "陌生链接",
+    "仿冒网站",
+    "二维码",
+    "账户验证"
+  ],
+  "features": [
+    {
+      "feature_name": "点击陌生链接",
+      "keywords": [
+        "链接",
+        "网址",
+        "二维码",
+        "http",
+        "https"
+      ],
+      "weight": 30,
+      "explanation": "陌生链接可能导向钓鱼页面。"
+    },
+    {
+      "feature_name": "索要银行卡或身份信息",
+      "keywords": [
+        "银行卡",
+        "身份证",
+        "实名信息"
+      ],
+      "weight": 40,
+      "explanation": "钓鱼页面常收集敏感信息。"
+    },
+    {
+      "feature_name": "索要验证码",
+      "keywords": [
+        "验证码",
+        "短信码",
+        "动态码"
+      ],
+      "weight": 45,
+      "explanation": "验证码可能用于盗刷或登录。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_PHISH_INFO_001",
+      "rule_name": "钓鱼链接敏感信息规则",
+      "conditions": {
+        "all": [
+          "点击陌生链接"
+        ],
+        "any": [
+          "索要验证码",
+          "索要银行卡或身份信息"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 90,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_click_link",
+      "explanation": "陌生链接要求敏感信息或验证码，触发强劝阻。",
+      "suggested_action": "关闭页面，不填写信息并保存链接。"
+    }
+  ],
+  "responses": [],
+  "game_scenarios": []
+}

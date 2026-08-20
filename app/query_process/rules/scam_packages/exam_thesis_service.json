@@ -1,0 +1,105 @@
+{
+  "scam_id": "scam_exam_thesis_service",
+  "name": "考试考证论文服务诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "包过考试",
+    "内部名额",
+    "考研复试包过",
+    "论文代写",
+    "查重降重",
+    "保研名额"
+  ],
+  "features": [
+    {
+      "feature_name": "违规保过服务",
+      "keywords": [
+        "包过",
+        "保过",
+        "内部答案",
+        "内部名额",
+        "包上岸"
+      ],
+      "weight": 35,
+      "explanation": "以违规承诺吸引转账，后续往往失联或加价。"
+    },
+    {
+      "feature_name": "论文代写降重",
+      "keywords": [
+        "论文代写",
+        "查重降重",
+        "包查重",
+        "论文保过",
+        "代写保过"
+      ],
+      "weight": 32,
+      "explanation": "论文代写降重服务存在违规和被骗双重风险。"
+    },
+    {
+      "feature_name": "先交定金尾款",
+      "keywords": [
+        "定金",
+        "尾款",
+        "订金",
+        "先付",
+        "预付款"
+      ],
+      "weight": 38,
+      "explanation": "先收定金后加价或失联是常见手法。"
+    },
+    {
+      "feature_name": "继续加价保密费",
+      "keywords": [
+        "保密费",
+        "修改费",
+        "加急费",
+        "解锁费",
+        "二次收费"
+      ],
+      "weight": 42,
+      "explanation": "以保密、加急、修改为名继续收费。"
+    },
+    {
+      "feature_name": "拒绝正规合同平台",
+      "keywords": [
+        "私下交易",
+        "微信转账",
+        "不能走平台",
+        "删记录",
+        "不要告诉老师"
+      ],
+      "weight": 35,
+      "explanation": "拒绝正规渠道并要求保密是高危信号。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_EXAM_SERVICE_HIGH_001",
+      "rule_name": "考试考证论文服务诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "违规保过服务"
+        ],
+        "any": [
+          "论文代写降重",
+          "先交定金尾款",
+          "继续加价保密费",
+          "拒绝正规合同平台"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 88,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "考试论文违规服务叠加定金、加价或私下交易，触发高危劝阻。",
+      "suggested_action": "停止付款，保留聊天和转账要求，不参与违规服务。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html"
+  ]
+}

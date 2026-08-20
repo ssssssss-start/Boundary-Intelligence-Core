@@ -1,0 +1,72 @@
+{
+  "scam_id": "scam_fake_investment",
+  "name": "虚假投资理财诈骗",
+  "version": "1.0",
+  "aliases": [
+    "投资老师",
+    "带单",
+    "高收益",
+    "稳赚",
+    "虚拟币投资",
+    "理财平台"
+  ],
+  "features": [
+    {
+      "feature_name": "陌生投资平台",
+      "keywords": [
+        "投资App",
+        "投资平台",
+        "交易平台",
+        "虚拟币平台"
+      ],
+      "weight": 35,
+      "explanation": "陌生平台数据可能被操控。"
+    },
+    {
+      "feature_name": "高收益诱导",
+      "keywords": [
+        "高收益",
+        "稳赚",
+        "保本",
+        "翻倍"
+      ],
+      "weight": 35,
+      "explanation": "高收益承诺不符合正常投资规律。"
+    },
+    {
+      "feature_name": "无法提现",
+      "keywords": [
+        "不能提现",
+        "提现失败",
+        "账户冻结"
+      ],
+      "weight": 45,
+      "explanation": "提现受阻继续收费。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_INVEST_WITHDRAW_001",
+      "rule_name": "虚假投资提现受阻规则",
+      "conditions": {
+        "all": [
+          "陌生投资平台",
+          "高收益诱导"
+        ],
+        "any": [
+          "无法提现",
+          "要求缴纳解冻费",
+          "诱导下载陌生APP"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 95,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "陌生投资平台、高收益和提现受阻组合命中高危。",
+      "suggested_action": "停止入金和缴纳提现费用。"
+    }
+  ],
+  "responses": [],
+  "game_scenarios": []
+}

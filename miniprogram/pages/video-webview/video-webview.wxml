@@ -1,0 +1,2 @@
+<web-view wx:if="{{sourceUrl}}" src="{{sourceUrl}}"></web-view>
+<view wx:else class="video-webview-empty">官方链接暂不可用</view>

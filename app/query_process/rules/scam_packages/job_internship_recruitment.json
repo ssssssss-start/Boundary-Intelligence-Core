@@ -1,0 +1,134 @@
+{
+  "scam_id": "scam_job_internship_recruitment",
+  "name": "求职实习招聘诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "求职诈骗",
+    "实习诈骗",
+    "兼职招聘",
+    "内推保offer",
+    "培训贷",
+    "入职押金",
+    "服装费",
+    "就业班",
+    "推荐实习",
+    "就业推荐",
+    "新媒体运营",
+    "新媒体运营就业班",
+    "运营就业班",
+    "月薪",
+    "不就业全额退款"
+  ],
+  "features": [
+    {
+      "feature_name": "轻松高薪诱导",
+      "keywords": [
+        "轻松高薪",
+        "日结",
+        "高薪兼职",
+        "无需经验",
+        "在家办公",
+        "轻松赚钱",
+        "推荐实习",
+        "高薪实习",
+        "不就业全额退款",
+        "就业保障",
+        "包就业",
+        "月薪8000",
+        "月薪八千",
+        "月薪能到",
+        "月薪"
+      ],
+      "weight": 25,
+      "explanation": "用不合理高薪吸引求职者。"
+    },
+    {
+      "feature_name": "入职前收费",
+      "keywords": [
+        "押金",
+        "服装费",
+        "培训费",
+        "课程费",
+        "服务费",
+        "资料费",
+        "体检费",
+        "报名费",
+        "先交",
+        "先付",
+        "缴费",
+        "交钱",
+        "不就业全额退款"
+      ],
+      "weight": 40,
+      "explanation": "正规招聘通常不要求入职前向私人账户缴费。"
+    },
+    {
+      "feature_name": "收费内推保offer",
+      "keywords": [
+        "内推保offer",
+        "保offer",
+        "内部名额",
+        "保录用",
+        "保实习",
+        "付费内推"
+      ],
+      "weight": 38,
+      "explanation": "收费内推和保录用承诺高度可疑。"
+    },
+    {
+      "feature_name": "培训贷上岗",
+      "keywords": [
+        "培训贷",
+        "先贷款培训",
+        "分期培训",
+        "贷款上岗",
+        "就业后还款"
+      ],
+      "weight": 45,
+      "explanation": "以求职名义绑定贷款可能造成债务风险。"
+    },
+    {
+      "feature_name": "脱离招聘平台私聊",
+      "keywords": [
+        "加微信详聊",
+        "私下聊",
+        "不走平台",
+        "平台审核慢",
+        "先交材料"
+      ],
+      "weight": 28,
+      "explanation": "脱离正规招聘平台会弱化审查和追责。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_JOB_FEE_HIGH_001",
+      "rule_name": "求职实习招聘诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "入职前收费"
+        ],
+        "any": [
+          "轻松高薪诱导",
+          "收费内推保offer",
+          "培训贷上岗",
+          "脱离招聘平台私聊"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 93,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "求职招聘中出现入职前收费、保offer或培训贷，触发高危劝阻。",
+      "suggested_action": "停止缴费或贷款，回到正规招聘平台核实企业和岗位。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html"
+  ]
+}

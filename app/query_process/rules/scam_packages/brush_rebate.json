@@ -1,0 +1,71 @@
+{
+  "scam_id": "scam_brush_rebate",
+  "name": "刷单返利诈骗",
+  "version": "1.0",
+  "aliases": [
+    "刷单",
+    "做任务",
+    "点赞返利",
+    "返佣",
+    "补单",
+    "连单"
+  ],
+  "features": [
+    {
+      "feature_name": "任务返佣",
+      "keywords": [
+        "刷单",
+        "做任务",
+        "点赞",
+        "返佣"
+      ],
+      "weight": 25,
+      "explanation": "以任务返佣包装兼职。"
+    },
+    {
+      "feature_name": "小额返利",
+      "keywords": [
+        "前两单返了",
+        "小额返利",
+        "返了钱"
+      ],
+      "weight": 20,
+      "explanation": "先小额返利建立信任。"
+    },
+    {
+      "feature_name": "无法提现",
+      "keywords": [
+        "不能提现",
+        "提现失败",
+        "冻结"
+      ],
+      "weight": 40,
+      "explanation": "提现受阻后继续收费。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_BRUSH_REALTIME_001",
+      "rule_name": "刷单返利实时劝阻规则",
+      "conditions": {
+        "all": [
+          "任务返佣",
+          "要求垫付资金"
+        ],
+        "any": [
+          "小额返利",
+          "无法提现",
+          "承诺返利"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 96,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "刷单任务叠加垫付和返利/提现受阻，触发实时强劝阻。",
+      "suggested_action": "立即停止垫付、补单和提现解冻缴费。"
+    }
+  ],
+  "responses": [],
+  "game_scenarios": []
+}

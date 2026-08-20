@@ -1,0 +1,133 @@
+.picker {
+  min-height: 86rpx;
+  border: 1rpx solid #d8cfc2;
+  border-radius: 14rpx;
+  background: #fffaf3;
+  color: #213b36;
+  padding: 0 20rpx;
+  line-height: 86rpx;
+  font-size: 29rpx;
+}
+
+.second-label {
+  margin-top: 18rpx;
+}
+
+.scenario-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18rpx;
+  align-items: flex-start;
+}
+
+.scenario-title {
+  font-size: 33rpx;
+  font-weight: 700;
+  color: #162c28;
+}
+
+.scenario-subtitle,
+.risk-list {
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  color: #60706b;
+  line-height: 1.5;
+}
+
+.messages {
+  height: 520rpx;
+  margin-bottom: 20rpx;
+}
+
+.msg {
+  margin-bottom: 20rpx;
+}
+
+.msg.user {
+  text-align: right;
+}
+
+.msg-role {
+  color: #7a877f;
+  font-size: 23rpx;
+  margin-bottom: 6rpx;
+}
+
+.msg-bubble {
+  display: inline-block;
+  max-width: 86%;
+  border: 1rpx solid #ded5c8;
+  border-radius: 16rpx;
+  background: #fffaf3;
+  color: #213b36;
+  padding: 18rpx 20rpx;
+  text-align: left;
+  font-size: 28rpx;
+  line-height: 1.58;
+}
+
+.msg.user .msg-bubble {
+  border-color: #b9d8d0;
+  background: #e7f3ef;
+  color: #174a43;
+}
+
+.final-card {
+  border-radius: 16rpx;
+  background: #e9f7ee;
+  color: #1f693d;
+  padding: 22rpx;
+  font-size: 27rpx;
+  line-height: 1.6;
+}
+
+.final-title {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.button-row button {
+  flex: 1;
+}
+
+.call-tools {
+  display: flex;
+  gap: 14rpx;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.speaker-picker {
+  flex: 1;
+}
+
+.speaker-value {
+  min-height: 72rpx;
+  border: 1rpx solid #d8cfc2;
+  border-radius: 14rpx;
+  background: #fffaf3;
+  color: #284c46;
+  padding: 0 18rpx;
+  font-size: 26rpx;
+  line-height: 72rpx;
+}
+
+.call-btn {
+  width: 180rpx;
+  min-height: 72rpx;
+  border-radius: 14rpx;
+  background: #243f39;
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 72rpx;
+}
+
+.call-btn.active {
+  background: #b3463d;
+}
+
+.call-status {
+  margin-bottom: 14rpx;
+  color: #60706b;
+  font-size: 24rpx;
+}

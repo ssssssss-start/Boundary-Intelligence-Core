@@ -1,0 +1,4136 @@
+[
+  {
+    "advice_id": "PREVENT_BRUSH_001",
+    "fraud_type": "刷单返利诈骗",
+    "risk_stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "正规兼职不会要求先垫付资金，更不会要求为提现继续充值、补单或交解冻费。",
+    "do": [
+      "通过正规招聘平台求职",
+      "保存任务页面和聊天记录",
+      "涉及付款先与家人或平台官方核实"
+    ],
+    "dont": [
+      "不要垫付",
+      "不要继续补单",
+      "不要缴纳解冻费、保证金或通道费"
+    ],
+    "official_verification_methods": [
+      "正规招聘平台客服",
+      "96110反诈咨询",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "前几单返了钱就是真的",
+      "提现前交一点钱就能拿回本金",
+      "群里其他人晒收益说明可靠"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_SERVICE_001",
+    "fraud_type": "冒充客服诈骗",
+    "risk_stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "advice": "官方客服不会要求共享屏幕、远程控制或索要验证码，退款理赔应通过官方App订单入口处理。",
+    "do": [
+      "从官方App订单页联系客服",
+      "关闭屏幕共享和远程控制",
+      "检查支付账户异常登录"
+    ],
+    "dont": [
+      "不要发验证码",
+      "不要共享屏幕",
+      "不要用对方给的电话或链接"
+    ],
+    "official_verification_methods": [
+      "电商官方App",
+      "快递公司官网/官方客服",
+      "支付平台官方客服"
+    ],
+    "common_misconceptions": [
+      "能说出订单号就一定是真客服",
+      "退款必须开会议软件",
+      "验证码只是核验身份"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_POLICE_001",
+    "fraud_type": "冒充公检法诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "公检法机关不会通过电话要求转账、共享屏幕、资金清查或转入安全账户。",
+    "do": [
+      "挂断电话后拨打110或去派出所核实",
+      "保存来电号码和聊天材料",
+      "告知家人或可信朋友"
+    ],
+    "dont": [
+      "不要转入安全账户",
+      "不要按对方要求保密",
+      "不要删除通话或聊天记录"
+    ],
+    "official_verification_methods": [
+      "110",
+      "就近派出所",
+      "官方政务平台"
+    ],
+    "common_misconceptions": [
+      "电话里能报身份证号就是真的",
+      "不保密就会影响办案",
+      "安全账户能证明清白"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_INVEST_001",
+    "fraud_type": "虚假投资理财诈骗",
+    "risk_stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "保本高收益、老师带单、陌生投资App和提现受阻收费，是虚假投资平台常见组合。",
+    "do": [
+      "停止继续入金",
+      "保存平台页面和充值地址",
+      "通过监管公开渠道核验机构资质"
+    ],
+    "dont": [
+      "不要缴税费或保证金",
+      "不要相信后台盈利截图",
+      "不要下载新安装包"
+    ],
+    "official_verification_methods": [
+      "金融监管部门公开信息",
+      "银行或证券期货机构官方渠道",
+      "96110"
+    ],
+    "common_misconceptions": [
+      "平台显示盈利就是真的",
+      "老师带单稳赚",
+      "提现前缴税是正常流程"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_LOAN_001",
+    "fraud_type": "网络贷款诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "正规贷款不会在放款前要求缴纳保证金、解冻费、刷流水或向私人账户转账。",
+    "do": [
+      "通过持牌金融机构官方渠道申请",
+      "核验App和公司资质",
+      "保护身份证、银行卡和验证码"
+    ],
+    "dont": [
+      "不要先交钱",
+      "不要下载陌生贷款App",
+      "不要做人脸识别给陌生平台"
+    ],
+    "official_verification_methods": [
+      "银行官方App/网点",
+      "持牌消费金融公司官网",
+      "国家金融监督管理相关公开信息"
+    ],
+    "common_misconceptions": [
+      "银行卡填错必须交解冻费",
+      "刷流水能提高额度",
+      "秒放款低门槛一定是真的"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_PHISH_001",
+    "fraud_type": "钓鱼链接诈骗",
+    "risk_stage": "验证码索取阶段",
+    "intervention_goal": "stop_click_link",
+    "advice": "陌生链接、二维码和仿冒页面不能填写银行卡、身份证、密码或验证码。",
+    "do": [
+      "关闭页面",
+      "从官方App或官网重新进入",
+      "保存链接和页面截图"
+    ],
+    "dont": [
+      "不要输入验证码",
+      "不要下载页面安装包",
+      "不要在短信链接里登录账户"
+    ],
+    "official_verification_methods": [
+      "官方App",
+      "官网域名",
+      "官方客服热线"
+    ],
+    "common_misconceptions": [
+      "页面有Logo就是真的",
+      "短信来自熟悉号码就安全",
+      "只填验证码不会有事"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_AI_FACE_001",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "视频和声音可以被伪造，涉及借钱转账必须通过第二渠道核验身份。",
+    "do": [
+      "拨打原手机号核验",
+      "联系共同熟人确认",
+      "核对收款账户姓名"
+    ],
+    "dont": [
+      "不要只凭视频或声音转账",
+      "不要按对方要求保密",
+      "不要转入非本人账户"
+    ],
+    "official_verification_methods": [
+      "原手机号",
+      "共同联系人",
+      "线下当面确认"
+    ],
+    "common_misconceptions": [
+      "视频能看到脸就是真的",
+      "声音很像就可靠",
+      "很急所以不用核验"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_ACQ_001",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "领导或熟人借钱、代付、周转，尤其使用新账号或不让电话核实时，必须停止转账并换渠道确认。",
+    "do": [
+      "用原联系方式确认",
+      "核对收款账户是否本人",
+      "向共同联系人核实"
+    ],
+    "dont": [
+      "不要向非本人账户转账",
+      "不要因为催促跳过核验",
+      "不要只在当前聊天窗口确认"
+    ],
+    "official_verification_methods": [
+      "原手机号",
+      "企业通讯录",
+      "共同联系人"
+    ],
+    "common_misconceptions": [
+      "领导不方便电话就不能打扰",
+      "头像昵称一样就是真的",
+      "小额先转也没关系"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_CODE_001",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "risk_stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "advice": "验证码、短信码、动态码和支付码不能提供给任何人，也不能在陌生网页、会议共享屏幕或对方指定App里填写。",
+    "do": [
+      "停止发送验证码",
+      "修改相关账户密码",
+      "检查异常登录、绑卡和免密支付"
+    ],
+    "dont": [
+      "不要告诉任何人验证码",
+      "不要在陌生页面填写验证码",
+      "不要让对方看到短信内容"
+    ],
+    "official_verification_methods": [
+      "平台官方App安全中心",
+      "银行或支付平台官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "验证码只是核验身份",
+      "客服要验证码才能退款",
+      "只给一次验证码不会有事"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_SCREEN_001",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "risk_stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "advice": "共享屏幕和远程控制会暴露验证码、支付页面和银行卡信息，应立即退出会议并关闭远程权限。",
+    "do": [
+      "退出会议或关闭屏幕共享",
+      "停止打开支付和银行页面",
+      "检查设备远程控制和辅助功能权限"
+    ],
+    "dont": [
+      "不要继续共享屏幕",
+      "不要接受远程控制",
+      "不要按对方口令操作支付App"
+    ],
+    "official_verification_methods": [
+      "官方App客服入口",
+      "平台官网客服电话",
+      "手机系统权限设置"
+    ],
+    "common_misconceptions": [
+      "只共享屏幕不操作就没事",
+      "官方客服远程帮我退款很正常",
+      "对方看不到短信内容"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_GAME_001",
+    "fraud_type": "游戏交易诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "识别游戏交易诈骗时，优先看是否出现“私下游戏交易、虚拟资产已交付、交易对象失联”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "立即停止继续交付装备、账号、验证码或补钱。",
+      "保存聊天记录、对方账号、游戏内交易记录、资产截图、估值依据和失联证据。",
+      "马上联系游戏平台客服提交盗骗/资产追回申诉，并拨打110或到派出所报案。"
+    ],
+    "dont": [
+      "不要继续和对方协商补偿或交手续费。",
+      "不要删除游戏内邮件、交易记录、聊天截图。",
+      "不要把更多账号密码、验证码或身份证信息给对方。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_CAMPUS_FEE_001",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别冒充老师辅导员收费诈骗时，优先看是否出现“冒充老师辅导员、班级费用名目、群内扫码缴费”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "立刻暂停付款。",
+      "用原来保存的电话或当面向老师、辅导员、班主任或学校财务核实。",
+      "保存群公告、二维码、收款账号、头像昵称和聊天记录。"
+    ],
+    "dont": [
+      "不要只看头像、昵称或群备注就付款。",
+      "不要扫陌生二维码交班费、资料费或考试费。",
+      "不要使用对方临时发来的电话或链接核实。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_JOB_001",
+    "fraud_type": "求职实习招聘诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别求职实习招聘诈骗时，优先看是否出现“轻松高薪诱导、入职前收费、收费内推保offer”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "暂停缴费和签贷款合同。",
+      "通过招聘平台官网、企业官网、学校就业中心或人社部门公开渠道核验。",
+      "保存招聘信息、合同、付款码、聊天记录和对方账号。"
+    ],
+    "dont": [
+      "不要相信收费内推、保offer、内部名额。",
+      "不要脱离招聘平台私下转账。",
+      "不要为了上岗先贷款培训。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_SCHOLAR_001",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "risk_stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "advice": "识别奖助学金/学费退费诈骗时，优先看是否出现“奖助学金异常通知、学费退费话术、索要银行卡和身份信息”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "关闭对方发来的页面或链接。",
+      "通过学校官网、辅导员、学院办公室或财务处核实。",
+      "保存短信、链接、页面截图、电话号码和聊天记录。"
+    ],
+    "dont": [
+      "不要先转账激活补贴。",
+      "不要在陌生链接里填银行卡、身份证、验证码。",
+      "不要拨打短信或链接里提供的所谓客服电话。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_EXAM_001",
+    "fraud_type": "考试考证论文服务诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别考试考证论文服务诈骗时，优先看是否出现“违规保过服务、论文代写降重、先交定金尾款”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "停止付款和私下交易。",
+      "保存聊天记录、服务承诺、收款账号和付款页面。",
+      "通过学校、考试机构或官方平台核实正规流程。"
+    ],
+    "dont": [
+      "不要参与包过、代写、内部名额等违规服务。",
+      "不要相信先交定金后保过的承诺。",
+      "不要删除对方要求保密或转账的证据。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_SECONDHAND_001",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别校园二手/票务交易诈骗时，优先看是否出现“内部低价票货、私下转账定金、脱离担保平台”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "停止平台外付款。",
+      "只通过官方票务平台或有担保的二手平台交易。",
+      "保存商品/票务页面、卖家账号、收款账户和聊天记录。"
+    ],
+    "dont": [
+      "不要相信内部票、低价票、先款后发。",
+      "不要脱离平台走微信/支付宝私下转账。",
+      "不要开启屏幕共享办理退款。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_RENTAL_001",
+    "fraud_type": "租房合租押金诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别租房合租押金诈骗时，优先看是否出现“低价房源诱导、未看房先付押金、房东身份未核验”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "先实地看房或通过可信渠道视频核验。",
+      "核验房东身份证明、产权证明或租赁授权。",
+      "签合同、拿收据后再通过可追溯渠道付款。"
+    ],
+    "dont": [
+      "不要在没看房、没核验身份和权属前转账。",
+      "不要相信房东在外地所以先交押金留房。",
+      "不要脱离平台私下付款。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_NUDE_001",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "识别裸聊敲诈勒索诈骗时，优先看是否出现“诱导下载交友直播App、窃取通讯录威胁、隐私视频威胁”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "立即停止付款，不继续回应对方威胁。",
+      "保存聊天记录、威胁内容、收款账户、App安装包来源和对方账号。",
+      "尽快拨打110或到派出所报案，说明对方用私密影像和通讯录威胁。"
+    ],
+    "dont": [
+      "不要相信给钱就删除视频。",
+      "不要删除聊天或转账证据。",
+      "不要继续下载对方给的新App或打开新链接。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_TWO_CARDS_001",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "preserve_evidence",
+    "advice": "识别两卡出租出借与跑分诈骗时，优先看是否出现“出租出借两卡、帮忙收款跑分、日结高薪诱导”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "立即停止交卡、交码、收款、转账或刷流水。",
+      "保存招募聊天、对方账号、佣金承诺、转账流水和群信息。",
+      "如果卡或账号已交出去，尽快联系银行/运营商挂失或冻结，并向警方或学校反诈部门咨询。"
+    ],
+    "dont": [
+      "不要相信租卡日结无风险。",
+      "不要替陌生人收款、转账、刷流水。",
+      "不要删除招募聊天和资金流水。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_TRAVEL_001",
+    "fraud_type": "机票火车票退改签诈骗",
+    "risk_stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "advice": "识别机票火车票退改签诈骗时，优先看是否出现“航班车票取消延误、下载App办理退票、退改签屏幕共享”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "立即关闭屏幕共享、远程协助和会议软件。",
+      "只通过航空公司官方App、官方客服电话、铁路12306或原购票平台核实。",
+      "保存来电号码、短信、链接、会议号和对方话术。"
+    ],
+    "dont": [
+      "不要下载对方指定App办退票。",
+      "不要给验证码、银行卡、支付密码。",
+      "不要用对方发来的链接或电话核实。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_PRIZE_001",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别虚假中奖/免费礼品诈骗时，优先看是否出现“中奖免费礼品诱导、中奖先交税费保证金、领奖填写银行卡验证码”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "停止付款和填写领奖资料。",
+      "只通过官方App、官网或活动主办方公开渠道核实。",
+      "保存中奖通知、链接、二维码、对方账号和付款要求。"
+    ],
+    "dont": [
+      "不要在领奖页面填写银行卡、身份证、验证码。",
+      "不要相信先交钱才能领奖。",
+      "不要点击陌生私信里的领奖链接。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_CREDIT_001",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别征信修复/注销账户诈骗时，优先看是否出现“征信会员恐吓、注销账户修复征信、转账刷流水验证”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "立刻停止转账和屏幕共享。",
+      "通过官方App、官网客服电话、银行或征信官方渠道核实。",
+      "保存来电号码、会议号、对方账号和操作要求。"
+    ],
+    "dont": [
+      "不要相信陌生客服能私下修复征信。",
+      "不要按对方要求刷流水或转到安全账户。",
+      "不要开屏幕共享给对方看支付和验证码页面。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_ROMANCE_001",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "识别情感交友诱导投资诈骗时，优先看是否出现“情感关系建立、引导投资博彩刷单、保本高收益承诺”等信号；一旦出现付款、验证码、屏幕共享、陌生App或已损失，应先阻断操作再解释。",
+    "do": [
+      "停止给对方推荐的平台充值或转账。",
+      "不要继续相信对方的收益截图、老师带单或提现承诺。",
+      "保存聊天记录、平台链接、充值地址、转账凭证和对方账号。"
+    ],
+    "dont": [
+      "不要为了提现继续交税费、解冻费或保证金。",
+      "不要进入对方推荐的投资、博彩、刷单平台。",
+      "不要因为对方催促或情感施压继续付款。"
+    ],
+    "official_verification_methods": [
+      "使用原本保存的官方电话、官网、官方App或线下机构核实",
+      "不要使用对方临时发来的链接、二维码、号码或App",
+      "涉及学校事务时优先向辅导员、学院办公室、学校财务或就业中心核实"
+    ],
+    "common_misconceptions": [
+      "头像昵称相同就一定是本人",
+      "视频或声音像本人就可以转账",
+      "先交小钱能换来大额收益或赔付",
+      "对方催得急说明事情真实"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "刷单返利诈骗",
+    "official_verification_methods": [
+      "正规招聘平台客服",
+      "96110反诈咨询",
+      "公安机关",
+      "家人或可信朋友二次核验"
+    ],
+    "common_misconceptions": [
+      "点赞关注、做任务返佣和前几单小额到账看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_BRUSH_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到点赞关注、做任务返佣和前几单小额到账时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "核实招聘主体和结算方式",
+      "保留广告、群聊和客服账号",
+      "只接受不需要预付费用的正规兼职"
+    ],
+    "dont": [
+      "不要进陌生任务群",
+      "不要下载任务App",
+      "不要因小额到账放松警惕"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "刷单返利诈骗",
+    "official_verification_methods": [
+      "正规招聘平台客服",
+      "96110反诈咨询",
+      "公安机关",
+      "家人或可信朋友二次核验"
+    ],
+    "common_misconceptions": [
+      "点赞关注、做任务返佣和前几单小额到账看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_BRUSH_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现垫付大额订单、联单补单、提现受阻继续收费，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "看到垫付/补单立刻停止",
+      "截图任务规则和收款账户",
+      "和家人或96110核实后再决定"
+    ],
+    "dont": [
+      "不要垫付订单",
+      "不要交保证金或解冻费",
+      "不要借钱继续做单"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "刷单返利诈骗",
+    "official_verification_methods": [
+      "正规招聘平台客服",
+      "96110反诈咨询",
+      "公安机关",
+      "家人或可信朋友二次核验"
+    ],
+    "common_misconceptions": [
+      "点赞关注、做任务返佣和前几单小额到账看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_BRUSH_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行或支付平台尝试止付",
+      "保存转账凭证、群聊和App页面",
+      "尽快拨打110或到派出所报案"
+    ],
+    "dont": [
+      "不要继续补单追回本金",
+      "不要相信内部通道退款",
+      "不要删除聊天记录"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充客服诈骗",
+    "official_verification_methods": [
+      "电商官方App",
+      "快递公司官网/官方客服",
+      "支付平台官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "退款理赔、取消会员、快递丢失或订单异常看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SERVICE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到退款理赔、取消会员、快递丢失或订单异常时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "挂断后从官方App订单页核实",
+      "记录来电号码和自称工号",
+      "把退款入口限定在官方页面内"
+    ],
+    "dont": [
+      "不要回拨陌生号码",
+      "不要点短信链接",
+      "不要把订单信息当成身份真实证明"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充客服诈骗",
+    "official_verification_methods": [
+      "电商官方App",
+      "快递公司官网/官方客服",
+      "支付平台官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "退款理赔、取消会员、快递丢失或订单异常看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SERVICE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现会议软件共享屏幕、索要验证码、刷流水或转账验证，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "退出会议软件和屏幕共享",
+      "关闭免密支付并检查授权",
+      "通过官方客服确认账户状态"
+    ],
+    "dont": [
+      "不要给验证码",
+      "不要共享屏幕",
+      "不要转账验证或刷流水"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充客服诈骗",
+    "official_verification_methods": [
+      "电商官方App",
+      "快递公司官网/官方客服",
+      "支付平台官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "退款理赔、取消会员、快递丢失或订单异常看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SERVICE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行/支付平台冻结或止付",
+      "修改支付密码并检查异常登录",
+      "保存通话、会议号、验证码短信和交易记录后报警"
+    ],
+    "dont": [
+      "不要继续按客服指令操作",
+      "不要卸载前忘记截图",
+      "不要相信二次退款专员"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充公检法诈骗",
+    "official_verification_methods": [
+      "110",
+      "就近派出所",
+      "学校老师或家长",
+      "官方政务平台"
+    ],
+    "common_misconceptions": [
+      "涉案洗钱、通缉令、案件编号和来学校/单位抓人的恐吓看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_POLICE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到涉案洗钱、通缉令、案件编号和来学校/单位抓人的恐吓时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "立即挂断并到派出所核实",
+      "告诉家人老师或可信同伴",
+      "保存号码、文书截图和App名称"
+    ],
+    "dont": [
+      "不要按要求保密",
+      "不要下载陌生办案App",
+      "不要进入视频笔录或共享屏幕"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充公检法诈骗",
+    "official_verification_methods": [
+      "110",
+      "就近派出所",
+      "学校老师或家长",
+      "官方政务平台"
+    ],
+    "common_misconceptions": [
+      "涉案洗钱、通缉令、案件编号和来学校/单位抓人的恐吓看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_POLICE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现保密隔离、下载App、屏幕共享、资金清查和安全账户转账，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "停止转账和屏幕共享",
+      "从官方渠道核验身份",
+      "让身边人陪同处理"
+    ],
+    "dont": [
+      "不要转入安全账户",
+      "不要提供验证码/银行卡密码",
+      "不要删除通话和聊天记录"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充公检法诈骗",
+    "official_verification_methods": [
+      "110",
+      "就近派出所",
+      "学校老师或家长",
+      "官方政务平台"
+    ],
+    "common_misconceptions": [
+      "涉案洗钱、通缉令、案件编号和来学校/单位抓人的恐吓看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_POLICE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "马上联系银行止付冻结",
+      "拨打110或去派出所报案",
+      "提交通缉令截图、App、号码和转账流水"
+    ],
+    "dont": [
+      "不要继续配合资金清查",
+      "不要相信保密威胁",
+      "不要联系对方所谓上级"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "虚假投资理财诈骗",
+    "official_verification_methods": [
+      "金融监管部门公开查询渠道",
+      "持牌机构官网/官方App",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "投资老师、内部消息、群内晒收益和小额盈利提现看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_INVEST_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到投资老师、内部消息、群内晒收益和小额盈利提现时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "查平台和机构是否持牌",
+      "核对App下载来源和域名",
+      "把收益承诺截图保存下来"
+    ],
+    "dont": [
+      "不要相信稳赚保本",
+      "不要进私域带单群",
+      "不要下载陌生投资App"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "虚假投资理财诈骗",
+    "official_verification_methods": [
+      "金融监管部门公开查询渠道",
+      "持牌机构官网/官方App",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "投资老师、内部消息、群内晒收益和小额盈利提现看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_INVEST_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现诱导大额入金、后台盈利造假、提现受阻后缴税费保证金，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "停止入金和加仓",
+      "核实收款主体是否一致",
+      "保存老师、客服和平台页面"
+    ],
+    "dont": [
+      "不要向个人账户或虚拟币地址转账",
+      "不要交提现税费/保证金",
+      "不要借钱补仓"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "虚假投资理财诈骗",
+    "official_verification_methods": [
+      "金融监管部门公开查询渠道",
+      "持牌机构官网/官方App",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "投资老师、内部消息、群内晒收益和小额盈利提现看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_INVEST_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "整理入金流水和平台截图",
+      "联系银行/支付平台尝试拦截",
+      "尽快报警并提交收款账户/钱包地址"
+    ],
+    "dont": [
+      "不要再缴解冻费",
+      "不要相信黑客追款",
+      "不要删除App前忘记取证"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "网络贷款诈骗",
+    "official_verification_methods": [
+      "持牌银行/消费金融公司官网",
+      "官方应用商店",
+      "中国人民银行征信中心官方渠道",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "无抵押、低息、秒放款、不看征信和校园贷包装看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_LOAN_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到无抵押、低息、秒放款、不看征信和校园贷包装时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "只走持牌机构官方渠道",
+      "核实App是否来自官方应用商店",
+      "先看合同和收费规则"
+    ],
+    "dont": [
+      "不要点短信贷款链接",
+      "不要提交人脸和通讯录",
+      "不要相信黑户可贷秒到账"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "网络贷款诈骗",
+    "official_verification_methods": [
+      "持牌银行/消费金融公司官网",
+      "官方应用商店",
+      "中国人民银行征信中心官方渠道",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "无抵押、低息、秒放款、不看征信和校园贷包装看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_LOAN_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现放款前收费、银行卡号错误冻结、刷流水和征信威胁，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "放款前收费立即停止",
+      "保存App页面和客服话术",
+      "联系官方机构核验"
+    ],
+    "dont": [
+      "不要交保证金/解冻费",
+      "不要刷流水",
+      "不要提供验证码"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "网络贷款诈骗",
+    "official_verification_methods": [
+      "持牌银行/消费金融公司官网",
+      "官方应用商店",
+      "中国人民银行征信中心官方渠道",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "无抵押、低息、秒放款、不看征信和校园贷包装看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_LOAN_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "保存合同、App、客服和转账记录",
+      "联系银行止付并监控账户",
+      "报警并留意个人信息被冒用"
+    ],
+    "dont": [
+      "不要继续交钱修复征信",
+      "不要相信内部通道放款",
+      "不要删除App数据"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "钓鱼链接诈骗",
+    "official_verification_methods": [
+      "官方App",
+      "平台官网",
+      "官方客服电话",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "账户异常、积分兑换、ETC认证、快递理赔或活动领取看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_PHISH_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到账户异常、积分兑换、ETC认证、快递理赔或活动领取时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "从官方App重新进入业务",
+      "检查域名和证书",
+      "截图保存短信和链接"
+    ],
+    "dont": [
+      "不要在链接里填敏感信息",
+      "不要安装未知APK",
+      "不要扫陌生二维码"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "钓鱼链接诈骗",
+    "official_verification_methods": [
+      "官方App",
+      "平台官网",
+      "官方客服电话",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "账户异常、积分兑换、ETC认证、快递理赔或活动领取看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_PHISH_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现仿冒网页收集账号密码、银行卡、身份证和短信验证码，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "关闭页面并清理授权",
+      "修改相关账号密码",
+      "联系平台确认异常登录"
+    ],
+    "dont": [
+      "不要输入验证码",
+      "不要继续补填资料",
+      "不要把页面转给更多人"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "钓鱼链接诈骗",
+    "official_verification_methods": [
+      "官方App",
+      "平台官网",
+      "官方客服电话",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "账户异常、积分兑换、ETC认证、快递理赔或活动领取看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_PHISH_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "冻结银行卡或支付账户",
+      "修改密码并退出所有设备",
+      "保存链接、页面和扣款记录后报警"
+    ],
+    "dont": [
+      "不要再次输入验证码",
+      "不要相信页面客服",
+      "不要删除短信"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "official_verification_methods": [
+      "原手机号码回拨",
+      "共同好友/家人核实",
+      "线下暗号",
+      "单位或学校官方通讯录"
+    ],
+    "common_misconceptions": [
+      "AI换脸/拟声冒充亲友领导，制造紧急借钱场景看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_AI_FACE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到AI换脸/拟声冒充亲友领导，制造紧急借钱场景时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "挂断后用原号码回拨",
+      "问只有本人知道的细节",
+      "核对收款账户实名"
+    ],
+    "dont": [
+      "不要只凭短视频确认身份",
+      "不要按要求保密",
+      "不要向非本人账户转账"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "official_verification_methods": [
+      "原手机号码回拨",
+      "共同好友/家人核实",
+      "线下暗号",
+      "单位或学校官方通讯录"
+    ],
+    "common_misconceptions": [
+      "AI换脸/拟声冒充亲友领导，制造紧急借钱场景看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_AI_FACE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现拒绝二次核验、要求保密催促、让钱转到非本人账户，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "让对方换渠道实时核验",
+      "找共同联系人确认",
+      "保存视频、语音和账号信息"
+    ],
+    "dont": [
+      "不要被紧急理由催着转账",
+      "不要绕开家人同学核实",
+      "不要点击对方链接"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "official_verification_methods": [
+      "原手机号码回拨",
+      "共同好友/家人核实",
+      "线下暗号",
+      "单位或学校官方通讯录"
+    ],
+    "common_misconceptions": [
+      "AI换脸/拟声冒充亲友领导，制造紧急借钱场景看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_AI_FACE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行止付",
+      "报警并提供视频语音、账号和转账流水",
+      "提醒本人账号可能被盗"
+    ],
+    "dont": [
+      "不要继续追加借款",
+      "不要删除通话记录",
+      "不要相信对方退款承诺"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "official_verification_methods": [
+      "原号码电话",
+      "单位/学校通讯录",
+      "共同联系人",
+      "线下确认"
+    ],
+    "common_misconceptions": [
+      "领导、老师、同学、亲友突然用新账号联系借钱看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_ACQ_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到领导、老师、同学、亲友突然用新账号联系借钱时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "通过原渠道确认身份",
+      "核对头像昵称以外的信息",
+      "保留新账号资料"
+    ],
+    "dont": [
+      "不要因领导/亲友身份直接转账",
+      "不要接受不能通话的解释",
+      "不要保密处理"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "official_verification_methods": [
+      "原号码电话",
+      "单位/学校通讯录",
+      "共同联系人",
+      "线下确认"
+    ],
+    "common_misconceptions": [
+      "领导、老师、同学、亲友突然用新账号联系借钱看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_ACQ_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现以开会、保密、急事为由拒绝电话核验并要求转第三方账户，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "先打原电话或找共同联系人",
+      "核实收款账户实名",
+      "把借款要求截图"
+    ],
+    "dont": [
+      "不要转第三方账户",
+      "不要分多笔规避提醒",
+      "不要删除证据"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "official_verification_methods": [
+      "原号码电话",
+      "单位/学校通讯录",
+      "共同联系人",
+      "线下确认"
+    ],
+    "common_misconceptions": [
+      "领导、老师、同学、亲友突然用新账号联系借钱看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_ACQ_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行止付",
+      "报警并提交新账号和收款账户",
+      "提醒真实熟人账号可能被盗"
+    ],
+    "dont": [
+      "不要继续追加",
+      "不要相信马上退还",
+      "不要让对方远程处理"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "official_verification_methods": [
+      "平台官方安全中心",
+      "支付平台官方客服",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "身份核验、退款确认、账户异常、好友辅助验证看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CODE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到身份核验、退款确认、账户异常、好友辅助验证时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "看清短信里的用途和收款/登录提示",
+      "从官方App查看异常",
+      "提醒身边人不要代收验证码"
+    ],
+    "dont": [
+      "不要读出验证码",
+      "不要截图发验证码",
+      "不要让别人远程看短信"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "official_verification_methods": [
+      "平台官方安全中心",
+      "支付平台官方客服",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "身份核验、退款确认、账户异常、好友辅助验证看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CODE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现索要验证码后登录、绑卡、改密、转账或盗刷，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "立即拒绝并挂断",
+      "修改密码并退出所有设备",
+      "关闭免密支付和可疑授权"
+    ],
+    "dont": [
+      "不要重复接收验证码",
+      "不要点对方链接",
+      "不要共享屏幕看短信"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "official_verification_methods": [
+      "平台官方安全中心",
+      "支付平台官方客服",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "身份核验、退款确认、账户异常、好友辅助验证看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CODE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "冻结账户和银行卡",
+      "修改密码、解绑陌生设备",
+      "保存短信和交易记录后报警"
+    ],
+    "dont": [
+      "不要再给新验证码",
+      "不要相信客服代处理",
+      "不要删除短信"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "official_verification_methods": [
+      "官方App业务入口",
+      "平台官方客服",
+      "手机权限管理",
+      "银行/支付平台官方客服"
+    ],
+    "common_misconceptions": [
+      "客服退款、贷款认证、征信修复、退改签或公检法视频办案看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SCREEN_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到客服退款、贷款认证、征信修复、退改签或公检法视频办案时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "立即退出会议和远程控制",
+      "检查设备权限和已安装App",
+      "保存会议号和对方账号"
+    ],
+    "dont": [
+      "不要共享屏幕",
+      "不要打开支付银行页面",
+      "不要让对方远程点击"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "official_verification_methods": [
+      "官方App业务入口",
+      "平台官方客服",
+      "手机权限管理",
+      "银行/支付平台官方客服"
+    ],
+    "common_misconceptions": [
+      "客服退款、贷款认证、征信修复、退改签或公检法视频办案看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SCREEN_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现共享屏幕时打开银行支付页面、验证码和密码输入界面，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "断网或结束远控",
+      "修改支付和银行密码",
+      "联系官方客服核实业务"
+    ],
+    "dont": [
+      "不要输入验证码",
+      "不要转账刷流水",
+      "不要继续听指令操作"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "official_verification_methods": [
+      "官方App业务入口",
+      "平台官方客服",
+      "手机权限管理",
+      "银行/支付平台官方客服"
+    ],
+    "common_misconceptions": [
+      "客服退款、贷款认证、征信修复、退改签或公检法视频办案看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SCREEN_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行/支付平台冻结止付",
+      "卸载可疑远控软件并查杀",
+      "保存会议记录和交易记录后报警"
+    ],
+    "dont": [
+      "不要重新加入会议",
+      "不要把设备交给对方处理",
+      "不要删除软件前忘记截图"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "游戏交易诈骗",
+    "official_verification_methods": [
+      "游戏官方客服",
+      "官方交易平台",
+      "账号安全中心",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "高价买号、低价代充、担保平台和爽快成交看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_GAME_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到高价买号、低价代充、担保平台和爽快成交时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "只走官方交易渠道",
+      "核实平台域名和客服入口",
+      "保持账号绑定在自己手里"
+    ],
+    "dont": [
+      "不要私下给账号密码",
+      "不要交保证金/解冻费",
+      "不要相信假担保平台页面"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "游戏交易诈骗",
+    "official_verification_methods": [
+      "游戏官方客服",
+      "官方交易平台",
+      "账号安全中心",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "高价买号、低价代充、担保平台和爽快成交看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_GAME_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现虚假平台冻结货款、账号密码索取、保证金/解冻费连环收费，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "立刻修改密码和检查绑定",
+      "开启登录保护",
+      "保存平台、买家和客服聊天"
+    ],
+    "dont": [
+      "不要继续充值",
+      "不要给验证码",
+      "不要交付账号或装备"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "游戏交易诈骗",
+    "official_verification_methods": [
+      "游戏官方客服",
+      "官方交易平台",
+      "账号安全中心",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "高价买号、低价代充、担保平台和爽快成交看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_GAME_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系游戏官方申诉冻结异常操作",
+      "保存充值/转账和聊天记录",
+      "报警并提交平台网址和收款账户"
+    ],
+    "dont": [
+      "不要再交零头/二次解冻费",
+      "不要相信客服退款",
+      "不要删除账号登录记录"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "official_verification_methods": [
+      "老师本人电话",
+      "学校官方缴费系统",
+      "班主任/辅导员办公室",
+      "学校官网"
+    ],
+    "common_misconceptions": [
+      "冒充老师辅导员在班群发布缴费通知看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CAMPUS_FEE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到冒充老师辅导员在班群发布缴费通知时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "电话联系老师本人",
+      "查看学校官方通知",
+      "提醒群管理员核验成员身份"
+    ],
+    "dont": [
+      "不要直接扫群内二维码",
+      "不要只看头像昵称",
+      "不要被截止时间催着付款"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "official_verification_methods": [
+      "老师本人电话",
+      "学校官方缴费系统",
+      "班主任/辅导员办公室",
+      "学校官网"
+    ],
+    "common_misconceptions": [
+      "冒充老师辅导员在班群发布缴费通知看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CAMPUS_FEE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现二维码/群收款限时缴费，阻止学生家长向官方核实，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "核对收款主体是否学校",
+      "在班群提醒先核实",
+      "保存缴费通知和账号信息"
+    ],
+    "dont": [
+      "不要向个人账户交学杂费",
+      "不要私聊转账",
+      "不要转发未核实通知"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "official_verification_methods": [
+      "老师本人电话",
+      "学校官方缴费系统",
+      "班主任/辅导员办公室",
+      "学校官网"
+    ],
+    "common_misconceptions": [
+      "冒充老师辅导员在班群发布缴费通知看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CAMPUS_FEE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系老师和学校说明情况",
+      "保存付款凭证和群聊记录",
+      "报警并提交收款二维码/账户"
+    ],
+    "dont": [
+      "不要继续补缴",
+      "不要删除群聊",
+      "不要相信退款客服"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "求职实习招聘诈骗",
+    "official_verification_methods": [
+      "企业官网招聘页",
+      "学校就业指导中心",
+      "人社部门公开渠道",
+      "正规招聘平台客服"
+    ],
+    "common_misconceptions": [
+      "高薪轻松、名企内推、实习保offer和快速入职看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_JOB_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到高薪轻松、名企内推、实习保offer和快速入职时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "核验企业邮箱和官网职位",
+      "保留招聘页面和HR账号",
+      "询问学校就业老师"
+    ],
+    "dont": [
+      "不要脱离平台私聊付款",
+      "不要相信保offer",
+      "不要交押金报名费"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "求职实习招聘诈骗",
+    "official_verification_methods": [
+      "企业官网招聘页",
+      "学校就业指导中心",
+      "人社部门公开渠道",
+      "正规招聘平台客服"
+    ],
+    "common_misconceptions": [
+      "高薪轻松、名企内推、实习保offer和快速入职看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_JOB_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现入职前收费、培训贷、脱离招聘平台私聊和虚假合同，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "要求对方提供正式合同和收费依据",
+      "核对收款主体",
+      "拒绝培训贷和分期"
+    ],
+    "dont": [
+      "不要办理贷款上岗",
+      "不要交体检服装资料费给个人",
+      "不要把身份证银行卡发给陌生HR"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "求职实习招聘诈骗",
+    "official_verification_methods": [
+      "企业官网招聘页",
+      "学校就业指导中心",
+      "人社部门公开渠道",
+      "正规招聘平台客服"
+    ],
+    "common_misconceptions": [
+      "高薪轻松、名企内推、实习保offer和快速入职看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_JOB_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "保存合同、聊天和付款记录",
+      "联系平台/学校就业中心投诉",
+      "涉嫌诈骗时报警"
+    ],
+    "dont": [
+      "不要继续交保证金",
+      "不要相信补交就能入职",
+      "不要删除招聘信息"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "official_verification_methods": [
+      "学校资助中心",
+      "学校财务处",
+      "辅导员/班主任",
+      "学校官方信息系统"
+    ],
+    "common_misconceptions": [
+      "奖助学金到账、学费退费、补贴资格异常看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SCHOLARSHIP_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到奖助学金到账、学费退费、补贴资格异常时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "通过学校系统核实通知",
+      "问辅导员或资助中心",
+      "保存短信链接"
+    ],
+    "dont": [
+      "不要在陌生链接填银行卡",
+      "不要给验证码",
+      "不要先转账激活"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "official_verification_methods": [
+      "学校资助中心",
+      "学校财务处",
+      "辅导员/班主任",
+      "学校官方信息系统"
+    ],
+    "common_misconceptions": [
+      "奖助学金到账、学费退费、补贴资格异常看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SCHOLARSHIP_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现填写银行卡身份信息、索要验证码或先转账激活补贴，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "关闭页面并修改相关密码",
+      "联系学校财务核验",
+      "检查银行卡交易提醒"
+    ],
+    "dont": [
+      "不要继续认证",
+      "不要把身份信息发给陌生客服",
+      "不要下载不明App"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "official_verification_methods": [
+      "学校资助中心",
+      "学校财务处",
+      "辅导员/班主任",
+      "学校官方信息系统"
+    ],
+    "common_misconceptions": [
+      "奖助学金到账、学费退费、补贴资格异常看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SCHOLARSHIP_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行冻结止付",
+      "保存短信、网页和扣款记录",
+      "向学校和公安机关报告"
+    ],
+    "dont": [
+      "不要相信退费专员",
+      "不要再次输入验证码",
+      "不要删除短信"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "考试考证论文服务诈骗",
+    "official_verification_methods": [
+      "学校教务处",
+      "导师/辅导员",
+      "正规学习辅导机构",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "考试保过、内部答案、论文代写降重和包录取看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_EXAM_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到考试保过、内部答案、论文代写降重和包录取时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "回到正规学习辅导渠道",
+      "保留对方违规承诺",
+      "向老师咨询补救方式"
+    ],
+    "dont": [
+      "不要购买答案/代考/代写",
+      "不要提供学号证件",
+      "不要交定金"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "考试考证论文服务诈骗",
+    "official_verification_methods": [
+      "学校教务处",
+      "导师/辅导员",
+      "正规学习辅导机构",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "考试保过、内部答案、论文代写降重和包录取看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_EXAM_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现先收定金尾款，随后以保密费、删记录费、举报威胁继续加价，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "停止付款并保存威胁记录",
+      "避免继续提供材料",
+      "必要时向学校或警方求助"
+    ],
+    "dont": [
+      "不要交保密费",
+      "不要被举报威胁勒索",
+      "不要继续违规交易"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "考试考证论文服务诈骗",
+    "official_verification_methods": [
+      "学校教务处",
+      "导师/辅导员",
+      "正规学习辅导机构",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "考试保过、内部答案、论文代写降重和包录取看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_EXAM_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "保存付款和威胁证据",
+      "主动寻求学校合规补救",
+      "遭遇敲诈时报警"
+    ],
+    "dont": [
+      "不要继续转账封口",
+      "不要删除聊天",
+      "不要向对方提供更多个人资料"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "校园二手/票务交易诈骗",
+    "official_verification_methods": [
+      "官方票务平台",
+      "二手平台担保交易",
+      "校园实名渠道",
+      "平台客服"
+    ],
+    "common_misconceptions": [
+      "低价二手、演唱会/车票内部名额和校园熟人交易看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SECONDHAND_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到低价二手、演唱会/车票内部名额和校园熟人交易时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "使用平台担保交易",
+      "核验票务订单和实名信息",
+      "保留卖家主页和聊天"
+    ],
+    "dont": [
+      "不要私下转定金",
+      "不要相信超低价内部票",
+      "不要脱离平台沟通"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "校园二手/票务交易诈骗",
+    "official_verification_methods": [
+      "官方票务平台",
+      "二手平台担保交易",
+      "校园实名渠道",
+      "平台客服"
+    ],
+    "common_misconceptions": [
+      "低价二手、演唱会/车票内部名额和校园熟人交易看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SECONDHAND_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现私下转账定金、脱离担保平台、票据截图造假和卖家失联，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "要求当面验货或平台担保",
+      "确认退改规则",
+      "截图商品、票据和收款账户"
+    ],
+    "dont": [
+      "不要提前确认收货",
+      "不要走朋友代付",
+      "不要开屏幕共享办退款"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "校园二手/票务交易诈骗",
+    "official_verification_methods": [
+      "官方票务平台",
+      "二手平台担保交易",
+      "校园实名渠道",
+      "平台客服"
+    ],
+    "common_misconceptions": [
+      "低价二手、演唱会/车票内部名额和校园熟人交易看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_SECONDHAND_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "向平台投诉冻结卖家",
+      "保存付款和聊天记录",
+      "涉嫌诈骗时报警"
+    ],
+    "dont": [
+      "不要再补尾款手续费",
+      "不要相信二次退款链接",
+      "不要删除订单"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "租房合租押金诈骗",
+    "official_verification_methods": [
+      "正规租房平台",
+      "小区物业/房屋产权资料",
+      "线下看房",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "低价好房、急租、近学校和名额抢手看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_RENTAL_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到低价好房、急租、近学校和名额抢手时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "实地看房并核验产权或授权",
+      "通过平台担保支付",
+      "保存房源链接和聊天"
+    ],
+    "dont": [
+      "不要未看房先交押金",
+      "不要向个人陌生账户转账",
+      "不要相信明显低价急租"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "租房合租押金诈骗",
+    "official_verification_methods": [
+      "正规租房平台",
+      "小区物业/房屋产权资料",
+      "线下看房",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "低价好房、急租、近学校和名额抢手看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_RENTAL_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现未看房先付押金、假房东、拒绝合同收据和平台外付款，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "要求合同、收据和身份信息一致",
+      "核对房源是否重复发布",
+      "让同学家人陪同看房"
+    ],
+    "dont": [
+      "不要平台外付款",
+      "不要交锁房费",
+      "不要接受口头承诺"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "租房合租押金诈骗",
+    "official_verification_methods": [
+      "正规租房平台",
+      "小区物业/房屋产权资料",
+      "线下看房",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "低价好房、急租、近学校和名额抢手看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_RENTAL_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系平台投诉和冻结账号",
+      "保存房源、聊天、转账凭证",
+      "金额较大或失联时报案"
+    ],
+    "dont": [
+      "不要继续交中介费",
+      "不要删除房源截图",
+      "不要相信补交就能退押金"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "official_verification_methods": [
+      "110或派出所",
+      "平台举报入口",
+      "手机权限管理",
+      "可信家人朋友"
+    ],
+    "common_misconceptions": [
+      "陌生交友、暧昧视频、诱导下载直播/交友App看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_NUDE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到陌生交友、暧昧视频、诱导下载直播/交友App时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "立即停止视频和聊天",
+      "撤销通讯录等权限",
+      "保存威胁截图"
+    ],
+    "dont": [
+      "不要继续裸聊",
+      "不要下载陌生App",
+      "不要相信付钱删视频"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "official_verification_methods": [
+      "110或派出所",
+      "平台举报入口",
+      "手机权限管理",
+      "可信家人朋友"
+    ],
+    "common_misconceptions": [
+      "陌生交友、暧昧视频、诱导下载直播/交友App看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_NUDE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现窃取通讯录后用隐私视频威胁转账，付款后继续勒索，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "不转账并拉黑前先取证",
+      "告诉可信的人协助处理",
+      "必要时报警"
+    ],
+    "dont": [
+      "不要借钱付款",
+      "不要按要求录更多内容",
+      "不要删除威胁记录"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "official_verification_methods": [
+      "110或派出所",
+      "平台举报入口",
+      "手机权限管理",
+      "可信家人朋友"
+    ],
+    "common_misconceptions": [
+      "陌生交友、暧昧视频、诱导下载直播/交友App看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_NUDE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "停止继续付款",
+      "保存转账和威胁证据",
+      "报警并说明被敲诈勒索"
+    ],
+    "dont": [
+      "不要继续谈判加价",
+      "不要因为害怕独自处理",
+      "不要相信二次追删视频"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "official_verification_methods": [
+      "银行官方客服",
+      "公安机关",
+      "学校老师/家长",
+      "反诈宣传渠道"
+    ],
+    "common_misconceptions": [
+      "日结高薪、无风险兼职、只借卡刷流水看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_TWO_CARDS_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到日结高薪、无风险兼职、只借卡刷流水时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "拒绝出租出借两卡",
+      "核实兼职资金来源",
+      "提醒同学不要代收款"
+    ],
+    "dont": [
+      "不要卖卡卖号",
+      "不要帮陌生人过账",
+      "不要出租收款码"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "official_verification_methods": [
+      "银行官方客服",
+      "公安机关",
+      "学校老师/家长",
+      "反诈宣传渠道"
+    ],
+    "common_misconceptions": [
+      "日结高薪、无风险兼职、只借卡刷流水看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_TWO_CARDS_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现用你的卡号账户收转涉诈资金，账户冻结甚至承担法律风险，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "立即停止收转账",
+      "保留对方招募和转账指令",
+      "联系银行说明异常"
+    ],
+    "dont": [
+      "不要继续刷流水",
+      "不要帮助取现转移",
+      "不要隐瞒账户用途"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "official_verification_methods": [
+      "银行官方客服",
+      "公安机关",
+      "学校老师/家长",
+      "反诈宣传渠道"
+    ],
+    "common_misconceptions": [
+      "日结高薪、无风险兼职、只借卡刷流水看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_TWO_CARDS_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "主动向银行和公安说明情况",
+      "提交对方招募账号和交易流水",
+      "配合账户核查"
+    ],
+    "dont": [
+      "不要继续受人指使转移资金",
+      "不要删除聊天记录",
+      "不要相信交钱解冻账户"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "机票火车票退改签诈骗",
+    "official_verification_methods": [
+      "航司官方App/官网",
+      "铁路12306官方渠道",
+      "订单平台官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "航班/车次延误取消、改签补偿和高额理赔看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_TRAVEL_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到航班/车次延误取消、改签补偿和高额理赔时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "从官方订单页核实退改签",
+      "核对短信发送号码",
+      "保存来电和短信"
+    ],
+    "dont": [
+      "不要点击短信链接",
+      "不要下载陌生App",
+      "不要共享屏幕"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "机票火车票退改签诈骗",
+    "official_verification_methods": [
+      "航司官方App/官网",
+      "铁路12306官方渠道",
+      "订单平台官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "航班/车次延误取消、改签补偿和高额理赔看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_TRAVEL_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现下载App或会议软件、屏幕共享、索要验证码银行卡和先交手续费，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "停止填写银行卡验证码",
+      "挂断后拨打官方客服",
+      "检查支付账户状态"
+    ],
+    "dont": [
+      "不要交手续费/保证金",
+      "不要刷流水",
+      "不要让客服远程指导"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "机票火车票退改签诈骗",
+    "official_verification_methods": [
+      "航司官方App/官网",
+      "铁路12306官方渠道",
+      "订单平台官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "航班/车次延误取消、改签补偿和高额理赔看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_TRAVEL_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行/支付平台止付",
+      "保存短信、号码、会议记录和交易流水",
+      "报警"
+    ],
+    "dont": [
+      "不要继续认证退款",
+      "不要相信二次理赔",
+      "不要删除订单和短信"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "official_verification_methods": [
+      "品牌/平台官方App",
+      "活动官网",
+      "官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "中奖、免费礼品、抽奖福利和限时领奖看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_PRIZE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到中奖、免费礼品、抽奖福利和限时领奖时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "从官方活动页核实",
+      "查看主办方和规则",
+      "保存中奖通知"
+    ],
+    "dont": [
+      "不要点陌生领奖链接",
+      "不要填写银行卡验证码",
+      "不要相信限时威胁"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "official_verification_methods": [
+      "品牌/平台官方App",
+      "活动官网",
+      "官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "中奖、免费礼品、抽奖福利和限时领奖看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_PRIZE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现领奖前交税费保证金、填写银行卡验证码或点陌生链接，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "遇到先收费立即停止",
+      "核实收款主体",
+      "截图活动页面"
+    ],
+    "dont": [
+      "不要交税费/保证金",
+      "不要转发链接拉人",
+      "不要提供身份银行卡"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "official_verification_methods": [
+      "品牌/平台官方App",
+      "活动官网",
+      "官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "中奖、免费礼品、抽奖福利和限时领奖看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_PRIZE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "保存支付凭证和客服聊天",
+      "联系支付平台尝试拦截",
+      "报警或向平台举报"
+    ],
+    "dont": [
+      "不要继续补认证费",
+      "不要相信客服退款",
+      "不要删除领奖页面"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "征信修复/注销账户诈骗",
+    "official_verification_methods": [
+      "中国人民银行征信中心官方渠道",
+      "金融平台官方App",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "征信异常、校园贷账户未注销、百万保障扣费和影响贷款看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CREDIT_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到征信异常、校园贷账户未注销、百万保障扣费和影响贷款时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "挂断后查官方征信渠道",
+      "从平台App设置查看账户",
+      "保存来电号码和话术"
+    ],
+    "dont": [
+      "不要开屏幕共享",
+      "不要转账刷流水",
+      "不要把验证码告诉客服"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "征信修复/注销账户诈骗",
+    "official_verification_methods": [
+      "中国人民银行征信中心官方渠道",
+      "金融平台官方App",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "征信异常、校园贷账户未注销、百万保障扣费和影响贷款看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CREDIT_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现转账刷流水、共享屏幕、索要验证码和所谓安全账户核验，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "停止转账和远程操作",
+      "联系官方平台核验",
+      "检查银行卡和贷款授权"
+    ],
+    "dont": [
+      "不要贷款套现清额度",
+      "不要转入安全账户",
+      "不要下载陌生App"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "征信修复/注销账户诈骗",
+    "official_verification_methods": [
+      "中国人民银行征信中心官方渠道",
+      "金融平台官方App",
+      "银行官方客服",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "征信异常、校园贷账户未注销、百万保障扣费和影响贷款看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_CREDIT_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "联系银行/支付平台止付冻结",
+      "保存通话、转账和App记录",
+      "报警并说明征信修复诈骗"
+    ],
+    "dont": [
+      "不要继续借贷转账",
+      "不要相信征信修复专员",
+      "不要删除聊天记录"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "情感交友诱导投资诈骗",
+    "official_verification_methods": [
+      "现实身份核验",
+      "金融监管公开查询",
+      "亲友共同判断",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "情感陪伴、成功人设、共同未来和内部投资机会看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_ROMANCE_EARLY_FINAL",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "verify_identity",
+    "advice": "刚接触到情感陪伴、成功人设、共同未来和内部投资机会时，先把身份、渠道和平台真实性核清楚，不要被第一眼的熟悉感或小利益带着走。",
+    "do": [
+      "把投资和感情分开判断",
+      "核验对方真实身份",
+      "查询平台资质"
+    ],
+    "dont": [
+      "不要向陌生平台入金",
+      "不要相信恋爱对象内幕消息",
+      "不要隐瞒亲友"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "情感交友诱导投资诈骗",
+    "official_verification_methods": [
+      "现实身份核验",
+      "金融监管公开查询",
+      "亲友共同判断",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "情感陪伴、成功人设、共同未来和内部投资机会看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_ROMANCE_PRELOSS_FINAL",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "一旦出现引导到投资/博彩/刷单平台，前期盈利后大额入金，提现失败继续收费，先停止转账、共享、填码或交付资产，再走官方渠道核验。",
+    "do": [
+      "停止投资和充值",
+      "保存聊天与平台页面",
+      "让可信亲友一起看风险"
+    ],
+    "dont": [
+      "不要借钱加仓",
+      "不要交提现保证金",
+      "不要转虚拟币到陌生地址"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "fraud_type": "情感交友诱导投资诈骗",
+    "official_verification_methods": [
+      "现实身份核验",
+      "金融监管公开查询",
+      "亲友共同判断",
+      "96110反诈咨询"
+    ],
+    "common_misconceptions": [
+      "情感陪伴、成功人设、共同未来和内部投资机会看起来真实就可靠",
+      "对方催得急所以必须马上操作",
+      "先交一点钱或给一次验证码问题不大"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "advice_id": "PREVENT_ROMANCE_LOSS_FINAL",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经付款、泄露信息或交付账号资产，重点是止损、冻结、取证和报警，不要再用继续交钱的方式追回。",
+    "do": [
+      "整理入金流水和聊天记录",
+      "联系银行/支付平台尝试拦截",
+      "报警并提交平台和对方账号"
+    ],
+    "dont": [
+      "不要继续被感情话术劝充值",
+      "不要相信追回资金团队",
+      "不要删除交友记录"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "advice_id": "PREVENT_CROSS_BORDER_001",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "stop_contact",
+    "advice": "遇到境外高薪、包签证、无需经验的招工信息，先不要联系和提交证件，必须通过正规劳务、企业官网和人社渠道核验。",
+    "do": [
+      "不打广告电话，不加私聊账号",
+      "向家人、老师、人社部门或派出所核实",
+      "保存广告照片、号码和聊天记录"
+    ],
+    "dont": [
+      "不要交签证费/押金/路费",
+      "不要交身份证、护照或银行卡",
+      "不要按对方要求秘密出境"
+    ],
+    "official_verification_methods": [
+      "当地人社部门",
+      "学校就业中心",
+      "公安机关",
+      "企业官网"
+    ],
+    "common_misconceptions": [
+      "工资越高越可靠",
+      "熟人介绍就安全",
+      "先交证件方便办手续"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_HEALTH_PRODUCT_001",
+    "fraud_type": "养老保健品诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "保健食品不能替代药品，遇到免费讲座、专家义诊后要求高价购买或预存套餐，应先让家人陪同核验。",
+    "do": [
+      "查产品批准文号和经营主体",
+      "保留宣传单、收据和付款记录",
+      "必要时向市场监管或消协咨询"
+    ],
+    "dont": [
+      "不要相信包治百病",
+      "不要现场冲动付款",
+      "不要瞒着家人购买大额套餐"
+    ],
+    "official_verification_methods": [
+      "市场监管部门",
+      "消费者协会",
+      "正规医院",
+      "药监公开查询渠道"
+    ],
+    "common_misconceptions": [
+      "专家说了就一定有效",
+      "免费体检结果能证明必须购买",
+      "今天不买就错过治疗"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_NATIONAL_PROJECT_001",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "国家补贴、资产解冻和央企项目不会通过微信群收会员费或激活费发放巨额资金。",
+    "do": [
+      "核验发文机关官网",
+      "保存群公告、收款码和伪造文件",
+      "向公安机关或社区反诈人员咨询"
+    ],
+    "dont": [
+      "不要交会员费/激活费",
+      "不要拉亲友入群",
+      "不要传播伪造文件"
+    ],
+    "official_verification_methods": [
+      "政府官网",
+      "12345政务服务",
+      "公安机关"
+    ],
+    "common_misconceptions": [
+      "有红头文件就是真的",
+      "先交小钱能领大钱",
+      "群里很多人报名说明可靠"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_MEDICARE_001",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "risk_stage": "身份信息暴露阶段",
+    "intervention_goal": "stop_identity_exposure",
+    "advice": "医保卡、电子医保码和医保身份信息只能本人合规就医购药使用，不能外借、套现或倒卖药品。",
+    "do": [
+      "立即停止外借医保凭证",
+      "检查医保消费记录",
+      "向医保部门或定点机构核实异常记录"
+    ],
+    "dont": [
+      "不要刷医保返钱",
+      "不要出借医保码",
+      "不要参与倒卖医保药品"
+    ],
+    "official_verification_methods": [
+      "国家医保服务平台",
+      "当地医保局",
+      "定点医疗机构"
+    ],
+    "common_misconceptions": [
+      "医保个人账户余额是自己的想怎么用都行",
+      "刷卡返钱只是薅福利",
+      "熟人借用不会有风险"
+    ],
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_VIRTUAL_CURRENCY_001",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "不要为了高佣金出借银行卡、收款码或虚拟币钱包，代收代付陌生资金可能卷入电诈洗钱。",
+    "do": [
+      "停止收付款和虚拟币转账",
+      "保存任务群、钱包地址和资金流水",
+      "如账户被冻结，联系银行并配合公安核查"
+    ],
+    "dont": [
+      "不要出借账户",
+      "不要购买或转出来源不明的USDT",
+      "不要删除聊天记录"
+    ],
+    "official_verification_methods": [
+      "银行官方客服",
+      "公安机关",
+      "支付平台官方客服"
+    ],
+    "common_misconceptions": [
+      "只是刷流水不违法",
+      "虚拟币查不到就安全",
+      "拿佣金说明只是兼职"
+    ],
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_LIVE_PRIVATE_TRADE_001",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "risk_stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "直播购物要留在平台订单和售后体系内，任何让你加群私下扫码付款的交易都先暂停。",
+    "do": [
+      "通过平台店铺下单",
+      "核验商家资质和售后规则",
+      "保存直播回放、商品页和聊天记录"
+    ],
+    "dont": [
+      "不要私下转账",
+      "不要跳过平台担保",
+      "不要相信明显低价和限时催付"
+    ],
+    "official_verification_methods": [
+      "电商平台官方客服",
+      "市场监管部门",
+      "消费者协会"
+    ],
+    "common_misconceptions": [
+      "主播承诺正品就一定真",
+      "群里付款更便宜更安全",
+      "私下付款也能平台售后"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_CROSS_BORDER_2026",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "risk_stage": "身份信息暴露阶段",
+    "intervention_goal": "stop_identity_exposure",
+    "advice": "不要把身份证、护照、银行卡、人脸识别或家庭住址发给境外招工方。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_CROSS_BORDER_TRAVEL_2026",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "如果已经准备赴边境或出境，先停下并把位置、联系人和行程告诉家人或公安机关。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_HEALTH_VERIFY_2026",
+    "fraud_type": "养老保健品诈骗",
+    "risk_stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "advice": "所谓专家义诊、免费体检和疗效承诺要用医院、药监和市场监管公开渠道核验。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_HEALTH_AFTER_LOSS_2026",
+    "fraud_type": "养老保健品诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "preserve_evidence",
+    "advice": "已经购买高价保健品时，保留包装、票据、宣传材料和聊天记录，优先走消协或市场监管投诉。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_NATIONAL_VERIFY_2026",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "risk_stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "advice": "看到红头文件、央企授权或内部名额时，不转发、不缴费，先到政府或企业官网核验。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_NATIONAL_GROUP_2026",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "preserve_evidence",
+    "advice": "已入群或已缴费时，保存群公告、管理员账号、收款码和拉人规则，不再发展下线。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_MEDICARE_VERIFY_2026",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "risk_stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "advice": "发现医保消费异常或被要求刷码返钱时，通过国家医保服务平台或当地医保部门核验。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_MEDICARE_AFTER_2026",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "preserve_evidence",
+    "advice": "医保码已被他人使用后，尽快查询消费记录，保存对方账号和返钱记录并向医保部门反映。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_VC_ACCOUNT_2026",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "risk_stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "advice": "任何让你提供银行卡、收款码或钱包地址帮忙过账的兼职，都先按涉诈资金转移处理。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_VC_FROZEN_2026",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "advice": "账户已被冻结时，不要找所谓解冻中介，直接联系银行、支付平台并配合公安核查。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_LIVE_VERIFY_2026",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "risk_stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "advice": "看到官方授权、专柜同款或低价尾货时，只信平台店铺资质和订单页面，不信私聊截图。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "advice_id": "PREVENT_LIVE_AFTER_2026",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "risk_stage": "已损失阶段",
+    "intervention_goal": "preserve_evidence",
+    "advice": "已私下付款或收到货不对板商品时，保存直播截图、付款凭证、物流和售后聊天。",
+    "do": [
+      "停止当前高危操作",
+      "通过官方渠道核验",
+      "保存聊天、付款和页面截图"
+    ],
+    "dont": [
+      "不要继续付款",
+      "不要删除证据",
+      "不要按对方要求保密"
+    ],
+    "official_verification_methods": [
+      "官方App/官网",
+      "公安机关或主管部门",
+      "家人或可信第三方"
+    ],
+    "common_misconceptions": [
+      "对方说得专业就是真的",
+      "先交一点钱风险不大",
+      "熟人或群友推荐就可靠"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  }
+]

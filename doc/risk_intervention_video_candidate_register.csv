@@ -1,0 +1,30 @@
+序号,fraud_type_id,诈骗类型,候选编号,视频标题,官方发布机构,官方账号名称,原始页面URL,视频平台,发布时间,时长秒,方向,官方认证或水印,下载权限,转载或使用权限,本地文件路径,本地审核状态,保留或淘汰理由,备注
+1,scam_brush_rebate,刷单返利诈骗,candidate_01,“刷单”是这样骗你的,中国警察网,中国警察网,https://www.bilibili.com/video/BV1G341167UC/,哔哩哔哩,2021-08-17,112.4,横屏,账号名和来源页可见，水印待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\01_scam_brush_rebate\candidate_01__china_police_net__BV1G341167UC.mp4,待看,已下载，待本地观看,
+2,scam_fake_customer_service,冒充客服诈骗,candidate_01,警惕冒充客服新套路！,衢州网警（地方公安网警账号候选）,衢州网警,https://www.bilibili.com/video/BV1gDSWBgEg9/,哔哩哔哩,2025-12-02,55.4,横屏,账号名可见，地方公安账号主体待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\02_scam_fake_customer_service\candidate_01__quzhou_net_police__BV1gDSWBgEg9.mp4,待看,已下载，待本地观看,账号主体需复核
+3,scam_fake_police,冒充公检法诈骗,candidate_01,切记！警察不会在网上办案,东营网警（地方公安网警账号候选）,东营网警,https://www.bilibili.com/video/BV1mtwReFEWv/,哔哩哔哩,2025-02-17,34.0,横屏,账号名可见，地方公安账号主体待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\03_scam_impersonate_public_security\candidate_01__dongying_net_police__BV1mtwReFEWv.mp4,待看,已下载，待本地观看,账号主体需复核
+4,scam_fake_investment,虚假投资理财诈骗,candidate_01,当心！“数字人民币”投资骗局（来源：公安部刑侦局）,阳泉网警,阳泉网警,https://www.bilibili.com/video/BV1wW97YfEFZ/,哔哩哔哩,2025-03-04,84.0,竖屏,标题注明来源公安部刑侦局，账号主体待复核,公开播放页，仅用于本地审核,转载或使用权限待确认,anti_fraud_video_candidates\04_scam_fake_investment\candidate_01__yangquan_net_police__BV1wW97YfEFZ.mp4,待看,已选候选，待你下载、本地观看和核验账号主体,
+5,scam_fake_loan,网络贷款诈骗,candidate_01,反诈民警为你揭秘虚假网络贷款骗局,公安部新闻宣传局,公安部新闻宣传局,https://www.bilibili.com/video/BV1Dz4y1i7Qk/,哔哩哔哩,2023-05-29,60.2,横屏,账号名和来源页可见，水印待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\05_scam_online_loan\candidate_01__mps_news_publicity__BV1Dz4y1i7Qk.mp4,待看,已下载，待本地观看,
+6,scam_phishing_link,钓鱼链接诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+7,scam_ai_face_family,AI换脸冒充熟人诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+8,scam_acquaintance_borrow,冒充领导或熟人借钱诈骗,candidate_01,公安反诈视频——冒充领导熟人诈骗,青海普法,青海普法,https://www.bilibili.com/video/BV1DA411H7hT/,哔哩哔哩,2021-01-27,208.2,横屏,官方普法账号线索，是否公安机关原始发布待复核,公开播放页，仅用于本地审核,转载或使用权限待确认,anti_fraud_video_candidates\08_scam_acquaintance_borrow\candidate_01__qinghai_pufa__BV1DA411H7hT.mp4,待看,备选候选，先确认账号主体和内容是否适合紧急劝阻,
+9,scam_code_account_theft,验证码/账户盗刷诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+10,scam_screen_remote_control,屏幕共享/远程控制诈骗,candidate_01,你正在共享屏幕，应当如何正确处理？,武汉网警（地方公安网警账号候选）,武汉网警,https://www.bilibili.com/video/BV1t42VBNEtJ/,哔哩哔哩,2025-12-05,91.4,横屏,账号名可见，地方公安账号主体待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\10_scam_screen_sharing\candidate_01__wuhan_net_police__BV1t42VBNEtJ.mp4,待看,已下载，待本地观看,另有 candidate_02 下载不完整
+11,scam_game_trade,游戏交易诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+12,scam_campus_fee_impersonation,冒充老师辅导员收费诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+13,scam_job_internship_recruitment,求职实习招聘诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+14,scam_scholarship_subsidy_phishing,奖助学金/学费退费诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+15,scam_exam_thesis_service,考试考证论文服务诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+16,scam_secondhand_ticket_trade,校园二手/票务交易诈骗,candidate_01,演唱会门票“一票难求” “内部渠道”购票是骗局,广东公安,广东公安,https://www.bilibili.com/video/BV1dW3K6gEzL/,哔哩哔哩,2026-07-25,103.3,横屏,账号名和来源页可见，水印待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\16_scam_ticket_transaction\candidate_01__guangdong_police__BV1dW3K6gEzL.mp4,待看,已下载，待本地观看,
+17,scam_rental_deposit,租房合租押金诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+18,scam_nude_chat_extortion,裸聊敲诈勒索诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+19,scam_two_cards_rent,两卡出租出借与跑分诈骗,candidate_01,雷霆出击 湛江公安成功抓获“跑分”洗钱嫌疑人28名,广东公安,广东公安,https://www.bilibili.com/video/BV1RL3F6HEDT/,哔哩哔哩,2026-07-27,21.1,竖屏,广东公安官方账号，需确认是否明确讲到出借账户/两卡,公开播放页，仅用于本地审核,转载或使用权限待确认,anti_fraud_video_candidates\19_scam_two_cards_rent\candidate_01__guangdong_police__BV1RL3F6HEDT.mp4,待看,已选候选，先本地确认与两卡/跑分类型的匹配度,
+20,scam_travel_ticket_refund,机票火车票退改签诈骗,candidate_01,有一种诈骗叫“机票退改签”,晋城网警,晋城网警,https://www.bilibili.com/video/BV1E2421K7Wu/,哔哩哔哩,2024-03-15,83.4,竖屏,账号名称与晋城市公安局网警线索相符，主体待复核,公开播放页，仅用于本地审核,转载或使用权限待确认,anti_fraud_video_candidates\20_scam_travel_ticket_refund\candidate_01__jincheng_net_police__BV1E2421K7Wu.mp4,待看,已选候选，待你下载、本地观看和核验账号主体,
+21,scam_fake_prize_gift,虚假中奖/免费礼品诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+22,scam_credit_repair_cancel_account,征信修复/注销账户诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+23,scam_romance_investment,情感交友诱导投资诈骗,candidate_01,【军恋杀猪盘】民警当场拆穿“军官”网图（来源：公安部刑侦局）,阳泉网警,阳泉网警,https://www.bilibili.com/video/BV1urd1BEEHB/,哔哩哔哩,2026-04-21,156.5,竖屏,标题注明来源公安部刑侦局，账号主体待复核,公开播放页，仅用于本地审核,转载或使用权限待确认,anti_fraud_video_candidates\23_scam_romance_investment\candidate_01__yangquan_net_police__BV1urd1BEEHB.mp4,待看,已选候选，待你下载、本地观看和核验账号主体,
+24,scam_cross_border_high_salary,跨境高薪招工诱骗诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+25,scam_elderly_health_product,养老保健品诈骗,candidate_01,“保健品”能治百病？陷阱！ 广州警方打掉一养老保健品诈骗团伙，刑拘百余人！,广东公安,广东公安,https://www.bilibili.com/video/BV1RL7N6EEiN/,哔哩哔哩,2026-06-23,63.3,横屏,账号名和来源页可见，水印待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\25_scam_elderly_health_products\candidate_01__guangdong_police__BV1RL7N6EEiN.mp4,待看,已下载，待本地观看,另有 candidate_02 下载不完整
+26,scam_national_asset_project,民族资产解冻/虚假国家项目诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+27,scam_medical_insurance_fund,医保骗保/医保卡倒卖诈骗,candidate_01,点击短信链接能多领医保报销金？民警：假的！速看防骗指南！#防诈骗,阳泉网警（地方公安网警账号候选）,阳泉网警,https://www.bilibili.com/video/BV1SUZ8B5Eir/,哔哩哔哩,2026-02-19,56.9,竖屏,账号名可见，地方公安账号主体待复核,公开播放页已下载到本地，仅用于内部审核,页面未见明确转载授权，待确认,anti_fraud_video_candidates\27_scam_medical_insurance\candidate_01__yangquan_net_police__BV1SUZ8B5Eir.mp4,待看,已下载，待本地观看,账号主体需复核
+28,scam_virtual_currency_laundering,虚拟货币洗钱跑分诈骗,,,,,,,,,,,待填写,待填写,,待看,,
+29,scam_live_commerce_private_trade,直播带货/私域交易诈骗,,,,,,,,,,,待填写,待填写,,待看,,

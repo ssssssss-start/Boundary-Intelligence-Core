@@ -1,0 +1,147 @@
+{
+  "scam_id": "scam_elderly_health_product",
+  "name": "养老保健品诈骗",
+  "version": "1.0",
+  "updated_at": "2026-06-06",
+  "aliases": [
+    "养老保健品",
+    "保健品诈骗",
+    "老年保健品",
+    "免费体检",
+    "免费讲座",
+    "健康讲座",
+    "专家义诊",
+    "送鸡蛋",
+    "养生仪器",
+    "包治百病"
+  ],
+  "features": [
+    {
+      "feature_name": "免费讲座义诊",
+      "keywords": [
+        "免费讲座",
+        "免费体检",
+        "专家义诊",
+        "健康讲座",
+        "送鸡蛋",
+        "免费旅游",
+        "免费检测",
+        "公益体检"
+      ],
+      "weight": 25,
+      "explanation": "用免费体检、讲座、礼品或旅游把老年人引到封闭销售场景。"
+    },
+    {
+      "feature_name": "夸大治疗功效",
+      "keywords": [
+        "包治百病",
+        "治癌",
+        "抗癌",
+        "降糖降压",
+        "替代药物",
+        "根治",
+        "不用吃药",
+        "调理所有病"
+      ],
+      "weight": 35,
+      "explanation": "把普通食品、保健品或器械包装成能治疗疾病的产品。"
+    },
+    {
+      "feature_name": "假专家背书",
+      "keywords": [
+        "院士",
+        "名医",
+        "专家推荐",
+        "专家说",
+        "内部产品",
+        "科研成果",
+        "权威认证",
+        "教授推荐"
+      ],
+      "weight": 30,
+      "explanation": "借假专家、假机构或伪权威背书降低受害人警惕。"
+    },
+    {
+      "feature_name": "高价预存套餐",
+      "keywords": [
+        "预存",
+        "套餐",
+        "买十送十",
+        "限时优惠",
+        "会员价",
+        "今天下单",
+        "订金",
+        "全款"
+      ],
+      "weight": 35,
+      "explanation": "诱导一次性购买高价套餐、预存会员或连续购买。"
+    },
+    {
+      "feature_name": "诱导隐瞒家人",
+      "keywords": [
+        "别告诉孩子",
+        "别让家人知道",
+        "家人不懂",
+        "偷偷买",
+        "名额有限",
+        "今天必须定",
+        "不要和子女说"
+      ],
+      "weight": 30,
+      "explanation": "让老年人绕开家人和正规医疗渠道，制造紧迫下单压力。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_ELDERLY_HEALTH_PRODUCT_001",
+      "rule_name": "养老保健品诈骗治疗功效夸大规则",
+      "conditions": {
+        "all": [
+          "夸大治疗功效"
+        ],
+        "any": [
+          "免费讲座义诊",
+          "假专家背书",
+          "高价预存套餐",
+          "诱导隐瞒家人"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 86,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "保健品销售中出现治疗承诺、假专家、预存套餐或隐瞒家人，触发高危劝阻。",
+      "suggested_action": "先不要付款或签订套餐，带资料到正规医院、市场监管部门或家人处核实，不要相信保健品替代治疗。",
+      "enabled": true
+    },
+    {
+      "rule_id": "PKG_ELDERLY_HEALTH_PRODUCT_002",
+      "rule_name": "免费体检讲座转高价购买规则",
+      "conditions": {
+        "all": [
+          "免费讲座义诊"
+        ],
+        "any": [
+          "假专家背书",
+          "高价预存套餐",
+          "诱导隐瞒家人",
+          "夸大治疗功效"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 78,
+      "risk_level": "中高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "免费体检、讲座或义诊后转入专家背书、限时购买或隐瞒家人，属于老年保健品诈骗高频前置场景。",
+      "suggested_action": "暂缓购买，先向正规医院、市场监管部门或家人核实产品资质、价格和宣传内容。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+    "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+    "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html"
+  ]
+}

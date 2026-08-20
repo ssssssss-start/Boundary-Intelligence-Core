@@ -1,0 +1,14 @@
+.home-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.loading-title {
+  color: #777777;
+  font-size: 26rpx;
+}

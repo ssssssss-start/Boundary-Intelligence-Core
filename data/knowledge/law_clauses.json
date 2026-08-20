@@ -1,0 +1,949 @@
+[
+  {
+    "law_id": "LAW_PRE_TRANSFER_DISSUASION_001",
+    "topic": "转账前高危劝阻与风险核验",
+    "related_behaviors": [
+      "转账前劝阻",
+      "要求转账",
+      "证据保存",
+      "举报"
+    ],
+    "plain_summary": "在转账、垫付、充值、缴费或补单前发现疑似诈骗时，应立即停止操作，优先通过官方渠道核验对方身份并保留证据。若对方持续催促或使用恐吓话术，可先举报并向公安机关咨询。",
+    "actions": [
+      "停止继续转账、充值、缴费或补单",
+      "通过官方App、官网或官方客服电话核验",
+      "保存聊天记录、收款信息和页面截图"
+    ],
+    "evidence_to_preserve": [
+      "聊天记录",
+      "收款账户",
+      "催促转账的对话",
+      "页面截图"
+    ],
+    "disclaimer": "以下为一般风险处置建议，不替代公安机关、银行或专业法律意见。",
+    "related_scam_types": [
+      "刷单返利诈骗",
+      "冒充客服诈骗",
+      "冒充公检法诈骗",
+      "虚假投资理财诈骗",
+      "网络贷款诈骗",
+      "钓鱼链接诈骗",
+      "AI换脸冒充熟人诈骗",
+      "冒充领导或熟人借钱诈骗",
+      "验证码/账户盗刷诈骗",
+      "屏幕共享/远程控制诈骗",
+      "游戏交易诈骗",
+      "冒充老师辅导员收费诈骗",
+      "求职实习招聘诈骗",
+      "奖助学金/学费退费诈骗",
+      "考试考证论文服务诈骗",
+      "校园二手/票务交易诈骗",
+      "租房合租押金诈骗",
+      "裸聊敲诈勒索诈骗",
+      "两卡出租出借与跑分诈骗",
+      "机票火车票退改签诈骗",
+      "虚假中奖/免费礼品诈骗",
+      "征信修复/注销账户诈骗",
+      "情感交友诱导投资诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_STOP_PAYMENT_001",
+    "topic": "已转账后的报警与止付",
+    "related_behaviors": [
+      "已发生转账",
+      "报警",
+      "止付冻结"
+    ],
+    "plain_summary": "遭遇疑似电信网络诈骗并已转账时，应尽快联系银行或支付平台申请止付、冻结或交易拦截，并向公安机关报案。",
+    "actions": [
+      "联系转出银行或支付平台官方客服说明疑似诈骗",
+      "准备交易时间、金额、收款账户、订单号或流水号",
+      "拨打110或前往派出所报案"
+    ],
+    "evidence_to_preserve": [
+      "转账凭证",
+      "收款账户",
+      "聊天记录",
+      "通话记录",
+      "对方账号"
+    ],
+    "disclaimer": "以下为一般处置建议，不替代公安机关、银行或专业法律意见。",
+    "related_scam_types": [
+      "刷单返利诈骗",
+      "冒充客服诈骗",
+      "冒充公检法诈骗",
+      "虚假投资理财诈骗",
+      "网络贷款诈骗",
+      "钓鱼链接诈骗",
+      "AI换脸冒充熟人诈骗",
+      "冒充领导或熟人借钱诈骗",
+      "验证码/账户盗刷诈骗",
+      "屏幕共享/远程控制诈骗",
+      "游戏交易诈骗",
+      "冒充老师辅导员收费诈骗",
+      "求职实习招聘诈骗",
+      "奖助学金/学费退费诈骗",
+      "考试考证论文服务诈骗",
+      "校园二手/票务交易诈骗",
+      "租房合租押金诈骗",
+      "裸聊敲诈勒索诈骗",
+      "两卡出租出借与跑分诈骗",
+      "机票火车票退改签诈骗",
+      "虚假中奖/免费礼品诈骗",
+      "征信修复/注销账户诈骗",
+      "情感交友诱导投资诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_CODE_LEAK_001",
+    "topic": "验证码泄露后的账户安全处置",
+    "related_behaviors": [
+      "验证码泄露",
+      "账户安全",
+      "止付冻结"
+    ],
+    "plain_summary": "验证码泄露可能导致登录、绑卡、转账授权，应立即修改密码、检查异常登录和支付授权，必要时冻结账户。",
+    "actions": [
+      "修改相关平台和支付账户密码",
+      "解绑银行卡或关闭免密支付",
+      "联系银行或支付平台检查异常交易"
+    ],
+    "evidence_to_preserve": [
+      "验证码短信时间",
+      "异常登录记录",
+      "交易记录",
+      "对方索要验证码的聊天记录"
+    ],
+    "disclaimer": "以下为一般账户安全处置建议，不构成法律意见。",
+    "related_scam_types": [
+      "验证码/账户盗刷诈骗",
+      "冒充客服诈骗",
+      "钓鱼链接诈骗",
+      "机票火车票退改签诈骗",
+      "奖助学金/学费退费诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_SCREEN_SHARE_DISSUASION_001",
+    "topic": "屏幕共享和远程控制风险处置",
+    "related_behaviors": [
+      "屏幕共享",
+      "远程控制",
+      "账户安全",
+      "证据保存"
+    ],
+    "plain_summary": "陌生人以客服、公安、导师等身份要求屏幕共享或远程控制时，可能看到验证码、银行卡、支付页面和操作过程。应立即断开会议或远程控制，并检查账户异常。",
+    "actions": [
+      "立即停止屏幕共享或远程控制",
+      "关闭银行、支付和验证码页面",
+      "修改重要账户密码并检查异常登录"
+    ],
+    "evidence_to_preserve": [
+      "会议软件名称",
+      "对方账号或号码",
+      "要求共享屏幕的聊天记录",
+      "异常登录或交易记录"
+    ],
+    "disclaimer": "以下为一般账户安全处置建议，不构成正式法律意见。",
+    "related_scam_types": [
+      "屏幕共享/远程控制诈骗",
+      "冒充客服诈骗",
+      "冒充公检法诈骗",
+      "征信修复/注销账户诈骗",
+      "机票火车票退改签诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_APP_INSTALL_RISK_001",
+    "topic": "陌生App安装与来源核验",
+    "related_behaviors": [
+      "陌生App",
+      "证据保存",
+      "举报"
+    ],
+    "plain_summary": "当对方要求安装陌生App、会议软件或投资/贷款平台时，应先核验来源和资质，不要从对方提供的链接或二维码直接安装。",
+    "actions": [
+      "只通过官方应用商店或官网获取软件",
+      "不要在陌生App里输入验证码、银行卡或身份证信息",
+      "保存安装页面、二维码和引导话术"
+    ],
+    "evidence_to_preserve": [
+      "安装来源",
+      "对方账号",
+      "二维码或下载链接",
+      "引导安装的聊天记录"
+    ],
+    "disclaimer": "以下为一般风险处置建议，不替代平台或公安机关意见。",
+    "related_scam_types": [
+      "网络贷款诈骗",
+      "虚假投资理财诈骗",
+      "屏幕共享/远程控制诈骗",
+      "裸聊敲诈勒索诈骗",
+      "钓鱼链接诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_ID_BANK_LEAK_001",
+    "topic": "身份证、银行卡等敏感信息泄露处置",
+    "related_behaviors": [
+      "身份信息泄露",
+      "银行卡泄露",
+      "人脸识别"
+    ],
+    "plain_summary": "身份证、银行卡、支付密码或人脸识别信息泄露后，应及时修改密码、冻结或挂失相关账户，并关注异常贷款、支付和登录。",
+    "actions": [
+      "联系银行挂失或限额",
+      "修改支付和网银密码",
+      "保留泄露信息的页面和聊天证据"
+    ],
+    "evidence_to_preserve": [
+      "提交信息页面截图",
+      "对方账号",
+      "聊天记录",
+      "银行或平台处理记录"
+    ],
+    "disclaimer": "以下为一般风险处置建议，不替代银行或公安机关意见。",
+    "related_scam_types": [
+      "网络贷款诈骗",
+      "钓鱼链接诈骗",
+      "奖助学金/学费退费诈骗",
+      "虚假中奖/免费礼品诈骗",
+      "冒充客服诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_PHISH_REPORT_001",
+    "topic": "钓鱼链接举报",
+    "related_behaviors": [
+      "钓鱼链接",
+      "举报",
+      "证据保存"
+    ],
+    "plain_summary": "收到疑似钓鱼链接时，不要继续填写信息，应保存链接、页面截图和发送者信息，并通过平台或公安渠道举报。",
+    "actions": [
+      "关闭页面并保存URL",
+      "截图页面要求填写的信息",
+      "在平台或浏览器安全入口举报"
+    ],
+    "evidence_to_preserve": [
+      "完整URL",
+      "页面截图",
+      "发送链接的账号或手机号",
+      "诱导话术"
+    ],
+    "disclaimer": "以下为一般举报建议，不构成对链接违法性的最终认定。",
+    "related_scam_types": [
+      "钓鱼链接诈骗",
+      "奖助学金/学费退费诈骗",
+      "虚假中奖/免费礼品诈骗",
+      "冒充客服诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_EVIDENCE_001",
+    "topic": "涉嫌电信网络诈骗证据保存",
+    "related_behaviors": [
+      "证据保存",
+      "报警",
+      "举报"
+    ],
+    "plain_summary": "疑似电信网络诈骗应尽量保存完整证据链，包括接触渠道、聊天记录、链接、App、转账凭证、收款账户和通话记录。",
+    "actions": [
+      "按时间顺序整理经过",
+      "截图保存对方账号和聊天内容",
+      "保存转账流水和收款账户"
+    ],
+    "evidence_to_preserve": [
+      "聊天记录",
+      "通话记录",
+      "转账凭证",
+      "收款账户",
+      "App名称和页面",
+      "链接和二维码"
+    ],
+    "disclaimer": "以下为一般证据保存建议，具体以公安机关要求为准。",
+    "related_scam_types": [
+      "刷单返利诈骗",
+      "冒充客服诈骗",
+      "冒充公检法诈骗",
+      "虚假投资理财诈骗",
+      "网络贷款诈骗",
+      "钓鱼链接诈骗",
+      "AI换脸冒充熟人诈骗",
+      "冒充领导或熟人借钱诈骗",
+      "验证码/账户盗刷诈骗",
+      "屏幕共享/远程控制诈骗",
+      "游戏交易诈骗",
+      "冒充老师辅导员收费诈骗",
+      "求职实习招聘诈骗",
+      "奖助学金/学费退费诈骗",
+      "考试考证论文服务诈骗",
+      "校园二手/票务交易诈骗",
+      "租房合租押金诈骗",
+      "裸聊敲诈勒索诈骗",
+      "两卡出租出借与跑分诈骗",
+      "机票火车票退改签诈骗",
+      "虚假中奖/免费礼品诈骗",
+      "征信修复/注销账户诈骗",
+      "情感交友诱导投资诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_VIRTUAL_ASSET_LOSS_001",
+    "topic": "虚拟资产损失后的证据保存与报案",
+    "related_behaviors": [
+      "虚拟资产损失",
+      "游戏装备",
+      "账号资产",
+      "证据保存",
+      "报警"
+    ],
+    "plain_summary": "游戏装备、账号、皮肤、点券等虚拟资产被骗后，应尽快固定账号归属、资产价值、交付过程和对方失联证据，并向平台申诉或向公安机关报案。",
+    "actions": [
+      "停止继续交付账号、装备或钱款",
+      "联系游戏平台客服申请冻结、找回或记录工单",
+      "整理时间线、账号信息、资产截图和聊天记录",
+      "根据损失情况拨打110或前往派出所报案"
+    ],
+    "evidence_to_preserve": [
+      "游戏账号归属证明",
+      "资产截图和估值依据",
+      "聊天记录",
+      "对方账号",
+      "交付记录",
+      "失联或拉黑证据"
+    ],
+    "disclaimer": "以下为一般处置建议，不构成正式法律意见；具体处理以公安机关、银行、平台和司法机关要求为准。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "related_scam_types": [
+      "游戏交易诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_TWO_CARDS_RISK_001",
+    "topic": "出租出借银行卡电话卡的风险处置",
+    "related_behaviors": [
+      "两卡",
+      "出租银行卡",
+      "出租电话卡",
+      "跑分",
+      "账户冻结",
+      "证据保存"
+    ],
+    "plain_summary": "出租、出借、出售实名银行卡、电话卡、收款码或账号可能被不法分子用于资金转移。发现已交出或被用于异常交易，应尽快停止、挂失冻结并保存招募和交易证据。",
+    "actions": [
+      "停止交卡、交码和代收代转",
+      "联系银行或运营商挂失、冻结或补办",
+      "保存招募聊天、佣金承诺和流水",
+      "如账户被冻结或发现涉案提示，按官方要求配合处理并咨询公安机关"
+    ],
+    "evidence_to_preserve": [
+      "招募聊天",
+      "对方账号",
+      "卡/码/账号交付记录",
+      "转账流水",
+      "佣金记录",
+      "冻结通知"
+    ],
+    "disclaimer": "以下为一般处置建议，不构成正式法律意见；具体处理以公安机关、银行、平台和司法机关要求为准。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "related_scam_types": [
+      "两卡出租出借与跑分诈骗",
+      "网络贷款诈骗",
+      "刷单返利诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_EXTORTION_EVIDENCE_001",
+    "topic": "裸聊敲诈勒索的一般处置",
+    "related_behaviors": [
+      "裸聊敲诈",
+      "隐私视频威胁",
+      "通讯录威胁",
+      "报警",
+      "证据保存"
+    ],
+    "plain_summary": "遭遇私密影像或通讯录威胁时，继续转账通常不能消除威胁，可能导致连续勒索。应先停止付款，保存证据并报警。",
+    "actions": [
+      "停止转账和回应威胁",
+      "保存威胁内容、账号、收款信息和App来源",
+      "不要删除通讯记录",
+      "拨打110或前往派出所报案"
+    ],
+    "evidence_to_preserve": [
+      "威胁聊天",
+      "对方账号",
+      "收款账户",
+      "转账凭证",
+      "App安装包来源",
+      "通讯录威胁截图"
+    ],
+    "disclaimer": "以下为一般处置建议，不构成正式法律意见；具体处理以公安机关、银行、平台和司法机关要求为准。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "related_scam_types": [
+      "裸聊敲诈勒索诈骗",
+      "考试考证论文服务诈骗"
+    ],
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "law_id": "LAW_OFFICIAL_VERIFICATION_001",
+    "topic": "官方渠道核验和二次确认",
+    "related_behaviors": [
+      "官方核验",
+      "身份核实",
+      "二次确认",
+      "保密催促"
+    ],
+    "related_scam_types": [
+      "刷单返利诈骗",
+      "冒充客服诈骗",
+      "冒充公检法诈骗",
+      "虚假投资理财诈骗",
+      "网络贷款诈骗",
+      "钓鱼链接诈骗",
+      "AI换脸冒充熟人诈骗",
+      "冒充领导或熟人借钱诈骗",
+      "验证码/账户盗刷诈骗",
+      "屏幕共享/远程控制诈骗",
+      "游戏交易诈骗",
+      "冒充老师辅导员收费诈骗",
+      "求职实习招聘诈骗",
+      "奖助学金/学费退费诈骗",
+      "考试考证论文服务诈骗",
+      "校园二手/票务交易诈骗",
+      "租房合租押金诈骗",
+      "裸聊敲诈勒索诈骗",
+      "两卡出租出借与跑分诈骗",
+      "机票火车票退改签诈骗",
+      "虚假中奖/免费礼品诈骗",
+      "征信修复/注销账户诈骗",
+      "情感交友诱导投资诈骗"
+    ],
+    "plain_summary": "遇到自称客服、公检法、老师、熟人、平台或投资贷款机构的人要求转账、验证码、屏幕共享时，应先脱离对方提供的渠道，通过官网、官方App、110、派出所或现实联系人核验。",
+    "actions": [
+      "挂断或暂停沟通",
+      "从官方App/官网/原号码重新发起联系",
+      "让家人、老师或同事参与核验"
+    ],
+    "evidence_to_preserve": [
+      "来电号码",
+      "账号主页",
+      "链接/App页面",
+      "要求保密或催促的聊天记录"
+    ],
+    "disclaimer": "以下为一般核验建议，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。"
+  },
+  {
+    "law_id": "LAW_SECONDARY_SCAM_PREVENTION_001",
+    "topic": "被骗后的二次诈骗防范",
+    "related_behaviors": [
+      "追回资金",
+      "网警",
+      "黑客追款",
+      "二次收费",
+      "证据保存"
+    ],
+    "related_scam_types": [
+      "刷单返利诈骗",
+      "冒充客服诈骗",
+      "冒充公检法诈骗",
+      "虚假投资理财诈骗",
+      "网络贷款诈骗",
+      "钓鱼链接诈骗",
+      "AI换脸冒充熟人诈骗",
+      "冒充领导或熟人借钱诈骗",
+      "验证码/账户盗刷诈骗",
+      "屏幕共享/远程控制诈骗",
+      "游戏交易诈骗",
+      "冒充老师辅导员收费诈骗",
+      "求职实习招聘诈骗",
+      "奖助学金/学费退费诈骗",
+      "考试考证论文服务诈骗",
+      "校园二手/票务交易诈骗",
+      "租房合租押金诈骗",
+      "裸聊敲诈勒索诈骗",
+      "两卡出租出借与跑分诈骗",
+      "机票火车票退改签诈骗",
+      "虚假中奖/免费礼品诈骗",
+      "征信修复/注销账户诈骗",
+      "情感交友诱导投资诈骗"
+    ],
+    "plain_summary": "被骗后声称能通过内部关系、网警、黑客或维权通道追回资金，并要求先交手续费、保证金或解冻费的，通常是二次诈骗风险。",
+    "actions": [
+      "只通过公安机关、银行、支付平台和官方平台跟进",
+      "不要向追款中介付款",
+      "补充新线索时提交给办案民警或官方平台"
+    ],
+    "evidence_to_preserve": [
+      "追款人员账号",
+      "收费要求",
+      "原诈骗证据",
+      "新的收款账户"
+    ],
+    "disclaimer": "追回资金以公安机关、银行和支付平台实际处理结果为准。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。"
+  },
+  {
+    "law_id": "LAW_CAMPUS_SUPPORT_001",
+    "topic": "学生和校园场景求助支持",
+    "related_behaviors": [
+      "学生求助",
+      "老师核验",
+      "家长协助",
+      "校园缴费",
+      "奖助学金"
+    ],
+    "related_scam_types": [
+      "冒充公检法诈骗",
+      "冒充老师辅导员收费诈骗",
+      "奖助学金/学费退费诈骗",
+      "网络贷款诈骗",
+      "求职实习招聘诈骗",
+      "考试考证论文服务诈骗"
+    ],
+    "plain_summary": "学生遇到恐吓、收费、贷款、奖助学金或求职类疑似诈骗时，不应独自承受压力，应尽快找老师、家长、学校相关部门或派出所核验。",
+    "actions": [
+      "告诉辅导员、班主任或家长",
+      "联系学校财务处、资助中心或就业中心",
+      "必要时拨打110或去派出所"
+    ],
+    "evidence_to_preserve": [
+      "通知截图",
+      "缴费二维码",
+      "对方账号",
+      "转账记录",
+      "威胁或保密话术"
+    ],
+    "disclaimer": "以下为校园场景一般求助建议，不替代学校正式处理或公安机关意见。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "https://www.gov.cn/",
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-06T00:00:48",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "legal_basis_type": "general_handling_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。"
+  },
+  {
+    "law_id": "LAW_CROSS_BORDER_FRAUD_2026_001",
+    "topic": "跨境电诈招募与出境风险处置",
+    "related_behaviors": [
+      "跨境电诈",
+      "境外高薪招工",
+      "限制人身自由",
+      "偷越国边境"
+    ],
+    "plain_summary": "跨境电诈相关违法犯罪可能同时涉及诈骗、组织偷越国边境、非法拘禁、帮助信息网络犯罪活动等风险。发现境外高薪招工诱骗，应停止联系并尽快向公安机关或人社部门核实。",
+    "actions": [
+      "停止联系招工方",
+      "不要出境或赴边境集合",
+      "保存广告、聊天和收费证据",
+      "向公安机关、人社部门或学校就业中心核实"
+    ],
+    "evidence_to_preserve": [
+      "广告截图",
+      "聊天记录",
+      "收费凭证",
+      "证件提交记录",
+      "集合地点"
+    ],
+    "disclaimer": "以下为一般风险处置和法律常识，不替代公安机关、司法机关、银行或专业律师意见。",
+    "related_scam_types": [
+      "跨境高薪招工诱骗诈骗",
+      "求职实习招聘诈骗"
+    ],
+    "legal_basis_type": "cross_border_official_opinion",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "law_id": "LAW_AI_DEEPFAKE_CASH_PICKUP_2026_001",
+    "topic": "AI拟声换脸与上门取现风险",
+    "related_behaviors": [
+      "AI拟声",
+      "AI换脸",
+      "上门取现",
+      "冒充熟人"
+    ],
+    "plain_summary": "冒充熟人、客服或工作人员并要求大额转账、交现金或上门取现时，即使声音或视频相似，也应通过原号码、线下见面或共同熟人二次核验。",
+    "actions": [
+      "停止转账或交现金",
+      "用原联系方式回拨核验",
+      "保存语音、视频、聊天和取现人员信息",
+      "必要时报警"
+    ],
+    "evidence_to_preserve": [
+      "语音视频记录",
+      "聊天记录",
+      "取现人员照片或信息",
+      "转账凭证"
+    ],
+    "disclaimer": "以下为一般风险处置和法律常识，不替代公安机关、司法机关、银行或专业律师意见。",
+    "related_scam_types": [
+      "AI换脸冒充熟人诈骗",
+      "冒充领导或熟人借钱诈骗"
+    ],
+    "legal_basis_type": "court_typical_case_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "law_id": "LAW_HEALTH_PRODUCT_CONSUMER_2026_001",
+    "topic": "保健品夸大宣传和老年消费维权",
+    "related_behaviors": [
+      "保健品虚假宣传",
+      "老年消费",
+      "免费讲座",
+      "高价预存"
+    ],
+    "plain_summary": "保健食品不能替代药品，宣称治疗疾病、虚构专家背书或诱导老年人高价购买的，可向市场监管、消协或公安机关反映。",
+    "actions": [
+      "停止继续购买",
+      "保存宣传材料、票据和产品包装",
+      "联系家人陪同维权",
+      "向市场监管或消协投诉"
+    ],
+    "evidence_to_preserve": [
+      "宣传单",
+      "产品包装",
+      "付款凭证",
+      "讲座照片",
+      "销售人员信息"
+    ],
+    "disclaimer": "以下为一般风险处置和法律常识，不替代公安机关、司法机关、银行或专业律师意见。",
+    "related_scam_types": [
+      "养老保健品诈骗"
+    ],
+    "legal_basis_type": "consumer_protection_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "law_id": "LAW_MEDICARE_FUND_2026_001",
+    "topic": "医保凭证外借与骗保风险",
+    "related_behaviors": [
+      "医保骗保",
+      "医保卡套现",
+      "倒卖医保药品",
+      "医保信息泄露"
+    ],
+    "plain_summary": "医保凭证、电子医保码和医保身份信息应由本人合规使用，外借套现、虚假就医购药或倒卖药品可能造成账户损失并承担相应责任。",
+    "actions": [
+      "停止外借医保凭证",
+      "查询医保消费明细",
+      "向医保部门反映异常",
+      "保存返钱或套现证据"
+    ],
+    "evidence_to_preserve": [
+      "医保消费记录",
+      "聊天记录",
+      "药品票据",
+      "返钱记录"
+    ],
+    "disclaimer": "以下为一般风险处置和法律常识，不替代公安机关、司法机关、银行或专业律师意见。",
+    "related_scam_types": [
+      "医保骗保/医保卡倒卖诈骗"
+    ],
+    "legal_basis_type": "medical_insurance_fund_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "law_id": "LAW_VIRTUAL_CURRENCY_LAUNDERING_2026_001",
+    "topic": "虚拟货币跑分与帮助犯罪风险",
+    "related_behaviors": [
+      "跑分洗钱",
+      "虚拟币转移",
+      "出借银行卡",
+      "帮助信息网络犯罪活动"
+    ],
+    "plain_summary": "出借银行卡、支付账户、收款码或虚拟币钱包代收代付陌生资金，可能帮助电信网络诈骗资金转移，面临账户冻结和刑事法律风险。",
+    "actions": [
+      "停止代收代付",
+      "不要再购买或转出虚拟币",
+      "保存流水、钱包地址和聊天记录",
+      "配合银行和公安核查"
+    ],
+    "evidence_to_preserve": [
+      "银行流水",
+      "支付流水",
+      "钱包地址",
+      "交易哈希",
+      "任务群聊天"
+    ],
+    "disclaimer": "以下为一般风险处置和法律常识，不替代公安机关、司法机关、银行或专业律师意见。",
+    "related_scam_types": [
+      "虚拟货币洗钱跑分诈骗",
+      "两卡出租出借与跑分诈骗"
+    ],
+    "legal_basis_type": "court_typical_case_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "law_id": "LAW_NATIONAL_ASSET_PROJECT_2026_001",
+    "topic": "虚假国家项目和民族资产解冻风险",
+    "related_behaviors": [
+      "民族资产解冻",
+      "虚假国家项目",
+      "伪造公文",
+      "拉人头"
+    ],
+    "plain_summary": "打着国家项目、资产解冻、内部补贴旗号收取会员费、激活费或要求拉人扩散的，应停止缴费并向公安机关举报。",
+    "actions": [
+      "停止缴费",
+      "不要转发伪造文件",
+      "保存群公告和收款信息",
+      "提醒亲友不要参与"
+    ],
+    "evidence_to_preserve": [
+      "群公告",
+      "伪造文件",
+      "收款码",
+      "管理员账号",
+      "拉人规则"
+    ],
+    "disclaimer": "以下为一般风险处置和法律常识，不替代公安机关、司法机关、银行或专业律师意见。",
+    "related_scam_types": [
+      "民族资产解冻/虚假国家项目诈骗"
+    ],
+    "legal_basis_type": "official_warning_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "law_id": "LAW_LIVE_COMMERCE_PRIVATE_TRADE_2026_001",
+    "topic": "直播私域交易消费维权和反诈处置",
+    "related_behaviors": [
+      "直播购物",
+      "私域交易",
+      "私下转账",
+      "货不对板"
+    ],
+    "plain_summary": "直播购物应保留在平台订单和售后体系内，私下扫码付款、货不对板或拒不退款时，应保存证据并联系平台、市场监管或消费者协会。",
+    "actions": [
+      "停止继续付款",
+      "保存直播和付款证据",
+      "联系平台官方客服",
+      "向市场监管或消协投诉"
+    ],
+    "evidence_to_preserve": [
+      "直播间截图",
+      "商品宣传",
+      "付款凭证",
+      "物流记录",
+      "售后聊天"
+    ],
+    "disclaimer": "以下为一般风险处置和法律常识，不替代公安机关、司法机关、银行或专业律师意见。",
+    "related_scam_types": [
+      "直播带货/私域交易诈骗"
+    ],
+    "legal_basis_type": "consumer_protection_guidance",
+    "user_visible_boundary": "只输出一般处置常识，不替代公安机关、银行或专业法律意见。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  }
+]

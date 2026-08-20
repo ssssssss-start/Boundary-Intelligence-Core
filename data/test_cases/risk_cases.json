@@ -1,0 +1,252 @@
+[
+  {
+    "case_id": "RISK_CASE_001",
+    "user_text": "我在群里做刷单任务，前两单返了几十元，现在提现失败，客服让我再交1000元解冻费。",
+    "expected_scam_type": "刷单返利诈骗",
+    "expected_features_any": [
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_002",
+    "user_text": "有人说半价代充游戏点券，让我先转账到个人账户，还要把账号密码发给他验号。",
+    "expected_scam_type": "游戏交易诈骗",
+    "expected_features_any": [
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金"
+    ],
+    "expected_risk_score_min": 78,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_003",
+    "user_text": "群里老师说有内部消息，让我下载一个投资App，保证三天20%收益，现在盈利不能提现，要先交税费。",
+    "expected_scam_type": "虚假投资理财诈骗",
+    "expected_features_any": [
+      "陌生投资平台",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "无法提现",
+      "要求缴纳解冻费",
+      "诱导下载陌生APP",
+      "要求垫付资金"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_004",
+    "user_text": "贷款App说额度批了，但银行卡号填错资金被冻结，要我先交解冻费和刷流水才能放款。",
+    "expected_scam_type": "网络贷款诈骗",
+    "expected_features_any": [
+      "贷款前收费",
+      "要求垫付资金",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "要求缴纳解冻费",
+      "无法提现"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_005",
+    "user_text": "有人说能包装学生资料办贷款，要先交资料费，还让我发身份证、学生证和银行卡验证码。",
+    "expected_scam_type": "网络贷款诈骗",
+    "expected_features_any": [
+      "校园贷包装",
+      "贷款前收费",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "诱导下载陌生APP"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_006",
+    "user_text": "自称快递客服说包裹丢了要理赔，发链接让我填银行卡和验证码，还让我开会议软件共享屏幕。",
+    "expected_scam_type": "冒充客服诈骗",
+    "expected_features_any": [
+      "冒充客服",
+      "索要验证码",
+      "屏幕共享",
+      "点击陌生链接",
+      "索要银行卡或身份信息",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_code_leak",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_007",
+    "user_text": "对方自称公安说我涉嫌洗钱，发了通缉令，让我保密并把钱转到安全账户。",
+    "expected_scam_type": "冒充公检法诈骗",
+    "expected_features_any": [
+      "冒充公检法",
+      "要求垫付资金",
+      "屏幕共享",
+      "远程控制",
+      "索要银行卡或身份信息",
+      "要求删除证据"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_008",
+    "user_text": "网恋对象说带我做虚拟币投资，平台一直盈利但提现要交保证金，他还劝我继续转钱。",
+    "expected_scam_type": "杀猪盘诈骗",
+    "expected_features_any": [
+      "陌生人引导",
+      "陌生投资平台",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "无法提现",
+      "要求垫付资金",
+      "要求缴纳解冻费"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_009",
+    "user_text": "短信说银行卡积分到期，链接进去要填身份证、银行卡和短信验证码。",
+    "expected_scam_type": "钓鱼链接诈骗",
+    "expected_features_any": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_code_leak",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_010",
+    "user_text": "陌生人说要验证我的账号信誉，催我60秒内把短信验证码发过去，还让我按要求做人脸识别。",
+    "expected_scam_type": "验证码/账户盗刷诈骗",
+    "expected_features_any": [
+      "索要验证码",
+      "冒充客服",
+      "点击陌生链接",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制"
+    ],
+    "expected_risk_score_min": 76,
+    "expected_intervention_goal": "stop_code_leak",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_011",
+    "user_text": "对方让我下载会议软件共享屏幕，说要帮我处理账户异常，我已经打开银行App了。",
+    "expected_scam_type": "屏幕共享/远程控制诈骗",
+    "expected_features_any": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "冒充客服",
+      "冒充公检法"
+    ],
+    "expected_risk_score_min": 77,
+    "expected_intervention_goal": "stop_screen_share",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_012",
+    "user_text": "领导新加我好友，说正在开会不方便电话，让我先给客户垫付一笔钱。",
+    "expected_scam_type": "冒充熟人诈骗",
+    "expected_features_any": [
+      "要求垫付资金",
+      "陌生人引导",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据"
+    ],
+    "expected_risk_score_min": 68,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_013",
+    "user_text": "卖家说演唱会票很便宜，但要我加私聊先转定金和保证金，不能走平台。",
+    "expected_scam_type": "虚假购物服务诈骗",
+    "expected_features_any": [
+      "要求垫付资金",
+      "私下交易",
+      "点击陌生链接",
+      "陌生人引导",
+      "无法提现",
+      "要求缴纳解冻费"
+    ],
+    "expected_risk_score_min": 68,
+    "expected_intervention_goal": "stop_transfer",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_COMMON_014",
+    "user_text": "我还没转钱，但对方一直催我共享屏幕看验证码。",
+    "expected_scam_type": "屏幕共享/远程控制诈骗",
+    "expected_features_any": [
+      "屏幕共享",
+      "索要验证码"
+    ],
+    "expected_risk_score_min": 80,
+    "expected_intervention_goal": "stop_screen_share",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  },
+  {
+    "case_id": "RISK_CASE_COMMON_015",
+    "user_text": "我已经给刷单平台转了3000元，现在客服说必须继续补单才能退本金。",
+    "expected_scam_type": "刷单返利诈骗",
+    "expected_features_any": [
+      "已发生转账",
+      "要求继续补单",
+      "任务返佣",
+      "要求垫付资金"
+    ],
+    "expected_risk_score_min": 90,
+    "expected_intervention_goal": "call_police",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理",
+    "enabled": true
+  }
+]

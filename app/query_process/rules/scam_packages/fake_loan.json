@@ -1,0 +1,70 @@
+{
+  "scam_id": "scam_fake_loan",
+  "name": "网络贷款诈骗",
+  "version": "1.0",
+  "aliases": [
+    "网络贷款",
+    "贷款App",
+    "放款",
+    "刷流水",
+    "解冻费",
+    "保证金"
+  ],
+  "features": [
+    {
+      "feature_name": "贷款前收费",
+      "keywords": [
+        "保证金",
+        "包装费",
+        "会员费",
+        "刷流水"
+      ],
+      "weight": 40,
+      "explanation": "正规贷款不会放款前收费。"
+    },
+    {
+      "feature_name": "要求缴纳解冻费",
+      "keywords": [
+        "银行卡填错",
+        "账户冻结",
+        "解冻费"
+      ],
+      "weight": 45,
+      "explanation": "解冻费是贷款诈骗高危话术。"
+    },
+    {
+      "feature_name": "诱导下载陌生APP",
+      "keywords": [
+        "贷款App",
+        "贷款软件",
+        "下载App"
+      ],
+      "weight": 35,
+      "explanation": "陌生贷款App可能收集隐私并诱导缴费。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_LOAN_PRE_FEE_001",
+      "rule_name": "网络贷款贷前收费规则",
+      "conditions": {
+        "all": [
+          "贷款前收费"
+        ],
+        "any": [
+          "要求垫付资金",
+          "要求缴纳解冻费",
+          "诱导下载陌生APP"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 93,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "贷前收费叠加解冻费或陌生App，触发强劝阻。",
+      "suggested_action": "停止缴费和提交敏感信息。"
+    }
+  ],
+  "responses": [],
+  "game_scenarios": []
+}

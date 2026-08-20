@@ -1,0 +1,9 @@
+{
+  "dataset": "case_derived_400",
+  "count": 400,
+  "case_family_count": 202,
+  "source": "database_snapshot/mongo/game_levels.json",
+  "status": "annotation_candidate_pool",
+  "blind_test_eligible": false,
+  "warning": "由项目已有题库衍生，会受到题库与系统知识重叠影响；须独立双人标注并按 case_family_id 分组切分。"
+}

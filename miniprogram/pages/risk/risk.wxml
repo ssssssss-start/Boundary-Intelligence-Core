@@ -1,0 +1,36 @@
+<view class="page">
+  <view class="section">
+    <view class="title">风险检测</view>
+    <view class="subtitle">输入聊天内容、链接或对方话术，小程序会调用现有后端做快速研判。</view>
+  </view>
+
+  <view class="surface section">
+    <view class="tabs">
+      <view class="tab {{mode === 'text' ? 'active' : ''}}" data-mode="text" bindtap="switchMode">文本</view>
+      <view class="tab {{mode === 'url' ? 'active' : ''}}" data-mode="url" bindtap="switchMode">链接/内容</view>
+    </view>
+    <textarea class="textarea" maxlength="1200" placeholder="粘贴需要检测的内容" value="{{content}}" bindinput="onInput"></textarea>
+    <button class="primary-btn check-btn" loading="{{loading}}" disabled="{{loading || !content}}" bindtap="submitCheck">开始检测</button>
+    <view class="status {{error ? 'error' : ''}}" wx:if="{{statusText}}">{{statusText}}</view>
+  </view>
+
+  <view class="surface result" wx:if="{{result}}">
+    <view class="result-head">
+      <view class="result-title">{{result.risk_level || result.message || '检测结果'}}</view>
+      <view class="pill" wx:if="{{result.scam_type || result.fraud_type}}">{{result.scam_type || result.fraud_type}}</view>
+    </view>
+    <view class="metric-row" wx:if="{{result.risk_score !== undefined}}">
+      <text>风险分</text>
+      <text>{{result.risk_score}}</text>
+    </view>
+    <view class="metric-row" wx:if="{{result.risk_rules}}">
+      <text>命中规则</text>
+      <text>{{rulesText}}</text>
+    </view>
+    <view class="advice" wx:if="{{adviceText}}">
+      <view class="label">建议</view>
+      <text>{{adviceText}}</text>
+    </view>
+    <view class="raw">{{rawResult}}</view>
+  </view>
+</view>

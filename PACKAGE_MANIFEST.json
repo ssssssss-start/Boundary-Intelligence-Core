@@ -1,0 +1,46 @@
+﻿{
+    "package_name":  "anti_fraud_project_full_20260731_221322",
+    "generated_at":  "2026-07-31T22:13:25.6078306+08:00",
+    "source_root":  "D:\\Ruikang\\anti_fraud_project_qwen_deepseek_deploy_20260630",
+    "included_files":  854,
+    "included_size_bytes":  357319315,
+    "included_size_mb":  340.77,
+    "video_candidate_files":  11,
+    "video_candidate_size_mb":  57.41,
+    "h5_build":  "verified_before_packaging",
+    "python_compileall":  "verified_before_packaging",
+    "database_snapshot":  {
+                              "included":  true,
+                              "files":  54,
+                              "size_mb":  24.34,
+                              "mongo_database":  "anti_fraud_rag",
+                              "mongo_collections":  52,
+                              "milvus_available":  true,
+                              "milvus_collections":  1,
+                              "contains_local_business_records":  true
+                          },
+    "included_components":  [
+                                "app",
+                                "data",
+                                "doc",
+                                "miniprogram",
+                                "mobile-app source and dist",
+                                "scripts",
+                                "test",
+                                "tests",
+                                "tts Kokoro model",
+                                "anti_fraud_video_candidates",
+                                "deployment and environment documentation"
+                            ],
+    "excluded":  [
+                     ".env",
+                     ".venv",
+                     ".video_tools",
+                     "mobile-app/node_modules",
+                     "models",
+                     "logs and runtime_*.log",
+                     "__pycache__ and *.pyc",
+                     "release output directory"
+                 ],
+    "sensitive_data_warning":  "database_snapshot contains local MongoDB records and must be treated as confidential."
+}

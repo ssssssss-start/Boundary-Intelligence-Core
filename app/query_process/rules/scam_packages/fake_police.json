@@ -1,0 +1,130 @@
+{
+  "scam_id": "scam_fake_police",
+  "name": "冒充公检法诈骗",
+  "version": "1.1",
+  "aliases": [
+    "公检法",
+    "公安",
+    "警察",
+    "安全账户",
+    "资金清查",
+    "涉案洗钱",
+    "违法物品",
+    "违禁品",
+    "涉案物品",
+    "违法包裹",
+    "涉嫌违法",
+    "银行流水"
+  ],
+  "features": [
+    {
+      "feature_name": "冒充公检法",
+      "keywords": [
+        "公安",
+        "警察",
+        "法院",
+        "检察院",
+        "公检法",
+        "违法物品",
+        "违禁品",
+        "涉案物品",
+        "违法包裹",
+        "涉嫌违法"
+      ],
+      "weight": 45,
+      "explanation": "冒充或借用司法机关、涉案违法名义制造恐慌。"
+    },
+    {
+      "feature_name": "涉案违法物品恐吓",
+      "keywords": [
+        "违法物品",
+        "违禁品",
+        "涉案物品",
+        "违法包裹",
+        "涉嫌违法",
+        "网购了一个违法物品"
+      ],
+      "weight": 45,
+      "explanation": "以网购物品、包裹或订单涉案违法为由施压。"
+    },
+    {
+      "feature_name": "安全账户",
+      "keywords": [
+        "安全账户",
+        "资金清查",
+        "指定账户"
+      ],
+      "weight": 50,
+      "explanation": "不存在所谓安全账户或线上资金清查。"
+    },
+    {
+      "feature_name": "索要银行流水或卡号",
+      "keywords": [
+        "银行流水",
+        "卡号",
+        "银行卡号",
+        "银行卡",
+        "个人信息",
+        "身份信息",
+        "身份证号"
+      ],
+      "weight": 40,
+      "explanation": "索要银行流水、卡号或身份信息，可能用于进一步盗刷、贷款或冒用身份。"
+    },
+    {
+      "feature_name": "要求删除证据",
+      "keywords": [
+        "不要告诉别人",
+        "保密",
+        "不要报警",
+        "删除聊天"
+      ],
+      "weight": 30,
+      "explanation": "阻断外界劝阻。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_POLICE_SAFE_ACCOUNT_001",
+      "rule_name": "冒充公检法安全账户规则",
+      "conditions": {
+        "all": [
+          "冒充公检法"
+        ],
+        "any": [
+          "安全账户",
+          "要求垫付资金",
+          "要求删除证据"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 99,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "冒充公检法并要求安全账户或保密，触发强劝阻。",
+      "suggested_action": "立即停止转账并拨打110或到派出所核实。"
+    },
+    {
+      "rule_id": "PKG_POLICE_ILLEGAL_ITEM_INFO_001",
+      "rule_name": "涉案违法物品索要敏感信息规则",
+      "conditions": {
+        "all": [
+          "涉案违法物品恐吓"
+        ],
+        "any": [
+          "索要银行流水或卡号",
+          "索要银行卡或身份信息",
+          "冒充公检法"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 86,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_sensitive_info",
+      "explanation": "以网购物品或包裹涉案违法为由，索要个人信息、银行流水或卡号，符合冒充公检法诈骗高危话术。",
+      "suggested_action": "不要提供个人信息、银行流水、银行卡号、身份证、密码或验证码；挂断后通过110或就近派出所核实。"
+    }
+  ],
+  "responses": [],
+  "game_scenarios": []
+}

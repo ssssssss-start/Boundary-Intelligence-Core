@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "name": "方向三反诈教育智能客服离线基准",
+    "version": "1.0.0",
+    "scope": "可复现的本地规则、意图路由与风险类型基线；不调用外部大模型",
+    "required_scam_types": ["刷单返利诈骗", "游戏交易诈骗", "冒充公检法诈骗", "虚假投资理财诈骗", "网络贷款诈骗"]
+  },
+  "route_cases": [
+    {"id":"r01","text":"什么是刷单返利诈骗？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r02","text":"校园贷诈骗怎么防范？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r03","text":"讲一个冒充公检法的典型案例","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r04","text":"游戏交易骗局有哪些套路？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r05","text":"虚假投资理财为什么不能提现？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r06","text":"转账前应该怎样核实收款人？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r07","text":"验证码为什么不能告诉陌生人？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r08","text":"屏幕共享诈骗的原理是什么？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r09","text":"帮我科普网络贷款诈骗","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r10","text":"学生兼职常见骗局有哪些？","expected":"knowledge_answer","group":"knowledge"},
+    {"id":"r11","text":"对方让我先垫付500元做联单，靠谱吗？","expected":"risk_case_flow","group":"risk"},
+    {"id":"r12","text":"我已经转账了，对方还让我继续补单怎么办？","expected":"risk_case_flow","group":"risk"},
+    {"id":"r13","text":"游戏群里有人让我把账号密码先给他验号，可以吗？","expected":"risk_case_flow","group":"risk"},
+    {"id":"r14","text":"自称公安的人让我把钱转到安全账户，我该怎么办？","expected":"risk_case_flow","group":"risk"},
+    {"id":"r15","text":"投资老师让我下载陌生App入金，现在不能提现","expected":"risk_case_flow","group":"risk"},
+    {"id":"r16","text":"贷款客服说银行卡填错了，让我交解冻费","expected":"risk_case_flow","group":"risk"},
+    {"id":"r17","text":"对方正在和我屏幕共享，还让我打开银行App","expected":"risk_case_flow","group":"risk"},
+    {"id":"r18","text":"我点了短信里的陌生链接，还填写了身份证和银行卡","expected":"risk_case_flow","group":"risk"},
+    {"id":"r19","text":"有人联系我说交押金就能保留宿舍床位，是真的吗？","expected":"risk_case_flow","group":"risk"},
+    {"id":"r20","text":"我看到出国高薪客服招聘，对方让我先交签证费","expected":"risk_case_flow","group":"risk"},
+    {"id":"r21","text":"你好","expected":"fallback","group":"smalltalk"},
+    {"id":"r22","text":"谢谢你","expected":"fallback","group":"smalltalk"},
+    {"id":"r23","text":"你是谁","expected":"fallback","group":"smalltalk"},
+    {"id":"r24","text":"我说的是中文","expected":"fallback","group":"smalltalk"},
+    {"id":"r25","text":"你听错了","expected":"fallback","group":"smalltalk"}
+  ],
+  "scam_cases": [
+    {"id":"s01","text":"我在兼职群刷单，前两单返了钱，现在让我垫付500元做联单","expected":"刷单返利诈骗"},
+    {"id":"s02","text":"刷了十几单后不能提现，对方要求继续补单","expected":"刷单返利诈骗"},
+    {"id":"s03","text":"游戏群有人叫我把装备先给他验货，再付款","expected":"游戏交易诈骗"},
+    {"id":"s04","text":"买游戏账号时，对方让我脱离平台交保证金","expected":"游戏交易诈骗"},
+    {"id":"s05","text":"自称公安说我涉嫌洗钱，让我转入安全账户并保密","expected":"冒充公检法诈骗"},
+    {"id":"s06","text":"假警察发来通缉令，要求屏幕共享配合资金清查","expected":"冒充公检法诈骗"},
+    {"id":"s07","text":"投资老师承诺稳赚，让我下载平台买虚拟币","expected":"虚假投资理财诈骗"},
+    {"id":"s08","text":"投资平台无法提现，还要交税费才能解冻","expected":"虚假投资理财诈骗"},
+    {"id":"s09","text":"贷款App放款前要求先交手续费和保证金","expected":"网络贷款诈骗"},
+    {"id":"s10","text":"校园贷款说银行卡错误，需要刷流水才能放款","expected":"网络贷款诈骗"}
+  ],
+  "knowledge_intent_cases": [
+    {"id":"k01","text":"什么是刷单诈骗","expected":"definition"},
+    {"id":"k02","text":"骗子一般是怎么操作的","expected":"technique"},
+    {"id":"k03","text":"给我讲一个真实案例","expected":"case"},
+    {"id":"k04","text":"平时应该怎么防范","expected":"prevention"},
+    {"id":"k05","text":"相关法律怎么规定","expected":"law"},
+    {"id":"k06","text":"刷单和虚假投资有什么区别","expected":"compare"},
+    {"id":"k07","text":"帮我总结一下重点","expected":"summary"}
+  ]
+}

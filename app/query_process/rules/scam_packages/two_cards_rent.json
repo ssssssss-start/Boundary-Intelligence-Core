@@ -1,0 +1,108 @@
+{
+  "scam_id": "scam_two_cards_rent",
+  "name": "两卡出租出借与跑分诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "两卡",
+    "跑分",
+    "出租银行卡",
+    "出借电话卡",
+    "租收款码",
+    "帮忙收款返佣"
+  ],
+  "features": [
+    {
+      "feature_name": "出租出借两卡",
+      "keywords": [
+        "出租银行卡",
+        "出借银行卡",
+        "出租电话卡",
+        "卖银行卡",
+        "卖电话卡",
+        "两卡"
+      ],
+      "weight": 50,
+      "explanation": "出租出借实名卡可能被用于违法犯罪活动。"
+    },
+    {
+      "feature_name": "帮忙收款跑分",
+      "keywords": [
+        "跑分",
+        "帮忙收款",
+        "刷流水",
+        "过账",
+        "转一圈",
+        "代收款"
+      ],
+      "weight": 52,
+      "explanation": "帮忙转移资金或跑分是高危违法风险信号。"
+    },
+    {
+      "feature_name": "日结高薪诱导",
+      "keywords": [
+        "一天几百",
+        "日结",
+        "高佣金",
+        "躺赚",
+        "无风险兼职"
+      ],
+      "weight": 28,
+      "explanation": "用高额日结诱导出租实名工具。"
+    },
+    {
+      "feature_name": "出租账号收款码",
+      "keywords": [
+        "收款码",
+        "微信账号",
+        "支付宝账号",
+        "实名账号",
+        "平台账号"
+      ],
+      "weight": 42,
+      "explanation": "实名账号和收款码也可能被用于收赃转账。"
+    },
+    {
+      "feature_name": "账户被冻结或涉案",
+      "keywords": [
+        "账户被冻结",
+        "涉案账户",
+        "公安冻结",
+        "银行卡冻结",
+        "资金被冻结"
+      ],
+      "weight": 45,
+      "explanation": "账户被冻结说明风险已经外溢，需要保留证据并按官方通知处理。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_TWO_CARDS_HIGH_001",
+      "rule_name": "两卡出租出借与跑分诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "出租出借两卡"
+        ],
+        "any": [
+          "帮忙收款跑分",
+          "日结高薪诱导",
+          "出租账号收款码",
+          "账户被冻结或涉案"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 96,
+      "risk_level": "高风险",
+      "intervention_goal": "preserve_evidence",
+      "explanation": "出租出借两卡叠加跑分、收款返佣或账户涉案，触发高危劝阻。",
+      "suggested_action": "立即停止出租出借卡、码、账号，保存招募和转账证据，必要时报警或咨询学校/警方。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html"
+  ]
+}

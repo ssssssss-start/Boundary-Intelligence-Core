@@ -1,0 +1,126 @@
+{
+  "scam_id": "scam_virtual_currency_laundering",
+  "name": "虚拟货币洗钱跑分诈骗",
+  "version": "1.0",
+  "updated_at": "2026-06-06",
+  "aliases": [
+    "虚拟币跑分",
+    "虚拟货币跑分",
+    "虚拟货币洗钱",
+    "USDT",
+    "USDT代买",
+    "数字货币",
+    "数字货币搬砖",
+    "跑分",
+    "刷流水",
+    "代收代付",
+    "银行卡刷流水"
+  ],
+  "features": [
+    {
+      "feature_name": "高佣金跑分",
+      "keywords": [
+        "高佣金",
+        "跑分",
+        "刷流水",
+        "日结",
+        "躺赚",
+        "无风险兼职",
+        "返佣",
+        "高返"
+      ],
+      "weight": 35,
+      "explanation": "以高佣金、日结或刷流水吸引用户参与资金过账。"
+    },
+    {
+      "feature_name": "出借账户收付款",
+      "keywords": [
+        "银行卡",
+        "支付宝",
+        "微信收款",
+        "收款码",
+        "代收",
+        "帮忙收款",
+        "代收代付",
+        "收款后转出"
+      ],
+      "weight": 40,
+      "explanation": "要求出借银行卡、支付账户、收款码或代收代付。"
+    },
+    {
+      "feature_name": "虚拟币转移资金",
+      "keywords": [
+        "USDT",
+        "usdt",
+        "虚拟币",
+        "虚拟货币",
+        "数字货币",
+        "钱包地址",
+        "链上转账",
+        "买U",
+        "U商"
+      ],
+      "weight": 40,
+      "explanation": "要求把收到的钱买成 USDT 等虚拟货币或转到链上地址。"
+    },
+    {
+      "feature_name": "资金来源不明",
+      "keywords": [
+        "不用问来源",
+        "帮忙过账",
+        "临时周转",
+        "客户款",
+        "走个流水",
+        "转一圈",
+        "资金过一下"
+      ],
+      "weight": 35,
+      "explanation": "回避资金来源，要求用户只负责收款、转账或过账。"
+    },
+    {
+      "feature_name": "账户被冻结",
+      "keywords": [
+        "银行卡冻结",
+        "支付宝冻结",
+        "微信冻结",
+        "司法冻结",
+        "止付",
+        "涉案账户",
+        "账户被冻结"
+      ],
+      "weight": 45,
+      "explanation": "账户被司法冻结、止付或标记涉案，说明风险已外溢。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_VIRTUAL_CURRENCY_LAUNDERING_001",
+      "rule_name": "虚拟货币洗钱跑分配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "高佣金跑分"
+        ],
+        "any": [
+          "出借账户收付款",
+          "虚拟币转移资金",
+          "资金来源不明",
+          "账户被冻结"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 97,
+      "risk_level": "极高风险",
+      "intervention_goal": "preserve_evidence",
+      "explanation": "跑分、刷流水、代收代付叠加 USDT/虚拟币转移或出借账户，触发涉诈资金转移和洗钱风险。",
+      "suggested_action": "立即停止收款、转账、买卖 USDT 或出借账户；保存招募、收款、钱包地址和转账记录，尽快联系银行/支付平台并向公安机关说明情况。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+    "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+    "https://www.mps.gov.cn/n6557563/c10155981/content.html"
+  ]
+}

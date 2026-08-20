@@ -1,0 +1,89 @@
+<view class="page training-page">
+  <view class="section">
+    <view class="title">防骗训练营</view>
+    <view class="subtitle">识别骗局信号，选择最安全的处置方式。</view>
+  </view>
+
+  <view class="stats section">
+    <view class="stat-card">
+      <text>积分</text>
+      <strong>{{report.score || 0}}</strong>
+    </view>
+    <view class="stat-card">
+      <text>段位</text>
+      <strong>{{report.rank_badge || report.assessment_level || '未测评'}}</strong>
+    </view>
+    <view class="stat-card">
+      <text>正确率</text>
+      <strong>{{accuracyText}}</strong>
+    </view>
+  </view>
+
+  <view class="surface level-card" wx:if="{{level}}">
+    <view class="battle-head">
+      <view>
+        <view class="battle-title">第 {{battle.stageNo}} 关 · {{battle.stageName}}</view>
+        <view class="battle-subtitle">第 {{battle.currentQuestion}}/{{battle.stageSize}} 题 · 守关骗子：{{battle.bossName}}</view>
+      </view>
+      <view class="hp-pill">血量 {{battle.bossHp}}/{{battle.stageSize}}</view>
+    </view>
+
+    <view class="stage-map">
+      <block wx:for="{{battle.nodes}}" wx:key="stageNo">
+        <view class="stage-node {{item.className}}" data-level-id="{{item.levelId}}" bindtap="jumpStage">{{item.stageNo}}</view>
+      </block>
+    </view>
+
+    <view class="hp-wrap">
+      <view class="hp-label">
+        <text>骗子血量</text>
+        <text>{{battle.bossHp}}/{{battle.stageSize}}</text>
+      </view>
+      <view class="hp-track">
+        <view class="hp-fill" style="width: {{battle.bossHpPercent}}%;"></view>
+      </view>
+    </view>
+
+    <view class="progress-dots">
+      <block wx:for="{{battle.dots}}" wx:key="no">
+        <view class="dot {{item.className}}">{{item.no}}</view>
+      </block>
+    </view>
+
+    <view class="level-meta">
+      <text>第 {{level.level_no || level.level_id}} 题</text>
+      <text>{{level.difficulty || '基础'}}</text>
+    </view>
+    <view class="level-title">{{level.title || level.chapter || '反诈闯关'}}</view>
+    <view class="scenario">{{scenarioText}}</view>
+    <view class="question">{{questionText}}</view>
+
+    <view class="options">
+      <block wx:for="{{options}}" wx:key="text">
+        <view class="option {{item.selected ? 'selected' : ''}}" data-value="{{item.text}}" bindtap="selectOption">
+          {{index + 1}}. {{item.text}}
+        </view>
+      </block>
+    </view>
+
+    <view class="result {{result && result.correct ? 'correct' : 'wrong'}}" wx:if="{{result}}">
+      <view class="result-title">{{result.correct ? '回答正确' : '回答错误'}}</view>
+      <view>你的选择：{{result.selected_answer || selectedAnswer}}</view>
+      <view>正确答案：{{result.answer}}</view>
+      <view wx:if="{{result.explanation}}">解析：{{result.explanation}}</view>
+    </view>
+
+    <view class="button-row">
+      <button class="ghost-btn" loading="{{loading}}" disabled="{{loading}}" bindtap="reloadLevel">刷新</button>
+      <button class="primary-btn" wx:if="{{!result}}" loading="{{submitting}}" disabled="{{submitting || !selectedAnswer}}" bindtap="submitAnswer">提交答案</button>
+      <button class="primary-btn" wx:else loading="{{loading}}" disabled="{{loading}}" bindtap="nextLevel">下一题</button>
+    </view>
+  </view>
+
+  <view class="surface empty-card" wx:else>
+    <view class="subtitle">{{statusText || '正在加载关卡'}}</view>
+    <button class="primary-btn" loading="{{loading}}" bindtap="reloadLevel">重新加载</button>
+  </view>
+
+  <view class="status {{error ? 'error' : ''}}" wx:if="{{statusText}}">{{statusText}}</view>
+</view>

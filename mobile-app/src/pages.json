@@ -1,0 +1,37 @@
+{
+  "pages": [
+    {
+      "path": "pages/chat/chat",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "反诈助手"
+      }
+    },
+    {
+      "path": "pages/video-webview/video-webview",
+      "style": {
+        "navigationBarTitleText": "官方反诈视频"
+      }
+    },
+    {
+      "path": "pages/training/training",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "防骗训练营"
+      }
+    },
+    {
+      "path": "pages/simulation/simulation",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "骗局模拟"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "反诈助手",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "scam_id": "scam_secondhand_ticket_trade",
+  "name": "校园二手/票务交易诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "校园二手",
+    "低价数码",
+    "演唱会票",
+    "赛事门票",
+    "景区门票",
+    "代购",
+    "黄牛票"
+  ],
+  "features": [
+    {
+      "feature_name": "内部低价票货",
+      "keywords": [
+        "内部票",
+        "黄牛保真",
+        "低价出",
+        "低价手机",
+        "低价电脑",
+        "内部渠道"
+      ],
+      "weight": 32,
+      "explanation": "低价和内部渠道常用于引导私下交易。"
+    },
+    {
+      "feature_name": "私下转账定金",
+      "keywords": [
+        "先付定金",
+        "订金",
+        "保证金",
+        "中介费",
+        "微信转账",
+        "支付宝转账"
+      ],
+      "weight": 42,
+      "explanation": "先转定金会失去平台担保。"
+    },
+    {
+      "feature_name": "脱离担保平台",
+      "keywords": [
+        "不走平台",
+        "平台手续费高",
+        "加微信",
+        "私下交易",
+        "平台外"
+      ],
+      "weight": 38,
+      "explanation": "脱离平台交易是二手和票务诈骗高危信号。"
+    },
+    {
+      "feature_name": "票务退款屏幕共享",
+      "keywords": [
+        "退票理赔",
+        "票务退款",
+        "屏幕共享",
+        "会议软件",
+        "远程协助"
+      ],
+      "weight": 45,
+      "explanation": "票务退款若要求屏幕共享，可能进一步盗刷账户。"
+    },
+    {
+      "feature_name": "卖家催促抢名额",
+      "keywords": [
+        "马上付款",
+        "只剩一张",
+        "别人也要",
+        "限时",
+        "先款后发"
+      ],
+      "weight": 24,
+      "explanation": "催促抢名额会压缩核验时间。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_SECONDHAND_TICKET_HIGH_001",
+      "rule_name": "校园二手/票务交易诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "内部低价票货"
+        ],
+        "any": [
+          "私下转账定金",
+          "脱离担保平台",
+          "卖家催促抢名额",
+          "票务退款屏幕共享"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 90,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "低价二手/票务叠加定金、平台外交易或催促付款，触发高危劝阻。",
+      "suggested_action": "停止私下转账，只使用官方票务或有担保平台。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+    "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html"
+  ]
+}

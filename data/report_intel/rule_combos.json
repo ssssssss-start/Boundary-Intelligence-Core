@@ -1,0 +1,134 @@
+[
+  {
+    "rule_id": "RR_BRUSH_HIGH",
+    "name": "刷单返利高危组合",
+    "scam_id": "scam_brush_rebate",
+    "conditions": {"all": ["任务返佣", "要求垫付资金"], "any": ["小额返利诱饵", "提现受阻", "继续收费名目"], "min_any": 1},
+    "risk_score": 96,
+    "risk_level": "极高风险",
+    "evidence_template": "任务返佣叠加垫付、补单或提现受阻，符合刷单返利诈骗高危模式。",
+    "advice_tags": ["stop_transfer", "save_evidence"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_BRUSH_WITHDRAW",
+    "name": "提现受阻继续收费组合",
+    "scam_id": "scam_brush_rebate",
+    "conditions": {"all": ["提现受阻"], "any": ["继续收费名目", "要求垫付资金"], "min_any": 1},
+    "risk_score": 92,
+    "risk_level": "极高风险",
+    "evidence_template": "提现失败后继续要求补单或交费，是扩大损失的典型节点。",
+    "advice_tags": ["stop_transfer", "save_evidence"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_LOAN_UPFRONT",
+    "name": "虚假贷款前收费组合",
+    "scam_id": "scam_fake_loan",
+    "conditions": {"all": ["低门槛快速贷款", "贷款前收费"], "any": ["索要身份银行卡信息"], "min_any": 0},
+    "risk_score": 94,
+    "risk_level": "极高风险",
+    "evidence_template": "低门槛贷款叠加放款前收费，符合虚假网络贷款诈骗模式。",
+    "advice_tags": ["stop_transfer", "bank_protect", "save_evidence"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_INVEST_PLATFORM",
+    "name": "虚假投资平台组合",
+    "scam_id": "scam_fake_investment",
+    "conditions": {"all": ["投资老师带单", "陌生投资平台"], "any": ["保本高收益诱导", "提现受阻", "继续收费名目"], "min_any": 1},
+    "risk_score": 95,
+    "risk_level": "极高风险",
+    "evidence_template": "投资老师带单、陌生平台充值和高收益/提现受阻组合，符合虚假投资理财诈骗。",
+    "advice_tags": ["stop_transfer", "save_evidence"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_CUSTOMER_CODE",
+    "name": "冒充客服索要验证码组合",
+    "scam_id": "scam_ecommerce_customer_service",
+    "conditions": {"all": ["退款理赔诱导"], "any": ["索要验证码", "屏幕共享或远程控制", "陌生链接诱导"], "min_any": 1},
+    "risk_score": 90,
+    "risk_level": "极高风险",
+    "evidence_template": "客服退款理赔叠加验证码、屏幕共享或陌生链接，存在盗刷和信息泄露风险。",
+    "advice_tags": ["verify_official", "protect_account", "stop_screen_share"],
+    "source_refs": ["src_mps_high_frequency", "src_anti_fraud_law"]
+  },
+  {
+    "rule_id": "RR_POLICE_SAFE_ACCOUNT",
+    "name": "冒充公检法安全账户组合",
+    "scam_id": "scam_impersonate_police",
+    "conditions": {"all": ["冒充公检法涉案恐吓"], "any": ["安全账户或资金清查", "屏幕共享或远程控制", "要求保密和制造紧迫"], "min_any": 1},
+    "risk_score": 98,
+    "risk_level": "极高风险",
+    "evidence_template": "自称公检法并要求资金清查、安全账户或屏幕共享，是冒充公检法诈骗高危组合。",
+    "advice_tags": ["stop_transfer", "call_police", "stop_screen_share"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_CREDIT_CAMPUS",
+    "name": "虚假征信注销校园贷组合",
+    "scam_id": "scam_credit_cleanup",
+    "conditions": {"all": ["虚假征信修复"], "any": ["注销校园贷话术", "贷款前收费", "索要身份银行卡信息"], "min_any": 1},
+    "risk_score": 92,
+    "risk_level": "极高风险",
+    "evidence_template": "征信修复或注销校园贷叠加收费、借款或敏感信息索取，符合虚假征信类诈骗。",
+    "advice_tags": ["verify_official", "stop_transfer", "bank_protect"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_GAME_FREEZE",
+    "name": "网络游戏交易冻结收费组合",
+    "scam_id": "scam_game_trade",
+    "conditions": {"all": ["游戏虚拟物交易", "游戏交易冻结收费"], "any": ["脱离平台付款"], "min_any": 0},
+    "risk_score": 90,
+    "risk_level": "极高风险",
+    "evidence_template": "游戏虚拟物交易中出现冻结、保证金、认证费或解冻费，存在虚假交易平台风险。",
+    "advice_tags": ["stop_transfer", "save_evidence"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_PRIVATE_SHOPPING",
+    "name": "虚假购物私下付款组合",
+    "scam_id": "scam_fake_shopping_service",
+    "conditions": {"all": ["低价稀缺商品诱导", "脱离平台付款"], "any": ["继续收费名目", "陌生链接诱导"], "min_any": 0},
+    "risk_score": 86,
+    "risk_level": "高风险",
+    "evidence_template": "低价稀缺商品叠加脱离平台付款，存在虚假购物服务诈骗风险。",
+    "advice_tags": ["stop_transfer", "save_evidence"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_ACQUAINTANCE_TRANSFER",
+    "name": "冒充熟人紧急转账组合",
+    "scam_id": "scam_impersonate_acquaintance",
+    "conditions": {"all": ["熟人紧急借钱"], "any": ["脱离平台付款", "要求保密和制造紧迫"], "min_any": 0},
+    "risk_score": 78,
+    "risk_level": "高风险",
+    "evidence_template": "自称熟人、领导或老师并催促转账，需先通过原联系方式核实身份。",
+    "advice_tags": ["verify_identity", "stop_transfer"],
+    "source_refs": ["src_mps_high_frequency"]
+  },
+  {
+    "rule_id": "RR_PRIZE_PRIVATE_CONTACT",
+    "name": "中奖领奖私域引流组合",
+    "scam_id": "scam_prize_phishing",
+    "conditions": {"all": ["中奖免费礼品诱导"], "any": ["私域联系方式诱导", "陌生链接诱导", "索要验证码", "索要身份银行卡信息", "领奖前收费"], "min_any": 1},
+    "risk_score": 88,
+    "risk_level": "高风险",
+    "evidence_template": "中奖、福利或领奖信息叠加加微信/QQ、陌生链接、填写敏感信息或先交费，存在钓鱼领奖诈骗风险。",
+    "advice_tags": ["verify_official", "protect_account", "stop_transfer"],
+    "source_refs": ["src_mps_high_frequency", "src_12321"]
+  },
+  {
+    "rule_id": "RR_PHISHING_ACCOUNT",
+    "name": "钓鱼链接索取账户信息组合",
+    "scam_id": "scam_phishing_link",
+    "conditions": {"all": ["陌生链接诱导"], "any": ["索要验证码", "索要身份银行卡信息", "屏幕共享或远程控制"], "min_any": 1},
+    "risk_score": 90,
+    "risk_level": "极高风险",
+    "evidence_template": "陌生链接叠加验证码、银行卡或身份信息索取，存在钓鱼和账户盗刷风险。",
+    "advice_tags": ["protect_account", "verify_official", "save_evidence"],
+    "source_refs": ["src_12321", "src_safe_browsing"]
+  }
+]

@@ -1,0 +1,70 @@
+<view class="page simulation-page">
+  <view class="section">
+    <view class="title">实时骗局模拟</view>
+    <view class="subtitle">和模拟骗子对练。明确拒绝、官方核实、保留证据才能拿高分。</view>
+  </view>
+
+  <view class="surface section" wx:if="{{!sessionId}}">
+    <view class="label">难度</view>
+    <picker mode="selector" range="{{difficultyLabels}}" value="{{difficultyIndex}}" bindchange="onDifficultyChange">
+      <view class="picker">{{difficultyLabels[difficultyIndex]}}</view>
+    </picker>
+    <view class="label second-label">骗子音色</view>
+    <picker mode="selector" range="{{speakerLabels}}" value="{{speakerIndex}}" bindchange="onSpeakerChange">
+      <view class="picker">{{speakerLabels[speakerIndex]}}</view>
+    </picker>
+    <view class="button-row">
+      <button class="primary-btn" loading="{{loading}}" disabled="{{loading}}" bindtap="startSimulation">开始模拟</button>
+    </view>
+  </view>
+
+  <view class="surface scenario" wx:if="{{simulation}}">
+    <view class="scenario-head">
+      <view>
+        <view class="scenario-title">{{simulation.fraud_type || '典型骗局'}}</view>
+        <view class="scenario-subtitle">{{simulation.difficulty_label || '中等模式'}} · {{simulation.turn_count || 0}}/{{simulation.max_turns || 0}} 轮</view>
+      </view>
+      <view class="pill">自称：{{simulation.scammer_identity || '平台工作人员'}}</view>
+    </view>
+    <view class="risk-list" wx:if="{{riskText}}">风险信号：{{riskText}}</view>
+  </view>
+
+  <scroll-view class="messages surface" scroll-y scroll-into-view="{{lastMessageId}}" wx:if="{{sessionId}}">
+    <block wx:for="{{messages}}" wx:key="id">
+      <view id="{{item.id}}" class="msg {{item.role}}">
+        <view class="msg-role">{{item.roleLabel}}</view>
+        <view class="msg-bubble">{{item.content}}</view>
+      </view>
+    </block>
+    <view wx:if="{{result}}" class="final-card">
+      <view class="final-title">{{result.outcome}}</view>
+      <view>得分：{{result.score}}</view>
+      <view wx:if="{{result.debrief}}">{{result.debrief}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="surface composer" wx:if="{{sessionId && !finished}}">
+    <view class="call-tools">
+      <picker class="speaker-picker" mode="selector" range="{{speakerLabels}}" value="{{speakerIndex}}" bindchange="onSpeakerChange">
+        <view class="speaker-value">音色：{{speakerLabels[speakerIndex]}}</view>
+      </picker>
+      <button class="call-btn {{callActive ? 'active' : ''}}" bindtap="toggleCall">{{callActive ? '挂断' : '电话模式'}}</button>
+    </view>
+    <view class="call-status">{{callStatus}}</view>
+    <textarea class="textarea" maxlength="500" auto-height placeholder="输入你的回应，例如：我不转账，我要去官方渠道核实。" value="{{inputText}}" bindinput="onInput"></textarea>
+    <view class="button-row">
+      <button class="ghost-btn" bindtap="toggleRecord">{{recording ? '停止录音' : '语音'}}</button>
+      <button class="ghost-btn" bindtap="finishSimulation">结束</button>
+      <button class="primary-btn" loading="{{loading}}" disabled="{{loading || !inputText}}" bindtap="sendTurn">发送</button>
+    </view>
+    <view class="button-row">
+      <button class="ghost-btn" bindtap="replayLastScammer">播放对方话术</button>
+    </view>
+  </view>
+
+  <view class="button-row" wx:if="{{finished}}">
+    <button class="primary-btn" bindtap="resetSimulation">再来一局</button>
+  </view>
+
+  <view class="status {{error ? 'error' : ''}}" wx:if="{{statusText}}">{{statusText}}</view>
+</view>

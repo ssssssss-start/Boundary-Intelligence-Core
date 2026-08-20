@@ -1,0 +1,5072 @@
+[
+  {
+    "knowledge_id": "brush_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是刷单返利诈骗",
+    "summary": "刷单返利诈骗的定义、入口和核心风险。",
+    "content": "刷单返利诈骗通常通过QQ群, 微信群, 短视频私信等渠道接触用户。它的核心套路是：先安排低门槛任务并返还小额佣金，随后要求垫付更大订单，最后用卡单、联单、提现失败、解冻费等理由继续要钱。识别时不要只看对方身份包装，而要看是否要求用户垫付订单、继续补单、缴纳解冻费或向私人账户转账。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是刷单返利诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "科普学习",
+    "title": "刷单返利诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：发布兼职返佣广告；引导加群或下载任务App；小额任务返利；诱导大额垫付或联单；提现失败后继续索要费用；拉黑或继续拖延。每一步都可能包装成合理业务，但只要进入垫付订单、继续补单、缴纳解冻费或向私人账户转账，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问刷单返利诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "刷单返利诈骗的高危识别信号",
+    "summary": "命中需要先垫付资金等信号时，应立即暂停。",
+    "content": "刷单返利诈骗的高危信号包括：陌生人引导, 任务返佣, 要求垫付资金, 承诺返利, 小额返利, 大额垫付, 无法提现, 要求继续补单, 要求缴纳解冻费, 已发生转账。其中最需要立即阻断的是垫付订单、继续补单、缴纳解冻费或向私人账户转账。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "刷单返利诈骗的防范建议",
+    "summary": "立即停止补单和任何新增转账，退出对方指定App但保留截图。",
+    "content": "当前最稳妥的动作是：立即停止补单和任何新增转账，退出对方指定App但保留截图。核验方式：正规兼职不会要求先垫付本金；招聘信息应通过官方招聘平台和用工主体核验。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "刷单返利诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。已转账时尽快联系银行或支付平台止付，同时报警并说明刷单返利、垫付、不能提现和继续补单的时间线。同时保留证据：群聊和客服聊天记录, 任务页面, App名称和下载链接, 收款账户, 转账凭证, 提现失败截图。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "刷单返利诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：群聊和客服聊天记录, 任务页面, App名称和下载链接, 收款账户, 转账凭证, 提现失败截图。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "刷单返利诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇刷单返利诈骗，通过兼职群接触对方，对方要求我垫付订单、继续补单、缴纳解冻费或向私人账户转账。我现在保存了群聊和客服聊天记录, 任务页面, App名称和下载链接, 收款账户等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "刷单返利诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似刷单返利诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "刷单返利诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续垫付订单、继续补单、缴纳解冻费或向私人账户转账，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "科普学习",
+    "title": "刷单返利诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "刷单返利诈骗警方公开案例：小额返利后诱导连续垫付。案例来源：典型案例一，警方公开案例披露约42万元。过程包括：被评论区信息引流到兼职刷单；完成小额任务并获得返利；下载指定App后继续做大额任务；以账户冻结、解冻费等理由多次转账。复盘重点是：小额返利不能证明平台真实，一旦出现垫付、补单、解冻费，应立即停止。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "brush_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "刷单返利诈骗",
+    "fraud_stage": "科普学习",
+    "title": "刷单返利诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你垫付订单、继续补单、缴纳解冻费或向私人账户转账的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：正规兼职不会要求先垫付本金；招聘信息应通过官方招聘平台和用工主体核验。",
+    "risk_tags": [
+      "陌生人引导",
+      "任务返佣",
+      "要求垫付资金",
+      "承诺返利",
+      "小额返利",
+      "大额垫付",
+      "无法提现",
+      "要求继续补单",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是游戏交易诈骗",
+    "summary": "游戏交易诈骗的定义、入口和核心风险。",
+    "content": "游戏交易诈骗通常通过游戏群, 贴吧论坛, 二手平台私信等渠道接触用户。它的核心套路是：用低价、急售、包赔或担保客服伪装吸引用户，随后要求平台外付款、交账号密码、点击验号链接或缴纳保证金。识别时不要只看对方身份包装，而要看是否要求用户私下付款、发送账号密码、点击验号链接或提供验证码。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是游戏交易诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "科普学习",
+    "title": "游戏交易诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：发布低价或急售游戏资产；诱导私聊；提出平台外付款或验号；索要账号密码/验证码；盗号或收款后拉黑。每一步都可能包装成合理业务，但只要进入私下付款、发送账号密码、点击验号链接或提供验证码，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问游戏交易诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "游戏交易诈骗的高危识别信号",
+    "summary": "命中脱离平台私下交易等信号时，应立即暂停。",
+    "content": "游戏交易诈骗的高危信号包括：陌生人引导, 私下交易, 低价代充, 账号密码索取, 点击陌生链接, 索要验证码, 要求垫付资金, 已发生转账。其中最需要立即阻断的是私下付款、发送账号密码、点击验号链接或提供验证码。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "游戏交易诈骗的防范建议",
+    "summary": "停止平台外交易，不交账号密码和验证码，关闭陌生验号链接。",
+    "content": "当前最稳妥的动作是：停止平台外交易，不交账号密码和验证码，关闭陌生验号链接。核验方式：只使用官方交易、充值和找回渠道；第三方担保客服身份必须在原平台内核验。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "游戏交易诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。通过游戏平台和支付平台投诉冻结账号交易，同时报警说明虚拟物品交易和资金流向。同时保留证据：交易聊天记录, 对方游戏ID, 收款码, 验号链接, 账号登录提醒, 转账凭证。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "游戏交易诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：交易聊天记录, 对方游戏ID, 收款码, 验号链接, 账号登录提醒, 转账凭证。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "游戏交易诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇游戏交易诈骗，通过游戏交易群接触对方，对方要求我私下付款、发送账号密码、点击验号链接或提供验证码。我现在保存了交易聊天记录, 对方游戏ID, 收款码, 验号链接等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "游戏交易诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似游戏交易诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "游戏交易诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续私下付款、发送账号密码、点击验号链接或提供验证码，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "科普学习",
+    "title": "游戏交易诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "游戏交易诈骗警方公开案例：私下买卖游戏账号后被拉黑。案例来源：典型案例十，警方公开案例披露6000元。过程包括：群内看到低价出售游戏账号信息；脱离正规平台联系卖家；按要求支付账号交易费用；付款后无法取得账号且对方失联。复盘重点是：游戏账号、装备、点券交易应坚持官方平台担保，不要私下转账。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "game_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "游戏交易诈骗",
+    "fraud_stage": "科普学习",
+    "title": "游戏交易诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你私下付款、发送账号密码、点击验号链接或提供验证码的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：只使用官方交易、充值和找回渠道；第三方担保客服身份必须在原平台内核验。",
+    "risk_tags": [
+      "陌生人引导",
+      "私下交易",
+      "低价代充",
+      "账号密码索取",
+      "点击陌生链接",
+      "索要验证码",
+      "要求垫付资金",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是虚假投资理财诈骗",
+    "summary": "虚假投资理财诈骗的定义、入口和核心风险。",
+    "content": "虚假投资理财诈骗通常通过投资群, 婚恋社交, 短视频直播等渠道接触用户。它的核心套路是：通过群内角色配合和虚假盈利截图制造可信度，引导用户到非正规平台入金，后续用税费、保证金、风控解除等名义阻止提现。识别时不要只看对方身份包装，而要看是否要求用户向陌生投资平台充值、加仓、缴税费或交保证金。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是虚假投资理财诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "科普学习",
+    "title": "虚假投资理财诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：拉入投资群；老师讲课晒收益；引导下载平台；小额盈利诱导加仓；提现受阻要求缴费；继续收割或失联。每一步都可能包装成合理业务，但只要进入向陌生投资平台充值、加仓、缴税费或交保证金，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问虚假投资理财诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "虚假投资理财诈骗的高危识别信号",
+    "summary": "命中陌生平台承诺高收益等信号时，应立即暂停。",
+    "content": "虚假投资理财诈骗的高危信号包括：陌生人引导, 高收益诱导, 保本稳赚承诺, 陌生投资平台, 诱导下载陌生APP, 要求垫付资金, 无法提现, 要求缴纳解冻费, 已发生转账。其中最需要立即阻断的是向陌生投资平台充值、加仓、缴税费或交保证金。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "虚假投资理财诈骗的防范建议",
+    "summary": "停止入金和缴费，保存平台页面、导师话术、充值地址和转账记录。",
+    "content": "当前最稳妥的动作是：停止入金和缴费，保存平台页面、导师话术、充值地址和转账记录。核验方式：投资平台应核验金融业务资质、官方渠道和资金托管，不相信保本稳赚和内部消息。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "虚假投资理财诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。已入金时同时联系银行/支付平台止付并报警，说明平台名称、充值账户、诱导人员和提现受阻经过。同时保留证据：投资群聊天, 老师和助理账号, 平台网址/App, 充值地址, 交易流水, 提现失败页面。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "虚假投资理财诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：投资群聊天, 老师和助理账号, 平台网址/App, 充值地址, 交易流水, 提现失败页面。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "虚假投资理财诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇虚假投资理财诈骗，通过投资交流群接触对方，对方要求我向陌生投资平台充值、加仓、缴税费或交保证金。我现在保存了投资群聊天, 老师和助理账号, 平台网址/App, 充值地址等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "虚假投资理财诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似虚假投资理财诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "虚假投资理财诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续向陌生投资平台充值、加仓、缴税费或交保证金，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "科普学习",
+    "title": "虚假投资理财诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "虚假投资理财警方公开案例：荐股群诱导下载陌生平台入金。案例来源：典型案例二，警方公开案例披露先后转入100万余元和40万余元。过程包括：被拉入股票推荐群并接受老师荐股；点击群内链接下载陌生投资App；平台显示盈利后被诱导继续入金；提现受阻并被要求继续缴费。复盘重点是：陌生投资平台、高收益承诺、导师荐股和提现收费同时出现，应按极高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "invest_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "虚假投资理财诈骗",
+    "fraud_stage": "科普学习",
+    "title": "虚假投资理财诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你向陌生投资平台充值、加仓、缴税费或交保证金的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：投资平台应核验金融业务资质、官方渠道和资金托管，不相信保本稳赚和内部消息。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是网络贷款诈骗",
+    "summary": "网络贷款诈骗的定义、入口和核心风险。",
+    "content": "网络贷款诈骗通常通过短信广告, 网页弹窗, 短视频广告等渠道接触用户。它的核心套路是：先显示额度已批或放款成功，再编造银行卡错误、流水不足、账户冻结、会员等级不够等理由要求先交钱。识别时不要只看对方身份包装，而要看是否要求用户放款前缴纳保证金、会员费、解冻费或刷流水。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是网络贷款诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "网络贷款诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：发布贷款广告；展示预审批额度；要求下载App并填资料；放款前收费；制造冻结继续收费；失联或继续威胁征信。每一步都可能包装成合理业务，但只要进入放款前缴纳保证金、会员费、解冻费或刷流水，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问网络贷款诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "网络贷款诈骗的高危识别信号",
+    "summary": "命中放款前收费等信号时，应立即暂停。",
+    "content": "网络贷款诈骗的高危信号包括：陌生人引导, 贷款前收费, 诱导下载陌生APP, 索要银行卡或身份信息, 索要验证码, 要求垫付资金, 要求缴纳解冻费, 无法提现, 已发生转账。其中最需要立即阻断的是放款前缴纳保证金、会员费、解冻费或刷流水。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "网络贷款诈骗的防范建议",
+    "summary": "停止缴费，不再提交身份证、银行卡、验证码和人脸识别。",
+    "content": "当前最稳妥的动作是：停止缴费，不再提交身份证、银行卡、验证码和人脸识别。核验方式：只通过持牌金融机构官方渠道申请贷款；贷款未到账前收费应直接拒绝。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "网络贷款诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。说明未实际放款却被要求缴纳费用，保存App和客服资料后报警并联系银行保护账户。同时保留证据：贷款App截图, 客服聊天, 合同页面, 银行卡号错误提示, 收款账户, 转账凭证。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "网络贷款诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：贷款App截图, 客服聊天, 合同页面, 银行卡号错误提示, 收款账户, 转账凭证。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "网络贷款诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇网络贷款诈骗，通过贷款短信链接接触对方，对方要求我放款前缴纳保证金、会员费、解冻费或刷流水。我现在保存了贷款App截图, 客服聊天, 合同页面, 银行卡号错误提示等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "网络贷款诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似网络贷款诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "网络贷款诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续放款前缴纳保证金、会员费、解冻费或刷流水，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "网络贷款诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "虚假贷款警方公开案例：放款前先交解冻费和认证费。案例来源：典型案例五，警方公开案例披露被骗6万元。过程包括：看到低息贷款广告并下载指定App；App显示额度审批通过但不能提现；客服以银行卡异常、认证失败等理由收费；多次转账后仍无法获得贷款。复盘重点是：正规贷款不会在放款前收取保证金、刷流水费、解冻费或认证金。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "loan_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "网络贷款诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你放款前缴纳保证金、会员费、解冻费或刷流水的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：只通过持牌金融机构官方渠道申请贷款；贷款未到账前收费应直接拒绝。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "无法提现",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是校园贷/培训贷诈骗",
+    "summary": "校园贷/培训贷诈骗的定义、入口和核心风险。",
+    "content": "校园贷/培训贷诈骗通常通过校园群, 兼职群, 培训机构销售等渠道接触用户。它的核心套路是：用学生身份、补贴名额、培训就业、注销历史贷款记录等理由制造压力，要求交资料费、保证金、刷流水或远程认证。识别时不要只看对方身份包装，而要看是否要求用户交资料包装费、培训分期首付、注销账户保证金或交出身份银行卡信息。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是校园贷/培训贷诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "校园贷/培训贷诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：通过校园渠道接触学生；承诺贷款/就业/注销账户；索取身份材料；要求资料费或分期；以审核失败或征信风险继续施压。每一步都可能包装成合理业务，但只要进入交资料包装费、培训分期首付、注销账户保证金或交出身份银行卡信息，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问校园贷/培训贷诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "校园贷/培训贷诈骗的高危识别信号",
+    "summary": "命中包装学生资料并先收费等信号时，应立即暂停。",
+    "content": "校园贷/培训贷诈骗的高危信号包括：陌生人引导, 贷款前收费, 校园贷包装, 诱导下载陌生APP, 索要银行卡或身份信息, 索要验证码, 要求垫付资金, 要求缴纳解冻费, 已发生转账。其中最需要立即阻断的是交资料包装费、培训分期首付、注销账户保证金或交出身份银行卡信息。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "校园贷/培训贷诈骗的防范建议",
+    "summary": "暂停签约和付款，不上传身份证、学生证、银行卡和验证码。",
+    "content": "当前最稳妥的动作是：暂停签约和付款，不上传身份证、学生证、银行卡和验证码。核验方式：通过学校资助中心、正规银行、官方客服或培训机构合同备案核验，不相信私聊办理。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "校园贷/培训贷诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。如已付款或被诱导分期，联系学校、贷款/支付平台和警方，说明是否存在培训贷、包装费或注销校园贷话术。同时保留证据：宣传截图, 合同或分期页面, 销售聊天, 付款二维码, 身份证/学生证提交记录, 客服账号。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "校园贷/培训贷诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：宣传截图, 合同或分期页面, 销售聊天, 付款二维码, 身份证/学生证提交记录, 客服账号。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "校园贷/培训贷诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇校园贷/培训贷诈骗，通过校园兼职群接触对方，对方要求我交资料包装费、培训分期首付、注销账户保证金或交出身份银行卡信息。我现在保存了宣传截图, 合同或分期页面, 销售聊天, 付款二维码等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "校园贷/培训贷诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似校园贷/培训贷诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "校园贷/培训贷诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续交资料包装费、培训分期首付、注销账户保证金或交出身份银行卡信息，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "校园贷/培训贷诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "虚假征信警方公开案例：冒充金融客服诱导贷款转账。案例来源：典型案例六，警方公开案例披露被骗14万元。过程包括：接到自称金融平台客服的来电；对方称账户或征信存在异常需要处理；诱导用户贷款并转入所谓安全账户；转账后发现被骗。复盘重点是：声称影响征信、要求贷款转账或屏幕操作的，不要继续配合。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "campus_loan_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "网络贷款诈骗",
+    "fraud_stage": "科普学习",
+    "title": "校园贷/培训贷诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你交资料包装费、培训分期首付、注销账户保证金或交出身份银行卡信息的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：通过学校资助中心、正规银行、官方客服或培训机构合同备案核验，不相信私聊办理。",
+    "risk_tags": [
+      "陌生人引导",
+      "贷款前收费",
+      "校园贷包装",
+      "诱导下载陌生APP",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "要求垫付资金",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是冒充客服诈骗",
+    "summary": "冒充客服诈骗的定义、入口和核心风险。",
+    "content": "冒充客服诈骗通常通过陌生来电, 短信, 社交软件等渠道接触用户。它的核心套路是：先说出部分订单或快递信息取得信任，再引导点击链接、下载会议软件、共享屏幕或转账验证。识别时不要只看对方身份包装，而要看是否要求用户点击理赔链接、提供验证码、共享屏幕、转账验证或下载会议软件。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是冒充客服诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充客服诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：陌生客服来电；说出订单信息；发理赔链接或会议号；索要验证码/共享屏幕；诱导转账或盗刷。每一步都可能包装成合理业务，但只要进入点击理赔链接、提供验证码、共享屏幕、转账验证或下载会议软件，就应按高风险处理。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问冒充客服诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充客服诈骗的高危识别信号",
+    "summary": "命中索要验证码或共享屏幕等信号时，应立即暂停。",
+    "content": "冒充客服诈骗的高危信号包括：冒充客服, 点击陌生链接, 诱导下载陌生APP, 索要验证码, 索要银行卡或身份信息, 屏幕共享, 远程控制, 要求垫付资金。其中最需要立即阻断的是点击理赔链接、提供验证码、共享屏幕、转账验证或下载会议软件。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充客服诈骗的防范建议",
+    "summary": "挂断陌生客服，停止共享屏幕和验证码发送，通过官方订单入口核实。",
+    "content": "当前最稳妥的动作是：挂断陌生客服，停止共享屏幕和验证码发送，通过官方订单入口核实。核验方式：只在官方App订单页、官网客服电话或平台内客服核实退款理赔，不使用对方提供的链接和电话。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "冒充客服诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。如验证码或屏幕信息已泄露，先冻结账户和修改密码，再向平台投诉并报警。同时保留证据：来电号码, 短信, 理赔链接, 会议号, 聊天记录, 验证码短信, 转账记录。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充客服诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：来电号码, 短信, 理赔链接, 会议号, 聊天记录, 验证码短信, 转账记录。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充客服诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇冒充客服诈骗，通过陌生来电接触对方，对方要求我点击理赔链接、提供验证码、共享屏幕、转账验证或下载会议软件。我现在保存了来电号码, 短信, 理赔链接, 会议号等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充客服诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似冒充客服诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充客服诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续点击理赔链接、提供验证码、共享屏幕、转账验证或下载会议软件，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充客服诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "冒充客服警方公开案例：快递理赔引导下载会议软件。案例来源：典型案例四，来源未披露具体损失金额。过程包括：接到自称快递或平台客服的电话；对方称快递丢失可以理赔；诱导下载会议软件或进入理赔页面；要求填写银行卡、验证码或配合屏幕操作。复盘重点是：退款理赔只应通过官方订单入口办理，不要点陌生链接或共享屏幕。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "service_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "冒充客服诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充客服诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你点击理赔链接、提供验证码、共享屏幕、转账验证或下载会议软件的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：只在官方App订单页、官网客服电话或平台内客服核实退款理赔，不使用对方提供的链接和电话。",
+    "risk_tags": [
+      "冒充客服",
+      "点击陌生链接",
+      "诱导下载陌生APP",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "屏幕共享",
+      "远程控制",
+      "要求垫付资金"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是冒充公检法诈骗",
+    "summary": "冒充公检法诈骗的定义、入口和核心风险。",
+    "content": "冒充公检法诈骗通常通过陌生电话, 视频会议, 聊天软件等渠道接触用户。它的核心套路是：利用权威和恐惧控制用户，伪造警官证、通缉令和保密要求，切断用户与家人、银行、派出所的核实渠道。识别时不要只看对方身份包装，而要看是否要求用户转入所谓安全账户、共享屏幕、提供银行卡密码或按对方要求保密。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是冒充公检法诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充公检法诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：陌生电话冒充机关；制造涉案恐惧；发送伪造文书；要求保密和远程控制；安全账户转账；继续威胁或失联。每一步都可能包装成合理业务，但只要进入转入所谓安全账户、共享屏幕、提供银行卡密码或按对方要求保密，就应按高风险处理。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问冒充公检法诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充公检法诈骗的高危识别信号",
+    "summary": "命中所谓安全账户等信号时，应立即暂停。",
+    "content": "冒充公检法诈骗的高危信号包括：冒充公检法, 要求垫付资金, 索要银行卡或身份信息, 索要验证码, 屏幕共享, 远程控制, 要求删除证据, 已发生转账。其中最需要立即阻断的是转入所谓安全账户、共享屏幕、提供银行卡密码或按对方要求保密。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充公检法诈骗的防范建议",
+    "summary": "立即挂断电话，不转账，不共享屏幕，到就近派出所或拨打110核实。",
+    "content": "当前最稳妥的动作是：立即挂断电话，不转账，不共享屏幕，到就近派出所或拨打110核实。核验方式：公检法不会电话远程办案，不存在安全账户，也不会要求保密转账或提供验证码。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "冒充公检法诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。向110或派出所说明对方冒充公检法、要求保密、共享屏幕或安全账户转账。同时保留证据：来电号码, 聊天账号, 伪造证件/文书, 会议记录, 转账账户, 威胁话术。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充公检法诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：来电号码, 聊天账号, 伪造证件/文书, 会议记录, 转账账户, 威胁话术。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充公检法诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇冒充公检法诈骗，通过陌生电话接触对方，对方要求我转入所谓安全账户、共享屏幕、提供银行卡密码或按对方要求保密。我现在保存了来电号码, 聊天账号, 伪造证件/文书, 会议记录等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充公检法诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似冒充公检法诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充公检法诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续转入所谓安全账户、共享屏幕、提供银行卡密码或按对方要求保密，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充公检法诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "冒充公检法警方公开案例：涉案恐吓后诱导转入安全账户。案例来源：典型案例八，警方公开案例披露至少涉及15万元贷款转账。过程包括：接到自称公安机关来电并被告知涉案；被要求保密并配合资金审查；对方诱导贷款或集中资金；资金转入所谓安全账户后被骗。复盘重点是：公检法不存在安全账户，不会电话办案、远程办案或要求转账自证清白。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "police_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "冒充公检法诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充公检法诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你转入所谓安全账户、共享屏幕、提供银行卡密码或按对方要求保密的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：公检法不会电话远程办案，不存在安全账户，也不会要求保密转账或提供验证码。",
+    "risk_tags": [
+      "冒充公检法",
+      "要求垫付资金",
+      "索要银行卡或身份信息",
+      "索要验证码",
+      "屏幕共享",
+      "远程控制",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是杀猪盘诈骗",
+    "summary": "杀猪盘诈骗的定义、入口和核心风险。",
+    "content": "杀猪盘诈骗通常通过婚恋平台, 社交软件, 短视频私信等渠道接触用户。它的核心套路是：用高质量人设和情感陪伴建立关系，随后引导用户到陌生投资或博彩平台，盈利后提现受阻并继续缴费。识别时不要只看对方身份包装，而要看是否要求用户跟随网恋对象向陌生平台充值、转虚拟币或为提现继续缴费。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是杀猪盘诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "科普学习",
+    "title": "杀猪盘诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：社交平台接触；长期陪伴建立信任；透露投资机会；引导平台注册充值；提现受阻继续缴费；关系施压或失联。每一步都可能包装成合理业务，但只要进入跟随网恋对象向陌生平台充值、转虚拟币或为提现继续缴费，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问杀猪盘诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "杀猪盘诈骗的高危识别信号",
+    "summary": "命中网恋对象带去陌生投资平台等信号时，应立即暂停。",
+    "content": "杀猪盘诈骗的高危信号包括：陌生人引导, 高收益诱导, 保本稳赚承诺, 陌生投资平台, 诱导下载陌生APP, 要求垫付资金, 无法提现, 要求缴纳解冻费, 已发生转账。其中最需要立即阻断的是跟随网恋对象向陌生平台充值、转虚拟币或为提现继续缴费。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "杀猪盘诈骗的防范建议",
+    "summary": "暂停联系和充值，找现实亲友共同核实，不再因关系压力转账。",
+    "content": "当前最稳妥的动作是：暂停联系和充值，找现实亲友共同核实，不再因关系压力转账。核验方式：网络亲密关系中的投资建议必须脱离对方单独核验平台资质和资金去向。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "杀猪盘诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。向警方说明交友过程、投资引导、平台名称、充值方式和提现受阻情况。同时保留证据：聊天记录, 对方身份包装, 投资链接, 充值地址, 提现失败截图, 转账凭证。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "杀猪盘诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：聊天记录, 对方身份包装, 投资链接, 充值地址, 提现失败截图, 转账凭证。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "杀猪盘诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇杀猪盘诈骗，通过婚恋平台接触对方，对方要求我跟随网恋对象向陌生平台充值、转虚拟币或为提现继续缴费。我现在保存了聊天记录, 对方身份包装, 投资链接, 充值地址等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "杀猪盘诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似杀猪盘诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "杀猪盘诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续跟随网恋对象向陌生平台充值、转虚拟币或为提现继续缴费，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "科普学习",
+    "title": "杀猪盘诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "杀猪盘警方公开案例：网络交友后诱导投资转账。案例来源：典型案例九，警方公开案例披露被骗160余万元。过程包括：通过婚恋或社交平台结识网友；对方长期聊天建立亲密关系；引导进入投资、博彩或理财平台；持续加仓后不能提现或被拉黑。复盘重点是：网恋对象推荐投资平台、声称内部渠道或代操作时，应立即停止转账。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "romance_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "杀猪盘诈骗",
+    "fraud_stage": "科普学习",
+    "title": "杀猪盘诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你跟随网恋对象向陌生平台充值、转虚拟币或为提现继续缴费的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：网络亲密关系中的投资建议必须脱离对方单独核验平台资质和资金去向。",
+    "risk_tags": [
+      "陌生人引导",
+      "高收益诱导",
+      "保本稳赚承诺",
+      "陌生投资平台",
+      "诱导下载陌生APP",
+      "要求垫付资金",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是钓鱼链接诈骗",
+    "summary": "钓鱼链接诈骗的定义、入口和核心风险。",
+    "content": "钓鱼链接诈骗通常通过短信, 邮件, 二维码等渠道接触用户。它的核心套路是：用积分过期、账户异常、补贴领取、ETC认证、快递理赔等紧急理由，让用户在仿冒页面提交敏感信息。识别时不要只看对方身份包装，而要看是否要求用户点击陌生链接并输入银行卡、密码、身份证、验证码或下载安装包。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是钓鱼链接诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "科普学习",
+    "title": "钓鱼链接诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：发送短信/二维码；仿冒官方页面；诱导填写信息；索要验证码或下载App；盗刷/改密/二次诈骗。每一步都可能包装成合理业务，但只要进入点击陌生链接并输入银行卡、密码、身份证、验证码或下载安装包，就应按高风险处理。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问钓鱼链接诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "钓鱼链接诈骗的高危识别信号",
+    "summary": "命中陌生链接索要敏感信息等信号时，应立即暂停。",
+    "content": "钓鱼链接诈骗的高危信号包括：点击陌生链接, 索要验证码, 索要银行卡或身份信息, 诱导下载陌生APP, 冒充客服, 已发生转账。其中最需要立即阻断的是点击陌生链接并输入银行卡、密码、身份证、验证码或下载安装包。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "钓鱼链接诈骗的防范建议",
+    "summary": "关闭链接，不提交信息；如已填写，立即改密、冻结银行卡和关闭免密支付。",
+    "content": "当前最稳妥的动作是：关闭链接，不提交信息；如已填写，立即改密、冻结银行卡和关闭免密支付。核验方式：通过官方App、官网手动输入域名或官方客服电话核实，不从短信链接进入。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "钓鱼链接诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。保留链接和页面证据，向平台、运营商或警方举报；涉及资金时立即联系银行。同时保留证据：短信原文, 链接URL, 页面截图, 填写信息时间, 异常登录/扣款记录。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "钓鱼链接诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：短信原文, 链接URL, 页面截图, 填写信息时间, 异常登录/扣款记录。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "钓鱼链接诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇钓鱼链接诈骗，通过短信短链接接触对方，对方要求我点击陌生链接并输入银行卡、密码、身份证、验证码或下载安装包。我现在保存了短信原文, 链接URL, 页面截图, 填写信息时间等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "钓鱼链接诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似钓鱼链接诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "钓鱼链接诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续点击陌生链接并输入银行卡、密码、身份证、验证码或下载安装包，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "科普学习",
+    "title": "钓鱼链接诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "钓鱼链接警方公开案例：ETC短信诱导填写银行卡信息。案例来源：ETC短信钓鱼案例，警方公开案例披露银行卡被转走6500元。过程包括：收到所谓ETC异常短信；点击短信中的陌生链接；在仿冒页面填写银行卡、身份信息和验证码；银行卡资金被盗刷。复盘重点是：短信中的认证、升级、过期链接不要点，应从官方App或官网入口核实。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "phishing_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "钓鱼链接诈骗",
+    "fraud_stage": "科普学习",
+    "title": "钓鱼链接诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你点击陌生链接并输入银行卡、密码、身份证、验证码或下载安装包的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：通过官方App、官网手动输入域名或官方客服电话核实，不从短信链接进入。",
+    "risk_tags": [
+      "点击陌生链接",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是验证码/账户盗刷诈骗",
+    "summary": "验证码/账户盗刷诈骗的定义、入口和核心风险。",
+    "content": "验证码/账户盗刷诈骗通常通过电话, 社交软件, 钓鱼页面等渠道接触用户。它的核心套路是：把验证码伪装成退款确认、身份验证或账户安全码，诱导用户在短时间内发送或在共享屏幕下展示。识别时不要只看对方身份包装，而要看是否要求用户把短信验证码、支付动态码、人脸识别或支付确认信息交给对方。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是验证码/账户盗刷诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "科普学习",
+    "title": "验证码/账户盗刷诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：冒充身份或发链接；解释验证码用途；倒计时催促；获取验证码/人脸；登录改密或盗刷。每一步都可能包装成合理业务，但只要进入把短信验证码、支付动态码、人脸识别或支付确认信息交给对方，就应按高风险处理。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问验证码/账户盗刷诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "验证码/账户盗刷诈骗的高危识别信号",
+    "summary": "命中任何人索要验证码等信号时，应立即暂停。",
+    "content": "验证码/账户盗刷诈骗的高危信号包括：索要验证码, 索要银行卡或身份信息, 点击陌生链接, 冒充客服, 屏幕共享, 远程控制, 已发生转账。其中最需要立即阻断的是把短信验证码、支付动态码、人脸识别或支付确认信息交给对方。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "验证码/账户盗刷诈骗的防范建议",
+    "summary": "不要发送任何验证码；如已发送，立即修改密码、解绑异常设备并冻结支付和银行卡。",
+    "content": "当前最稳妥的动作是：不要发送任何验证码；如已发送，立即修改密码、解绑异常设备并冻结支付和银行卡。核验方式：验证码只给本人在官方渠道使用，任何人以任何身份索要验证码都应拒绝。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "验证码/账户盗刷诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。联系平台客服冻结账户、关闭快捷支付并报警说明验证码泄露时间和对方身份。同时保留证据：验证码短信, 索要验证码聊天, 异常登录提醒, 交易记录, 设备登录记录。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "验证码/账户盗刷诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：验证码短信, 索要验证码聊天, 异常登录提醒, 交易记录, 设备登录记录。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "验证码/账户盗刷诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇验证码/账户盗刷诈骗，通过冒充客服私聊接触对方，对方要求我把短信验证码、支付动态码、人脸识别或支付确认信息交给对方。我现在保存了验证码短信, 索要验证码聊天, 异常登录提醒, 交易记录等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "验证码/账户盗刷诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似验证码/账户盗刷诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "验证码/账户盗刷诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续把短信验证码、支付动态码、人脸识别或支付确认信息交给对方，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_code_leak"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "科普学习",
+    "title": "验证码/账户盗刷诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "验证码盗刷警方公开案例：钓鱼页面索要动态码后盗刷。案例来源：ETC短信钓鱼案例，与深圳公安公开ETC钓鱼案例同源。过程包括：用户进入仿冒认证页面；页面要求输入银行卡和短信验证码；验证码被用于完成扣款或盗刷；用户收到银行扣款提醒后发现异常。复盘重点是：验证码等同于资金操作授权，不要提供给任何陌生页面或陌生客服。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "code_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "fraud_stage": "科普学习",
+    "title": "验证码/账户盗刷诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你把短信验证码、支付动态码、人脸识别或支付确认信息交给对方的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：验证码只给本人在官方渠道使用，任何人以任何身份索要验证码都应拒绝。",
+    "risk_tags": [
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "点击陌生链接",
+      "冒充客服",
+      "屏幕共享",
+      "远程控制",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是屏幕共享/远程控制诈骗",
+    "summary": "屏幕共享/远程控制诈骗的定义、入口和核心风险。",
+    "content": "屏幕共享/远程控制诈骗通常通过会议软件, 远程协助App, 电话指导等渠道接触用户。它的核心套路是：让用户以为对方只是在指导操作，实际通过共享屏幕看到验证码、银行卡余额、支付密码输入和交易确认。识别时不要只看对方身份包装，而要看是否要求用户开启共享屏幕、允许远程控制或在共享状态下操作银行和支付软件。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是屏幕共享/远程控制诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "科普学习",
+    "title": "屏幕共享/远程控制诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：冒充客服或技术人员；要求下载会议/远程软件；引导共享屏幕；指导打开支付/银行App；查看验证码或诱导转账。每一步都可能包装成合理业务，但只要进入开启共享屏幕、允许远程控制或在共享状态下操作银行和支付软件，就应按高风险处理。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问屏幕共享/远程控制诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "屏幕共享/远程控制诈骗的高危识别信号",
+    "summary": "命中共享屏幕会暴露账户操作等信号时，应立即暂停。",
+    "content": "屏幕共享/远程控制诈骗的高危信号包括：屏幕共享, 远程控制, 索要验证码, 索要银行卡或身份信息, 诱导下载陌生APP, 冒充客服, 冒充公检法, 已发生转账。其中最需要立即阻断的是开启共享屏幕、允许远程控制或在共享状态下操作银行和支付软件。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_screen_share"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "屏幕共享/远程控制诈骗的防范建议",
+    "summary": "立即断开会议和远程控制，关闭支付App，修改密码并检查异常交易。",
+    "content": "当前最稳妥的动作是：立即断开会议和远程控制，关闭支付App，修改密码并检查异常交易。核验方式：官方客服不会要求用户共享屏幕操作银行卡、支付App或贷款App。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_screen_share"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "屏幕共享/远程控制诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。如已共享屏幕，联系银行和支付平台临时管控账户，并报警说明对方远程控制经过。同时保留证据：会议号, 远程控制软件, 通话记录, 聊天记录, 验证码短信, 异常交易记录。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "屏幕共享/远程控制诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：会议号, 远程控制软件, 通话记录, 聊天记录, 验证码短信, 异常交易记录。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "屏幕共享/远程控制诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇屏幕共享/远程控制诈骗，通过会议软件接触对方，对方要求我开启共享屏幕、允许远程控制或在共享状态下操作银行和支付软件。我现在保存了会议号, 远程控制软件, 通话记录, 聊天记录等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "屏幕共享/远程控制诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似屏幕共享/远程控制诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "屏幕共享/远程控制诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续开启共享屏幕、允许远程控制或在共享状态下操作银行和支付软件，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_screen_share"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "科普学习",
+    "title": "屏幕共享/远程控制诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "屏幕共享警方公开案例：会议软件暴露资金操作后被骗。案例来源：屏幕共享案例，福建省公安厅公开案例披露5万元。过程包括：接到自称平台或客服人员来电；按要求打开会议软件并共享屏幕；银行卡、验证码或支付操作被对方实时看到；账户资金被转走。复盘重点是：屏幕共享不是普通沟通，对方能看到验证码、余额和支付操作，应立即退出。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "screen_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "fraud_stage": "科普学习",
+    "title": "屏幕共享/远程控制诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你开启共享屏幕、允许远程控制或在共享状态下操作银行和支付软件的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：官方客服不会要求用户共享屏幕操作银行卡、支付App或贷款App。",
+    "risk_tags": [
+      "屏幕共享",
+      "远程控制",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "诱导下载陌生APP",
+      "冒充客服",
+      "冒充公检法",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是冒充熟人诈骗",
+    "summary": "冒充熟人诈骗的定义、入口和核心风险。",
+    "content": "冒充熟人诈骗通常通过社交软件, 短信, 邮箱等渠道接触用户。它的核心套路是：伪装成熟人或盗用账号，以开会、手机坏、急事、垫付款、住院等理由拒绝电话核验并催促转账。识别时不要只看对方身份包装，而要看是否要求用户未通过原号码或当面核实就转账、代付或提供验证码。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是冒充熟人诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充熟人诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：新账号或盗号接触；寒暄建立身份；制造紧急事项；拒绝电话核验；要求代付转账；继续催款或失联。每一步都可能包装成合理业务，但只要进入未通过原号码或当面核实就转账、代付或提供验证码，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问冒充熟人诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充熟人诈骗的高危识别信号",
+    "summary": "命中转账前未二次核验身份等信号时，应立即暂停。",
+    "content": "冒充熟人诈骗的高危信号包括：陌生人引导, 要求垫付资金, 索要验证码, 索要银行卡或身份信息, 要求删除证据, 已发生转账。其中最需要立即阻断的是未通过原号码或当面核实就转账、代付或提供验证码。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充熟人诈骗的防范建议",
+    "summary": "先通过原手机号、视频、共同联系人或当面核实身份，未核实前不转账。",
+    "content": "当前最稳妥的动作是：先通过原手机号、视频、共同联系人或当面核实身份，未核实前不转账。核验方式：熟人转账必须使用已知联系方式二次确认，不接受新账号文字催促作为核验。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "冒充熟人诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。联系真实本人确认账号是否被盗，已付款则保存证据报警并联系支付平台。同时保留证据：新账号资料, 聊天记录, 转账截图, 对方收款账户, 拒绝通话理由。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充熟人诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：新账号资料, 聊天记录, 转账截图, 对方收款账户, 拒绝通话理由。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充熟人诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇冒充熟人诈骗，通过社交软件新账号接触对方，对方要求我未通过原号码或当面核实就转账、代付或提供验证码。我现在保存了新账号资料, 聊天记录, 转账截图, 对方收款账户等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "冒充熟人诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似冒充熟人诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "冒充熟人诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续未通过原号码或当面核实就转账、代付或提供验证码，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充熟人诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "冒充熟人警方公开案例：盗用亲友账号后借钱。案例来源：典型案例七，来源未披露具体损失金额。过程包括：收到亲友或熟人账号发来的借钱请求；对方以急事、不方便电话等理由催促转账；用户未通过电话或线下方式核验；转账后发现账号被盗或身份被冒充。复盘重点是：熟人账号也可能被盗，涉及借钱转账必须电话或当面核验。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "acquaintance_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "冒充熟人诈骗",
+    "fraud_stage": "科普学习",
+    "title": "冒充熟人诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你未通过原号码或当面核实就转账、代付或提供验证码的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：熟人转账必须使用已知联系方式二次确认，不接受新账号文字催促作为核验。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "索要验证码",
+      "索要银行卡或身份信息",
+      "要求删除证据",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_definition_001",
+    "knowledge_type": "fraud_definition",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "科普学习",
+    "title": "什么是虚假购物服务诈骗",
+    "summary": "虚假购物服务诈骗的定义、入口和核心风险。",
+    "content": "虚假购物服务诈骗通常通过二手平台, 社交群, 短视频评论等渠道接触用户。它的核心套路是：利用低价和稀缺诱导脱离平台担保，先收定金、保证金、运费或实名费，付款后不发货或继续收费。识别时不要只看对方身份包装，而要看是否要求用户脱离平台向个人账户付定金、保证金、手续费或解冻费。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户没有具体正在发生的风险，只是学习概念",
+    "use_when": "用户问什么是虚假购物服务诈骗、有哪些套路、为什么危险。",
+    "do_not_use_when": "用户正在被催促转账、给验证码或共享屏幕时，应优先使用劝阻和止损知识。",
+    "answer_role": "解释诈骗定义和核心机制。",
+    "priority": 76,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_process_001",
+    "knowledge_type": "fraud_process",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "科普学习",
+    "title": "虚假购物服务诈骗的一般流程",
+    "summary": "从接触、建立信任、提出危险动作到收割的完整流程。",
+    "content": "常见流程包括：发布低价商品/票务；诱导私聊；要求定金或全款；追加保证金/手续费；不发货或拉黑。每一步都可能包装成合理业务，但只要进入脱离平台向个人账户付定金、保证金、手续费或解冻费，就应按高风险处理。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户想理解完整骗局阶段",
+    "use_when": "用户问虚假购物服务诈骗一般如何推进、每一步有什么信号。",
+    "do_not_use_when": "用户已经受损时，应先给银行止付、证据保存和报警指引。",
+    "answer_role": "帮助用户理解诈骗推进路径。",
+    "priority": 74,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_risk_signal_001",
+    "knowledge_type": "risk_signal",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "虚假购物服务诈骗的高危识别信号",
+    "summary": "命中私下转账缺少担保等信号时，应立即暂停。",
+    "content": "虚假购物服务诈骗的高危信号包括：陌生人引导, 要求垫付资金, 点击陌生链接, 私下交易, 无法提现, 要求缴纳解冻费, 已发生转账。其中最需要立即阻断的是脱离平台向个人账户付定金、保证金、手续费或解冻费。如果对方同时制造限时、恐吓、保本、退款、资质包装或熟人关系压力，不应继续跟着对方操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "尚未确认损失，但已经出现危险要求",
+    "use_when": "用户正在判断对方要求是否安全，或准备进行下一步危险操作。",
+    "do_not_use_when": "用户已经明确转账或泄露信息时，应补充止损流程。",
+    "answer_role": "指出命中的风险特征并阻断下一步动作。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_prevention_advice_001",
+    "knowledge_type": "prevention_advice",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "虚假购物服务诈骗的防范建议",
+    "summary": "停止私下付款，坚持平台担保交易，核实商家资质和订单状态。",
+    "content": "当前最稳妥的动作是：停止私下付款，坚持平台担保交易，核实商家资质和订单状态。核验方式：商品、票务、民宿和服务交易优先走正规平台，付款前核验主体、评价和担保机制。不要因为对方承诺返利、理赔、放款、收益、身份权威或关系压力就继续操作。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户还在判断是否继续",
+    "use_when": "用户尚未受损，需要一组马上能执行的防范动作。",
+    "do_not_use_when": "用户已经转账后，不应只给一般防范。",
+    "answer_role": "给出明确、可执行的防范动作。",
+    "priority": 92,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_intervention_action_001",
+    "knowledge_type": "intervention_action",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "损失发生阶段",
+    "title": "虚假购物服务诈骗已发生后的止损动作",
+    "summary": "已经转账、泄露或无法提现时，第一步是停止新增操作。",
+    "content": "如果已经发生转账、泄露验证码/账户信息、开启过屏幕共享或遇到不能提现，立即停止和对方继续沟通，不再补交任何费用。通过交易平台投诉并报警，说明私下转账、未发货或继续收费过程。同时保留证据：商品/票务页面, 私聊记录, 收款码, 付款凭证, 物流/出票承诺, 对方身份信息。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence",
+      "call_bank"
+    ],
+    "user_stage": "用户已经转账、泄露信息或资金可能受损",
+    "use_when": "用户问已经被骗怎么办、钱还能不能追回、是否继续缴费。",
+    "do_not_use_when": "用户只是学习或尚未操作时，不应渲染已经受损。",
+    "answer_role": "给出第一优先级止损动作。",
+    "priority": 98,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_evidence_guide_001",
+    "knowledge_type": "evidence_guide",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "虚假购物服务诈骗证据保存清单",
+    "summary": "证据越完整，越有利于止付、冻结和报案。",
+    "content": "建议保存：商品/票务页面, 私聊记录, 收款码, 付款凭证, 物流/出票承诺, 对方身份信息。保存时尽量保留原始聊天、完整截图、时间线、账号ID和转账流水，不要按对方要求删除记录、退群或清空App。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "preserve_evidence",
+      "call_police"
+    ],
+    "user_stage": "用户准备报警、投诉或联系银行",
+    "use_when": "用户已经受损或可能泄露信息，需要知道保存哪些材料。",
+    "do_not_use_when": "用户只是泛泛学习时可以简化。",
+    "answer_role": "列出证据清单。",
+    "priority": 94,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_police_report_guide_001",
+    "knowledge_type": "police_report_guide",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "虚假购物服务诈骗报警时怎么说",
+    "summary": "报警时按时间线说明接触方式、对方要求、付款方式和证据。",
+    "content": "可以这样说：我疑似遭遇虚假购物服务诈骗，通过二手交易平台私聊接触对方，对方要求我脱离平台向个人账户付定金、保证金、手续费或解冻费。我现在保存了商品/票务页面, 私聊记录, 收款码, 付款凭证等证据，请帮我登记并协助止付。说明时按时间顺序讲清金额、账户、链接、App和对方身份。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_police",
+      "preserve_evidence"
+    ],
+    "user_stage": "用户准备报警或需要报案话术",
+    "use_when": "用户问报警怎么讲、需要准备什么。",
+    "do_not_use_when": "用户尚未受损时，不要把报警作为唯一动作。",
+    "answer_role": "提供报案表达和案情整理框架。",
+    "priority": 95,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_bank_stop_guide_001",
+    "knowledge_type": "bank_stop_guide",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "止损报警阶段",
+    "title": "虚假购物服务诈骗银行或支付止付指引",
+    "summary": "资金刚转出或账户信息泄露时，应同步联系银行和支付平台。",
+    "content": "如果刚发生付款或验证码、银行卡、屏幕信息可能泄露，马上联系银行、支付平台或发卡行，说明疑似虚假购物服务诈骗，提供转账时间、金额、收款账户、交易流水号，并请求止付、冻结、限额、挂失或关闭快捷支付。银行处理不能替代报警，两边应同时进行。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "loss_response"
+    ],
+    "applicable_case_types": [
+      2
+    ],
+    "intervention_goals": [
+      "call_bank",
+      "call_police"
+    ],
+    "user_stage": "用户刚转账或账户可能被盗刷",
+    "use_when": "用户问如何止损、银行卡是否安全、钱能不能拦截。",
+    "do_not_use_when": "用户没有资金或账户风险时，不应要求无谓冻结全部账户。",
+    "answer_role": "指导联系银行和支付平台保护账户。",
+    "priority": 93,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_persuasion_script_001",
+    "knowledge_type": "persuasion_script",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "资金转账前阶段",
+    "title": "虚假购物服务诈骗劝阻话术",
+    "summary": "用于帮助用户拒绝对方继续诱导。",
+    "content": "可以直接回复：我不会继续脱离平台向个人账户付定金、保证金、手续费或解冻费，也不会提供验证码、银行卡、身份证、人脸识别或屏幕共享。我要通过官方渠道或线下方式核实，核实前不要再联系我。若对方继续催促、威胁、承诺返还或要求删除记录，我会保留证据并报警咨询。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "prevention_consult"
+    ],
+    "applicable_case_types": [
+      1
+    ],
+    "intervention_goals": [
+      "stop_transfer"
+    ],
+    "user_stage": "用户仍在被对方催促或需要拒绝话术",
+    "use_when": "用户问该怎么回复对方、怎么劝家人停手。",
+    "do_not_use_when": "用户已经受损时，话术不能替代止付和报警。",
+    "answer_role": "提供可直接使用的拒绝表达。",
+    "priority": 86,
+    "risk_level": "高风险",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_case_001",
+    "knowledge_type": "fraud_case",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "科普学习",
+    "title": "虚假购物服务诈骗警方公开案例复盘",
+    "summary": "警方公开案例说明骗局如何从普通接触升级为资金或信息风险。",
+    "content": "虚假购物服务警方公开案例：低价门票诱导私下转账。案例来源：典型案例三，警方公开案例披露支付订金1.3万元，后续还被索要保证金。过程包括：看到低价稀缺门票或商品信息；卖家要求脱离平台私聊交易；用户先支付定金或全款；对方继续索要保证金或直接失联。复盘重点是：低价稀缺商品和私下转账组合风险很高，应坚持平台担保交易。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户希望通过案例学习",
+    "use_when": "用户问有没有类似案例、这种骗局怎么发生。",
+    "do_not_use_when": "用户正在被催促操作时，应优先劝阻。",
+    "answer_role": "用案例增强理解和说服力。",
+    "priority": 72,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  },
+  {
+    "knowledge_id": "shopping_education_summary_001",
+    "knowledge_type": "education_summary",
+    "fraud_type": "虚假购物服务诈骗",
+    "fraud_stage": "科普学习",
+    "title": "虚假购物服务诈骗学习总结",
+    "summary": "总结识别口诀、核验方式和底线动作。",
+    "content": "记住三条底线：第一，凡是让你脱离平台向个人账户付定金、保证金、手续费或解冻费的，都先停；第二，凡是索要验证码、银行卡、身份证、人脸识别、账号密码或屏幕共享的，都拒绝；第三，凡是绕开官方平台、要求保密、删除证据、继续补费解冻的，都按高风险处理。核验方式是：商品、票务、民宿和服务交易优先走正规平台，付款前核验主体、评价和担保机制。",
+    "risk_tags": [
+      "陌生人引导",
+      "要求垫付资金",
+      "点击陌生链接",
+      "私下交易",
+      "无法提现",
+      "要求缴纳解冻费",
+      "已发生转账"
+    ],
+    "applicable_routes": [
+      "education"
+    ],
+    "applicable_case_types": [
+      3
+    ],
+    "intervention_goals": [
+      "educate"
+    ],
+    "user_stage": "用户完成学习或需要简短总结",
+    "use_when": "用户问如何记住、防范重点是什么。",
+    "do_not_use_when": "用户已经受损时应优先止损。",
+    "answer_role": "形成可迁移的防骗原则。",
+    "priority": 70,
+    "risk_level": "不适用",
+    "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+  }
+]

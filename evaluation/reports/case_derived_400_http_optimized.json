@@ -1,0 +1,3222 @@
+{
+  "generated_at": "2026-08-02T13:26:15+08:00",
+  "dataset": "case_derived_400",
+  "evaluation_scope": "internal_case_derived_regression",
+  "limitations": [
+    "题库与项目知识库存在重叠，不是独立盲测",
+    "端到端回答质量仅使用自动启发式检查，仍需人工复核"
+  ],
+  "risk_api": {
+    "total": 400,
+    "errors": 0,
+    "top1_accuracy": 0.7275,
+    "topk_recall": 0.85,
+    "risk_detection_rate_score_ge_30": 0.755,
+    "mean_risk_score": 67.3375,
+    "latency_ms": {
+      "mean": 44.49080386082642,
+      "p50": 41.809624992311,
+      "p95": 66.41941698035225,
+      "p99": 112.00829199515283,
+      "max": 114.20866701519117
+    },
+    "per_type": {
+      "AI 换脸冒充亲友诈骗": {
+        "count": 22,
+        "top1_accuracy": 0.9545454545454546,
+        "topk_recall": 0.9545454545454546,
+        "mean_risk_score": 67.4090909090909
+      },
+      "两卡出租出借诈骗": {
+        "count": 20,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 84.9
+      },
+      "二手票务交易诈骗": {
+        "count": 12,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 63.333333333333336
+      },
+      "假冒证券公司投资诈骗": {
+        "count": 10,
+        "top1_accuracy": 0.5,
+        "topk_recall": 0.5,
+        "mean_risk_score": 8.0
+      },
+      "冒充公检法诈骗": {
+        "count": 22,
+        "top1_accuracy": 0.6363636363636364,
+        "topk_recall": 0.6818181818181818,
+        "mean_risk_score": 65.18181818181819
+      },
+      "冒充客服诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.6666666666666666,
+        "topk_recall": 1.0,
+        "mean_risk_score": 84.41666666666667
+      },
+      "冒充电商物流客服诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.4166666666666667,
+        "topk_recall": 0.75,
+        "mean_risk_score": 57.416666666666664
+      },
+      "冒充老师收费诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.8333333333333334,
+        "topk_recall": 0.8333333333333334,
+        "mean_risk_score": 94.16666666666667
+      },
+      "冒充领导/熟人诈骗": {
+        "count": 13,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 23.384615384615383
+      },
+      "刷单返利诈骗": {
+        "count": 22,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 90.81818181818181
+      },
+      "奖助学金/补贴诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.3333333333333333,
+        "topk_recall": 0.6666666666666666,
+        "mean_risk_score": 50.0
+      },
+      "婚恋/交友诈骗": {
+        "count": 8,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 60.0
+      },
+      "屏幕共享/远程控制诈骗": {
+        "count": 12,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 81.58333333333333
+      },
+      "征信修复/注销账户诈骗": {
+        "count": 22,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 92.54545454545455
+      },
+      "机票退改签诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.16666666666666666,
+        "topk_recall": 0.5833333333333334,
+        "mean_risk_score": 84.33333333333333
+      },
+      "杀猪盘诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.3333333333333333,
+        "topk_recall": 1.0,
+        "mean_risk_score": 81.75
+      },
+      "游戏交易诈骗": {
+        "count": 20,
+        "top1_accuracy": 0.55,
+        "topk_recall": 0.75,
+        "mean_risk_score": 76.45
+      },
+      "租房押金诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.0,
+        "topk_recall": 0.0,
+        "mean_risk_score": 42.416666666666664
+      },
+      "虚假中奖/免费礼品诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.4166666666666667,
+        "topk_recall": 1.0,
+        "mean_risk_score": 73.5
+      },
+      "虚假投资理财诈骗": {
+        "count": 19,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 41.1578947368421
+      },
+      "虚假招聘/实习诈骗": {
+        "count": 22,
+        "top1_accuracy": 0.8181818181818182,
+        "topk_recall": 1.0,
+        "mean_risk_score": 37.18181818181818
+      },
+      "虚假购物/服务诈骗": {
+        "count": 14,
+        "top1_accuracy": 0.35714285714285715,
+        "topk_recall": 0.42857142857142855,
+        "mean_risk_score": 40.0
+      },
+      "虚假贷款诈骗": {
+        "count": 22,
+        "top1_accuracy": 0.8181818181818182,
+        "topk_recall": 1.0,
+        "mean_risk_score": 83.36363636363636
+      },
+      "裸聊敲诈诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.3333333333333333,
+        "topk_recall": 0.3333333333333333,
+        "mean_risk_score": 69.66666666666667
+      },
+      "跑腿取现/洗钱工具人风险": {
+        "count": 8,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 82.75
+      },
+      "钓鱼链接诈骗": {
+        "count": 12,
+        "top1_accuracy": 0.75,
+        "topk_recall": 1.0,
+        "mean_risk_score": 57.5
+      },
+      "验证码/账户盗刷诈骗": {
+        "count": 12,
+        "top1_accuracy": 1.0,
+        "topk_recall": 1.0,
+        "mean_risk_score": 96.33333333333333
+      }
+    },
+    "failures": [
+      {
+        "sample_id": "AF-CASE-0023",
+        "text": "这是一个反诈案例：客服称会员误开通，每月扣费，需要共享屏幕关闭，对方自称“冒充平台客服”。请问，下面哪种做法最可能让损失扩大？",
+        "expected_type": "冒充客服诈骗",
+        "expected_answer": "在链接里填写银行卡",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 45.434415980707854,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0025",
+        "text": "我遇到这样一件事：对方说退款通道拥堵，让你下载会议软件远程指导，对方自称“冒充平台客服”。如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "冒充客服诈骗",
+        "expected_answer": "打开电商或快递平台官方 App 核对订单和退款",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 45.39716703584418,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0028",
+        "text": "有人碰到了下面的情况：客服称会员误开通，每月扣费，需要共享屏幕关闭，对方自称“冒充平台客服”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "冒充客服诈骗",
+        "expected_answer": "我会自己打开官方 App 查订单，不共享屏幕也不发验证码。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 44.473249989096075,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0030",
+        "text": "帮我判断一下这个情况：对方说退款通道拥堵，让你下载会议软件远程指导，对方自称“冒充平台客服”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "冒充客服诈骗",
+        "expected_answer": "退款理赔只走官方 App，验证码和屏幕共享都拒绝。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 44.108750007580966,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0033",
+        "text": "我遇到这样一件事：所谓办案人员让你保密，不许告诉家人和老师，对方自称“民警”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "下载软件共享屏幕",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 10,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 43.40137500548735,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0034",
+        "text": "帮我判断一下这个情况：对方要求下载会议软件，开启屏幕共享接受资金审查，对方自称“民警”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "冒充公检法诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 42.713249975349754,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0038",
+        "text": "帮我判断一下这个情况：所谓办案人员让你保密，不许告诉家人和老师，对方自称“民警”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "我会挂断并拨打 110 核实，不转所谓安全账户。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 10,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 42.324332986027,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0039",
+        "text": "这是一个反诈案例：对方要求下载会议软件，开启屏幕共享接受资金审查，对方自称“民警”。请问，这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "银行卡密码、验证码、账户余额和身份证件",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 42.36879100790247,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0042",
+        "text": "帮我判断一下这个情况：对方每天关心你，随后推荐虚拟币内部通道，对方自称“网恋对象”。此时最稳妥的第一步是什么？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "不要相信网恋对象的稳赚承诺",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "极高风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 49.140250019263476,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0044",
+        "text": "有人碰到了下面的情况：对方称两人未来需要共同理财，让你把钱转到指定账户，对方自称“网恋对象”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "杀猪盘诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 38,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 52.3795000044629,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0045",
+        "text": "我遇到这样一件事：陌生投资群里多人晒收益，管理员催你抓住最后名额，对方自称“网恋对象”。如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "查询监管信息并只通过持牌金融机构核实投资资质",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 88,
+        "risk_level": "极高风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 52.49708303017542,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0047",
+        "text": "这是一个反诈案例：对方每天关心你，随后推荐虚拟币内部通道，对方自称“网恋对象”。请问，对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "用情感信任包装稳赚投资",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 29,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 51.58854101318866,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0049",
+        "text": "我遇到这样一件事：对方称两人未来需要共同理财，让你把钱转到指定账户，对方自称“网恋对象”。这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "投资账户、银行卡、身份信息和充值记录",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 38,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 59.74841600982472,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0050",
+        "text": "帮我判断一下这个情况：陌生投资群里多人晒收益，管理员催你抓住最后名额，对方自称“网恋对象”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "网恋关系不能替代投资资质，陌生平台稳赚收益不可信。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 88,
+        "risk_level": "极高风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 59.93474996648729,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0091",
+        "text": "这是一个反诈案例：招聘方承诺高薪实习，但入职前要交培训押金，对方自称“招聘专员”。请问，这段场景最应警惕的风险信号是什么？",
+        "expected_type": "虚假招聘/实习诈骗",
+        "expected_answer": "入职前收费",
+        "question": "这段场景最应警惕的风险信号是什么？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "求职实习招聘诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 40.12037499342114,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0093",
+        "text": "我遇到这样一件事：兼职群要求下载 App 接任务，先交会员费才能派单，对方自称“招聘专员”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "虚假招聘/实习诈骗",
+        "expected_answer": "把身份证银行卡照片发群里",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "网络贷款诈骗",
+        "possible_types": [
+          "网络贷款诈骗",
+          "求职实习招聘诈骗",
+          "刷单返利诈骗"
+        ],
+        "risk_score": 95,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 39.31237501092255,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0096",
+        "text": "有人碰到了下面的情况：招聘方承诺高薪实习，但入职前要交培训押金，对方自称“招聘专员”。如果准备投诉、求助或报警，最该保留哪组证据？",
+        "expected_type": "虚假招聘/实习诈骗",
+        "expected_answer": "招聘信息、收费要求、私人账户、合同材料和对方身份资料",
+        "question": "如果准备投诉、求助或报警，最该保留哪组证据？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "求职实习招聘诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 39.34254200430587,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0098",
+        "text": "帮我判断一下这个情况：兼职群要求下载 App 接任务，先交会员费才能派单，对方自称“招聘专员”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "虚假招聘/实习诈骗",
+        "expected_answer": "入职前收费我不交，我会通过官网和学校就业部门核实。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "网络贷款诈骗",
+        "possible_types": [
+          "网络贷款诈骗",
+          "求职实习招聘诈骗",
+          "刷单返利诈骗"
+        ],
+        "risk_score": 95,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 36.17675002897158,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0101",
+        "text": "我遇到这样一件事：短信称你获得助学金，链接要求填写银行卡和验证码，对方自称“补贴办理员”。这段场景最应警惕的风险信号是什么？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "补贴链接填敏感信息",
+        "question": "这段场景最应警惕的风险信号是什么？",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "possible_types": [
+          "验证码/账户盗刷诈骗",
+          "奖助学金/学费退费诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 38.854833983350545,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0103",
+        "text": "这是一个反诈案例：对方说奖学金名额即将过期，需要先缴税费，对方自称“补贴办理员”。请问，下面哪种做法最可能让损失扩大？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "按电话提示操作 ATM",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "奖助学金/学费退费诈骗",
+          "未知"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 40.02858401509002,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0104",
+        "text": "有人碰到了下面的情况：群里发补贴二维码，页面要求输入身份证和支付密码，对方自称“补贴办理员”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "奖助学金/补贴诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 39.47291697841138,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0105",
+        "text": "我遇到这样一件事：来电称国家补助发放，要你去 ATM 按提示操作，对方自称“补贴办理员”。如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "向学校资助部门、辅导员或官方政务渠道核实",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 39.86895800335333,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0106",
+        "text": "帮我判断一下这个情况：短信称你获得助学金，链接要求填写银行卡和验证码，对方自称“补贴办理员”。如果准备投诉、求助或报警，最该保留哪组证据？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "补贴短信、二维码页面、银行卡填写页和学校核实结果",
+        "question": "如果准备投诉、求助或报警，最该保留哪组证据？",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "possible_types": [
+          "验证码/账户盗刷诈骗",
+          "奖助学金/学费退费诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 40.08279100526124,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0108",
+        "text": "有人碰到了下面的情况：对方说奖学金名额即将过期，需要先缴税费，对方自称“补贴办理员”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "我会问辅导员或资助部门，不点链接也不填银行卡验证码。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "奖助学金/学费退费诈骗",
+          "未知"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 41.95899999467656,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0109",
+        "text": "我遇到这样一件事：群里发补贴二维码，页面要求输入身份证和支付密码，对方自称“补贴办理员”。这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "身份证号、银行卡号、支付密码和验证码",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 42.35300002619624,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0110",
+        "text": "帮我判断一下这个情况：来电称国家补助发放，要你去 ATM 按提示操作，对方自称“补贴办理员”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "奖助学金/补贴诈骗",
+        "expected_answer": "补贴奖助学金以学校或官方通知为准，不先缴费。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 41.916374990250915,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0111",
+        "text": "这是一个反诈案例：网上房源价格明显低于市场，房东要求先付定金才看房，对方自称“房东中介”。请问，这段场景最应警惕的风险信号是什么？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "未看房先付定金",
+        "question": "这段场景最应警惕的风险信号是什么？",
+        "actual_type": "虚假购物服务诈骗",
+        "possible_types": [
+          "虚假购物服务诈骗"
+        ],
+        "risk_score": 29,
+        "risk_level": "低风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 41.66995798004791,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0112",
+        "text": "有人碰到了下面的情况：中介称房源抢手，让你先转押金保留名额，对方自称“房东中介”。此时最稳妥的第一步是什么？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "签署正规合同并保留收据",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 41.17737500928342,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0113",
+        "text": "我遇到这样一件事：对方只发精装修照片，拒绝视频看房和实地看房，对方自称“房东中介”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "不签合同直接入住",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 41.13099997630343,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0114",
+        "text": "帮我判断一下这个情况：房东要求私下转账，不签合同也不出示产权证明，对方自称“房东中介”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "租房押金诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 40.916915982961655,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0115",
+        "text": "这是一个反诈案例：对方说人在外地，钥匙可快递，但要先付三个月租金，对方自称“房东中介”。请问，如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "实地看房并核验证件、合同和平台交易记录",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 40.153250040020794,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0116",
+        "text": "有人碰到了下面的情况：网上房源价格明显低于市场，房东要求先付定金才看房，对方自称“房东中介”。如果准备投诉、求助或报警，最该保留哪组证据？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "房源链接、房东身份、产权/合同材料、聊天记录和付款凭证",
+        "question": "如果准备投诉、求助或报警，最该保留哪组证据？",
+        "actual_type": "虚假购物服务诈骗",
+        "possible_types": [
+          "虚假购物服务诈骗"
+        ],
+        "risk_score": 35,
+        "risk_level": "中风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 40.21212499355897,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0117",
+        "text": "我遇到这样一件事：中介称房源抢手，让你先转押金保留名额，对方自称“房东中介”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "用低价房源和名额抢手催付押金",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 40.990499954205006,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0118",
+        "text": "帮我判断一下这个情况：对方只发精装修照片，拒绝视频看房和实地看房，对方自称“房东中介”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "没实地看房和签合同前，我不会先付押金或租金。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 38.67762500885874,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0119",
+        "text": "这是一个反诈案例：房东要求私下转账，不签合同也不出示产权证明，对方自称“房东中介”。请问，这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "身份证照片、银行卡和提前转账信息",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 38.73154200846329,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0120",
+        "text": "有人碰到了下面的情况：对方说人在外地，钥匙可快递，但要先付三个月租金，对方自称“房东中介”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "未实地核验房源和合同前，不支付押金或大额租金。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 38.70483301579952,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0132",
+        "text": "有人碰到了下面的情况：对方让你下载交友 App，随后读取通讯录进行威胁，对方自称“敲诈者”。此时最稳妥的第一步是什么？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "不要继续发送隐私内容",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "情感交友诱导投资诈骗",
+        "possible_types": [
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 10,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 68.7059159972705,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0133",
+        "text": "我遇到这样一件事：敲诈者要求连续转账买断视频，否则马上群发，对方自称“敲诈者”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "再发送照片证明诚意",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 70.9466669941321,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0134",
+        "text": "帮我判断一下这个情况：对方发来通讯录截图，要求你不要报警只转账，对方自称“敲诈者”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "裸聊敲诈诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "冒充公检法诈骗",
+        "possible_types": [
+          "冒充公检法诈骗",
+          "未知"
+        ],
+        "risk_score": 93,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 70.99020795430988,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0135",
+        "text": "这是一个反诈案例：陌生账号诱导发送隐私照片后索要封口费，对方自称“敲诈者”。请问，如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "保留威胁记录后向公安机关和平台举报求助",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 29,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 71.24429102987051,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0137",
+        "text": "我遇到这样一件事：对方让你下载交友 App，随后读取通讯录进行威胁，对方自称“敲诈者”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "用隐私曝光威胁持续勒索",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "情感交友诱导投资诈骗",
+        "possible_types": [
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 10,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 70.47591701848432,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0138",
+        "text": "帮我判断一下这个情况：敲诈者要求连续转账买断视频，否则马上群发，对方自称“敲诈者”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "我不会继续转账，会保存威胁证据并报警求助。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 71.43666699994355,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0139",
+        "text": "这是一个反诈案例：对方发来通讯录截图，要求你不要报警只转账，对方自称“敲诈者”。请问，这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "通讯录、隐私照片视频和更多联系人信息",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "冒充公检法诈骗",
+        "possible_types": [
+          "冒充公检法诈骗",
+          "未知"
+        ],
+        "risk_score": 93,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 71.97308295872062,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0140",
+        "text": "有人碰到了下面的情况：陌生账号诱导发送隐私照片后索要封口费，对方自称“敲诈者”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "裸聊敲诈诈骗",
+        "expected_answer": "遇到隐私勒索不转账，保留证据并尽快报警求助。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 45,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 72.10054202005267,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0152",
+        "text": "有人碰到了下面的情况：短信提示机票退改签，链接要求填写银行卡和验证码，对方自称“航司客服”。此时最稳妥的第一步是什么？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "不要提供银行卡验证码",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗",
+          "机票火车票退改签诈骗",
+          "验证码/账户盗刷诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 50.07416702574119,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0153",
+        "text": "我遇到这样一件事：客服说理赔通道异常，需要你下载会议软件操作，对方自称“航司客服”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "先转手续费等退款",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 51.61762499483302,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0154",
+        "text": "帮我判断一下这个情况：对方要求先转手续费，补偿金随后一起退回，对方自称“航司客服”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "机票退改签诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 50.665332993958145,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0155",
+        "text": "这是一个反诈案例：所谓客服能准确说出航班信息，随后索要支付验证码，对方自称“航司客服”。请问，如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "通过航司官方 App、官网或官方客服电话核实退改签",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "possible_types": [
+          "验证码/账户盗刷诈骗",
+          "机票火车票退改签诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 50.24599999887869,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0157",
+        "text": "我遇到这样一件事：短信提示机票退改签，链接要求填写银行卡和验证码，对方自称“航司客服”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "准确说出行程信息后以补偿金诱导验证",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗",
+          "机票火车票退改签诈骗",
+          "验证码/账户盗刷诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 49.51433296082541,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0158",
+        "text": "帮我判断一下这个情况：客服说理赔通道异常，需要你下载会议软件操作，对方自称“航司客服”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "我会用航司官方渠道查退改签，不发验证码也不交手续费。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 50.581833987962455,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0159",
+        "text": "这是一个反诈案例：对方要求先转手续费，补偿金随后一起退回，对方自称“航司客服”。请问，这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "银行卡、验证码、行程信息和支付密码",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 50.652457983233035,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0160",
+        "text": "有人碰到了下面的情况：所谓客服能准确说出航班信息，随后索要支付验证码，对方自称“航司客服”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "退改签和赔偿只在航司或平台官方渠道办理，不交验证费。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "possible_types": [
+          "验证码/账户盗刷诈骗",
+          "机票火车票退改签诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 50.65212497720495,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0183",
+        "text": "这是一个反诈案例：对方让你点击领奖链接，填写身份证和银行卡，对方自称“领奖客服”。请问，下面哪种做法最可能让损失扩大？",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "expected_answer": "把验证码发给客服",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗",
+          "虚假中奖/免费礼品诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_sensitive_info",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 42.16741700656712,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0184",
+        "text": "有人碰到了下面的情况：客服说奖品已锁定，需要提供验证码确认身份，对方自称“领奖客服”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "expected_answer": "虚假中奖/免费礼品诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗",
+          "虚假中奖/免费礼品诈骗",
+          "验证码/账户盗刷诈骗"
+        ],
+        "risk_score": 93,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 42.887208983302116,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0185",
+        "text": "我遇到这样一件事：群里发免费礼品活动，要求拉人并缴保证金，对方自称“领奖客服”。如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "expected_answer": "通过活动主办方官方账号或平台客服核实中奖规则",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "网络贷款诈骗",
+        "possible_types": [
+          "网络贷款诈骗",
+          "虚假中奖/免费礼品诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 41.611291002482176,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0188",
+        "text": "有人碰到了下面的情况：对方让你点击领奖链接，填写身份证和银行卡，对方自称“领奖客服”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "expected_answer": "领奖前收费和要验证码我不接受，我会查官方活动规则。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗",
+          "虚假中奖/免费礼品诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_sensitive_info",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 42.67204197822139,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0189",
+        "text": "我遇到这样一件事：客服说奖品已锁定，需要提供验证码确认身份，对方自称“领奖客服”。这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "expected_answer": "身份证、银行卡、验证码和收货信息",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗",
+          "虚假中奖/免费礼品诈骗",
+          "验证码/账户盗刷诈骗"
+        ],
+        "risk_score": 93,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 42.70675004227087,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0190",
+        "text": "帮我判断一下这个情况：群里发免费礼品活动，要求拉人并缴保证金，对方自称“领奖客服”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "expected_answer": "中奖免费礼品先收费或要验证码，基本都是陷阱。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "网络贷款诈骗",
+        "possible_types": [
+          "网络贷款诈骗",
+          "虚假中奖/免费礼品诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 42.646125017199665,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0194",
+        "text": "帮我判断一下这个情况：二维码页面要求输入身份证、银行卡和验证码，对方自称“链接发送者”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "钓鱼链接诈骗",
+        "expected_answer": "钓鱼链接诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "possible_types": [
+          "验证码/账户盗刷诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 95,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 41.16366704693064,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0199",
+        "text": "这是一个反诈案例：二维码页面要求输入身份证、银行卡和验证码，对方自称“链接发送者”。请问，这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "钓鱼链接诈骗",
+        "expected_answer": "账号密码、支付密码、验证码和通讯录权限",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "possible_types": [
+          "验证码/账户盗刷诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 95,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 39.24837498925626,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0210",
+        "text": "帮我判断一下这个情况：所谓办案人员要求你不要告诉家人、老师或银行工作人员，并让你下载会议软件接受资金审查，对方自称“公安人员”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "冒充权威并要求保密制造恐惧",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "虚假投资理财诈骗",
+          "冒充公检法诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_app_install",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 42.05291700782254,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0214",
+        "text": "帮我判断一下这个情况：二维码页面声称可以领取红包，但要求授权通讯录和短信权限，并填写身份证、银行卡和验证码，对方自称“活动客服”。这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "钓鱼链接诈骗",
+        "expected_answer": "账号密码、支付密码、验证码和通讯录权限",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗",
+          "验证码/账户盗刷诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 46.25845799455419,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0215",
+        "text": "这是一个反诈案例：陌生电话准确说出你的航班信息，称航班取消可领取补偿金，但需要你点击链接填写银行卡和支付验证码，对方自称“航司客服”。请问，如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "通过航司官方 App、官网或官方客服电话核实",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "possible_types": [
+          "验证码/账户盗刷诈骗",
+          "机票火车票退改签诈骗",
+          "钓鱼链接诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 47.8156249737367,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0216",
+        "text": "有人碰到了下面的情况：所谓客服称理赔通道异常，需要你先转一笔手续费，补偿金会和手续费一起退回，对方自称“航司客服”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "机票退改签诈骗",
+        "expected_answer": "先转手续费等待退款",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗"
+        ],
+        "risk_score": 91,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 46.357667015399784,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0218",
+        "text": "帮我判断一下这个情况：对方催促你马上点击领奖链接填写银行卡和验证码，否则中奖资格会过期，对方自称“领奖客服”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "expected_answer": "领奖前收费和索要验证码我不接受，我会查官方活动规则。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "冒充客服诈骗",
+        "possible_types": [
+          "冒充客服诈骗",
+          "虚假中奖/免费礼品诈骗",
+          "验证码/账户盗刷诈骗",
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 47.127583995461464,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0221",
+        "text": "我遇到这样一件事：你在社交平台看到低价演唱会门票广告，对方要求先加私人微信并脱离平台付款，称不走平台可以更便宜，对方自称“票务商家”。这段场景最应警惕的风险信号是什么？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "要求脱离正规平台私下付款",
+        "question": "这段场景最应警惕的风险信号是什么？",
+        "actual_type": "校园二手/票务交易诈骗",
+        "possible_types": [
+          "校园二手/票务交易诈骗",
+          "虚假购物服务诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 43.231791991274804,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0222",
+        "text": "帮我判断一下这个情况：客服称你的订单要通过陌生二维码补交运费，否则无法发货，并让你不要在原购物平台上咨询，对方自称“网店客服”。此时最稳妥的第一步是什么？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "回到原购物平台订单页联系官方客服核实",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 44.12279202369973,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0223",
+        "text": "这是一个反诈案例：对方称限时特价只剩最后一个名额，必须马上转到私人账户才能保留商品，对方自称“代购商家”。请问，哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "我只通过正规平台下单付款，不接受私下转账。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 43.003917031455785,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0227",
+        "text": "这是一个反诈案例：所谓物流客服称你的快递丢失可高额赔付，但需要你打开会议软件共享屏幕，按指引查看银行卡余额和验证码，对方自称“物流客服”。请问，这段场景最应警惕的风险信号是什么？",
+        "expected_type": "冒充电商物流客服诈骗",
+        "expected_answer": "退款赔付中要求共享屏幕和查看验证码",
+        "question": "这段场景最应警惕的风险信号是什么？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "验证码/账户盗刷诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_code_leak",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 43.01320802187547,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0233",
+        "text": "我遇到这样一件事：一名17岁学生在游戏中遇到买家，对方声称要高价购买其游戏账号，并让他登录指定的“正规交易平台”。平台随后提示买家的付款被冻结，需要卖家充值确认交易。学生先后充值3000元后，买家失联，网站也无法打开，对方自称“游戏账号买家和平台客服”。这段真实案例中最应警惕的风险信号是什么？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "要求进入指定平台并由卖家充值解冻交易",
+        "question": "这段真实案例中最应警惕的风险信号是什么？",
+        "actual_type": "虚假购物服务诈骗",
+        "possible_types": [
+          "虚假购物服务诈骗",
+          "虚假投资理财诈骗",
+          "游戏交易诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 45.95574998529628,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0235",
+        "text": "这是一个反诈案例：某公司负责人收到“好友”的微信消息，对方通过短暂视频通话展示了与好友相似的面孔和声音，随后以项目投标急需周转为由要求转账。负责人未拨打好友原号码核实，在约10分钟内转出430万元，对方自称“好友”。请问，看到熟人视频后，转账前最关键的一步是什么？",
+        "expected_type": "AI 换脸冒充亲友诈骗",
+        "expected_answer": "通过好友原号码、当面或共同联系人进行二次核实",
+        "question": "看到熟人视频后，转账前最关键的一步是什么？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 44.65524997795001,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0241",
+        "text": "我遇到这样一件事：骗子诱导一名学生提供班级群二维码，进群后把头像和昵称改成班主任，以收取试卷和材料费为由发布收款码，每人收取598.5元。40名家长先后付款，直到有人发现群里出现两个相同的班主任账号，对方自称“班主任”。家长看到班级群收费通知后，最稳妥的第一步是什么？",
+        "expected_type": "冒充老师收费诈骗",
+        "expected_answer": "通过班主任原号码、学校财务或正式通知独立核实",
+        "question": "家长看到班级群收费通知后，最稳妥的第一步是什么？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗",
+          "两卡出租出借与跑分诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 38.40820904588327,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0242",
+        "text": "帮我判断一下这个情况：骗子进入新生家长群后，在深夜将昵称和头像改成群主老师，发布缴纳资料费、复印费的通知，并要求家长备注学生姓名、截图接龙。9名家长在40分钟内付款，对方自称“新生班级老师”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "冒充老师收费诈骗",
+        "expected_answer": "利用老师身份、低额收费和群内接龙制造从众压力",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "网络贷款诈骗",
+        "possible_types": [
+          "网络贷款诈骗"
+        ],
+        "risk_score": 70,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 38.35099999560043,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0247",
+        "text": "这是一个反诈案例：骗子在租房网站发布明显低价的北京房源，分别扮演房东、房东太太和送钥匙人员，要求租客在拿钥匙前支付押金和三个月租金。一名租客未实地看房便转账1.4万元，随后对方失联。该团伙共骗取34名租客26万余元，对方自称“房东”。请问，这段真实案例中最应警惕的风险信号是什么？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "未核验房源、产权和出租人身份就支付押金及大额租金",
+        "question": "这段真实案例中最应警惕的风险信号是什么？",
+        "actual_type": "虚假购物服务诈骗",
+        "possible_types": [
+          "虚假购物服务诈骗"
+        ],
+        "risk_score": 55,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 37.981499976012856,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0248",
+        "text": "有人碰到了下面的情况：诈骗分子先短租热门区域公寓数日，再把房源以优惠价格发布在社交媒体上，并安排人员带留学生看房。受害人与假中介签署租期数月的虚假合同，支付押金和租金并拿到钥匙。数日后真正房主出现，受害人才发现短租已经到期，对方自称“房东和中介”。为什么“看过房、拿到钥匙、签了合同”仍不能完全证明出租人可信？",
+        "expected_type": "租房押金诈骗",
+        "expected_answer": "还必须核验产权人、出租授权、合同主体和收款账户是否一致",
+        "question": "为什么“看过房、拿到钥匙、签了合同”仍不能完全证明出租人可信？",
+        "actual_type": "冒充领导或熟人借钱诈骗",
+        "possible_types": [
+          "冒充领导或熟人借钱诈骗",
+          "未知",
+          "冒充熟人诈骗"
+        ],
+        "risk_score": 78,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 39.60525000002235,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0251",
+        "text": "这是一个反诈案例：一名女子在交友平台认识自称高收入人士的男子，双方很快建立网恋关系。男子随后推荐一个高收益投资平台，女子多次投入资金，累计37万余元后发现无法提现，所谓男友也失去联系，对方自称“网恋对象”。请问，这段真实案例中最应警惕的风险信号是什么？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "网恋对象在取得信任后推荐陌生投资平台",
+        "question": "这段真实案例中最应警惕的风险信号是什么？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 40.199542010668665,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0252",
+        "text": "有人碰到了下面的情况：一名女子在网络交友群认识自称企业高管的男子。对方以两人共同生活为由推荐投资平台，先让她投入100元获得收益，又让她投入1万元并成功提现。取得信任后，她继续投入5万元，随后账户无法登录，客服称需充值20万元才能解冻，对方自称“网恋对象和平台客服”。平台允许小额盈利和提现说明了什么？",
+        "expected_type": "杀猪盘诈骗",
+        "expected_answer": "可能是诈骗者为建立信任而设置的诱饵，不能证明平台真实",
+        "question": "平台允许小额盈利和提现说明了什么？",
+        "actual_type": "虚假投资理财诈骗",
+        "possible_types": [
+          "虚假投资理财诈骗",
+          "情感交友诱导投资诈骗",
+          "冒充客服诈骗",
+          "杀猪盘诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 40.318834013305604,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0275",
+        "text": "这是一个反诈案例：你接到自称金融平台客服的电话，对方称可以快速放款，并让你添加企业微信下载贷款 App，对方自称“贷款客服”。请问，这段场景最应警惕的风险信号是什么？",
+        "expected_type": "虚假贷款诈骗",
+        "expected_answer": "快速放贷广告后要求下载虚假贷款 App 并先收费",
+        "question": "这段场景最应警惕的风险信号是什么？",
+        "actual_type": "征信修复/注销账户诈骗",
+        "possible_types": [
+          "征信修复/注销账户诈骗",
+          "网络贷款诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 41.41499998513609,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0278",
+        "text": "帮我判断一下这个情况：你接到自称金融平台客服的电话，对方称可以快速放款，并让你添加企业微信下载贷款 App，对方自称“贷款客服”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "虚假贷款诈骗",
+        "expected_answer": "虚假贷款诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "征信修复/注销账户诈骗",
+        "possible_types": [
+          "征信修复/注销账户诈骗",
+          "网络贷款诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 43.46491699106991,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0281",
+        "text": "我遇到这样一件事：你接到自称金融平台客服的电话，对方称可以快速放款，并让你添加企业微信下载贷款 App，对方自称“贷款客服”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "虚假贷款诈骗",
+        "expected_answer": "用急需资金周转和已批额度诱导放款前收费",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "征信修复/注销账户诈骗",
+        "possible_types": [
+          "征信修复/注销账户诈骗",
+          "网络贷款诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 41.143457987345755,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0284",
+        "text": "有人碰到了下面的情况：你接到自称金融平台客服的电话，对方称可以快速放款，并让你添加企业微信下载贷款 App，对方自称“贷款客服”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "虚假贷款诈骗",
+        "expected_answer": "正规贷款放款前不收费，不要求刷流水，也不会索要验证码。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "征信修复/注销账户诈骗",
+        "possible_types": [
+          "征信修复/注销账户诈骗",
+          "网络贷款诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 100,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 41.48129204986617,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0286",
+        "text": "帮我判断一下这个情况：客服让你在下载的 App 中开启屏幕共享，说这样才能完成退款流程，对方自称“网店客服”。此时最稳妥的第一步是什么？",
+        "expected_type": "冒充电商物流客服诈骗",
+        "expected_answer": "挂断电话，自己打开电商平台官方 App 查询订单和退款",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 41.62733402336016,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0287",
+        "text": "这是一个反诈案例：你按客服提示操作后，手机收到银行卡被转出 2 万元的短信，对方自称“网店客服”。请问，下面哪种做法最可能让损失扩大？",
+        "expected_type": "冒充电商物流客服诈骗",
+        "expected_answer": "边共享屏幕边打开银行或支付 App 操作",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 29,
+        "risk_level": "低风险",
+        "intervention_goal": "stop_sensitive_info",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 41.150041972287,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0289",
+        "text": "我遇到这样一件事：客服让你在下载的 App 中开启屏幕共享，说这样才能完成退款流程，对方自称“网店客服”。如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "冒充电商物流客服诈骗",
+        "expected_answer": "通过电商平台、快递平台官方 App 或官方客服电话核实订单",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 37.97800000756979,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0290",
+        "text": "帮我判断一下这个情况：你按客服提示操作后，手机收到银行卡被转出 2 万元的短信，对方自称“网店客服”。如果准备投诉、求助或报警，最该保留哪组证据？",
+        "expected_type": "冒充电商物流客服诈骗",
+        "expected_answer": "来电号码、订单信息、下载 App 记录、屏幕共享提示和银行卡扣款短信",
+        "question": "如果准备投诉、求助或报警，最该保留哪组证据？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 35,
+        "risk_level": "中风险",
+        "intervention_goal": "stop_sensitive_info",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 37.556333001703024,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0292",
+        "text": "有人碰到了下面的情况：客服让你在下载的 App 中开启屏幕共享，说这样才能完成退款流程，对方自称“网店客服”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "冒充电商物流客服诈骗",
+        "expected_answer": "我会自己打开官方 App 查订单，不下载陌生 App，也不共享屏幕。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "possible_types": [
+          "屏幕共享/远程控制诈骗",
+          "冒充客服诈骗"
+        ],
+        "risk_score": 90,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_screen_share",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 35.70566698908806,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0293",
+        "text": "我遇到这样一件事：你按客服提示操作后，手机收到银行卡被转出 2 万元的短信，对方自称“网店客服”。这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "冒充电商物流客服诈骗",
+        "expected_answer": "银行卡号、短信验证码、支付密码、屏幕内容和付款码",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 35,
+        "risk_level": "中风险",
+        "intervention_goal": "stop_sensitive_info",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 35.8024169690907,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0296",
+        "text": "有人碰到了下面的情况：对方发来带你照片的“法律文书”，称案件涉密，要求你到无人房间配合调查，对方自称“办案民警”。此时最稳妥的第一步是什么？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "立即挂断，拨打 110 或联系属地派出所核实",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 35.727333975955844,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0299",
+        "text": "这是一个反诈案例：对方发来带你照片的“法律文书”，称案件涉密，要求你到无人房间配合调查，对方自称“办案民警”。请问，如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "挂断后拨打 110 或联系属地派出所核实，不回拨对方号码",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 36.76929202629253,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0302",
+        "text": "帮我判断一下这个情况：对方发来带你照片的“法律文书”，称案件涉密，要求你到无人房间配合调查，对方自称“办案民警”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "冒充公检法诈骗",
+        "expected_answer": "我会挂断并拨打 110 核实，不会转入所谓安全账户。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 40.44433304807171,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0316",
+        "text": "有人碰到了下面的情况：你付款后询问物流，对方直接把你拉黑；你又在网上找“私家侦探”帮忙定位找人，对方自称“私家侦探”。此时最稳妥的第一步是什么？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "停止私下转账，通过正规平台交易并向平台或公安机关求助",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 55,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 40.40516703389585,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0317",
+        "text": "我遇到这样一件事：所谓私家侦探称能通过手机号定位骗子，但必须先支付高额劳务费，对方自称“私家侦探”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "被骗后继续找陌生私家侦探并预付劳务费",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 40.30183400027454,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0319",
+        "text": "这是一个反诈案例：你付款后询问物流，对方直接把你拉黑；你又在网上找“私家侦探”帮忙定位找人，对方自称“私家侦探”。请问，如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "通过正规电商平台、品牌官方渠道、平台客服或公安机关核实处理",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 55,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 38.33279199898243,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0320",
+        "text": "有人碰到了下面的情况：所谓私家侦探称能通过手机号定位骗子，但必须先支付高额劳务费，对方自称“私家侦探”。如果准备投诉、求助或报警，最该保留哪组证据？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "商品广告、私聊记录、收款账户、物流承诺、拉黑截图和转账凭证",
+        "question": "如果准备投诉、求助或报警，最该保留哪组证据？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 38.00724999746308,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0322",
+        "text": "帮我判断一下这个情况：你付款后询问物流，对方直接把你拉黑；你又在网上找“私家侦探”帮忙定位找人，对方自称“私家侦探”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "我只走正规平台交易，不私下转账，也不找陌生人付费定位。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 55,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 36.161832977086306,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0323",
+        "text": "这是一个反诈案例：所谓私家侦探称能通过手机号定位骗子，但必须先支付高额劳务费，对方自称“私家侦探”。请问，这个场景中最需要保护的是哪类信息或权限？",
+        "expected_type": "虚假购物/服务诈骗",
+        "expected_answer": "收货信息、银行卡、支付凭证、身份证照片和私下转账信息",
+        "question": "这个场景中最需要保护的是哪类信息或权限？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 36.703791993204504,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0335",
+        "text": "这是一个反诈案例：游戏聊天框有人发“进群免费领取游戏道具”，进群后要求扫描二维码填写信息，对方自称“福利派送员”。请问，这段场景最应警惕的风险信号是什么？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "免费游戏福利二维码诱导填写信息后制造账户冻结恐慌",
+        "question": "这段场景最应警惕的风险信号是什么？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗",
+          "虚假中奖/免费礼品诈骗",
+          "游戏交易诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 32.18591696349904,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0336",
+        "text": "有人碰到了下面的情况：扫码填写信息后，网页提示微信将被冻结，群内人员让你联系“处理员”，对方自称“处理员”。此时最稳妥的第一步是什么？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "停止扫码填信息，通过游戏官方平台或微信安全中心核实",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 40,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 32.51666703727096,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0337",
+        "text": "我遇到这样一件事：处理员称需要转账证明微信是本人使用，验证后会如数退还，对方自称“处理员”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "为证明本人使用而向指定账户转账验证",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 32.08387503400445,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0338",
+        "text": "帮我判断一下这个情况：游戏聊天框有人发“进群免费领取游戏道具”，进群后要求扫描二维码填写信息，对方自称“福利派送员”。这个场景更符合哪类诈骗套路？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "游戏交易诈骗",
+        "question": "这个场景更符合哪类诈骗套路？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗",
+          "虚假中奖/免费礼品诈骗",
+          "游戏交易诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 32.563666987698525,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0339",
+        "text": "这是一个反诈案例：扫码填写信息后，网页提示微信将被冻结，群内人员让你联系“处理员”，对方自称“处理员”。请问，如果要核实真伪，应优先通过哪类可信渠道？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "通过游戏官网、官方交易平台、微信安全中心或平台客服核实",
+        "question": "如果要核实真伪，应优先通过哪类可信渠道？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 29,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 32.793042017146945,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0340",
+        "text": "有人碰到了下面的情况：处理员称需要转账证明微信是本人使用，验证后会如数退还，对方自称“处理员”。如果准备投诉、求助或报警，最该保留哪组证据？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "游戏聊天记录、福利群二维码、填写页面、冻结提示、处理员账号和转账凭证",
+        "question": "如果准备投诉、求助或报警，最该保留哪组证据？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 0,
+        "risk_level": "风险未知",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 32.45087497634813,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0341",
+        "text": "我遇到这样一件事：游戏聊天框有人发“进群免费领取游戏道具”，进群后要求扫描二维码填写信息，对方自称“福利派送员”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "用免费道具引流，再用账户冻结和退款承诺逼转账",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗",
+          "虚假中奖/免费礼品诈骗",
+          "游戏交易诈骗"
+        ],
+        "risk_score": 86,
+        "risk_level": "高风险",
+        "intervention_goal": "stop_transfer",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证",
+          "如已转账或泄露信息，尽快联系银行/支付平台止付并报警或拨打96110咨询"
+        ],
+        "top1_pass": false,
+        "topk_pass": true,
+        "latency_ms": 36.14870802266523,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0342",
+        "text": "帮我判断一下这个情况：扫码填写信息后，网页提示微信将被冻结，群内人员让你联系“处理员”，对方自称“处理员”。哪句回复最能立即阻断对方继续诱导？",
+        "expected_type": "游戏交易诈骗",
+        "expected_answer": "我不会扫码填敏感信息，也不会转账证明身份，会走官方渠道核实。",
+        "question": "哪句回复最能立即阻断对方继续诱导？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 40,
+        "risk_level": "中风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 35.62195796985179,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0388",
+        "text": "有人碰到了下面的情况：群里所谓老师和学员不断晒盈利截图，诱导你参与虚假证券交易，对方自称“证券公司员工”。此时最稳妥的第一步是什么？",
+        "expected_type": "假冒证券公司投资诈骗",
+        "expected_answer": "立即核验证券机构和人员资质，不进群、不转账",
+        "question": "此时最稳妥的第一步是什么？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 10,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 33.68658298859373,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0389",
+        "text": "我遇到这样一件事：对方提供自行制作的资质文件和社交平台链接，却不让你通过证券公司官网核实，对方自称“证券公司员工”。下面哪种做法最可能让损失扩大？",
+        "expected_type": "假冒证券公司投资诈骗",
+        "expected_answer": "向非本人名下账户转入所谓投资款",
+        "question": "下面哪种做法最可能让损失扩大？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 25,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 33.81158399861306,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0392",
+        "text": "有人碰到了下面的情况：群里所谓老师和学员不断晒盈利截图，诱导你参与虚假证券交易，对方自称“证券公司员工”。如果准备投诉、求助或报警，最该保留哪组证据？",
+        "expected_type": "假冒证券公司投资诈骗",
+        "expected_answer": "来电号码、QQ 群记录、盈利截图、虚假资质文件、收款账户和转账凭证",
+        "question": "如果准备投诉、求助或报警，最该保留哪组证据？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 10,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 33.283458033110946,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0393",
+        "text": "我遇到这样一件事：对方提供自行制作的资质文件和社交平台链接，却不让你通过证券公司官网核实，对方自称“证券公司员工”。对方主要使用了哪种诱导或施压手法？",
+        "expected_type": "假冒证券公司投资诈骗",
+        "expected_answer": "假冒专业机构和专家指导，用群内成功案例制造从众信任",
+        "question": "对方主要使用了哪种诱导或施压手法？",
+        "actual_type": "钓鱼链接诈骗",
+        "possible_types": [
+          "钓鱼链接诈骗"
+        ],
+        "risk_score": 25,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 32.89699996821582,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0396",
+        "text": "有人碰到了下面的情况：群里所谓老师和学员不断晒盈利截图，诱导你参与虚假证券交易，对方自称“证券公司员工”。完成本题后，最应该记住哪条防骗原则？",
+        "expected_type": "假冒证券公司投资诈骗",
+        "expected_answer": "证券投资认准持牌机构和本人第三方存管账户，稳赚承诺和群聊带单都不可信。",
+        "question": "完成本题后，最应该记住哪条防骗原则？",
+        "actual_type": "未知",
+        "possible_types": [
+          "未知"
+        ],
+        "risk_score": 10,
+        "risk_level": "低风险",
+        "intervention_goal": "ask_clarification",
+        "next_actions": [
+          "不要继续转账、充值、垫付或交付账号/装备等虚拟资产",
+          "不要提供验证码、银行卡、身份证或人脸识别信息",
+          "保存聊天记录、对方账号、链接和转账凭证"
+        ],
+        "top1_pass": false,
+        "topk_pass": false,
+        "latency_ms": 32.50920801656321,
+        "error": ""
+      }
+    ]
+  },
+  "e2e_sample": {
+    "total": 27,
+    "errors": 0,
+    "type_accuracy": 0.6666666666666666,
+    "action_coverage": 1.0,
+    "knowledge_point_coverage": 0.7037037037037037,
+    "next_question_coverage": 0.3333333333333333,
+    "latency_ms": {
+      "mean": 809.5988458156137,
+      "p95": 1829.8819580231793
+    },
+    "cases": [
+      {
+        "sample_id": "AF-CASE-0001",
+        "expected_type": "刷单返利诈骗",
+        "actual_type": "刷单返利诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：刷单返利诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 群里\n2. 刷单\n3. 承诺返利\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n3. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 1597.8296249522828,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0011",
+        "expected_type": "游戏交易诈骗",
+        "actual_type": "游戏交易诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：游戏交易诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑游戏交易诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理游戏交易诈骗的高频关键词、话术和阶段特征。\n3. 围绕游戏账号、装备、皮肤、点券、代练等虚拟资产交易，诱导学生或游戏用户脱离平台、先交付资产或私下付款，随后失联、拉黑或继续索要保证金。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 1598.604874976445,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0021",
+        "expected_type": "冒充客服诈骗",
+        "actual_type": "冒充客服诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“冒充客服诈骗”给你做通用科普。\n识别这类风险，先看对方是否在制造紧迫感、绕开官方平台、要求提前付款、索要验证码/银行卡/身份证，或让你下载陌生 App、共享屏幕。\n如果只是了解知识，可以先记住一句话：身份可以包装，流程可以伪造，但只要开始要钱、要码、要权限，就先停下来核验官方渠道。",
+        "latency_ms": 1652.2293749731034,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0031",
+        "expected_type": "冒充公检法诈骗",
+        "actual_type": "通用法律法规与处置常识",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：通用法律法规与处置常识。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 被骗后声称能通过内部关系、网警、黑客或维权通道追回资金，并要求先交手续费、保证金或解冻费的，通常是二次诈骗风险。\n2. 骗子以兼职任务、小额返利建立信任，随后要求垫付、补单或缴费，常在提现受阻时继续扩大损失。\n3. 用于支撑公开脱敏案例、司法风险和处置常识。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 1652.8828330338001,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0041",
+        "expected_type": "杀猪盘诈骗",
+        "actual_type": "情感交友诱导投资诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：情感交友诱导投资诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑情感交友诱导投资诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理情感交友诱导投资诈骗的高频关键词、话术和阶段特征。\n3. 通过网恋、交友或长期关心建立信任，再引导用户进入对方推荐的投资、博彩、刷单或虚拟币平台，最终以提现失败、税费、解冻费继续榨取资金。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 1617.2723339986987,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0051",
+        "expected_type": "虚假贷款诈骗",
+        "actual_type": "网络贷款诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“网络贷款诈骗”给你做通用科普。\n识别这类风险，先看对方是否在制造紧迫感、绕开官方平台、要求提前付款、索要验证码/银行卡/身份证，或让你下载陌生 App、共享屏幕。\n如果只是了解知识，可以先记住一句话：身份可以包装，流程可以伪造，但只要开始要钱、要码、要权限，就先停下来核验官方渠道。",
+        "latency_ms": 80.86054201703519,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0061",
+        "expected_type": "验证码/账户盗刷诈骗",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：验证码/账户盗刷诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 验证码\n2. 客服\n3. 私下游戏交易\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 不要提供验证码、密码、银行卡或身份证信息\n3. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n4. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 98.0304169934243,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0071",
+        "expected_type": "屏幕共享/远程控制诈骗",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“屏幕共享/远程控制诈骗”给你做通用科普。\n识别这类风险，先看对方是否在制造紧迫感、绕开官方平台、要求提前付款、索要验证码/银行卡/身份证，或让你下载陌生 App、共享屏幕。\n如果只是了解知识，可以先记住一句话：身份可以包装，流程可以伪造，但只要开始要钱、要码、要权限，就先停下来核验官方渠道。",
+        "latency_ms": 165.17095803283155,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0081",
+        "expected_type": "AI 换脸冒充亲友诈骗",
+        "actual_type": "AI换脸冒充熟人诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：AI换脸冒充熟人诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 要求垫付资金\n2. 冻结\n3. 视频里像\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n3. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 145.40558401495218,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0091",
+        "expected_type": "虚假招聘/实习诈骗",
+        "actual_type": "求职实习招聘诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：求职实习招聘诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑求职实习招聘诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理求职实习招聘诈骗的高频关键词、话术和阶段特征。\n3. 以轻松高薪、内推保 offer、入职前收费、培训贷款上岗等方式诱导学生和毕业生交费、贷款或脱离正规招聘平台。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 79.1136670159176,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0101",
+        "expected_type": "奖助学金/补贴诈骗",
+        "actual_type": "验证码/账户盗刷诈骗",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：验证码/账户盗刷诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 验证码\n2. 银行卡\n3. 链接\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 不要提供验证码、密码、银行卡或身份证信息\n3. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n4. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 1732.3946250253357,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0111",
+        "expected_type": "租房押金诈骗",
+        "actual_type": "通用法律法规与处置常识",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：通用法律法规与处置常识。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑公开脱敏案例、司法风险和处置常识。\n2. 作为公安机关反诈宣传、典型案例和报案处置常识的通用官方入口。\n3. 用于支撑典型案例复盘和多类私下交易诈骗识别点。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 1598.5174999805167,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0121",
+        "expected_type": "二手票务交易诈骗",
+        "actual_type": "校园二手/票务交易诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：校园二手/票务交易诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 卖家\n2. 要求垫付资金\n3. 票务/二手交易平台外付款行为组合规则\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n3. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 143.95604201126844,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0131",
+        "expected_type": "裸聊敲诈诈骗",
+        "actual_type": "裸聊敲诈勒索诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：裸聊敲诈勒索诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑裸聊敲诈勒索诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理裸聊敲诈勒索诈骗的高频关键词、话术和阶段特征。\n3. 通过交友、直播或裸聊诱导下载陌生 App，获取通讯录或私密影像后，以公开视频、发给同学家人等方式威胁转账，付款后通常继续勒索。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 80.33566700760275,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0141",
+        "expected_type": "两卡出租出借诈骗",
+        "actual_type": "两卡出租出借与跑分诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：两卡出租出借与跑分诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 陌生人\n2. 银行卡\n3. 出租出借两卡\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n3. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 140.08849998936057,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0151",
+        "expected_type": "机票退改签诈骗",
+        "actual_type": "机票火车票退改签诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“机票火车票退改签诈骗”给你做通用科普。\n识别这类风险，先看对方是否在制造紧迫感、绕开官方平台、要求提前付款、索要验证码/银行卡/身份证，或让你下载陌生 App、共享屏幕。\n如果只是了解知识，可以先记住一句话：身份可以包装，流程可以伪造，但只要开始要钱、要码、要权限，就先停下来核验官方渠道。",
+        "latency_ms": 91.3880419684574,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0161",
+        "expected_type": "冒充老师收费诈骗",
+        "actual_type": "冒充老师辅导员收费诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：冒充老师辅导员收费诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑冒充老师辅导员收费诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理冒充老师辅导员收费诈骗的高频关键词、话术和阶段特征。\n3. 诈骗分子冒充老师、辅导员、班干部或家委身份，在班级群、家长群、校友群发布缴费二维码或收款信息，催促学生和家长缴纳班费、资料费、考试费等。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 1830.5552499950863,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0171",
+        "expected_type": "征信修复/注销账户诈骗",
+        "actual_type": "冒充客服诈骗",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：冒充客服诈骗、网络贷款诈骗、征信修复/注销账户诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑网络贷款诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理征信修复/注销账户诈骗的高频关键词、话术和阶段特征。\n3. 骗子以低门槛贷款、快速放款为诱饵，在放款前收取保证金、解冻费、刷流水或索要身份证银行卡信息。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 92.95812499476597,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0181",
+        "expected_type": "虚假中奖/免费礼品诈骗",
+        "actual_type": "虚假中奖/免费礼品诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：虚假中奖/免费礼品诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 先交\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n3. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 58.5819169646129,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0191",
+        "expected_type": "钓鱼链接诈骗",
+        "actual_type": "钓鱼链接诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：钓鱼链接诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑钓鱼链接诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理钓鱼链接诈骗的高频关键词、话术和阶段特征。\n3. 骗子通过仿冒网站、短信链接、二维码诱导用户填写账号、密码、银行卡、身份证或验证码。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 97.59495896287262,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0221",
+        "expected_type": "虚假购物/服务诈骗",
+        "actual_type": "校园二手/票务交易诈骗",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：校园二手/票务交易诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 要求垫付资金\n2. 脱离平台\n3. 票务/二手交易平台外付款行为组合规则\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n3. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 81.28350001061335,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0224",
+        "expected_type": "虚假投资理财诈骗",
+        "actual_type": "虚假投资理财诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“虚假投资理财诈骗”给你做通用科普。\n识别这类风险，先看对方是否在制造紧迫感、绕开官方平台、要求提前付款、索要验证码/银行卡/身份证，或让你下载陌生 App、共享屏幕。\n如果只是了解知识，可以先记住一句话：身份可以包装，流程可以伪造，但只要开始要钱、要码、要权限，就先停下来核验官方渠道。",
+        "latency_ms": 79.05554200988263,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0227",
+        "expected_type": "冒充电商物流客服诈骗",
+        "actual_type": "屏幕共享/远程控制诈骗",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“转账前防骗”给你讲。\n真正要看的不是它叫什么骗局，而是有没有这些危险动作：催你马上转账、让你转到陌生个人账户、发来所谓已转账截图让你垫付、要求验证码或屏幕共享、让你绕开官方平台私下付款。\n转账前先做三件事：第一，确认收款账户是否和真实交易主体一致；第二，通过官方 App、客服电话或线下渠道核实，不点陌生链接；第三，只要对方催促、保密、先交钱解冻或补资料，就先停。\n如果已经转了钱，尽快联系银行或支付平台申请止付，保存聊天记录、收款账号、转账凭证和链接，再报警或通过官方渠道举报。",
+        "latency_ms": 1827.1943750442006,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0229",
+        "expected_type": "冒充领导/熟人诈骗",
+        "actual_type": "AI换脸冒充熟人诈骗",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": true,
+        "answer": "判断为：AI换脸冒充熟人诈骗。先不要继续按对方要求操作。\n我这样判断，主要是因为：\n1. 垫付\n2. 换了新号\n3. 冒充熟人诈骗核心高危规则\n现在先做：\n1. 立即停止当前转账、充值、补单、交费或交付账号/银行卡的动作\n2. 通过官方 App、官网客服电话或线下机构独立核验，不使用对方提供的联系方式\n3. 保存聊天记录、来电号码、链接、账号、收款码和转账凭证\n\n下一步请确认：你现在是否已经转账、提供验证码或开启屏幕共享？",
+        "latency_ms": 1829.8819580231793,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0343",
+        "expected_type": "婚恋/交友诈骗",
+        "actual_type": "跨境高薪招工诱骗诈骗",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“境外/跨境诈骗”给你做一个总览。\n这不是单一骗局名称，而是一组常见场景：境外高薪招工或电诈园区诱骗、跨境投资理财和虚拟币骗局、跨境交友诱导投资、两卡出租出借与跑分洗钱工具人。\n共同风险信号是：承诺高收益或高薪、要求保密私聊、绕开官方渠道、先交保证金/路费/解冻费、索要身份证护照银行卡，或安排出境、边境集合、提交证件。\n防范时先抓一句话：凡是让你脱离正规渠道、交钱交证件、保密行动或去边境/境外集合的，都先停止联系，保存广告、聊天、账号和转账证据，通过公安、人社、学校或官方平台核验。",
+        "latency_ms": 1730.8464579982683,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0379",
+        "expected_type": "跑腿取现/洗钱工具人风险",
+        "actual_type": "校园二手/票务交易诈骗",
+        "type_pass": false,
+        "has_action": true,
+        "has_knowledge_points": false,
+        "has_next_question": false,
+        "answer": "可以，我先按“转账前防骗”给你讲。\n真正要看的不是它叫什么骗局，而是有没有这些危险动作：催你马上转账、让你转到陌生个人账户、发来所谓已转账截图让你垫付、要求验证码或屏幕共享、让你绕开官方平台私下付款。\n转账前先做三件事：第一，确认收款账户是否和真实交易主体一致；第二，通过官方 App、客服电话或线下渠道核实，不点陌生链接；第三，只要对方催促、保密、先交钱解冻或补资料，就先停。\n如果已经转了钱，尽快联系银行或支付平台申请止付，保存聊天记录、收款账号、转账凭证和链接，再报警或通过官方渠道举报。",
+        "latency_ms": 99.50204199412838,
+        "error": ""
+      },
+      {
+        "sample_id": "AF-CASE-0387",
+        "expected_type": "假冒证券公司投资诈骗",
+        "actual_type": "虚假投资理财诈骗",
+        "type_pass": true,
+        "has_action": true,
+        "has_knowledge_points": true,
+        "has_next_question": false,
+        "answer": "判断类型：虚假投资理财诈骗。这类风险需要重点留意。\n与当前主题对应的三个信号：\n1. 用于支撑虚假投资理财诈骗的风险推理、等级判断和劝阻目标选择。\n2. 整理虚假投资理财诈骗的高频关键词、话术和阶段特征。\n3. 通过网恋、交友或长期关心建立信任，再引导用户进入对方推荐的投资、博彩、刷单或虚拟币平台，最终以提现失败、税费、解冻费继续榨取资金。\n为什么这样判断：这些行为把交易或账户安全交给无法独立核验的对象，风险不在于对方怎么自称，而在于是否绕开正规流程并推动高风险动作。\n安全原则：先停止付款和信息提交，只通过官方 App、官网客服电话或线下机构核验，并保留聊天、链接和转账证据。\n如果您愿意，可以把对方的话术、链接或要求发出来，我可以继续帮您拆解风险点。",
+        "latency_ms": 1657.6341250329278,
+        "error": ""
+      }
+    ]
+  }
+}

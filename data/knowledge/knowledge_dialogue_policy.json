@@ -1,0 +1,1849 @@
+[
+  {
+    "policy_id": "KDP_GLOBAL_V1",
+    "policy_type": "global_teaching_contract",
+    "title": "反诈知识多轮教学总策略",
+    "enabled": true,
+    "priority": 100,
+    "workflow_mode": "knowledge_dialogue_flow",
+    "teaching_contract": {
+      "goal": "把反诈知识拆成多轮、可追问、可中断的教学对话，而不是一次性百科输出。",
+      "turn_limits": {
+        "target_chars": [
+          220,
+          420
+        ],
+        "max_bullets": 5,
+        "max_sections_per_turn": 1
+      },
+      "stage_order": [
+        "overview",
+        "features",
+        "tactics",
+        "case",
+        "prevention",
+        "law",
+        "summary"
+      ],
+      "default_first_stage": "overview",
+      "continuation_policy": {
+        "continue_words": [
+          "继续",
+          "接着说",
+          "往下讲",
+          "然后呢",
+          "下一步",
+          "还有呢"
+        ],
+        "repeat_or_summary_words": [
+          "总结",
+          "复盘",
+          "再概括",
+          "重点"
+        ],
+        "stage_jump_words": {
+          "features": [
+            "特征",
+            "识别",
+            "信号",
+            "怎么看出来",
+            "怎么判断"
+          ],
+          "tactics": [
+            "套路",
+            "手法",
+            "流程",
+            "怎么骗",
+            "怎么上钩"
+          ],
+          "case": [
+            "案例",
+            "例子",
+            "真实案例",
+            "举例"
+          ],
+          "prevention": [
+            "怎么防",
+            "防范",
+            "避免",
+            "核验",
+            "怎么办"
+          ],
+          "law": [
+            "法律",
+            "法规",
+            "违法",
+            "报警",
+            "立案",
+            "追回"
+          ]
+        }
+      },
+      "convergence_policy": {
+        "goal": "科普对话要通过 LLM 语义理解自然结束，不能把用户的确认语持续解释成继续学习。",
+        "semantic_judge": {
+          "enabled": true,
+          "output_schema": {
+            "turn_act": "new_topic|continue_learning|stage_jump|close_learning|post_completion_ack|risk_interrupt|smalltalk|unclear",
+            "requested_stage": "overview|features|tactics|case|prevention|law|summary|",
+            "should_continue_knowledge": "boolean",
+            "should_close_learning": "boolean",
+            "is_risk_interrupt": "boolean",
+            "is_post_completion_idle": "boolean",
+            "semantic_rewrite": "保留用户原意的学习意图改写",
+            "confidence": "0.0-1.0",
+            "reason": "判定依据"
+          },
+          "close_learning_semantics": "用户表达已经理解、记住、够了、暂时结束、不需要继续，或对总结后的内容作普通确认。",
+          "continue_learning_semantics": "用户表达还想继续、要求展开下一节，或明确提出案例、防范、法律、流程、特征等学习方向。",
+          "post_completion_idle_semantics": "学习状态已 completed/idle 后，用户只是短确认、含糊回应或自然收尾，不应重新进入知识流或风险流。",
+          "risk_interrupt_semantics": "用户描述自己正在转账、提现失败、被要求交钱、验证码/屏幕共享/陌生App/账号密码等真实处境。"
+        },
+        "close_after_stage": "summary",
+        "ack_after_completed": "回到日常助手状态，不重复科普内容，也不继续追问。",
+        "max_active_teaching_turns_without_explicit_request": 4
+      },
+      "risk_interrupt": {
+        "enabled": true,
+        "signals": [
+          "已转账",
+          "已经付款",
+          "提现不了",
+          "不能提现",
+          "让我交保证金",
+          "让我交税费",
+          "验证码",
+          "屏幕共享",
+          "下载App",
+          "安全账户",
+          "账号给了",
+          "密码给了"
+        ],
+        "action": "停止科普，交给 risk_case_flow 做实时止损。"
+      },
+      "answer_style": [
+        "先给一句清晰结论。",
+        "本轮只讲一个教学重点。",
+        "尽量用用户听得懂的话解释，不堆术语。",
+        "普通阶段最多给一句自然过渡，不问“想听吗/要不要/需不需要”。",
+        "总结阶段必须自然收口，不再引出案例、流程或下一节。",
+        "不要用“好的、好，那咱们、我们接着”这类模板化开头。",
+        "不输出风险分、内部状态、规则命中字段。"
+      ],
+      "knowledge_grounding": {
+        "must_read_materials": [
+          "scam_types.critical_facts",
+          "scam_types.loss_signals",
+          "scam_features",
+          "prevention_advice",
+          "typical_cases",
+          "law_clauses"
+        ],
+        "generation_rule": "LLM 只能基于检索到的结构化知识扩写，不编造法律条文号或不存在的官方流程。"
+      }
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_BRUSH_REBATE_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "刷单返利诈骗教学路径",
+    "enabled": true,
+    "priority": 95,
+    "fraud_type": "刷单返利诈骗",
+    "scam_id": "scam_brush_rebate",
+    "aliases": [
+      "刷单",
+      "返利",
+      "做任务",
+      "点赞返利",
+      "返佣",
+      "补单",
+      "福利单",
+      "连单",
+      "福利群",
+      "任务群",
+      "点赞关注、做任务返佣和前几单小额到账",
+      "垫付大额订单、联单补单、提现受阻继续收费",
+      "刷单返利"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：小额返利不是可信证明，要求垫付/补单/解冻就是高危。",
+      "features": "讲清任务返佣、小额返利、垫付资金、提现受阻、继续补单等识别点。",
+      "tactics": "拆解从兼职引流、试单返利、连单加码到提现受阻的完整流程。",
+      "case": "用脱敏案例复盘小额返利如何诱导大额垫付。",
+      "prevention": "给出求职兼职中的核验和停止动作。",
+      "law": "讲保存证据、报警、止付和不要继续交费的通用法律处置常识。",
+      "summary": "用一句口诀总结刷单返利的识别逻辑。"
+    },
+    "one_sentence_rule": "凡是兼职任务要求你先垫钱、补单或交解冻费，本质上就不是正规兼职。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    }
+  },
+  {
+    "policy_id": "KDP_GAME_TRADE_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "游戏交易诈骗教学路径",
+    "enabled": true,
+    "priority": 94,
+    "fraud_type": "游戏交易诈骗",
+    "scam_id": "scam_game_trade",
+    "aliases": [
+      "游戏交易",
+      "卖号",
+      "游戏账号",
+      "游戏装备",
+      "代充",
+      "代练",
+      "担保平台",
+      "解冻保证金",
+      "皮肤交易",
+      "点券代充",
+      "代练押金",
+      "虚拟资产",
+      "游戏币",
+      "高价买号、低价代充、担保平台和爽快成交",
+      "虚假平台冻结货款、账号密码索取、保证金/解冻费连环收费"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：脱离官方交易、索要账号密码或解冻保证金，是游戏交易诈骗核心组合。",
+      "features": "讲清私下交易、虚假担保平台、账号密码索取、保证金解冻费、交易对象失联等特征。",
+      "tactics": "拆解从游戏内引流、转到QQ微信、假平台托管到冻结/解冻收费的流程。",
+      "case": "用卖号或装备交易案例复盘如何被骗钱和账号。",
+      "prevention": "给出账号安全、官方客服、证据保存和交易核验建议。",
+      "law": "讲虚拟资产被骗后的证据保存、平台申诉和报警常识。",
+      "summary": "用一句口诀总结游戏交易诈骗识别逻辑。"
+    },
+    "one_sentence_rule": "凡是游戏交易中让你离开官方渠道、交保证金或先给账号密码，都要先停下来核实。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    }
+  },
+  {
+    "policy_id": "KDP_POLICE_IMPERSONATION_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "冒充公检法诈骗教学路径",
+    "enabled": true,
+    "priority": 96,
+    "fraud_type": "冒充公检法诈骗",
+    "scam_id": "scam_fake_police",
+    "aliases": [
+      "公检法",
+      "公安",
+      "检察院",
+      "法院",
+      "通缉令",
+      "安全账户",
+      "资金清查",
+      "视频笔录",
+      "警察",
+      "涉案洗钱",
+      "涉案洗钱、通缉令、案件编号和来学校/单位抓人的恐吓",
+      "保密隔离、下载App、屏幕共享、资金清查和安全账户转账",
+      "冒充公检法"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：电话办案、要求保密、资金清查/安全账户三件套就是诈骗。",
+      "features": "讲清涉案恐吓、伪造文书、要求保密、视频笔录、屏幕共享、安全账户等信号。",
+      "tactics": "拆解从恐吓、隔离、伪造权威到转账自证清白的流程。",
+      "case": "用银行卡涉案或通缉令案例复盘心理操控。",
+      "prevention": "给出挂断、110/派出所核验、告知家人老师、保存证据建议。",
+      "law": "讲公检法不会电话要求转账、个人遇到恐吓时的报警和证据常识。",
+      "summary": "用一句口诀总结冒充公检法识别逻辑。"
+    },
+    "one_sentence_rule": "凡是自称公检法还让你保密、开视频或把钱转到安全账户，直接按诈骗处理。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    }
+  },
+  {
+    "policy_id": "KDP_FAKE_INVESTMENT_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "虚假投资理财诈骗教学路径",
+    "enabled": true,
+    "priority": 96,
+    "fraud_type": "虚假投资理财诈骗",
+    "scam_id": "scam_fake_investment",
+    "aliases": [
+      "虚假投资",
+      "投资理财",
+      "投资老师",
+      "带单",
+      "高收益",
+      "稳赚",
+      "虚拟币投资",
+      "提现受阻",
+      "理财平台",
+      "内部消息",
+      "投资老师、内部消息、群内晒收益和小额盈利提现",
+      "诱导大额入金、后台盈利造假、提现受阻后缴税费保证金",
+      "虚假投资理财"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：高收益带单、陌生平台、提现要交钱是虚假投资的核心组合。",
+      "features": "讲清老师带单、保本高收益、陌生投资App、后台盈利、提现受阻收费等识别点。",
+      "tactics": "拆解从社交引流、群托晒收益、小额提现、加大投入到提现受阻的流程。",
+      "case": "用投资老师带单案例复盘假平台如何收割。",
+      "prevention": "给出平台资质核验、停止入金、证据保存和不要交解冻费建议。",
+      "law": "讲投资类诈骗的报警、止付、证据保存和金融资质核验常识。",
+      "summary": "用一句口诀总结虚假投资识别逻辑。"
+    },
+    "one_sentence_rule": "高收益带单加陌生平台，再遇到提现先交钱，基本就是虚假投资诈骗。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    }
+  },
+  {
+    "policy_id": "KDP_CAMPUS_LOAN_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "校园贷/网络贷款诈骗教学路径",
+    "enabled": true,
+    "priority": 93,
+    "fraud_type": "网络贷款诈骗",
+    "scam_id": "scam_fake_loan",
+    "aliases": [
+      "校园贷",
+      "注销校园贷",
+      "网络贷款",
+      "贷款App",
+      "放款前收费",
+      "刷流水",
+      "解冻费",
+      "征信修复",
+      "放款",
+      "保证金",
+      "包装费",
+      "无抵押、低息、秒放款、不看征信和校园贷包装",
+      "放款前收费、银行卡号错误冻结、刷流水和征信威胁"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：贷款没到账先收费、刷流水、解冻账号，都是高危信号。",
+      "features": "讲清低门槛放款、银行卡填错、账户冻结、保证金/解冻费、征信威胁等识别点。",
+      "tactics": "拆解从贷款诱导、填写资料、假审批通过到放款前收费的流程。",
+      "case": "用贷款前交解冻费或注销校园贷案例复盘。",
+      "prevention": "给出正规金融渠道核验、保护身份银行卡信息和停止缴费建议。",
+      "law": "讲个人信息保护、报警止付和贷款资质核验常识。",
+      "summary": "用一句口诀总结校园贷/网络贷款诈骗识别逻辑。"
+    },
+    "one_sentence_rule": "正规贷款不会在放款前让你交保证金、解冻费或刷流水。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    }
+  },
+  {
+    "policy_id": "KDP_SERVICE_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "冒充客服诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "冒充客服诈骗",
+    "scam_id": "scam_fake_customer_service",
+    "aliases": [
+      "客服退款",
+      "快递理赔",
+      "平台客服",
+      "百万保障",
+      "取消会员",
+      "售后退款",
+      "退款理赔、取消会员、快递丢失或订单异常",
+      "会议软件共享屏幕、索要验证码、刷流水或转账验证",
+      "冒充客服"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：官方客服不会让你开屏幕共享、给验证码，或向私人账户转账办理退款理赔。",
+      "features": "讲清冒充客服、退款理赔、屏幕共享、验证码、陌生链接和先交钱这些识别点。",
+      "tactics": "拆解从退款理赔、取消会员、快递丢失或订单异常到会议软件共享屏幕、索要验证码、刷流水或转账验证的完整诱导流程。",
+      "case": "用脱敏案例复盘退款理赔如何变成账户盗刷。",
+      "prevention": "给出官方App订单页、平台官方客服电话和快递官网、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：官方客服不会让你开屏幕共享、给验证码，或向私人账户转账办理退款理赔。"
+    },
+    "one_sentence_rule": "官方客服不会让你开屏幕共享、给验证码，或向私人账户转账办理退款理赔。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_PHISH_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "钓鱼链接诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "钓鱼链接诈骗",
+    "scam_id": "scam_phishing_link",
+    "aliases": [
+      "钓鱼链接",
+      "陌生链接",
+      "仿冒网站",
+      "二维码",
+      "账户验证",
+      "安全认证",
+      "账户异常、积分兑换、ETC认证、快递理赔或活动领取",
+      "仿冒网页收集账号密码、银行卡、身份证和短信验证码"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：陌生链接只要让你填账号、银行卡或验证码，就先关闭并走官方入口核验。",
+      "features": "讲清陌生链接、银行卡身份信息、验证码、仿冒域名和诱导安装App这些识别点。",
+      "tactics": "拆解从账户异常、积分兑换、ETC认证、快递理赔或活动领取到仿冒网页收集账号密码、银行卡、身份证和短信验证码的完整诱导流程。",
+      "case": "用脱敏案例复盘仿冒页面如何拿走账户授权。",
+      "prevention": "给出官方App/官网入口、域名、发送者账号和页面权限、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：陌生链接只要让你填账号、银行卡或验证码，就先关闭并走官方入口核验。"
+    },
+    "one_sentence_rule": "陌生链接只要让你填账号、银行卡或验证码，就先关闭并走官方入口核验。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_AI_FACE_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "AI换脸冒充熟人诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "scam_id": "scam_ai_face_family",
+    "aliases": [
+      "AI换脸",
+      "视频通话借钱",
+      "声音很像",
+      "脸很像",
+      "冒充亲友",
+      "AI换脸/拟声冒充亲友领导，制造紧急借钱场景",
+      "拒绝二次核验、要求保密催促、让钱转到非本人账户",
+      "AI换脸冒充熟人"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：视频或语音像本人也不能直接转账，必须用原号码或线下共同信息二次核验。",
+      "features": "讲清AI换脸冒充、熟人借钱、保密催促、非本人账户和拒绝核验这些识别点。",
+      "tactics": "拆解从AI换脸/拟声冒充亲友领导，制造紧急借钱场景到拒绝二次核验、要求保密催促、让钱转到非本人账户的完整诱导流程。",
+      "case": "用脱敏案例复盘AI拟真身份如何绕过熟人信任。",
+      "prevention": "给出原号码回拨、暗号核验、共同联系人确认和收款账户一致性、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：视频或语音像本人也不能直接转账，必须用原号码或线下共同信息二次核验。"
+    },
+    "one_sentence_rule": "视频或语音像本人也不能直接转账，必须用原号码或线下共同信息二次核验。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_ACQ_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "冒充领导或熟人借钱诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "scam_id": "scam_acquaintance_borrow",
+    "aliases": [
+      "领导借钱",
+      "熟人借钱",
+      "朋友借钱",
+      "同事借钱",
+      "亲戚急用钱",
+      "不方便电话",
+      "领导、老师、同学、亲友突然用新账号联系借钱",
+      "以开会、保密、急事为由拒绝电话核验并要求转第三方账户",
+      "冒充领导或熟人借钱"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：熟人新账号借钱、不方便通话、收款账户不是本人，必须先核实再转。",
+      "features": "讲清熟人新账号、借钱、拒绝电话核实、保密催促和第三方收款这些识别点。",
+      "tactics": "拆解从领导、老师、同学、亲友突然用新账号联系借钱到以开会、保密、急事为由拒绝电话核验并要求转第三方账户的完整诱导流程。",
+      "case": "用脱敏案例复盘盗号或仿冒熟人如何利用关系压力。",
+      "prevention": "给出原联系方式、共同联系人、线下见面和收款账户实名、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：熟人新账号借钱、不方便通话、收款账户不是本人，必须先核实再转。"
+    },
+    "one_sentence_rule": "熟人新账号借钱、不方便通话、收款账户不是本人，必须先核实再转。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_CODE_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "验证码/账户盗刷诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "scam_id": "scam_code_account_theft",
+    "aliases": [
+      "验证码",
+      "短信码",
+      "动态码",
+      "登录码",
+      "支付码",
+      "账户盗刷",
+      "身份核验、退款确认、账户异常、好友辅助验证",
+      "索要验证码后登录、绑卡、改密、转账或盗刷",
+      "验证码/账户盗刷"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：验证码就是账户钥匙，任何人索要短信码、登录码、支付码都不能给。",
+      "features": "讲清验证码、身份核验、支付绑卡授权和账户异常恐吓这些识别点。",
+      "tactics": "拆解从身份核验、退款确认、账户异常、好友辅助验证到索要验证码后登录、绑卡、改密、转账或盗刷的完整诱导流程。",
+      "case": "用脱敏案例复盘一个验证码如何变成账户控制权。",
+      "prevention": "给出平台官方安全中心、异常登录记录和支付授权、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：验证码就是账户钥匙，任何人索要短信码、登录码、支付码都不能给。"
+    },
+    "one_sentence_rule": "验证码就是账户钥匙，任何人索要短信码、登录码、支付码都不能给。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_SCREEN_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "屏幕共享/远程控制诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "scam_id": "scam_screen_remote_control",
+    "aliases": [
+      "屏幕共享",
+      "共享屏幕",
+      "远程控制",
+      "远程协助",
+      "会议软件",
+      "客服退款、贷款认证、征信修复、退改签或公检法视频办案",
+      "共享屏幕时打开银行支付页面、验证码和密码输入界面",
+      "屏幕共享/远程控制"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：陌生人让你开屏幕共享或远程控制，本质上就是让对方看你的钱包和验证码。",
+      "features": "讲清屏幕共享、远程控制、会议软件、打开支付银行页面和暴露验证码这些识别点。",
+      "tactics": "拆解从客服退款、贷款认证、征信修复、退改签或公检法视频办案到共享屏幕时打开银行支付页面、验证码和密码输入界面的完整诱导流程。",
+      "case": "用脱敏案例复盘屏幕共享如何绕开验证码保护。",
+      "prevention": "给出会议来源、官方业务渠道、设备权限和支付账户安全、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：陌生人让你开屏幕共享或远程控制，本质上就是让对方看你的钱包和验证码。"
+    },
+    "one_sentence_rule": "陌生人让你开屏幕共享或远程控制，本质上就是让对方看你的钱包和验证码。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_CAMPUS_FEE_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "冒充老师辅导员收费诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "scam_id": "scam_campus_fee_impersonation",
+    "aliases": [
+      "冒充老师",
+      "冒充辅导员",
+      "班干部收费",
+      "班费",
+      "资料费",
+      "考试费",
+      "补课费",
+      "进群缴费",
+      "冒充老师辅导员在班群发布缴费通知",
+      "二维码/群收款限时缴费，阻止学生家长向官方核实",
+      "冒充老师辅导员收费"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：班费、资料费、报名费只要脱离学校官方渠道收款，就先找老师本人核实。",
+      "features": "讲清冒充老师辅导员、班级费用名目、群内扫码、限时催促和拒绝核验这些识别点。",
+      "tactics": "拆解从冒充老师辅导员在班群发布缴费通知到二维码/群收款限时缴费，阻止学生家长向官方核实的完整诱导流程。",
+      "case": "用脱敏案例复盘假老师进群收费如何利用集体压力。",
+      "prevention": "给出老师本人、学校缴费系统、班主任电话和班级官方通知、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：班费、资料费、报名费只要脱离学校官方渠道收款，就先找老师本人核实。"
+    },
+    "one_sentence_rule": "班费、资料费、报名费只要脱离学校官方渠道收款，就先找老师本人核实。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_JOB_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "求职实习招聘诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "求职实习招聘诈骗",
+    "scam_id": "scam_job_internship_recruitment",
+    "aliases": [
+      "求职诈骗",
+      "实习诈骗",
+      "兼职招聘",
+      "内推保offer",
+      "培训贷",
+      "入职押金",
+      "服装费",
+      "高薪轻松、名企内推、实习保offer和快速入职",
+      "入职前收费、培训贷、脱离招聘平台私聊和虚假合同",
+      "求职实习招聘"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：入职前让你交报名费、押金、培训贷或内推费的招聘，先按诈骗处理。",
+      "features": "讲清轻松高薪、入职前收费、收费内推、培训贷和私聊引流这些识别点。",
+      "tactics": "拆解从高薪轻松、名企内推、实习保offer和快速入职到入职前收费、培训贷、脱离招聘平台私聊和虚假合同的完整诱导流程。",
+      "case": "用脱敏案例复盘高薪招聘如何包装成收费内推和培训贷。",
+      "prevention": "给出企业官网招聘页、人社/学校就业渠道、合同主体和收费项目、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：入职前让你交报名费、押金、培训贷或内推费的招聘，先按诈骗处理。"
+    },
+    "one_sentence_rule": "入职前让你交报名费、押金、培训贷或内推费的招聘，先按诈骗处理。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_SCHOLARSHIP_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "奖助学金/学费退费诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "scam_id": "scam_scholarship_subsidy_phishing",
+    "aliases": [
+      "助学金",
+      "奖助学金",
+      "助学金异常",
+      "助学金到账异常",
+      "奖学金领取",
+      "学费退费",
+      "教育补贴",
+      "补贴发放",
+      "银行卡激活",
+      "奖助学金到账、学费退费、补贴资格异常",
+      "填写银行卡身份信息、索要验证码或先转账激活补贴",
+      "奖助学金/学费退费"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：奖助学金和退费不会让你先转账激活，也不会索要银行卡验证码。",
+      "features": "讲清奖助学金异常、学费退费、银行卡身份信息、验证码和先转账激活这些识别点。",
+      "tactics": "拆解从奖助学金到账、学费退费、补贴资格异常到填写银行卡身份信息、索要验证码或先转账激活补贴的完整诱导流程。",
+      "case": "用脱敏案例复盘补贴退费如何变成钓鱼盗刷。",
+      "prevention": "给出学校资助中心、财务处、辅导员和官方通知系统、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：奖助学金和退费不会让你先转账激活，也不会索要银行卡验证码。"
+    },
+    "one_sentence_rule": "奖助学金和退费不会让你先转账激活，也不会索要银行卡验证码。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_EXAM_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "考试考证论文服务诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "考试考证论文服务诈骗",
+    "scam_id": "scam_exam_thesis_service",
+    "aliases": [
+      "包过考试",
+      "内部名额",
+      "考研复试包过",
+      "论文代写",
+      "查重降重",
+      "保研名额",
+      "考试保过、内部答案、论文代写降重和包录取",
+      "先收定金尾款，随后以保密费、删记录费、举报威胁继续加价",
+      "考试考证论文服务"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：保过、代考、代写和论文包过本身就高危，继续交保密费只会被勒索。",
+      "features": "讲清违规保过、论文代写、定金尾款、加价保密费和拒绝正规合同这些识别点。",
+      "tactics": "拆解从考试保过、内部答案、论文代写降重和包录取到先收定金尾款，随后以保密费、删记录费、举报威胁继续加价的完整诱导流程。",
+      "case": "用脱敏案例复盘违规服务如何从交易变成敲诈。",
+      "prevention": "给出学校考试规定、正规教务渠道、合同合法性和服务边界、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：保过、代考、代写和论文包过本身就高危，继续交保密费只会被勒索。"
+    },
+    "one_sentence_rule": "保过、代考、代写和论文包过本身就高危，继续交保密费只会被勒索。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_SECONDHAND_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "校园二手/票务交易诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "校园二手/票务交易诈骗",
+    "scam_id": "scam_secondhand_ticket_trade",
+    "aliases": [
+      "校园二手",
+      "低价数码",
+      "演唱会票",
+      "赛事门票",
+      "景区门票",
+      "代购",
+      "黄牛票",
+      "低价二手、演唱会/车票内部名额和校园熟人交易",
+      "私下转账定金、脱离担保平台、票据截图造假和卖家失联",
+      "校园二手/票务交易"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：二手和票务交易脱离担保平台、先付定金或低价内部票，都要先核验。",
+      "features": "讲清内部低价票货、私下定金、脱离担保平台、票务退款屏幕共享和催促抢名额这些识别点。",
+      "tactics": "拆解从低价二手、演唱会/车票内部名额和校园熟人交易到私下转账定金、脱离担保平台、票据截图造假和卖家失联的完整诱导流程。",
+      "case": "用脱敏案例复盘低价票货如何诱导脱离担保。",
+      "prevention": "给出官方票务平台、校园实名身份、担保交易和票据真伪、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：二手和票务交易脱离担保平台、先付定金或低价内部票，都要先核验。"
+    },
+    "one_sentence_rule": "二手和票务交易脱离担保平台、先付定金或低价内部票，都要先核验。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_RENTAL_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "租房合租押金诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "租房合租押金诈骗",
+    "scam_id": "scam_rental_deposit",
+    "aliases": [
+      "低价好房",
+      "合租押金",
+      "短租押金",
+      "先交定金看房",
+      "房东在外地",
+      "留房押金",
+      "低价好房、急租、近学校和名额抢手",
+      "未看房先付押金、假房东、拒绝合同收据和平台外付款",
+      "租房合租押金"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：没看房、没核验房东和产权，就先交押金或定金，风险很高。",
+      "features": "讲清低价房源、未看房押金、房东身份未核验、拒绝合同收据和平台外付款这些识别点。",
+      "tactics": "拆解从低价好房、急租、近学校和名额抢手到未看房先付押金、假房东、拒绝合同收据和平台外付款的完整诱导流程。",
+      "case": "用脱敏案例复盘低价房源如何骗取押金。",
+      "prevention": "给出房源实地、产权/租赁授权、正规合同和平台担保、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：没看房、没核验房东和产权，就先交押金或定金，风险很高。"
+    },
+    "one_sentence_rule": "没看房、没核验房东和产权，就先交押金或定金，风险很高。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_NUDE_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "裸聊敲诈勒索诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "scam_id": "scam_nude_chat_extortion",
+    "aliases": [
+      "裸聊",
+      "偷拍视频",
+      "通讯录威胁",
+      "公开视频",
+      "直播交友App",
+      "删视频费用",
+      "陌生交友、暧昧视频、诱导下载直播/交友App",
+      "窃取通讯录后用隐私视频威胁转账，付款后继续勒索",
+      "裸聊敲诈勒索"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：裸聊被威胁时，转钱不会删视频，只会让勒索升级。",
+      "features": "讲清交友App、通讯录威胁、隐私视频、转账删视频和付款后继续勒索这些识别点。",
+      "tactics": "拆解从陌生交友、暧昧视频、诱导下载直播/交友App到窃取通讯录后用隐私视频威胁转账，付款后继续勒索的完整诱导流程。",
+      "case": "用脱敏案例复盘裸聊勒索如何利用羞耻感持续收割。",
+      "prevention": "给出立即止付止联、保护通讯录、证据保存和报警求助、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：裸聊被威胁时，转钱不会删视频，只会让勒索升级。"
+    },
+    "one_sentence_rule": "裸聊被威胁时，转钱不会删视频，只会让勒索升级。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_TWO_CARDS_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "两卡出租出借与跑分诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "scam_id": "scam_two_cards_rent",
+    "aliases": [
+      "两卡",
+      "跑分",
+      "出租银行卡",
+      "出借电话卡",
+      "租收款码",
+      "帮忙收款返佣",
+      "日结高薪、无风险兼职、只借卡刷流水",
+      "用你的卡号账户收转涉诈资金，账户冻结甚至承担法律风险",
+      "两卡出租出借与跑分"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：出租出借银行卡、电话卡、收款码或实名账号，可能卷入涉诈洗钱和跑分。",
+      "features": "讲清出租两卡、跑分收款、日结高薪、收款码实名账号和账户涉案冻结这些识别点。",
+      "tactics": "拆解从日结高薪、无风险兼职、只借卡刷流水到用你的卡号账户收转涉诈资金，账户冻结甚至承担法律风险的完整诱导流程。",
+      "case": "用脱敏案例复盘跑分兼职如何把学生变成涉诈工具人。",
+      "prevention": "给出银行卡电话卡实名责任、资金来源和兼职合法性、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：出租出借银行卡、电话卡、收款码或实名账号，可能卷入涉诈洗钱和跑分。"
+    },
+    "one_sentence_rule": "出租出借银行卡、电话卡、收款码或实名账号，可能卷入涉诈洗钱和跑分。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_TRAVEL_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "机票火车票退改签诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "机票火车票退改签诈骗",
+    "scam_id": "scam_travel_ticket_refund",
+    "aliases": [
+      "航班取消",
+      "航班延误赔付",
+      "火车票退改签",
+      "退票理赔",
+      "下载App办退票",
+      "航班/车次延误取消、改签补偿和高额理赔",
+      "下载App或会议软件、屏幕共享、索要验证码银行卡和先交手续费",
+      "机票火车票退改签"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：机票火车票退改签只走官方App，要求共享屏幕、验证码或手续费保证金就是高危。",
+      "features": "讲清退改签通知、下载App、屏幕共享、验证码银行卡和手续费保证金这些识别点。",
+      "tactics": "拆解从航班/车次延误取消、改签补偿和高额理赔到下载App或会议软件、屏幕共享、索要验证码银行卡和先交手续费的完整诱导流程。",
+      "case": "用脱敏案例复盘退改签通知如何引导屏幕共享盗刷。",
+      "prevention": "给出航司/铁路官方App、订单页、官方客服电话和短信来源、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：机票火车票退改签只走官方App，要求共享屏幕、验证码或手续费保证金就是高危。"
+    },
+    "one_sentence_rule": "机票火车票退改签只走官方App，要求共享屏幕、验证码或手续费保证金就是高危。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_PRIZE_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "虚假中奖/免费礼品诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "scam_id": "scam_fake_prize_gift",
+    "aliases": [
+      "虚假中奖",
+      "免费领礼品",
+      "免费领手机",
+      "盲盒中奖",
+      "中奖交税费",
+      "运费保证金",
+      "中奖、免费礼品、抽奖福利和限时领奖",
+      "领奖前交税费保证金、填写银行卡验证码或点陌生链接",
+      "虚假中奖/免费礼品"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：中奖免费礼品如果要先交税费、保证金或填验证码，免费就变成了骗局。",
+      "features": "讲清中奖礼品、先交税费保证金、银行卡验证码、陌生链接二维码和限时催促这些识别点。",
+      "tactics": "拆解从中奖、免费礼品、抽奖福利和限时领奖到领奖前交税费保证金、填写银行卡验证码或点陌生链接的完整诱导流程。",
+      "case": "用脱敏案例复盘免费礼品如何一步步收费。",
+      "prevention": "给出活动主办方、官方活动页面、领奖规则和是否先收费、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：中奖免费礼品如果要先交税费、保证金或填验证码，免费就变成了骗局。"
+    },
+    "one_sentence_rule": "中奖免费礼品如果要先交税费、保证金或填验证码，免费就变成了骗局。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_CREDIT_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "征信修复/注销账户诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "征信修复/注销账户诈骗",
+    "scam_id": "scam_credit_repair_cancel_account",
+    "aliases": [
+      "征信修复",
+      "注销校园贷",
+      "注销账户",
+      "取消会员",
+      "百万保障",
+      "影响征信",
+      "关闭额度",
+      "征信异常、校园贷账户未注销、百万保障扣费和影响贷款",
+      "转账刷流水、共享屏幕、索要验证码和所谓安全账户核验",
+      "征信修复/注销账户"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：征信修复、注销账户、刷流水验证这些说法，遇到转账和屏幕共享就是诈骗。",
+      "features": "讲清征信会员恐吓、注销账户、刷流水验证、屏幕共享和验证码这些识别点。",
+      "tactics": "拆解从征信异常、校园贷账户未注销、百万保障扣费和影响贷款到转账刷流水、共享屏幕、索要验证码和所谓安全账户核验的完整诱导流程。",
+      "case": "用脱敏案例复盘征信恐吓如何诱导刷流水转账。",
+      "prevention": "给出人民银行征信中心、平台官方客服、官方App账户设置、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：征信修复、注销账户、刷流水验证这些说法，遇到转账和屏幕共享就是诈骗。"
+    },
+    "one_sentence_rule": "征信修复、注销账户、刷流水验证这些说法，遇到转账和屏幕共享就是诈骗。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_ROMANCE_FINAL_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "情感交友诱导投资诈骗教学路径",
+    "enabled": true,
+    "priority": 90,
+    "fraud_type": "情感交友诱导投资诈骗",
+    "scam_id": "scam_romance_investment",
+    "aliases": [
+      "杀猪盘",
+      "网恋投资",
+      "恋爱对象带投资",
+      "情感交友",
+      "博彩平台",
+      "带我赚钱",
+      "情感陪伴、成功人设、共同未来和内部投资机会",
+      "引导到投资/博彩/刷单平台，前期盈利后大额入金，提现失败继续收费",
+      "情感交友诱导投资"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：网恋对象带你投资、博彩或刷单赚钱，本质上要先按杀猪盘警惕。",
+      "features": "讲清情感关系、投资博彩刷单、保本高收益、提现失败和拒绝现实核验这些识别点。",
+      "tactics": "拆解从情感陪伴、成功人设、共同未来和内部投资机会到引导到投资/博彩/刷单平台，前期盈利后大额入金，提现失败继续收费的完整诱导流程。",
+      "case": "用脱敏案例复盘情感信任如何转化为投资收割。",
+      "prevention": "给出真实身份、线下核验、平台资质和资金去向、停止危险动作和证据保存建议。",
+      "law": "讲清报警、止付、证据保存、平台举报和敏感信息保护的通用处置常识。",
+      "summary": "用一句口诀收束：网恋对象带你投资、博彩或刷单赚钱，本质上要先按杀猪盘警惕。"
+    },
+    "one_sentence_rule": "网恋对象带你投资、博彩或刷单赚钱，本质上要先按杀猪盘警惕。",
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "KDP_CROSS_BORDER_HIGH_SALARY_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "跨境高薪招工诱骗诈骗教学路径",
+    "enabled": true,
+    "priority": 88,
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "scam_id": "scam_cross_border_high_salary",
+    "aliases": [
+      "境外高薪",
+      "出国高工资",
+      "海外客服招聘",
+      "电诈园区诱骗"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：境外高薪招工只要让你私下联系、交钱、交证件或秘密出境，就先按高危处理。",
+      "features": "讲清身份包装、诱导动作、资金或信息暴露、官方核验缺失等识别点。",
+      "tactics": "拆解从接触引流、建立信任、制造紧迫感到付款或信息暴露的流程。",
+      "case": "用官方公开脱敏案例复盘关键风险信号。",
+      "prevention": "给出停止动作、官方核验、证据保存和报警/举报建议。",
+      "law": "讲反电诈、个人信息、帮助犯罪和取证报案的通用法律常识。",
+      "summary": "用一句话帮助用户记住该类骗局的判断规则。"
+    },
+    "one_sentence_rule": "境外高薪招工只要让你私下联系、交钱、交证件或秘密出境，就先按高危处理。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "policy_id": "KDP_ELDERLY_HEALTH_PRODUCT_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "养老保健品诈骗教学路径",
+    "enabled": true,
+    "priority": 88,
+    "fraud_type": "养老保健品诈骗",
+    "scam_id": "scam_elderly_health_product",
+    "aliases": [
+      "保健品诈骗",
+      "免费讲座",
+      "专家义诊",
+      "包治百病"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：保健品不是药，宣称治病并催促高价购买就是高危信号。",
+      "features": "讲清身份包装、诱导动作、资金或信息暴露、官方核验缺失等识别点。",
+      "tactics": "拆解从接触引流、建立信任、制造紧迫感到付款或信息暴露的流程。",
+      "case": "用官方公开脱敏案例复盘关键风险信号。",
+      "prevention": "给出停止动作、官方核验、证据保存和报警/举报建议。",
+      "law": "讲反电诈、个人信息、帮助犯罪和取证报案的通用法律常识。",
+      "summary": "用一句话帮助用户记住该类骗局的判断规则。"
+    },
+    "one_sentence_rule": "保健品不是药，宣称治病并催促高价购买就是高危信号。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "policy_id": "KDP_NATIONAL_ASSET_PROJECT_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "民族资产解冻/虚假国家项目诈骗教学路径",
+    "enabled": true,
+    "priority": 88,
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "scam_id": "scam_national_asset_project",
+    "aliases": [
+      "民族资产解冻",
+      "国家项目",
+      "缴费领补贴"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：国家项目不会通过群聊让你先交钱领巨额补贴。",
+      "features": "讲清身份包装、诱导动作、资金或信息暴露、官方核验缺失等识别点。",
+      "tactics": "拆解从接触引流、建立信任、制造紧迫感到付款或信息暴露的流程。",
+      "case": "用官方公开脱敏案例复盘关键风险信号。",
+      "prevention": "给出停止动作、官方核验、证据保存和报警/举报建议。",
+      "law": "讲反电诈、个人信息、帮助犯罪和取证报案的通用法律常识。",
+      "summary": "用一句话帮助用户记住该类骗局的判断规则。"
+    },
+    "one_sentence_rule": "国家项目不会通过群聊让你先交钱领巨额补贴。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "policy_id": "KDP_MEDICARE_FUND_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "医保骗保/医保卡倒卖诈骗教学路径",
+    "enabled": true,
+    "priority": 88,
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "scam_id": "scam_medical_insurance_fund",
+    "aliases": [
+      "医保骗保",
+      "医保卡套现",
+      "刷医保返钱"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：医保凭证不能外借、套现或倒卖药品，异常记录要及时核实。",
+      "features": "讲清身份包装、诱导动作、资金或信息暴露、官方核验缺失等识别点。",
+      "tactics": "拆解从接触引流、建立信任、制造紧迫感到付款或信息暴露的流程。",
+      "case": "用官方公开脱敏案例复盘关键风险信号。",
+      "prevention": "给出停止动作、官方核验、证据保存和报警/举报建议。",
+      "law": "讲反电诈、个人信息、帮助犯罪和取证报案的通用法律常识。",
+      "summary": "用一句话帮助用户记住该类骗局的判断规则。"
+    },
+    "one_sentence_rule": "医保凭证不能外借、套现或倒卖药品，异常记录要及时核实。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "policy_id": "KDP_VIRTUAL_CURRENCY_LAUNDERING_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "虚拟货币洗钱跑分诈骗教学路径",
+    "enabled": true,
+    "priority": 88,
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "scam_id": "scam_virtual_currency_laundering",
+    "aliases": [
+      "虚拟币跑分",
+      "USDT代买",
+      "刷流水",
+      "代收代付"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：出借账户或用虚拟币转移陌生资金，可能是在帮电诈资金洗钱。",
+      "features": "讲清身份包装、诱导动作、资金或信息暴露、官方核验缺失等识别点。",
+      "tactics": "拆解从接触引流、建立信任、制造紧迫感到付款或信息暴露的流程。",
+      "case": "用官方公开脱敏案例复盘关键风险信号。",
+      "prevention": "给出停止动作、官方核验、证据保存和报警/举报建议。",
+      "law": "讲反电诈、个人信息、帮助犯罪和取证报案的通用法律常识。",
+      "summary": "用一句话帮助用户记住该类骗局的判断规则。"
+    },
+    "one_sentence_rule": "出借账户或用虚拟币转移陌生资金，可能是在帮电诈资金洗钱。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "policy_id": "KDP_LIVE_PRIVATE_TRADE_V1",
+    "policy_type": "scam_teaching_path",
+    "title": "直播带货/私域交易诈骗教学路径",
+    "enabled": true,
+    "priority": 88,
+    "fraud_type": "直播带货/私域交易诈骗",
+    "scam_id": "scam_live_commerce_private_trade",
+    "aliases": [
+      "直播购物诈骗",
+      "私域下单",
+      "低价抢购",
+      "私下转账购物"
+    ],
+    "stage_goals": {
+      "overview": "先让用户记住：直播购物只走平台订单，私下转账会失去售后保障。",
+      "features": "讲清身份包装、诱导动作、资金或信息暴露、官方核验缺失等识别点。",
+      "tactics": "拆解从接触引流、建立信任、制造紧迫感到付款或信息暴露的流程。",
+      "case": "用官方公开脱敏案例复盘关键风险信号。",
+      "prevention": "给出停止动作、官方核验、证据保存和报警/举报建议。",
+      "law": "讲反电诈、个人信息、帮助犯罪和取证报案的通用法律常识。",
+      "summary": "用一句话帮助用户记住该类骗局的判断规则。"
+    },
+    "one_sentence_rule": "直播购物只走平台订单，私下转账会失去售后保障。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "teaching_material_requirements": {
+      "must_use": [
+        "scam_features",
+        "prevention_advice",
+        "typical_cases",
+        "law_clauses"
+      ],
+      "stage_policy": "每轮只取当前阶段最相关材料，避免一次性百科输出。",
+      "must_cover_in_summary": [
+        "核心识别点",
+        "关键手法",
+        "防范核验",
+        "证据和报警常识"
+      ]
+    },
+    "closure_policy": {
+      "summary_stage_closes_workflow": true,
+      "after_summary": "active_workflow=idle；用户短确认不继续触发教学。"
+    },
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  }
+]

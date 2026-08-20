@@ -1,0 +1,23 @@
+{
+  "version": "report-intel-display-v1",
+  "empty_text": {
+    "url_features": "检测到链接，但暂未发现明显异常 URL 特征。",
+    "url_features_no_url": "未检测到可分析的链接。",
+    "keyword_hits": "暂未发现明显高危话术。",
+    "rule_hits": "暂未形成高危组合规则命中。",
+    "advice": "建议通过官方渠道再次核实。"
+  },
+  "section_titles": {
+    "url_features": "URL特征匹配",
+    "keyword_hits": "高危话术命中",
+    "rule_hits": "组合规则命中",
+    "evidence": "建议补充的举报证据"
+  },
+  "risk_copy": {
+    "risk_unknown": "暂未发现足够的诈骗风险证据，不代表链接或内容一定安全。",
+    "low": "发现少量可疑信号，建议先通过官方渠道核实。",
+    "medium": "发现多个可疑信号，继续操作前需要谨慎核实。",
+    "high": "发现高危诈骗组合，建议停止转账、停止泄露信息并保存证据。",
+    "critical": "发现极高风险诈骗组合，请立即停止操作，必要时联系银行、平台或警方。"
+  }
+}

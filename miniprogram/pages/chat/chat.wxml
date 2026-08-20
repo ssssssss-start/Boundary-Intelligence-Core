@@ -1,0 +1,222 @@
+<view class="page chat-page" style="padding-top: {{navTop}}px;">
+  <view class="chat-topbar" style="height: {{topbarHeight}}px">
+    <button class="top-action menu-action" bindtap="openMenu">...</button>
+    <view class="top-title">
+      <view class="top-name">反诈助手</view>
+    </view>
+    <button class="top-action new-action" style="right: {{rightSafe}}px" bindtap="newChat">＋</button>
+  </view>
+
+  <view class="top-insight {{topInsight.type}} {{topInsightExpanded ? 'expanded' : ''}}" bindtap="toggleTopInsight">
+    <view class="top-insight-row">
+      <view class="top-insight-title">{{topInsight.title}}</view>
+      <view class="top-insight-badge">{{topInsight.badge}}</view>
+    </view>
+    <view class="top-insight-detail" wx:if="{{topInsightExpanded && topInsight.hasDetails}}">
+      <view class="top-insight-grid">
+        <view class="top-insight-cell">
+          <text>等级</text>
+          <strong>{{topInsight.level}}</strong>
+        </view>
+        <view class="top-insight-cell">
+          <text>场景</text>
+          <strong>{{topInsight.scene}}</strong>
+        </view>
+        <view class="top-insight-cell">
+          <text>阶段</text>
+          <strong>{{topInsight.stage}}</strong>
+        </view>
+        <view class="top-insight-cell" wx:if="{{topInsight.scoreText}}">
+          <text>风险分</text>
+          <strong>{{topInsight.scoreText}}</strong>
+        </view>
+      </view>
+      <view class="top-insight-summary" wx:if="{{topInsight.evidenceSummary}}">{{topInsight.evidenceSummary}}</view>
+      <view class="top-insight-list" wx:if="{{topInsight.features.length}}">
+        <view class="top-insight-list-title">风险信号</view>
+        <block wx:for="{{topInsight.features}}" wx:key="*this">
+          <view class="top-insight-item">{{item}}</view>
+        </block>
+      </view>
+      <view class="top-insight-list" wx:if="{{topInsight.rules.length}}">
+        <view class="top-insight-list-title">命中依据</view>
+        <block wx:for="{{topInsight.rules}}" wx:key="*this">
+          <view class="top-insight-item">{{item}}</view>
+        </block>
+      </view>
+      <view class="top-insight-list" wx:if="{{topInsight.actions.length}}">
+        <view class="top-insight-list-title">下一步建议</view>
+        <block wx:for="{{topInsight.actions}}" wx:key="*this">
+          <view class="top-insight-item">{{index + 1}}. {{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view class="menu-mask" wx:if="{{menuOpen}}" catchtap="closeMenu">
+    <view class="side-menu" style="margin-top: {{menuTop}}px; height: calc(100vh - {{menuTop}}px);" catchtap="noop">
+      <view class="menu-section">
+        <view class="menu-item" bindtap="goTraining">
+          <view class="menu-dot">训</view>
+          <view class="menu-copy">
+            <view class="menu-title">防骗训练营</view>
+            <view class="menu-subtitle">闯关答题提升识别力</view>
+          </view>
+        </view>
+        <view class="menu-item" bindtap="goSimulation">
+          <view class="menu-dot">练</view>
+          <view class="menu-copy">
+            <view class="menu-title">骗局模拟</view>
+            <view class="menu-subtitle">和话术对练并评分</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="history-head">历史聊天</view>
+      <scroll-view class="history-list" scroll-y>
+        <block wx:for="{{sessions}}" wx:key="id">
+          <view class="history-row {{item.id === activeSessionId ? 'active' : ''}}" data-id="{{item.id}}" bindtap="openSession">
+            <view class="history-title">{{item.title || '新对话'}}</view>
+            <view class="history-meta">{{item.messages.length || 0}} 条消息</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <scroll-view class="messages {{showWelcome ? 'is-empty' : ''}}" style="height: calc(100vh - {{navOffset}}px - {{topInsightHeightRpx}}rpx - 142rpx - env(safe-area-inset-bottom));" scroll-y scroll-with-animation scroll-into-view="{{lastMessageId}}">
+    <view class="welcome-panel" wx:if="{{showWelcome}}">
+      <view class="welcome-mark"></view>
+      <view class="welcome-title">有什么可以帮忙的？</view>
+      <view class="welcome-copy">描述对方让你做什么，或粘贴可疑话术。我会帮你判断风险并给出下一步。</view>
+      <view class="welcome-prompts">
+        <block wx:for="{{quickPrompts}}" wx:key="text">
+          <button class="welcome-chip" data-prompt="{{item.text}}" bindtap="useQuickPrompt">{{item.text}}</button>
+        </block>
+      </view>
+    </view>
+
+    <block wx:else>
+      <block wx:for="{{displayMessages}}" wx:key="id" wx:for-index="messageIndex">
+        <view id="{{item.id}}" class="message {{item.role}}">
+          <view class="bubble-wrap">
+            <view class="bubble">{{item.text}}</view>
+            <view class="video-card-list" wx:if="{{item.role === 'bot' && item.videoCards && item.videoCards.length}}">
+              <block wx:for="{{item.videoCards}}" wx:key="videoId" wx:for-index="videoIndex">
+                <view class="video-card">
+                  <view wx:if="{{item.playing}}" class="video-card-inline-player" catchtap="stopVideoTap">
+                    <video wx:if="{{item.playerKind === 'video'}}" class="video-card-video" src="{{item.playerUrl}}" controls autoplay show-center-play-btn object-fit="contain"></video>
+                    <web-view wx:elif="{{item.playerKind === 'webview'}}" class="video-card-webview" src="{{item.playerUrl}}"></web-view>
+                    <view wx:else class="video-card-inline-empty">该视频暂不支持卡片内播放，请点击下方官方页面查看。</view>
+                  </view>
+                  <view
+                    wx:else
+                    class="video-card-cover-button"
+                    data-message-index="{{messageIndex}}"
+                    data-video-index="{{videoIndex}}"
+                    bindtap="playVideoCard"
+                  >
+                    <view class="video-card-cover-wrap">
+                      <image wx:if="{{item.coverUrl}}" class="video-card-cover" src="{{item.coverUrl}}" mode="aspectFill"></image>
+                      <view wx:else class="video-card-cover video-card-cover-empty">官方视频</view>
+                      <view class="video-card-play" aria-hidden="true">▶</view>
+                    </view>
+                  </view>
+                  <view class="video-card-body">
+                    <view class="video-card-label">{{item.label}}</view>
+                    <view class="video-card-title">{{item.title}}</view>
+                    <view class="video-card-meta">
+                      <text>{{item.publisher || item.officialAccount || '官方发布'}}</text>
+                      <text wx:if="{{item.platform}}">{{item.platform}}</text>
+                      <text wx:if="{{item.durationText}}">{{item.durationText}}</text>
+                    </view>
+                    <view
+                      class="video-card-action {{item.playing ? 'is-playing' : ''}}"
+                      data-message-index="{{messageIndex}}"
+                      data-video-index="{{videoIndex}}"
+                      bindtap="playVideoCard"
+                    >{{item.playing ? '视频已在卡片内播放' : '当前页播放'}}</view>
+                    <view class="video-card-official-link" data-card="{{item}}" bindtap="openOfficialVideo">打开官方页面</view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </scroll-view>
+
+  <view class="tool-panel" wx:if="{{toolPanelOpen}}">
+    <button class="tool-panel-item" bindtap="openReportModal">
+      <view class="tool-panel-title">可疑链接/内容一键举报</view>
+      <view class="tool-panel-copy">粘贴短信、链接、账号或聊天记录进行研判</view>
+    </button>
+  </view>
+
+  <view class="composer-shell">
+    <view class="input-pill">
+      <button class="icon-btn mic-btn {{recording ? 'active' : ''}}" bindtap="toggleRecord">
+        <view class="mic-icon">
+          <view class="mic-head"></view>
+          <view class="mic-stem"></view>
+          <view class="mic-base"></view>
+        </view>
+      </button>
+      <button class="icon-btn plus-tool" bindtap="toggleToolPanel">
+        <view class="plus-icon">
+          <view class="plus-h"></view>
+          <view class="plus-v"></view>
+        </view>
+      </button>
+      <textarea class="chat-input" maxlength="800" auto-height placeholder="发消息" value="{{inputText}}" bindinput="onInput"></textarea>
+      <button class="send-btn" loading="{{sending}}" disabled="{{sending || !inputText}}" bindtap="sendMessage">发送</button>
+    </view>
+    <view class="status {{error ? 'error' : ''}}" wx:if="{{statusText}}">{{statusText}}</view>
+  </view>
+
+  <view class="report-mask" wx:if="{{reportModalOpen}}" catchtap="closeReportModal">
+    <view class="report-sheet" catchtap="noop">
+      <view class="report-head">
+        <view>
+          <view class="report-title">可疑链接/内容一键举报</view>
+          <view class="report-subtitle">先研判，再确认举报</view>
+        </view>
+        <button class="report-close" bindtap="closeReportModal">×</button>
+      </view>
+
+      <textarea class="report-input" maxlength="1600" placeholder="粘贴可疑短信、链接、账号、App 名称或聊天记录" value="{{reportContent}}" bindinput="onReportInput"></textarea>
+
+      <view class="report-actions">
+        <button class="report-secondary" bindtap="clearReportTool">清空</button>
+        <button class="report-primary" loading="{{reportLoading}}" disabled="{{reportLoading || !reportContent}}" bindtap="analyzeReportTool">开始研判</button>
+      </view>
+
+      <view class="report-status {{reportError ? 'error' : ''}}" wx:if="{{reportStatusText}}">{{reportStatusText}}</view>
+
+      <view class="report-result" wx:if="{{reportAnalysis}}">
+        <view class="report-result-head">
+          <view>
+            <view class="report-risk">{{reportAnalysis.risk_level || '研判结果'}}</view>
+            <view class="report-type">{{reportAnalysis.suspected_type || reportAnalysis.fraud_type || '类型待确认'}}</view>
+          </view>
+          <view class="report-score" wx:if="{{reportAnalysis.risk_score}}">{{reportAnalysis.risk_score}}</view>
+        </view>
+        <view class="report-summary">{{reportAnalysis.display_summary || reportAnalysis.answer || reportAnalysis.message}}</view>
+        <view class="report-list" wx:if="{{reportMatchedRules.length}}">
+          <view class="report-list-title">命中规则</view>
+          <block wx:for="{{reportMatchedRules}}" wx:key="*this">
+            <view class="report-list-item">{{item}}</view>
+          </block>
+        </view>
+        <view class="report-list" wx:if="{{reportAdvice.length}}">
+          <view class="report-list-title">建议</view>
+          <block wx:for="{{reportAdvice}}" wx:key="*this">
+            <view class="report-list-item">{{item}}</view>
+          </block>
+        </view>
+        <button class="report-confirm" loading="{{reportConfirming}}" disabled="{{reportConfirming || reportConfirmed || !reportCanConfirm}}" bindtap="confirmReportTool">{{reportConfirmed ? '已确认举报' : '确认举报'}}</button>
+      </view>
+    </view>
+  </view>
+</view>

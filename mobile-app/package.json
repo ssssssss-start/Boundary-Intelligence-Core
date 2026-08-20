@@ -1,0 +1,26 @@
+{
+  "name": "anti-fraud-mobile-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:app": "uni -p app",
+    "build:app": "uni build -p app",
+    "dev:h5": "vite --host 127.0.0.1 --port 5173",
+    "build:h5": "vite build"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "latest",
+    "@dcloudio/uni-app-plus": "latest",
+    "@dcloudio/uni-components": "latest",
+    "@dcloudio/uni-h5": "latest",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-cli-i18n": "2.0.2-5000720260410001",
+    "@dcloudio/uni-cli-shared": "2.0.2-5000720260410001",
+    "@dcloudio/vite-plugin-uni": "latest",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "vite": "^5.2.8"
+  }
+}

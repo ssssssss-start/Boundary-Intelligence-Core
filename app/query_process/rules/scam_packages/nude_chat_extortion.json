@@ -1,0 +1,106 @@
+{
+  "scam_id": "scam_nude_chat_extortion",
+  "name": "裸聊敲诈勒索诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "裸聊",
+    "偷拍视频",
+    "通讯录威胁",
+    "公开视频",
+    "直播交友App",
+    "删视频费用"
+  ],
+  "features": [
+    {
+      "feature_name": "诱导下载交友直播App",
+      "keywords": [
+        "下载直播App",
+        "交友App",
+        "裸聊App",
+        "安装包",
+        "陌生安装包"
+      ],
+      "weight": 38,
+      "explanation": "陌生安装包可能窃取通讯录或权限。"
+    },
+    {
+      "feature_name": "窃取通讯录威胁",
+      "keywords": [
+        "通讯录",
+        "发给家人",
+        "发给同学",
+        "群发",
+        "联系人"
+      ],
+      "weight": 50,
+      "explanation": "以通讯录威胁是裸聊敲诈典型手段。"
+    },
+    {
+      "feature_name": "隐私视频威胁",
+      "keywords": [
+        "裸聊",
+        "偷拍视频",
+        "隐私视频",
+        "不雅视频",
+        "公开视频"
+      ],
+      "weight": 48,
+      "explanation": "以私密影像威胁转账属于紧急止损场景。"
+    },
+    {
+      "feature_name": "要求转账删视频",
+      "keywords": [
+        "转账删视频",
+        "给钱删除",
+        "封口费",
+        "删视频费",
+        "不转就发"
+      ],
+      "weight": 52,
+      "explanation": "付款不会真正消除威胁，常导致连续勒索。"
+    },
+    {
+      "feature_name": "已付款仍继续勒索",
+      "keywords": [
+        "又要钱",
+        "继续要",
+        "还要转",
+        "已经转了",
+        "再给"
+      ],
+      "weight": 45,
+      "explanation": "已付款后继续索要是二次勒索信号。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_NUDE_EXTORTION_HIGH_001",
+      "rule_name": "裸聊敲诈勒索诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "隐私视频威胁"
+        ],
+        "any": [
+          "窃取通讯录威胁",
+          "要求转账删视频",
+          "已付款仍继续勒索",
+          "诱导下载交友直播App"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 100,
+      "risk_level": "高风险",
+      "intervention_goal": "call_police",
+      "explanation": "私密影像威胁叠加通讯录、转账删视频或持续勒索，必须按紧急敲诈止损处理。",
+      "suggested_action": "不要继续转账，不回应威胁，保存证据并报警。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html"
+  ]
+}

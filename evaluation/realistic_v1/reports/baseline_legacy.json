@@ -1,0 +1,938 @@
+{
+  "generated_at": "2026-08-02T20:07:40+08:00",
+  "dataset": "evaluation/realistic_v1/realistic_eval_50.jsonl",
+  "mode": "offline_deterministic_development_regression",
+  "summary": {
+    "total": 50,
+    "errors": 0,
+    "warning_samples": 0,
+    "risk_count": 34,
+    "control_count": 16,
+    "top1_accuracy": 0.23529411764705882,
+    "topk_recall": 0.23529411764705882,
+    "control_false_positive_rate": 0.625,
+    "latency_ms": {
+      "mean": 45.26212746044621,
+      "p50": 4.099292040336877,
+      "p95": 6.09020801493898,
+      "max": 2063.82629199652
+    }
+  },
+  "per_type": {
+    "AI换脸冒充熟人诈骗": {
+      "count": 1,
+      "top1_accuracy": 0.0,
+      "topk_recall": 0.0
+    },
+    "冒充公检法诈骗": {
+      "count": 5,
+      "top1_accuracy": 0.0,
+      "topk_recall": 0.0
+    },
+    "冒充客服诈骗": {
+      "count": 5,
+      "top1_accuracy": 0.4,
+      "topk_recall": 0.4
+    },
+    "冒充领导或熟人借钱诈骗": {
+      "count": 3,
+      "top1_accuracy": 0.0,
+      "topk_recall": 0.0
+    },
+    "刷单返利诈骗": {
+      "count": 4,
+      "top1_accuracy": 0.25,
+      "topk_recall": 0.25
+    },
+    "征信修复/注销账户诈骗": {
+      "count": 2,
+      "top1_accuracy": 0.0,
+      "topk_recall": 0.0
+    },
+    "游戏交易诈骗": {
+      "count": 4,
+      "top1_accuracy": 0.0,
+      "topk_recall": 0.0
+    },
+    "网络贷款诈骗": {
+      "count": 6,
+      "top1_accuracy": 0.6666666666666666,
+      "topk_recall": 0.6666666666666666
+    },
+    "虚假投资理财诈骗": {
+      "count": 4,
+      "top1_accuracy": 0.25,
+      "topk_recall": 0.25
+    }
+  },
+  "confusions": [
+    {
+      "expected": "冒充公检法诈骗",
+      "actual": "未知",
+      "count": 3
+    },
+    {
+      "expected": "刷单返利诈骗",
+      "actual": "未知",
+      "count": 2
+    },
+    {
+      "expected": "游戏交易诈骗",
+      "actual": "未知",
+      "count": 2
+    },
+    {
+      "expected": "正常对照",
+      "actual": "游戏交易诈骗",
+      "count": 2
+    },
+    {
+      "expected": "正常对照",
+      "actual": "未知",
+      "count": 2
+    },
+    {
+      "expected": "虚假投资理财诈骗",
+      "actual": "未知",
+      "count": 2
+    },
+    {
+      "expected": "正常对照",
+      "actual": "网络贷款诈骗",
+      "count": 2
+    },
+    {
+      "expected": "冒充客服诈骗",
+      "actual": "未知",
+      "count": 2
+    },
+    {
+      "expected": "正常对照",
+      "actual": "冒充熟人诈骗",
+      "count": 2
+    },
+    {
+      "expected": "冒充领导或熟人借钱诈骗",
+      "actual": "冒充熟人诈骗",
+      "count": 2
+    },
+    {
+      "expected": "正常对照",
+      "actual": "刷单返利诈骗",
+      "count": 1
+    },
+    {
+      "expected": "刷单返利诈骗",
+      "actual": "冒充客服诈骗",
+      "count": 1
+    },
+    {
+      "expected": "游戏交易诈骗",
+      "actual": "冒充熟人诈骗",
+      "count": 1
+    },
+    {
+      "expected": "游戏交易诈骗",
+      "actual": "验证码/账户盗刷诈骗",
+      "count": 1
+    },
+    {
+      "expected": "冒充公检法诈骗",
+      "actual": "屏幕共享/远程控制诈骗",
+      "count": 1
+    },
+    {
+      "expected": "冒充公检法诈骗",
+      "actual": "冒充客服诈骗",
+      "count": 1
+    },
+    {
+      "expected": "正常对照",
+      "actual": "虚假投资理财诈骗",
+      "count": 1
+    },
+    {
+      "expected": "虚假投资理财诈骗",
+      "actual": "杀猪盘诈骗",
+      "count": 1
+    },
+    {
+      "expected": "征信修复/注销账户诈骗",
+      "actual": "未知",
+      "count": 1
+    },
+    {
+      "expected": "网络贷款诈骗",
+      "actual": "冒充熟人诈骗",
+      "count": 1
+    },
+    {
+      "expected": "网络贷款诈骗",
+      "actual": "未知",
+      "count": 1
+    },
+    {
+      "expected": "征信修复/注销账户诈骗",
+      "actual": "网络贷款诈骗",
+      "count": 1
+    },
+    {
+      "expected": "冒充客服诈骗",
+      "actual": "网络贷款诈骗",
+      "count": 1
+    },
+    {
+      "expected": "冒充领导或熟人借钱诈骗",
+      "actual": "未知",
+      "count": 1
+    },
+    {
+      "expected": "AI换脸冒充熟人诈骗",
+      "actual": "冒充熟人诈骗",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "sample_id": "AF-REAL-0002",
+      "case_family_id": "realistic_v1_family_0002",
+      "expected_type": "刷单返利诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.255375009961426,
+      "error": "",
+      "text": "语音识别可能不准：他说下一轮是‘连淡’，要把三个单子绑一块儿，差的两千我还没补。"
+    },
+    {
+      "sample_id": "AF-REAL-0003",
+      "case_family_id": "realistic_v1_family_0003",
+      "expected_type": "刷单返利诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.420915967784822,
+      "error": "",
+      "text": "我脑子真抽了，已经垫了3200。现在页面写订单锁住，要再付同样的钱才能解，倒计时还有六分钟。"
+    },
+    {
+      "sample_id": "AF-REAL-0004",
+      "case_family_id": "realistic_v1_family_0004",
+      "expected_type": null,
+      "actual_type": "刷单返利诈骗",
+      "candidate_types": [
+        "刷单返利诈骗"
+      ],
+      "risk_score": 20,
+      "risk_features": [
+        "承诺返利"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 4.881499975454062,
+      "error": "",
+      "text": "我用银行App里的信用卡活动买咖啡，返现直接进账单了，也没人加我或让我先垫任务，这个返现正常吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0006",
+      "case_family_id": "realistic_v1_family_0006",
+      "expected_type": "刷单返利诈骗",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗"
+      ],
+      "risk_score": 30,
+      "risk_features": [
+        "冒充客服"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 2.925999986473471,
+      "error": "",
+      "text": "售后说店里最近差评价，让我帮忙拍一单，过会儿原路退。\n对方是否要求离开平台或操作手机？\n他让我上会议，说共享一下就能看着我申请退款。"
+    },
+    {
+      "sample_id": "AF-REAL-0007",
+      "case_family_id": "realistic_v1_family_0007",
+      "expected_type": "游戏交易诈骗",
+      "actual_type": "冒充熟人诈骗",
+      "candidate_types": [
+        "冒充熟人诈骗",
+        "未知"
+      ],
+      "risk_score": 78,
+      "risk_features": [
+        "要求垫付资金"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 6.09020801493898,
+      "error": "",
+      "text": "公会里有人说能帮我把两件材料合成稀有装，失败包赔，但得先把材料邮给他的小号，交易行手续费太贵。"
+    },
+    {
+      "sample_id": "AF-REAL-0008",
+      "case_family_id": "realistic_v1_family_0008",
+      "expected_type": "游戏交易诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 3.867542021907866,
+      "error": "",
+      "text": "陪练工作室说先给我排大神，但要压600的‘防跑单金’，结束秒退。我还没付，客服一直弹语音。"
+    },
+    {
+      "sample_id": "AF-REAL-0009",
+      "case_family_id": "realistic_v1_family_0009",
+      "expected_type": "游戏交易诈骗",
+      "actual_type": "验证码/账户盗刷诈骗",
+      "candidate_types": [
+        "验证码/账户盗刷诈骗"
+      ],
+      "risk_score": 35,
+      "risk_features": [
+        "要求垫付资金"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 5.736166029237211,
+      "error": "",
+      "text": "我租了个比赛号，押金给了。对面现在说检测到异地，叫我扫码交二次认证，不交就把押金算违约，快点告诉我咋整。"
+    },
+    {
+      "sample_id": "AF-REAL-0010",
+      "case_family_id": "realistic_v1_family_0010",
+      "expected_type": null,
+      "actual_type": "游戏交易诈骗",
+      "candidate_types": [
+        "游戏交易诈骗"
+      ],
+      "risk_score": 40,
+      "risk_features": [
+        "无法提现"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 3.059083013795316,
+      "error": "",
+      "text": "我在游戏自带市场挂了道具，钱先冻结在平台，买家确认后系统到账，全程没加联系方式。这样需要担心吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0011",
+      "case_family_id": "realistic_v1_family_0011",
+      "expected_type": null,
+      "actual_type": "游戏交易诈骗",
+      "candidate_types": [
+        "游戏交易诈骗"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 2.6066249702125788,
+      "error": "",
+      "text": "游戏里那个交易咋弄啊，急。"
+    },
+    {
+      "sample_id": "AF-REAL-0012",
+      "case_family_id": "realistic_v1_family_0012",
+      "expected_type": "游戏交易诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.429542052093893,
+      "error": "",
+      "text": "买家说想看仓库，不然没法估价。\n他让你怎么展示？\n让我装个远程看号的东西，还说解绑短信到了就念给他。"
+    },
+    {
+      "sample_id": "AF-REAL-0013",
+      "case_family_id": "realistic_v1_family_0013",
+      "expected_type": "冒充公检法诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 35,
+      "risk_features": [
+        "索要银行卡或身份信息"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 5.7884170091710985,
+      "error": "",
+      "text": "有人让我一个人去酒店开房，说线上做笔录不能有旁人，摄像头要一直对着我和银行卡。我还没去。"
+    },
+    {
+      "sample_id": "AF-REAL-0014",
+      "case_family_id": "realistic_v1_family_0014",
+      "expected_type": "冒充公检法诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 3.533290990162641,
+      "error": "",
+      "text": "‘协查员’说转账不好查，让我买两根金条，等便衣上门拿去做证物。我还在金店门口，没买。"
+    },
+    {
+      "sample_id": "AF-REAL-0015",
+      "case_family_id": "realistic_v1_family_0015",
+      "expected_type": "冒充公检法诈骗",
+      "actual_type": "屏幕共享/远程控制诈骗",
+      "candidate_types": [
+        "屏幕共享/远程控制诈骗",
+        "未知"
+      ],
+      "risk_score": 87,
+      "risk_features": [
+        "屏幕共享"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.794832959305495,
+      "error": "",
+      "text": "我在视频会议里，对方让我把几张卡的余额都念出来，还开着共享。他说下一步做‘归集’，我妈在敲门但不让我开。"
+    },
+    {
+      "sample_id": "AF-REAL-0016",
+      "case_family_id": "realistic_v1_family_0016",
+      "expected_type": null,
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 40,
+      "risk_features": [
+        "无法提现"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 4.174667003098875,
+      "error": "",
+      "text": "银行风控打电话问我昨天那笔境外消费是不是本人，我没在电话里说密码，挂断后从卡背面的号码打回去确认了。"
+    },
+    {
+      "sample_id": "AF-REAL-0018",
+      "case_family_id": "realistic_v1_family_0018",
+      "expected_type": "冒充公检法诈骗",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 6.225250021088868,
+      "error": "",
+      "text": "先是‘快递中心’说我的包裹夹了违禁卡，后来转给一个穿警服的人。他让我借一笔网贷证明资金清白，再上飞书看操作。"
+    },
+    {
+      "sample_id": "AF-REAL-0020",
+      "case_family_id": "realistic_v1_family_0020",
+      "expected_type": "虚假投资理财诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 3.8302919710986316,
+      "error": "",
+      "text": "同城群认识的大哥让我开个‘商品子账户’，说直接转稳定币能赶上夜盘，我钱包都建好了但还没买币。"
+    },
+    {
+      "sample_id": "AF-REAL-0021",
+      "case_family_id": "realistic_v1_family_0021",
+      "expected_type": "虚假投资理财诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 70,
+      "risk_features": [
+        "无法提现",
+        "私下交易"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 3.5645419848151505,
+      "error": "",
+      "text": "我已经投进去6万了。现在客服说提现得找一个家属做‘信用担保’，让他也充10%，不然两个人账户一起冻结。"
+    },
+    {
+      "sample_id": "AF-REAL-0022",
+      "case_family_id": "realistic_v1_family_0022",
+      "expected_type": null,
+      "actual_type": "虚假投资理财诈骗",
+      "candidate_types": [
+        "虚假投资理财诈骗"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 2.738624985795468,
+      "error": "",
+      "text": "我在持牌券商App买的指数基金跌了12%，赎回按页面规则第二天到账。亏钱是不是也算平台骗我？"
+    },
+    {
+      "sample_id": "AF-REAL-0024",
+      "case_family_id": "realistic_v1_family_0024",
+      "expected_type": "虚假投资理财诈骗",
+      "actual_type": "杀猪盘诈骗",
+      "candidate_types": [
+        "杀猪盘诈骗"
+      ],
+      "risk_score": 10,
+      "risk_features": [
+        "陌生人引导"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 5.5810410412959754,
+      "error": "",
+      "text": "交友软件认识的姐姐天天给我看酒庄分红。\n她让你通过哪里参与？\n一个小程序，客服还说余额不够可以先网贷补保证份额。"
+    },
+    {
+      "sample_id": "AF-REAL-0025",
+      "case_family_id": "realistic_v1_family_0025",
+      "expected_type": "征信修复/注销账户诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.012332996353507,
+      "error": "",
+      "text": "有人说我毕业后学生分期身份还挂着，不清掉每年都会扣管理费。他让我先申请一笔新额度，把旧记录对冲掉。"
+    },
+    {
+      "sample_id": "AF-REAL-0026",
+      "case_family_id": "realistic_v1_family_0026",
+      "expected_type": "网络贷款诈骗",
+      "actual_type": "冒充熟人诈骗",
+      "candidate_types": [
+        "冒充熟人诈骗",
+        "未知"
+      ],
+      "risk_score": 78,
+      "risk_features": [
+        "要求垫付资金"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.230667022056878,
+      "error": "",
+      "text": "社团学长说能帮我办临时学费周转，收款卡先填他们公司的，到账后我留三成、剩下转回去。我还没提交。"
+    },
+    {
+      "sample_id": "AF-REAL-0027",
+      "case_family_id": "realistic_v1_family_0027",
+      "expected_type": "网络贷款诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.192834021523595,
+      "error": "",
+      "text": "摄影社招新让我签了个器材分期，东西没拿到，App里却多了12000欠款。商家说再交1500才能撤合同，我快崩了。"
+    },
+    {
+      "sample_id": "AF-REAL-0028",
+      "case_family_id": "realistic_v1_family_0028",
+      "expected_type": null,
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 70,
+      "risk_features": [
+        "陌生人引导",
+        "贷款前收费",
+        "校园贷包装"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 4.7605000436306,
+      "error": "",
+      "text": "我在国家开发银行助学贷款系统办的，学校老师核过回执，钱直接冲学费，毕业后按合同还。这个算校园贷风险吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0030",
+      "case_family_id": "realistic_v1_family_0030",
+      "expected_type": "征信修复/注销账户诈骗",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 25,
+      "risk_features": [
+        "校园贷包装"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.481541982386261,
+      "error": "",
+      "text": "‘教育金融中心’给我打电话，说以前注册过校园贷，开腾讯会议看着我从三个平台把额度借出来，再统一转到清算卡就能销户。"
+    },
+    {
+      "sample_id": "AF-REAL-0031",
+      "case_family_id": "realistic_v1_family_0031",
+      "expected_type": "冒充客服诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 3.997374966274947,
+      "error": "",
+      "text": "卖电热毯的店突然通知批次有问题，说给我三倍补偿，但得装一个视频软件让‘保险专员’看订单。"
+    },
+    {
+      "sample_id": "AF-REAL-0032",
+      "case_family_id": "realistic_v1_family_0032",
+      "expected_type": "冒充客服诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 3.6764999967999756,
+      "error": "",
+      "text": "外卖平台的‘赔付组’让我先开数字人民币钱包，说不往里充钱，只要把钱包编号发他。我还没弄。"
+    },
+    {
+      "sample_id": "AF-REAL-0034",
+      "case_family_id": "realistic_v1_family_0034",
+      "expected_type": null,
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 40,
+      "risk_features": [
+        "陌生人引导",
+        "私下交易"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 3.9094999665394425,
+      "error": "",
+      "text": "网购退货后，平台App里显示原路退回信用卡，商家没私聊我要任何信息，今天账单已经冲正。"
+    },
+    {
+      "sample_id": "AF-REAL-0036",
+      "case_family_id": "realistic_v1_family_0036",
+      "expected_type": "冒充客服诈骗",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 93,
+      "risk_features": [
+        "要求垫付资金",
+        "贷款前收费"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 5.668833036907017,
+      "error": "",
+      "text": "来电说我误开了商户保障，每月扣800。要取消就先在借款页面把可用额度截屏，再把借出来的钱退回他们的‘银联清算户’。"
+    },
+    {
+      "sample_id": "AF-REAL-0040",
+      "case_family_id": "realistic_v1_family_0040",
+      "expected_type": null,
+      "actual_type": "冒充熟人诈骗",
+      "candidate_types": [
+        "冒充熟人诈骗",
+        "未知"
+      ],
+      "risk_score": 78,
+      "risk_features": [
+        "要求垫付资金"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 4.624458029866219,
+      "error": "",
+      "text": "我在银行网点申请装修贷，经理让我在柜台面签，合同写清利率和提前还款规则，钱进我本人卡，没有先交保证金。"
+    },
+    {
+      "sample_id": "AF-REAL-0043",
+      "case_family_id": "realistic_v1_family_0043",
+      "expected_type": "冒充领导或熟人借钱诈骗",
+      "actual_type": "冒充熟人诈骗",
+      "candidate_types": [
+        "冒充熟人诈骗"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.093749972525984,
+      "error": "",
+      "text": "以前的室友用新号找我，说在急诊不方便视频，发了张缴费单让我先垫。他连我们宿舍住几楼都说得对。"
+    },
+    {
+      "sample_id": "AF-REAL-0044",
+      "case_family_id": "realistic_v1_family_0044",
+      "expected_type": "冒充领导或熟人借钱诈骗",
+      "actual_type": "冒充熟人诈骗",
+      "candidate_types": [
+        "冒充熟人诈骗",
+        "虚假投资理财诈骗",
+        "未知"
+      ],
+      "risk_score": 78,
+      "risk_features": [
+        "陌生人引导",
+        "要求垫付资金"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 3.985124989412725,
+      "error": "",
+      "text": "导师发语音说临时替我交会议注册费，让我买三张充值卡把号码拍过去，语气挺像，但他不接电话。"
+    },
+    {
+      "sample_id": "AF-REAL-0045",
+      "case_family_id": "realistic_v1_family_0045",
+      "expected_type": "冒充领导或熟人借钱诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 55,
+      "risk_features": [
+        "陌生人引导",
+        "已发生转账"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.454499983694404,
+      "error": "",
+      "text": "家族群里‘表哥’让我替婚庆付尾款，我按他发的账户转了8800。刚才真表哥说婚礼早结完了，我现在手都在抖。"
+    },
+    {
+      "sample_id": "AF-REAL-0046",
+      "case_family_id": "realistic_v1_family_0046",
+      "expected_type": null,
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 100,
+      "risk_features": [
+        "要求垫付资金",
+        "索要银行卡或身份信息",
+        "贷款前收费"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 4.139792057685554,
+      "error": "",
+      "text": "朋友当面跟我借两万，我们核对了身份证和本人银行卡，也写了借条，转账备注借款。他后来按约还了第一期。"
+    },
+    {
+      "sample_id": "AF-REAL-0047",
+      "case_family_id": "realistic_v1_family_0047",
+      "expected_type": null,
+      "actual_type": "冒充熟人诈骗",
+      "candidate_types": [
+        "冒充熟人诈骗"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": true,
+      "latency_ms": 2.338542020879686,
+      "error": "",
+      "text": "他换号了问我借点，能给吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0048",
+      "case_family_id": "realistic_v1_family_0048",
+      "expected_type": "AI换脸冒充熟人诈骗",
+      "actual_type": "冒充熟人诈骗",
+      "candidate_types": [
+        "冒充熟人诈骗",
+        "未知"
+      ],
+      "risk_score": 80,
+      "risk_features": [
+        "要求垫付资金",
+        "已发生转账"
+      ],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 5.734957987442613,
+      "error": "",
+      "text": "舅舅视频说有个私募名额，让我先替他打款。\n视频中能正常交流吗？\n脸有点卡，只会点头，还不肯说我们家的暗号，收款人也不是他。"
+    },
+    {
+      "sample_id": "AF-REAL-0050",
+      "case_family_id": "realistic_v1_family_0050",
+      "expected_type": "冒充公检法诈骗",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "risk_features": [],
+      "warnings": [],
+      "top1_pass": false,
+      "topk_pass": false,
+      "control_pass": false,
+      "is_control": false,
+      "latency_ms": 4.133249982260168,
+      "error": "",
+      "text": "他说要清一下，我没听明白。\n是清查资金吗？对方自称什么身份？\n嗯说自己市局的，让我开飞书给他看卡里还有多钱。"
+    }
+  ]
+}

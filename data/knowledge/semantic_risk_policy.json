@@ -1,0 +1,162 @@
+[
+  {
+    "policy_id": "SEMANTIC_SCENE_ROUTING_V1",
+    "policy_type": "scene_routing",
+    "title": "语义场景路由原则",
+    "enabled": true,
+    "priority": 100,
+    "rules": [
+      {
+        "scene": "knowledge_consultation",
+        "description": "用户只是在询问诈骗定义、套路、案例、防范、法律法规或学习资料时，不进入风险场景。",
+        "workflow_mode": "knowledge_answer",
+        "risk_scene": false
+      },
+      {
+        "scene": "personal_risk_scene",
+        "description": "用户描述自己、家人或朋友正在被诱导操作，或询问还能不能继续、靠不靠谱、现在怎么办时，进入风险场景。",
+        "workflow_mode": "risk_case_flow",
+        "risk_scene": true
+      },
+      {
+        "scene": "post_loss_help",
+        "description": "用户已经转账、付款、交付账号/装备/虚拟资产、泄露验证码/身份银行卡信息或设备控制权时，进入已损失或已暴露风险场景。",
+        "workflow_mode": "risk_case_flow",
+        "risk_scene": true
+      },
+      {
+        "scene": "risk_followup",
+        "description": "用户正在回答上一轮风险追问，即使只说“有”“没有”“还能”“不能登录”等短句，也交给 LLM 结合上下文理解。",
+        "workflow_mode": "risk_case_flow",
+        "risk_scene": true
+      }
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "SEMANTIC_RISK_LEVEL_V1",
+    "policy_type": "risk_level",
+    "title": "风险等级语义裁决原则",
+    "enabled": true,
+    "priority": 95,
+    "rules": [
+      {
+        "risk_level": "none",
+        "description": "仅知识咨询、案例学习、法律科普，不存在用户自身正在发生的风险或损失。"
+      },
+      {
+        "risk_level": "medium_low",
+        "description": "用户有个人处境但事实不足，尚未出现明确危险动作、损失或高危特征。"
+      },
+      {
+        "risk_level": "medium",
+        "description": "已有疑似骗局特征，但未确认转账、资产交付、敏感信息泄露或设备控制暴露。"
+      },
+      {
+        "risk_level": "high",
+        "description": "对方正在诱导付款、充值、垫付、补单、交保证金、交付虚拟资产、提供验证码/身份银行卡信息，或用户已发生资金/资产/个人信息暴露。"
+      },
+      {
+        "risk_level": "critical",
+        "description": "用户正在转账、正在共享屏幕/远程控制、正在输入验证码或银行卡信息、对方正在实时催促继续操作。"
+      }
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "SEMANTIC_RESPONSE_CONSTRAINTS_V1",
+    "policy_type": "response_constraints",
+    "title": "实时劝阻自然表达约束",
+    "enabled": true,
+    "priority": 90,
+    "response_principles": [
+      "规则和知识库只提供判断依据与安全边界，最终表达由 LLM 结合本轮上下文实时生成。",
+      "风险场景先回应用户具体问题，再阻止最危险动作，再解释与用户原话相关的风险特征，最后只追问最关键的 1 到 2 个事实。",
+      "知识咨询不进行风险评分，不追问用户是否转账，不进入止损闭环。",
+      "追问必须贴合骗局类型和用户事实，不使用跨场景通用问句。",
+      "用户可以自由输入，不要求按固定词回复。"
+    ],
+    "forbidden_visible_phrases": [
+      "风险等级：",
+      "风险分：",
+      "当前阶段：",
+      "依据：",
+      "只需回答是或否",
+      "回复“已保留”",
+      "回复“已联系”",
+      "完成后回复",
+      "你现在是还没操作、准备操作，还是已经操作了"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "policy_id": "SEMANTIC_SCENARIO_FOLLOWUP_V1",
+    "policy_type": "scenario_followup",
+    "title": "场景化追问目标",
+    "enabled": true,
+    "priority": 85,
+    "scenario_followups": [
+      {
+        "fraud_type": "刷单返利诈骗",
+        "critical_questions": [
+          "是否被要求垫付、充值、补单或缴费",
+          "是否已经转过钱以及能否正常提现",
+          "对方是否要求继续做下一单或缴纳解冻费"
+        ]
+      },
+      {
+        "fraud_type": "游戏交易诈骗",
+        "critical_questions": [
+          "账号、装备或游戏币是否已经交给对方",
+          "现在是否还能登录或控制账号",
+          "交易是否在官方平台或有官方担保"
+        ]
+      },
+      {
+        "fraud_type": "冒充客服诈骗",
+        "critical_questions": [
+          "是否正在共享屏幕或被远程控制",
+          "是否输入或提供过验证码、银行卡、身份信息",
+          "对方让你下载的 App 或打开的链接是什么"
+        ]
+      },
+      {
+        "fraud_type": "虚假投资理财诈骗",
+        "critical_questions": [
+          "是否已经入金或追加投资",
+          "平台是否无法提现或要求缴纳税费、保证金",
+          "投资入口是否来自陌生人、群聊或非官方链接"
+        ]
+      }
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  }
+]

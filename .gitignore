@@ -1,0 +1,43 @@
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+
+# Runtime logs, caches, and generated Python artifacts
+*.log
+*.pyc
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local model, audio, and service data
+models/
+tts/*
+database_snapshot/
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated reports and delivery artifacts that may contain private data or are too large
+anti_fraud_project_full_*.zip
+anti_fraud_video_candidates/
+output/
+converted_pdfs/
+reports/judges/*.docx
+reports/judges/*.pdf
+reports/
+
+# User-provided evaluation records and derived reports
+evaluation/annotations/user_*.jsonl
+evaluation/annotations/user_*.json
+evaluation/reports/user_*
+evaluation/splits/development.jsonl
+
+# Local exports and temporary files
+*.part
+*.tmp
+*.bak

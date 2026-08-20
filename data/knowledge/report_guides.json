@@ -1,0 +1,1103 @@
+[
+  {
+    "guide_id": "REPORT_URL_001",
+    "input_type": "url",
+    "fraud_type": "钓鱼链接诈骗",
+    "required_fields": [
+      "url",
+      "发送者账号或手机号",
+      "页面截图",
+      "诱导话术"
+    ],
+    "suggested_summary_template": "用户收到可疑链接 {url}，页面或话术要求填写敏感信息，疑似钓鱼链接诈骗。",
+    "evidence_checklist": [
+      "完整URL",
+      "页面截图",
+      "发送链接的聊天记录",
+      "要求填写银行卡/验证码的页面"
+    ],
+    "next_actions": [
+      "关闭页面",
+      "不要输入信息",
+      "通过平台或公安渠道举报"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_PHONE_001",
+    "input_type": "phone",
+    "fraud_type": "冒充客服诈骗",
+    "required_fields": [
+      "来电号码",
+      "通话时间",
+      "自称身份",
+      "要求操作"
+    ],
+    "suggested_summary_template": "用户接到号码 {phone} 来电，对方自称客服/公检法并要求高危操作，疑似诈骗。",
+    "evidence_checklist": [
+      "来电号码截图",
+      "通话录音或记录",
+      "对方自称身份",
+      "后续链接或账号"
+    ],
+    "next_actions": [
+      "不要回拨对方号码",
+      "通过官方客服核实",
+      "提交举报线索"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_APP_001",
+    "input_type": "app",
+    "fraud_type": "虚假投资理财诈骗",
+    "required_fields": [
+      "app名称",
+      "下载来源",
+      "页面截图",
+      "诱导话术"
+    ],
+    "suggested_summary_template": "用户被诱导下载可疑App {app}，该App与转账、投资、贷款或远程控制相关，疑似诈骗工具。",
+    "evidence_checklist": [
+      "App图标和名称",
+      "下载链接",
+      "权限截图",
+      "平台页面"
+    ],
+    "next_actions": [
+      "停止使用App",
+      "保存截图后卸载或断开权限",
+      "提交举报"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_ACCOUNT_001",
+    "input_type": "account",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "required_fields": [
+      "对方账号",
+      "昵称头像",
+      "收款账户",
+      "聊天记录"
+    ],
+    "suggested_summary_template": "用户被账号 {account} 诱导转账或提供信息，疑似冒充熟人/客服/投资导师诈骗。",
+    "evidence_checklist": [
+      "账号主页",
+      "聊天记录",
+      "收款账户",
+      "昵称头像变化记录"
+    ],
+    "next_actions": [
+      "停止联系",
+      "换渠道核实身份",
+      "提交平台举报"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_TRANSFER_001",
+    "input_type": "transfer",
+    "fraud_type": "通用",
+    "required_fields": [
+      "转账金额",
+      "转账时间",
+      "收款账户",
+      "交易流水"
+    ],
+    "suggested_summary_template": "用户已向可疑对象转账 {amount}，收款账户为 {account}，疑似电信网络诈骗资金流。",
+    "evidence_checklist": [
+      "转账凭证",
+      "收款账户",
+      "订单号或流水号",
+      "聊天记录"
+    ],
+    "next_actions": [
+      "联系银行或支付平台止付",
+      "报警",
+      "保存证据"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_CHAT_001",
+    "input_type": "chat_record",
+    "fraud_type": "通用",
+    "required_fields": [
+      "聊天截图",
+      "对方账号",
+      "关键话术",
+      "时间线"
+    ],
+    "suggested_summary_template": "用户提供聊天记录，对方存在诱导转账、验证码、屏幕共享或下载App等高危话术，疑似诈骗。",
+    "evidence_checklist": [
+      "完整聊天上下文",
+      "对方账号信息",
+      "关键诱导话术",
+      "时间和金额"
+    ],
+    "next_actions": [
+      "保存完整记录",
+      "不要删除对话",
+      "按平台规则举报"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_GAME_001",
+    "input_type": "account",
+    "fraud_type": "游戏交易诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇游戏交易诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_CAMPUS_FEE_001",
+    "input_type": "chat_record",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇冒充老师辅导员收费诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_JOB_001",
+    "input_type": "chat_record",
+    "fraud_type": "求职实习招聘诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇求职实习招聘诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_SCHOLAR_001",
+    "input_type": "url",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇奖助学金/学费退费诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_EXAM_001",
+    "input_type": "chat_record",
+    "fraud_type": "考试考证论文服务诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇考试考证论文服务诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_SECONDHAND_001",
+    "input_type": "chat_record",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇校园二手/票务交易诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_RENTAL_001",
+    "input_type": "chat_record",
+    "fraud_type": "租房合租押金诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇租房合租押金诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_NUDE_001",
+    "input_type": "transfer",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇裸聊敲诈勒索诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_TWO_CARDS_001",
+    "input_type": "account",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇两卡出租出借与跑分诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_TRAVEL_001",
+    "input_type": "url",
+    "fraud_type": "机票火车票退改签诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇机票火车票退改签诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_PRIZE_001",
+    "input_type": "url",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇虚假中奖/免费礼品诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_CREDIT_001",
+    "input_type": "chat_record",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇征信修复/注销账户诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_ROMANCE_001",
+    "input_type": "transfer",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "required_fields": [
+      "接触时间",
+      "接触渠道",
+      "对方账号或号码",
+      "对方要求",
+      "金额或资产价值",
+      "是否已付款/交付/泄露信息",
+      "证据截图"
+    ],
+    "suggested_summary_template": "我疑似遭遇情感交友诱导投资诈骗。对方通过{contact_channel}联系我，要求{requested_action}，涉及金额/资产价值{amount}。目前状态：{exposure_status}。证据包括{evidence_list}。",
+    "evidence_checklist": [
+      "聊天记录",
+      "对方账号/号码",
+      "付款或资产交付凭证",
+      "链接/二维码/App/会议号",
+      "平台订单或账号归属证明"
+    ],
+    "next_actions": [
+      "停止继续操作",
+      "保存证据",
+      "向平台举报或申诉",
+      "如已发生损失或被威胁，拨打110或前往派出所报案"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_BRUSH_FINAL",
+    "input_type": "mixed",
+    "fraud_type": "刷单返利诈骗",
+    "required_fields": [
+      "发生时间",
+      "对方账号/电话/平台名称",
+      "诱导话术",
+      "是否已转账或泄露信息",
+      "金额、收款账户或链接/App"
+    ],
+    "suggested_summary_template": "用户遇到疑似刷单返利诈骗：对方以点赞关注、做任务返佣和前几单小额到账为由接触，后续出现垫付大额订单、联单补单、提现受阻继续收费等风险点。已发生操作：{actions}；金额/账户/链接：{evidence}。",
+    "evidence_checklist": [
+      "聊天记录和通话记录",
+      "对方账号、电话号码、群聊或平台页面",
+      "链接、二维码、App名称或下载来源",
+      "转账/充值/扣款凭证",
+      "对方要求继续操作的关键话术"
+    ],
+    "next_actions": [
+      "先停止继续付款、共享屏幕、输入验证码或交付账号资产",
+      "联系银行/支付平台/相关官方平台做止付、冻结或申诉",
+      "拨打110或前往派出所报案并提交证据"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_POLICE_FINAL",
+    "input_type": "mixed",
+    "fraud_type": "冒充公检法诈骗",
+    "required_fields": [
+      "发生时间",
+      "对方账号/电话/平台名称",
+      "诱导话术",
+      "是否已转账或泄露信息",
+      "金额、收款账户或链接/App"
+    ],
+    "suggested_summary_template": "用户遇到疑似冒充公检法诈骗：对方以涉案洗钱、通缉令、案件编号和来学校/单位抓人的恐吓为由接触，后续出现保密隔离、下载App、屏幕共享、资金清查和安全账户转账等风险点。已发生操作：{actions}；金额/账户/链接：{evidence}。",
+    "evidence_checklist": [
+      "聊天记录和通话记录",
+      "对方账号、电话号码、群聊或平台页面",
+      "链接、二维码、App名称或下载来源",
+      "转账/充值/扣款凭证",
+      "对方要求继续操作的关键话术"
+    ],
+    "next_actions": [
+      "先停止继续付款、共享屏幕、输入验证码或交付账号资产",
+      "联系银行/支付平台/相关官方平台做止付、冻结或申诉",
+      "拨打110或前往派出所报案并提交证据"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_LOAN_FINAL",
+    "input_type": "mixed",
+    "fraud_type": "网络贷款诈骗",
+    "required_fields": [
+      "发生时间",
+      "对方账号/电话/平台名称",
+      "诱导话术",
+      "是否已转账或泄露信息",
+      "金额、收款账户或链接/App"
+    ],
+    "suggested_summary_template": "用户遇到疑似网络贷款诈骗：对方以无抵押、低息、秒放款、不看征信和校园贷包装为由接触，后续出现放款前收费、银行卡号错误冻结、刷流水和征信威胁等风险点。已发生操作：{actions}；金额/账户/链接：{evidence}。",
+    "evidence_checklist": [
+      "聊天记录和通话记录",
+      "对方账号、电话号码、群聊或平台页面",
+      "链接、二维码、App名称或下载来源",
+      "转账/充值/扣款凭证",
+      "对方要求继续操作的关键话术"
+    ],
+    "next_actions": [
+      "先停止继续付款、共享屏幕、输入验证码或交付账号资产",
+      "联系银行/支付平台/相关官方平台做止付、冻结或申诉",
+      "拨打110或前往派出所报案并提交证据"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_AI_FACE_FINAL",
+    "input_type": "mixed",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "required_fields": [
+      "发生时间",
+      "对方账号/电话/平台名称",
+      "诱导话术",
+      "是否已转账或泄露信息",
+      "金额、收款账户或链接/App"
+    ],
+    "suggested_summary_template": "用户遇到疑似AI换脸冒充熟人诈骗：对方以AI换脸/拟声冒充亲友领导，制造紧急借钱场景为由接触，后续出现拒绝二次核验、要求保密催促、让钱转到非本人账户等风险点。已发生操作：{actions}；金额/账户/链接：{evidence}。",
+    "evidence_checklist": [
+      "聊天记录和通话记录",
+      "对方账号、电话号码、群聊或平台页面",
+      "链接、二维码、App名称或下载来源",
+      "转账/充值/扣款凭证",
+      "对方要求继续操作的关键话术"
+    ],
+    "next_actions": [
+      "先停止继续付款、共享屏幕、输入验证码或交付账号资产",
+      "联系银行/支付平台/相关官方平台做止付、冻结或申诉",
+      "拨打110或前往派出所报案并提交证据"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_CODE_FINAL",
+    "input_type": "mixed",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "required_fields": [
+      "发生时间",
+      "对方账号/电话/平台名称",
+      "诱导话术",
+      "是否已转账或泄露信息",
+      "金额、收款账户或链接/App"
+    ],
+    "suggested_summary_template": "用户遇到疑似验证码/账户盗刷诈骗：对方以身份核验、退款确认、账户异常、好友辅助验证为由接触，后续出现索要验证码后登录、绑卡、改密、转账或盗刷等风险点。已发生操作：{actions}；金额/账户/链接：{evidence}。",
+    "evidence_checklist": [
+      "聊天记录和通话记录",
+      "对方账号、电话号码、群聊或平台页面",
+      "链接、二维码、App名称或下载来源",
+      "转账/充值/扣款凭证",
+      "对方要求继续操作的关键话术"
+    ],
+    "next_actions": [
+      "先停止继续付款、共享屏幕、输入验证码或交付账号资产",
+      "联系银行/支付平台/相关官方平台做止付、冻结或申诉",
+      "拨打110或前往派出所报案并提交证据"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_SCREEN_FINAL",
+    "input_type": "mixed",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "required_fields": [
+      "发生时间",
+      "对方账号/电话/平台名称",
+      "诱导话术",
+      "是否已转账或泄露信息",
+      "金额、收款账户或链接/App"
+    ],
+    "suggested_summary_template": "用户遇到疑似屏幕共享/远程控制诈骗：对方以客服退款、贷款认证、征信修复、退改签或公检法视频办案为由接触，后续出现共享屏幕时打开银行支付页面、验证码和密码输入界面等风险点。已发生操作：{actions}；金额/账户/链接：{evidence}。",
+    "evidence_checklist": [
+      "聊天记录和通话记录",
+      "对方账号、电话号码、群聊或平台页面",
+      "链接、二维码、App名称或下载来源",
+      "转账/充值/扣款凭证",
+      "对方要求继续操作的关键话术"
+    ],
+    "next_actions": [
+      "先停止继续付款、共享屏幕、输入验证码或交付账号资产",
+      "联系银行/支付平台/相关官方平台做止付、冻结或申诉",
+      "拨打110或前往派出所报案并提交证据"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "REPORT_CROSS_BORDER_RECRUIT_001",
+    "input_type": "recruitment_ad",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "required_fields": [
+      "广告照片或截图",
+      "联系方式",
+      "聊天记录",
+      "收费要求",
+      "集合/出境安排"
+    ],
+    "suggested_summary_template": "用户看到境外高薪招工信息 {content}，对方要求私聊、交费或提交证件，疑似跨境高薪招工诱骗。",
+    "evidence_checklist": [
+      "墙面广告/网页截图",
+      "电话微信QQ账号",
+      "转账或收费截图",
+      "证件提交记录",
+      "出境集合信息"
+    ],
+    "next_actions": [
+      "停止联系并告知家人",
+      "不要提交证件或出境",
+      "向公安机关或人社部门核实"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "REPORT_HEALTH_PRODUCT_001",
+    "input_type": "offline_sale",
+    "fraud_type": "养老保健品诈骗",
+    "required_fields": [
+      "商家名称",
+      "活动地点",
+      "产品名称",
+      "付款凭证",
+      "宣传材料"
+    ],
+    "suggested_summary_template": "用户参加健康讲座或义诊后被诱导购买 {product}，宣传疑似夸大疗效或高价预存。",
+    "evidence_checklist": [
+      "宣传单和讲座照片",
+      "产品包装和批准文号",
+      "收据发票",
+      "付款记录",
+      "销售人员联系方式"
+    ],
+    "next_actions": [
+      "停止继续付款",
+      "联系家人陪同处理",
+      "向市场监管或消协投诉"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "REPORT_NATIONAL_PROJECT_001",
+    "input_type": "group_message",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "required_fields": [
+      "群名称",
+      "项目名称",
+      "伪造文件",
+      "收款账号",
+      "拉人要求"
+    ],
+    "suggested_summary_template": "用户在群内看到所谓国家项目/资产解冻信息，要求缴费领取补贴，疑似民族资产解冻诈骗。",
+    "evidence_checklist": [
+      "群公告",
+      "伪造红头文件",
+      "收款码",
+      "管理员账号",
+      "拉人返利规则"
+    ],
+    "next_actions": [
+      "停止缴费",
+      "提醒亲友不要扩散",
+      "向公安机关举报"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "REPORT_MEDICARE_FUND_001",
+    "input_type": "medical_insurance",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "required_fields": [
+      "医保消费记录",
+      "使用人信息",
+      "药店/诊所名称",
+      "返钱或倒卖话术"
+    ],
+    "suggested_summary_template": "用户被诱导外借医保凭证、刷医保返钱或倒卖药品，疑似医保骗保/医保卡倒卖风险。",
+    "evidence_checklist": [
+      "医保消费明细",
+      "聊天记录",
+      "药品票据",
+      "返钱记录",
+      "对方账号"
+    ],
+    "next_actions": [
+      "停止外借医保凭证",
+      "通过医保平台核查记录",
+      "向医保部门反映"
+    ],
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "REPORT_VIRTUAL_CURRENCY_LAUNDERING_001",
+    "input_type": "fund_flow",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "required_fields": [
+      "任务群记录",
+      "银行卡/支付账户",
+      "虚拟币钱包地址",
+      "资金流水",
+      "佣金说明"
+    ],
+    "suggested_summary_template": "用户被诱导参与高佣金跑分或虚拟币代收代付，疑似帮助电诈资金转移。",
+    "evidence_checklist": [
+      "收付款流水",
+      "钱包地址",
+      "交易哈希",
+      "任务群聊天",
+      "佣金记录"
+    ],
+    "next_actions": [
+      "停止交易",
+      "联系银行或支付平台",
+      "保留证据并配合公安核查"
+    ],
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "REPORT_LIVE_PRIVATE_TRADE_001",
+    "input_type": "online_order",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "required_fields": [
+      "直播间/主播账号",
+      "商品链接",
+      "私下收款码",
+      "聊天记录",
+      "售后记录"
+    ],
+    "suggested_summary_template": "用户在直播或福利群被引导私下付款购物，出现货不对板、拒不退款或失联，疑似直播带货/私域交易诈骗。",
+    "evidence_checklist": [
+      "直播间截图",
+      "商品宣传",
+      "私下付款凭证",
+      "物流和收货照片",
+      "售后沟通记录"
+    ],
+    "next_actions": [
+      "保留证据",
+      "联系平台官方客服",
+      "向市场监管或消协投诉"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  }
+]

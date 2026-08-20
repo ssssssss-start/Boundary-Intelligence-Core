@@ -1,0 +1,393 @@
+[
+  {
+    "source_id": "SRC_NPC_ANTI_TELECOM_FRAUD_LAW_2022",
+    "title": "中华人民共和国反电信网络诈骗法",
+    "url": "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+    "authority": "全国人民代表大会",
+    "source_type": "law",
+    "domains": [
+      "反电信网络诈骗法",
+      "个人信息保护",
+      "涉诈治理",
+      "法律常识"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "law_clauses",
+      "prevention_advice",
+      "risk_rules",
+      "knowledge_dialogue_policy"
+    ],
+    "coverage": "反电信网络诈骗治理、个人信息保护、账户实名和涉诈处置的基础法律来源。",
+    "source_refs": [
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html"
+    ]
+  },
+  {
+    "source_id": "SRC_GOV_CROSS_BORDER_FRAUD_OPINION_2024",
+    "title": "跨境电信网络诈骗等刑事案件适用法律相关官方意见发布",
+    "url": "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+    "authority": "中国政府网",
+    "source_type": "official_legal_opinion",
+    "domains": [
+      "跨境电诈",
+      "境外高薪招工",
+      "人身安全",
+      "刑事法律常识"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "scam_cross_border_high_salary",
+      "law_clauses",
+      "risk_rules"
+    ],
+    "coverage": "用于支撑跨境高薪招工诱骗、跨境电诈招募和出境风险处置规则。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm"
+    ]
+  },
+  {
+    "source_id": "SRC_GOV_ANTI_FRAUD_MANUAL_2025",
+    "title": "防范电信网络诈骗宣传手册相关官方材料",
+    "url": "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+    "authority": "中国政府网",
+    "source_type": "official_manual",
+    "domains": [
+      "最新骗局",
+      "反诈宣传",
+      "风险特征",
+      "典型案例"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "scam_elderly_health_product",
+      "scam_national_asset_project",
+      "scam_virtual_currency_laundering",
+      "scam_live_commerce_private_trade",
+      "typical_cases"
+    ],
+    "coverage": "用于补充 2025 年以来高发诈骗类型、通用风险特征和防范建议。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm"
+    ]
+  },
+  {
+    "source_id": "SRC_COURT_TELECOM_FRAUD_CASES_2026",
+    "title": "人民法院电信网络诈骗相关典型案例",
+    "url": "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+    "authority": "最高人民法院",
+    "source_type": "official_case",
+    "domains": [
+      "典型案例",
+      "跨境电诈",
+      "跑分洗钱",
+      "司法裁判"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "typical_cases",
+      "law_clauses",
+      "risk_rules"
+    ],
+    "coverage": "用于支撑公开脱敏案例、司法风险和处置常识。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html"
+    ]
+  },
+  {
+    "source_id": "SRC_SAMR_HEALTH_PRODUCT_WARNING_2025",
+    "title": "保健食品和涉老消费风险提示相关官方材料",
+    "url": "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+    "authority": "国家市场监督管理总局",
+    "source_type": "consumer_warning",
+    "domains": [
+      "养老保健品",
+      "保健食品",
+      "虚假宣传",
+      "消费提示"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "scam_elderly_health_product",
+      "prevention_advice",
+      "typical_cases"
+    ],
+    "coverage": "用于支撑养老保健品诈骗中的免费讲座、夸大疗效、假专家和高价销售识别点。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html"
+    ]
+  },
+  {
+    "source_id": "SRC_NHSA_MEDICAL_INSURANCE_PORTAL",
+    "title": "国家医疗保障局官方信息发布渠道",
+    "url": "https://www.nhsa.gov.cn/",
+    "authority": "国家医疗保障局",
+    "source_type": "official_portal",
+    "domains": [
+      "医保基金监管",
+      "医保凭证",
+      "骗保",
+      "医保卡倒卖"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "scam_medical_insurance_fund",
+      "law_clauses",
+      "prevention_advice"
+    ],
+    "coverage": "用于支撑医保骗保、医保卡/医保码外借和医保基金监管相关常识。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/"
+    ]
+  },
+  {
+    "source_id": "SRC_GOV_GENERAL_PORTAL",
+    "title": "中国政府网官方信息发布渠道",
+    "url": "https://www.gov.cn/",
+    "authority": "中国政府网",
+    "source_type": "official_portal",
+    "domains": [
+      "政策发布",
+      "部门联播",
+      "法律法规",
+      "公共服务"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "law_clauses",
+      "prevention_advice"
+    ],
+    "coverage": "用于承接通用法律、政策和官方核验渠道说明。",
+    "source_refs": [
+      "https://www.gov.cn/"
+    ]
+  },
+  {
+    "source_id": "SRC_GOV_CONSUMER_RISK_2024",
+    "title": "官方部门电信网络诈骗风险提示材料",
+    "url": "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+    "authority": "中国政府网",
+    "source_type": "official_warning",
+    "domains": [
+      "退改签诈骗",
+      "征信修复",
+      "客服冒充",
+      "风险提示"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "travel_ticket_refund",
+      "credit_repair_cancel_account",
+      "prevention_advice"
+    ],
+    "coverage": "用于支撑退改签、征信修复、冒充客服等场景中的官方风险提示。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_OFFICIAL_PORTAL",
+    "title": "公安部官方网站",
+    "url": "https://www.mps.gov.cn/",
+    "authority": "公安部",
+    "source_type": "official_portal",
+    "domains": [
+      "公安机关提醒",
+      "反诈宣传",
+      "典型案例",
+      "报案处置"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "scam_types",
+      "risk_rules",
+      "typical_cases",
+      "prevention_advice"
+    ],
+    "coverage": "作为公安机关反诈宣传、典型案例和报案处置常识的通用官方入口。",
+    "source_refs": [
+      "https://www.mps.gov.cn/"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_GENERAL_ANTI_FRAUD_C8882901",
+    "title": "公安机关防范电信网络诈骗宣传材料",
+    "url": "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+    "authority": "公安部",
+    "source_type": "official_warning",
+    "domains": [
+      "刷单返利",
+      "冒充客服",
+      "虚假贷款",
+      "反诈宣传"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "core_scam_types",
+      "scam_live_commerce_private_trade",
+      "risk_rules"
+    ],
+    "coverage": "用于支撑多类高发电信网络诈骗特征、案例和通用防范建议。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_STUDENT_ANTI_FRAUD_C8090077",
+    "title": "公安机关校园和个人反诈宣传材料",
+    "url": "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+    "authority": "公安部",
+    "source_type": "official_warning",
+    "domains": [
+      "校园诈骗",
+      "游戏交易",
+      "奖助学金",
+      "冒充老师"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "campus_fee_impersonation",
+      "game_trade",
+      "scholarship_subsidy_phishing"
+    ],
+    "coverage": "用于支撑校园群体相关诈骗的识别、案例和劝阻建议。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_CASE_COLLECTION_C9629527",
+    "title": "公安机关公开反诈典型案例材料",
+    "url": "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+    "authority": "公安部",
+    "source_type": "official_case",
+    "domains": [
+      "典型案例",
+      "虚假购物",
+      "杀猪盘",
+      "租房押金"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "typical_cases",
+      "romance_investment",
+      "rental_deposit"
+    ],
+    "coverage": "用于支撑典型案例复盘和多类私下交易诈骗识别点。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_JOB_RECRUITMENT_C9075076",
+    "title": "公安机关求职招聘类诈骗风险提示材料",
+    "url": "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+    "authority": "公安部",
+    "source_type": "official_warning",
+    "domains": [
+      "求职诈骗",
+      "招聘诈骗",
+      "培训贷",
+      "入职收费"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "job_internship_recruitment",
+      "scam_cross_border_high_salary"
+    ],
+    "coverage": "用于支撑求职招聘、入职前收费和培训贷类风险识别。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_TICKET_TRADE_C10152014",
+    "title": "公安机关票务交易诈骗风险提示材料",
+    "url": "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+    "authority": "公安部",
+    "source_type": "official_warning",
+    "domains": [
+      "演唱会票",
+      "二手票务",
+      "私下交易",
+      "定金诈骗"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "secondhand_ticket_trade",
+      "phishing_link"
+    ],
+    "coverage": "用于支撑二手票务、私下定金和钓鱼链接识别规则。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_TRAVEL_REFUND_C10461813",
+    "title": "公安机关机票火车票退改签诈骗风险提示材料",
+    "url": "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+    "authority": "公安部",
+    "source_type": "official_warning",
+    "domains": [
+      "机票退改签",
+      "火车票退改签",
+      "理赔退款",
+      "冒充客服"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "travel_ticket_refund",
+      "fake_customer_service"
+    ],
+    "coverage": "用于支撑退改签、退款理赔和冒充客服类风险规则。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_NUDE_CHAT_EXTORTION_C7375192",
+    "title": "公安机关裸聊敲诈类风险提示材料",
+    "url": "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+    "authority": "公安部",
+    "source_type": "official_warning",
+    "domains": [
+      "裸聊敲诈",
+      "隐私威胁",
+      "通讯录威胁",
+      "证据保存"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "nude_chat_extortion",
+      "law_clauses",
+      "evidence_guides"
+    ],
+    "coverage": "用于支撑裸聊敲诈的风险识别、证据保存和报警处置常识。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html"
+    ]
+  },
+  {
+    "source_id": "SRC_MPS_TWO_CARDS_C10155981",
+    "title": "公安机关两卡和跑分违法风险提示材料",
+    "url": "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+    "authority": "公安部",
+    "source_type": "official_warning",
+    "domains": [
+      "两卡",
+      "跑分",
+      "出租出借账户",
+      "洗钱风险"
+    ],
+    "last_checked": "2026-06-06",
+    "used_for": [
+      "two_cards_rent",
+      "scam_virtual_currency_laundering",
+      "law_clauses"
+    ],
+    "coverage": "用于支撑两卡出租出借、跑分、代收代付和涉诈资金转移风险。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html"
+    ]
+  }
+]

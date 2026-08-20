@@ -1,0 +1,123 @@
+{
+  "scam_id": "scam_national_asset_project",
+  "name": "民族资产解冻/虚假国家项目诈骗",
+  "version": "1.0",
+  "updated_at": "2026-06-06",
+  "aliases": [
+    "民族资产解冻",
+    "虚假国家项目",
+    "国家项目",
+    "央企项目",
+    "扶贫款",
+    "共同富裕项目",
+    "数字资产解冻",
+    "缴费领补贴",
+    "国家补贴"
+  ],
+  "features": [
+    {
+      "feature_name": "国家项目包装",
+      "keywords": [
+        "国家项目",
+        "央企项目",
+        "扶贫款",
+        "共同富裕",
+        "内部名额",
+        "民族资产",
+        "资产解冻",
+        "国家补贴",
+        "数字资产解冻"
+      ],
+      "weight": 35,
+      "explanation": "冒用国家、央企、扶贫、共同富裕等名义包装虚假项目。"
+    },
+    {
+      "feature_name": "伪造红头文件",
+      "keywords": [
+        "红头文件",
+        "授权书",
+        "证书",
+        "公章",
+        "批文",
+        "保密文件",
+        "国家批复"
+      ],
+      "weight": 30,
+      "explanation": "用伪造文件、公章、授权书制造官方背书假象。"
+    },
+    {
+      "feature_name": "缴费领取补贴",
+      "keywords": [
+        "会员费",
+        "激活费",
+        "材料费",
+        "解冻费",
+        "手续费",
+        "认证费",
+        "先交",
+        "缴费"
+      ],
+      "weight": 40,
+      "explanation": "要求先缴费、激活或认证后才能领取所谓补贴、分红或资产。"
+    },
+    {
+      "feature_name": "巨额分红承诺",
+      "keywords": [
+        "领几十万",
+        "领几百万",
+        "分红",
+        "返利",
+        "补贴到账",
+        "高额回报",
+        "马上到账"
+      ],
+      "weight": 35,
+      "explanation": "承诺缴小钱领取巨额补贴、分红或资产解冻收益。"
+    },
+    {
+      "feature_name": "拉人头扩散",
+      "keywords": [
+        "发展会员",
+        "拉人",
+        "团队",
+        "下线",
+        "推广奖励",
+        "邀请奖励",
+        "分享名额"
+      ],
+      "weight": 30,
+      "explanation": "通过发展会员、下线或群传播扩大骗局影响。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_NATIONAL_ASSET_PROJECT_001",
+      "rule_name": "民族资产解冻/虚假国家项目配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "国家项目包装"
+        ],
+        "any": [
+          "伪造红头文件",
+          "缴费领取补贴",
+          "巨额分红承诺",
+          "拉人头扩散"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 92,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "国家项目、民族资产或共同富裕包装叠加缴费、分红、红头文件或拉人头，触发虚假项目诈骗高危劝阻。",
+      "suggested_action": "不要缴会员费、激活费、解冻费或转发拉人；通过政府官网和官方电话核验，保存群聊、文件和收款信息。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+    "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+    "https://www.mps.gov.cn/"
+  ]
+}

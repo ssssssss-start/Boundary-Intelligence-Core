@@ -1,0 +1,2590 @@
+{
+  "label": "optimized_v2",
+  "mode": "offline",
+  "dataset": "/Users/sss/main/ruikang/anti_fraud_project_full_20260731/evaluation/realistic_v1/realistic_eval_50.jsonl",
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "sample_count": 50,
+    "case_family_count": 50,
+    "dimension_distribution": {
+      "明确诈骗": 8,
+      "尚未转账": 8,
+      "正在操作或已付款": 8,
+      "正常对照": 8,
+      "信息不足": 8,
+      "混合困难": 8,
+      "跨轮状态变化": 1,
+      "语音转写混合": 1
+    }
+  },
+  "novelty": {
+    "prior_sample_count": 710,
+    "threshold": 0.72,
+    "maximum_similarity": 0.5714,
+    "flagged_count": 0,
+    "flagged_pairs": []
+  },
+  "summary": {
+    "total": 50,
+    "risk_count": 34,
+    "normal_count": 8,
+    "clarification_count": 8,
+    "type_top1_accuracy": 1.0,
+    "type_topk_recall": 1.0,
+    "risk_detection_recall": 1.0,
+    "normal_false_positive_rate": 0.0,
+    "normal_forced_type_rate": 0.0,
+    "clarification_forced_decision_rate": 0.0,
+    "risk_level_accuracy": 0.92,
+    "warning_samples": 0,
+    "errors": 0,
+    "latency_ms": {
+      "mean": 42.7190883201547,
+      "p95": 2.528791956137866,
+      "max": 2071.796500007622
+    },
+    "per_type": {
+      "AI换脸冒充熟人诈骗": {
+        "count": 1,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "冒充公检法诈骗": {
+        "count": 5,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "冒充客服诈骗": {
+        "count": 5,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "冒充领导或熟人借钱诈骗": {
+        "count": 3,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "刷单返利诈骗": {
+        "count": 4,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "征信修复/注销账户诈骗": {
+        "count": 2,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "游戏交易诈骗": {
+        "count": 4,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "网络贷款诈骗": {
+        "count": 6,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      },
+      "虚假投资理财诈骗": {
+        "count": 4,
+        "top1_accuracy": 1.0,
+        "risk_recall": 1.0
+      }
+    }
+  },
+  "confusions": [
+    {
+      "expected": "冒充客服诈骗",
+      "actual": "冒充客服诈骗",
+      "count": 2
+    },
+    {
+      "expected": "冒充公检法诈骗",
+      "actual": "冒充公检法诈骗",
+      "count": 1
+    },
+    {
+      "expected": "冒充领导或熟人借钱诈骗",
+      "actual": "冒充领导或熟人借钱诈骗",
+      "count": 1
+    }
+  ],
+  "failures": [
+    {
+      "sample_id": "AF-REAL-0015",
+      "case_family_id": "realistic_v1_family_0015",
+      "focus_category": "冒充公检法",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "冒充公检法诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充公检法诈骗",
+      "candidate_types": [
+        "冒充公检法诈骗"
+      ],
+      "risk_score": 40,
+      "actual_risk_level": "中风险",
+      "risk_features": [
+        "屏幕共享"
+      ],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 2.78345902916044,
+      "error": "",
+      "text": "user：我在视频会议里，对方让我把几张卡的余额都念出来，还开着共享。他说下一步做‘归集’，我妈在敲门但不让我开。"
+    },
+    {
+      "sample_id": "AF-REAL-0033",
+      "case_family_id": "realistic_v1_family_0033",
+      "focus_category": "冒充客服",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "冒充客服诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "已发生转账",
+        "冒充客服"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CUSTOMER_OPERATION_001",
+          "rule_name": "客服赔付与账户操作组合",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：银行售后",
+            "关键词命中：短信数字"
+          ],
+          "matched_keywords": [
+            "银行售后",
+            "短信数字"
+          ],
+          "explanation": "客服或赔付身份叠加安装软件、开钱包、读取短信、借款并转入清算户等账户操作。",
+          "suggested_action": "挂断来电，不安装软件、不提供钱包或短信信息，也不要从借款页面提现转账；从订单官方入口核验。",
+          "intervention_goal": "stop_sensitive_info",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 1.2066669878549874,
+      "error": "",
+      "text": "user：自称银行售后的说帮我撤销一笔扣费，让我先转1块测试退款通道。我转了以后，他又让我把收到的短信数字念过去。"
+    },
+    {
+      "sample_id": "AF-REAL-0036",
+      "case_family_id": "realistic_v1_family_0036",
+      "focus_category": "冒充客服",
+      "test_dimension": "混合困难",
+      "expected_type": "冒充客服诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗",
+        "网络贷款诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "要求垫付资金",
+        "贷款前收费"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CUSTOMER_OPERATION_001",
+          "rule_name": "客服赔付与账户操作组合",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：商户保障",
+            "关键词命中：借款页面"
+          ],
+          "matched_keywords": [
+            "商户保障",
+            "借款页面"
+          ],
+          "explanation": "客服或赔付身份叠加安装软件、开钱包、读取短信、借款并转入清算户等账户操作。",
+          "suggested_action": "挂断来电，不安装软件、不提供钱包或短信信息，也不要从借款页面提现转账；从订单官方入口核验。",
+          "intervention_goal": "stop_sensitive_info",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 1.5313749900087714,
+      "error": "",
+      "text": "user：来电说我误开了商户保障，每月扣800。要取消就先在借款页面把可用额度截屏，再把借出来的钱退回他们的‘银联清算户’。"
+    },
+    {
+      "sample_id": "AF-REAL-0045",
+      "case_family_id": "realistic_v1_family_0045",
+      "focus_category": "冒充熟人",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "冒充领导或熟人借钱诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充领导或熟人借钱诈骗",
+      "candidate_types": [
+        "冒充领导或熟人借钱诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "陌生人引导",
+        "已发生转账"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_ACQUAINTANCE_VERIFY_001",
+          "rule_name": "熟人异常联系与第三方收款组合",
+          "fraud_type": "冒充领导或熟人借钱诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：表哥",
+            "关键词命中：尾款"
+          ],
+          "matched_keywords": [
+            "表哥",
+            "尾款"
+          ],
+          "explanation": "熟人身份叠加拒绝原渠道核验、充值卡付款或第三方收款，身份与资金对象不一致。",
+          "suggested_action": "先不要付款或发送卡密，用原手机号、当面或共同联系人核验，并确认收款账户本人身份。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 1.7233340186066926,
+      "error": "",
+      "text": "user：家族群里‘表哥’让我替婚庆付尾款，我按他发的账户转了8800。刚才真表哥说婚礼早结完了，我现在手都在抖。"
+    }
+  ],
+  "results": [
+    {
+      "sample_id": "AF-REAL-0001",
+      "case_family_id": "realistic_v1_family_0001",
+      "focus_category": "刷单返利",
+      "test_dimension": "明确诈骗",
+      "expected_type": "刷单返利诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "刷单返利诈骗",
+      "candidate_types": [
+        "刷单返利诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "陌生人引导",
+        "任务返佣"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_BRUSH_CHAIN_001",
+          "rule_name": "刷单任务升级与返款组合",
+          "fraud_type": "刷单返利诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：养数据",
+            "关键词命中：本金"
+          ],
+          "matched_keywords": [
+            "养数据",
+            "本金"
+          ],
+          "explanation": "任务或评价行为叠加返本金、补差额、解锁订单等资金要求，构成刷单任务升级链。",
+          "suggested_action": "停止拍单、补差额和解锁付款，不要因前款被占用继续投入，保留任务页面与收款记录。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 2071.796500007622,
+      "error": "",
+      "text": "user：群里管事的说这是给店铺养数据，不算刷单。让我拍下三件家电先别拆，五星截图后本金和工钱一起回。"
+    },
+    {
+      "sample_id": "AF-REAL-0002",
+      "case_family_id": "realistic_v1_family_0002",
+      "focus_category": "刷单返利",
+      "test_dimension": "尚未转账",
+      "expected_type": "刷单返利诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "刷单返利诈骗",
+      "candidate_types": [
+        "刷单返利诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_BRUSH_CHAIN_001",
+          "rule_name": "刷单任务升级与返款组合",
+          "fraud_type": "刷单返利诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：连淡",
+            "关键词命中：补"
+          ],
+          "matched_keywords": [
+            "连淡",
+            "补"
+          ],
+          "explanation": "任务或评价行为叠加返本金、补差额、解锁订单等资金要求，构成刷单任务升级链。",
+          "suggested_action": "停止拍单、补差额和解锁付款，不要因前款被占用继续投入，保留任务页面与收款记录。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.819542027078569,
+      "error": "",
+      "text": "user：语音识别可能不准：他说下一轮是‘连淡’，要把三个单子绑一块儿，差的两千我还没补。"
+    },
+    {
+      "sample_id": "AF-REAL-0003",
+      "case_family_id": "realistic_v1_family_0003",
+      "focus_category": "刷单返利",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "刷单返利诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "刷单返利诈骗",
+      "candidate_types": [
+        "刷单返利诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "已发生转账"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_BRUSH_CHAIN_001",
+          "rule_name": "刷单任务升级与返款组合",
+          "fraud_type": "刷单返利诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：订单锁住",
+            "关键词命中：再付"
+          ],
+          "matched_keywords": [
+            "订单锁住",
+            "再付"
+          ],
+          "explanation": "任务或评价行为叠加返本金、补差额、解锁订单等资金要求，构成刷单任务升级链。",
+          "suggested_action": "停止拍单、补差额和解锁付款，不要因前款被占用继续投入，保留任务页面与收款记录。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_ACTIVE_ESCALATION_001",
+          "rule_name": "已进入资金或账户控制的复合高危操作",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：订单锁住",
+            "关键词命中：再付"
+          ],
+          "matched_keywords": [
+            "订单锁住",
+            "再付"
+          ],
+          "explanation": "已出现资金被占用、远程/短信控制、追加担保、清算转出或亲友否认等事中信号。",
+          "suggested_action": "立即停止继续付款、共享、验证码或代转操作；如已付款，马上联系银行止付并保存证据报警。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.939708017744124,
+      "error": "",
+      "text": "user：我脑子真抽了，已经垫了3200。现在页面写订单锁住，要再付同样的钱才能解，倒计时还有六分钟。"
+    },
+    {
+      "sample_id": "AF-REAL-0004",
+      "case_family_id": "realistic_v1_family_0004",
+      "focus_category": "刷单返利",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.8709999965503812,
+      "error": "",
+      "text": "user：我用银行App里的信用卡活动买咖啡，返现直接进账单了，也没人加我或让我先垫任务，这个返现正常吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0005",
+      "case_family_id": "realistic_v1_family_0005",
+      "focus_category": "刷单返利",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.7513330201618373,
+      "error": "",
+      "text": "user：他说这轮做完就能回，我现在该咋办？"
+    },
+    {
+      "sample_id": "AF-REAL-0006",
+      "case_family_id": "realistic_v1_family_0006",
+      "focus_category": "刷单返利",
+      "test_dimension": "混合困难",
+      "expected_type": "刷单返利诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "刷单返利诈骗",
+      "candidate_types": [
+        "刷单返利诈骗",
+        "冒充客服诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "冒充客服",
+        "屏幕共享"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_BRUSH_CHAIN_001",
+          "rule_name": "刷单任务升级与返款组合",
+          "fraud_type": "刷单返利诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：拍一单",
+            "关键词命中：原路退"
+          ],
+          "matched_keywords": [
+            "拍一单",
+            "原路退"
+          ],
+          "explanation": "任务或评价行为叠加返本金、补差额、解锁订单等资金要求，构成刷单任务升级链。",
+          "suggested_action": "停止拍单、补差额和解锁付款，不要因前款被占用继续投入，保留任务页面与收款记录。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_CROSS_CHANNEL_CONTROL_001",
+          "rule_name": "原场景诱导叠加远程控制",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：拍一单",
+            "关键词命中：会议"
+          ],
+          "matched_keywords": [
+            "拍一单",
+            "会议"
+          ],
+          "explanation": "交易、任务或客服场景已升级为会议共享、远程控制或短信凭证交付。",
+          "suggested_action": "立即断开会议和远程控制，不朗读短信或验证码，并在原平台和银行检查异常操作。",
+          "intervention_goal": "stop_screen_share",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 2.079333004076034,
+      "error": "",
+      "text": "user：售后说店里最近差评价，让我帮忙拍一单，过会儿原路退。\nassistant：对方是否要求离开平台或操作手机？\nuser：他让我上会议，说共享一下就能看着我申请退款。"
+    },
+    {
+      "sample_id": "AF-REAL-0007",
+      "case_family_id": "realistic_v1_family_0007",
+      "focus_category": "游戏交易",
+      "test_dimension": "明确诈骗",
+      "expected_type": "游戏交易诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "游戏交易诈骗",
+      "candidate_types": [
+        "游戏交易诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "要求垫付资金"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_GAME_DELIVERY_001",
+          "rule_name": "游戏资产交付与异常担保组合",
+          "fraud_type": "游戏交易诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：公会",
+            "关键词命中：小号"
+          ],
+          "matched_keywords": [
+            "公会",
+            "小号"
+          ],
+          "explanation": "游戏场景叠加先交资产、押金、扫码认证或远程验号，已脱离可追偿的官方交付流程。",
+          "suggested_action": "不要交付材料、账号、押金或验证码，终止远程验号并回到游戏官方交易渠道。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 2.528791956137866,
+      "error": "",
+      "text": "user：公会里有人说能帮我把两件材料合成稀有装，失败包赔，但得先把材料邮给他的小号，交易行手续费太贵。"
+    },
+    {
+      "sample_id": "AF-REAL-0008",
+      "case_family_id": "realistic_v1_family_0008",
+      "focus_category": "游戏交易",
+      "test_dimension": "尚未转账",
+      "expected_type": "游戏交易诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "游戏交易诈骗",
+      "candidate_types": [
+        "游戏交易诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_GAME_DELIVERY_001",
+          "rule_name": "游戏资产交付与异常担保组合",
+          "fraud_type": "游戏交易诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：陪练",
+            "关键词命中：防跑单金"
+          ],
+          "matched_keywords": [
+            "陪练",
+            "防跑单金"
+          ],
+          "explanation": "游戏场景叠加先交资产、押金、扫码认证或远程验号，已脱离可追偿的官方交付流程。",
+          "suggested_action": "不要交付材料、账号、押金或验证码，终止远程验号并回到游戏官方交易渠道。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.6887499950826168,
+      "error": "",
+      "text": "user：陪练工作室说先给我排大神，但要压600的‘防跑单金’，结束秒退。我还没付，客服一直弹语音。"
+    },
+    {
+      "sample_id": "AF-REAL-0009",
+      "case_family_id": "realistic_v1_family_0009",
+      "focus_category": "游戏交易",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "游戏交易诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "游戏交易诈骗",
+      "candidate_types": [
+        "游戏交易诈骗"
+      ],
+      "risk_score": 80,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "要求垫付资金",
+        "已发生转账"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_GAME_DELIVERY_001",
+          "rule_name": "游戏资产交付与异常担保组合",
+          "fraud_type": "游戏交易诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：比赛号",
+            "关键词命中：押金"
+          ],
+          "matched_keywords": [
+            "比赛号",
+            "押金"
+          ],
+          "explanation": "游戏场景叠加先交资产、押金、扫码认证或远程验号，已脱离可追偿的官方交付流程。",
+          "suggested_action": "不要交付材料、账号、押金或验证码，终止远程验号并回到游戏官方交易渠道。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.675875042565167,
+      "error": "",
+      "text": "user：我租了个比赛号，押金给了。对面现在说检测到异地，叫我扫码交二次认证，不交就把押金算违约，快点告诉我咋整。"
+    },
+    {
+      "sample_id": "AF-REAL-0010",
+      "case_family_id": "realistic_v1_family_0010",
+      "focus_category": "游戏交易",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.9982080082409084,
+      "error": "",
+      "text": "user：我在游戏自带市场挂了道具，钱先冻结在平台，买家确认后系统到账，全程没加联系方式。这样需要担心吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0011",
+      "case_family_id": "realistic_v1_family_0011",
+      "focus_category": "游戏交易",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.8919999818317592,
+      "error": "",
+      "text": "user：游戏里那个交易咋弄啊，急。"
+    },
+    {
+      "sample_id": "AF-REAL-0012",
+      "case_family_id": "realistic_v1_family_0012",
+      "focus_category": "游戏交易",
+      "test_dimension": "混合困难",
+      "expected_type": "游戏交易诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "游戏交易诈骗",
+      "candidate_types": [
+        "游戏交易诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "索要验证码",
+        "屏幕共享"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_GAME_DELIVERY_001",
+          "rule_name": "游戏资产交付与异常担保组合",
+          "fraud_type": "游戏交易诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：仓库",
+            "关键词命中：解绑短信"
+          ],
+          "matched_keywords": [
+            "仓库",
+            "解绑短信"
+          ],
+          "explanation": "游戏场景叠加先交资产、押金、扫码认证或远程验号，已脱离可追偿的官方交付流程。",
+          "suggested_action": "不要交付材料、账号、押金或验证码，终止远程验号并回到游戏官方交易渠道。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_ACTIVE_ESCALATION_001",
+          "rule_name": "已进入资金或账户控制的复合高危操作",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：远程看号",
+            "关键词命中：短信"
+          ],
+          "matched_keywords": [
+            "远程看号",
+            "短信"
+          ],
+          "explanation": "已出现资金被占用、远程/短信控制、追加担保、清算转出或亲友否认等事中信号。",
+          "suggested_action": "立即停止继续付款、共享、验证码或代转操作；如已付款，马上联系银行止付并保存证据报警。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_CROSS_CHANNEL_CONTROL_001",
+          "rule_name": "原场景诱导叠加远程控制",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：仓库",
+            "关键词命中：远程"
+          ],
+          "matched_keywords": [
+            "仓库",
+            "远程"
+          ],
+          "explanation": "交易、任务或客服场景已升级为会议共享、远程控制或短信凭证交付。",
+          "suggested_action": "立即断开会议和远程控制，不朗读短信或验证码，并在原平台和银行检查异常操作。",
+          "intervention_goal": "stop_screen_share",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.7354169976897538,
+      "error": "",
+      "text": "user：买家说想看仓库，不然没法估价。\nassistant：他让你怎么展示？\nuser：让我装个远程看号的东西，还说解绑短信到了就念给他。"
+    },
+    {
+      "sample_id": "AF-REAL-0013",
+      "case_family_id": "realistic_v1_family_0013",
+      "focus_category": "冒充公检法",
+      "test_dimension": "明确诈骗",
+      "expected_type": "冒充公检法诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充公检法诈骗",
+      "candidate_types": [
+        "冒充公检法诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "索要银行卡或身份信息"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_POLICE_ISOLATION_001",
+          "rule_name": "线上办案隔离与资金处置组合",
+          "fraud_type": "冒充公检法诈骗",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：线上做笔录",
+            "关键词命中：一个人"
+          ],
+          "matched_keywords": [
+            "线上做笔录",
+            "一个人"
+          ],
+          "explanation": "办案身份或线上笔录叠加隔离、查看资金、购金取证、借贷归集等要求，是高危冒充公检法组合。",
+          "suggested_action": "立即退出会议并停止购金、借贷、归集或展示账户，通过 110 或属地公安公开电话独立核验。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 2.014541008975357,
+      "error": "",
+      "text": "user：有人让我一个人去酒店开房，说线上做笔录不能有旁人，摄像头要一直对着我和银行卡。我还没去。"
+    },
+    {
+      "sample_id": "AF-REAL-0014",
+      "case_family_id": "realistic_v1_family_0014",
+      "focus_category": "冒充公检法",
+      "test_dimension": "尚未转账",
+      "expected_type": "冒充公检法诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充公检法诈骗",
+      "candidate_types": [
+        "冒充公检法诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_POLICE_ISOLATION_001",
+          "rule_name": "线上办案隔离与资金处置组合",
+          "fraud_type": "冒充公检法诈骗",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：协查员",
+            "关键词命中：金条"
+          ],
+          "matched_keywords": [
+            "协查员",
+            "金条"
+          ],
+          "explanation": "办案身份或线上笔录叠加隔离、查看资金、购金取证、借贷归集等要求，是高危冒充公检法组合。",
+          "suggested_action": "立即退出会议并停止购金、借贷、归集或展示账户，通过 110 或属地公安公开电话独立核验。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.474292017519474,
+      "error": "",
+      "text": "user：‘协查员’说转账不好查，让我买两根金条，等便衣上门拿去做证物。我还在金店门口，没买。"
+    },
+    {
+      "sample_id": "AF-REAL-0015",
+      "case_family_id": "realistic_v1_family_0015",
+      "focus_category": "冒充公检法",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "冒充公检法诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充公检法诈骗",
+      "candidate_types": [
+        "冒充公检法诈骗"
+      ],
+      "risk_score": 40,
+      "actual_risk_level": "中风险",
+      "risk_features": [
+        "屏幕共享"
+      ],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 2.78345902916044,
+      "error": "",
+      "text": "user：我在视频会议里，对方让我把几张卡的余额都念出来，还开着共享。他说下一步做‘归集’，我妈在敲门但不让我开。"
+    },
+    {
+      "sample_id": "AF-REAL-0016",
+      "case_family_id": "realistic_v1_family_0016",
+      "focus_category": "冒充公检法",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.7184169953688979,
+      "error": "",
+      "text": "user：银行风控打电话问我昨天那笔境外消费是不是本人，我没在电话里说密码，挂断后从卡背面的号码打回去确认了。"
+    },
+    {
+      "sample_id": "AF-REAL-0017",
+      "case_family_id": "realistic_v1_family_0017",
+      "focus_category": "冒充公检法",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.7440000190399587,
+      "error": "",
+      "text": "user：有个说是办案的，是真的假的？"
+    },
+    {
+      "sample_id": "AF-REAL-0018",
+      "case_family_id": "realistic_v1_family_0018",
+      "focus_category": "冒充公检法",
+      "test_dimension": "混合困难",
+      "expected_type": "冒充公检法诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充公检法诈骗",
+      "candidate_types": [
+        "冒充公检法诈骗",
+        "冒充客服诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_POLICE_ISOLATION_001",
+          "rule_name": "线上办案隔离与资金处置组合",
+          "fraud_type": "冒充公检法诈骗",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：穿警服",
+            "关键词命中：网贷"
+          ],
+          "matched_keywords": [
+            "穿警服",
+            "网贷"
+          ],
+          "explanation": "办案身份或线上笔录叠加隔离、查看资金、购金取证、借贷归集等要求，是高危冒充公检法组合。",
+          "suggested_action": "立即退出会议并停止购金、借贷、归集或展示账户，通过 110 或属地公安公开电话独立核验。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.3996249763295054,
+      "error": "",
+      "text": "user：先是‘快递中心’说我的包裹夹了违禁卡，后来转给一个穿警服的人。他让我借一笔网贷证明资金清白，再上飞书看操作。"
+    },
+    {
+      "sample_id": "AF-REAL-0019",
+      "case_family_id": "realistic_v1_family_0019",
+      "focus_category": "虚假投资",
+      "test_dimension": "明确诈骗",
+      "expected_type": "虚假投资理财诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "虚假投资理财诈骗",
+      "candidate_types": [
+        "虚假投资理财诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "陌生人引导"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_INVESTMENT_FUNDING_001",
+          "rule_name": "非官方投资载体与追加资金组合",
+          "fraud_type": "虚假投资理财诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：量化内测",
+            "关键词命中：入金"
+          ],
+          "matched_keywords": [
+            "量化内测",
+            "入金"
+          ],
+          "explanation": "非官方投资载体叠加安装插件、稳定币入金、担保充值或提现限制，形成封闭资金链。",
+          "suggested_action": "不要安装对方插件、购买稳定币或追加担保资金，先核验机构牌照和资金托管账户。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.4833749737590551,
+      "error": "",
+      "text": "user：短视频里有个AI量化内测群，每天只要跟着报数，老师说先观察七天再开放入金，还让我装他们的行情插件。"
+    },
+    {
+      "sample_id": "AF-REAL-0020",
+      "case_family_id": "realistic_v1_family_0020",
+      "focus_category": "虚假投资",
+      "test_dimension": "尚未转账",
+      "expected_type": "虚假投资理财诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "虚假投资理财诈骗",
+      "candidate_types": [
+        "虚假投资理财诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_INVESTMENT_FUNDING_001",
+          "rule_name": "非官方投资载体与追加资金组合",
+          "fraud_type": "虚假投资理财诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：商品子账户",
+            "关键词命中：钱包"
+          ],
+          "matched_keywords": [
+            "商品子账户",
+            "钱包"
+          ],
+          "explanation": "非官方投资载体叠加安装插件、稳定币入金、担保充值或提现限制，形成封闭资金链。",
+          "suggested_action": "不要安装对方插件、购买稳定币或追加担保资金，先核验机构牌照和资金托管账户。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.172332966234535,
+      "error": "",
+      "text": "user：同城群认识的大哥让我开个‘商品子账户’，说直接转稳定币能赶上夜盘，我钱包都建好了但还没买币。"
+    },
+    {
+      "sample_id": "AF-REAL-0021",
+      "case_family_id": "realistic_v1_family_0021",
+      "focus_category": "虚假投资",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "虚假投资理财诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "虚假投资理财诈骗",
+      "candidate_types": [
+        "虚假投资理财诈骗"
+      ],
+      "risk_score": 100,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "无法提现",
+        "私下交易",
+        "已发生转账"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_INVESTMENT_FUNDING_001",
+          "rule_name": "非官方投资载体与追加资金组合",
+          "fraud_type": "虚假投资理财诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：投进去",
+            "关键词命中：充"
+          ],
+          "matched_keywords": [
+            "投进去",
+            "充"
+          ],
+          "explanation": "非官方投资载体叠加安装插件、稳定币入金、担保充值或提现限制，形成封闭资金链。",
+          "suggested_action": "不要安装对方插件、购买稳定币或追加担保资金，先核验机构牌照和资金托管账户。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.5339170349761844,
+      "error": "",
+      "text": "user：我已经投进去6万了。现在客服说提现得找一个家属做‘信用担保’，让他也充10%，不然两个人账户一起冻结。"
+    },
+    {
+      "sample_id": "AF-REAL-0022",
+      "case_family_id": "realistic_v1_family_0022",
+      "focus_category": "虚假投资",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.8794169989414513,
+      "error": "",
+      "text": "user：我在持牌券商App买的指数基金跌了12%，赎回按页面规则第二天到账。亏钱是不是也算平台骗我？"
+    },
+    {
+      "sample_id": "AF-REAL-0023",
+      "case_family_id": "realistic_v1_family_0023",
+      "focus_category": "虚假投资",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.5492499913088977,
+      "error": "",
+      "text": "user：老师说这票能上，我该买吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0024",
+      "case_family_id": "realistic_v1_family_0024",
+      "focus_category": "虚假投资",
+      "test_dimension": "混合困难",
+      "expected_type": "虚假投资理财诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "虚假投资理财诈骗",
+      "candidate_types": [
+        "虚假投资理财诈骗",
+        "情感交友诱导投资诈骗",
+        "杀猪盘诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "陌生人引导"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_INVESTMENT_FUNDING_001",
+          "rule_name": "非官方投资载体与追加资金组合",
+          "fraud_type": "虚假投资理财诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：酒庄分红",
+            "关键词命中：保证份额"
+          ],
+          "matched_keywords": [
+            "酒庄分红",
+            "保证份额"
+          ],
+          "explanation": "非官方投资载体叠加安装插件、稳定币入金、担保充值或提现限制，形成封闭资金链。",
+          "suggested_action": "不要安装对方插件、购买稳定币或追加担保资金，先核验机构牌照和资金托管账户。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_ACTIVE_ESCALATION_001",
+          "rule_name": "已进入资金或账户控制的复合高危操作",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：保证份额",
+            "关键词命中：网贷"
+          ],
+          "matched_keywords": [
+            "保证份额",
+            "网贷"
+          ],
+          "explanation": "已出现资金被占用、远程/短信控制、追加担保、清算转出或亲友否认等事中信号。",
+          "suggested_action": "立即停止继续付款、共享、验证码或代转操作；如已付款，马上联系银行止付并保存证据报警。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.3808330404572189,
+      "error": "",
+      "text": "user：交友软件认识的姐姐天天给我看酒庄分红。\nassistant：她让你通过哪里参与？\nuser：一个小程序，客服还说余额不够可以先网贷补保证份额。"
+    },
+    {
+      "sample_id": "AF-REAL-0025",
+      "case_family_id": "realistic_v1_family_0025",
+      "focus_category": "校园贷",
+      "test_dimension": "明确诈骗",
+      "expected_type": "征信修复/注销账户诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "征信修复/注销账户诈骗",
+      "candidate_types": [
+        "征信修复/注销账户诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CAMPUS_CREDIT_001",
+          "rule_name": "校园额度注销与借新还旧组合",
+          "fraud_type": "征信修复/注销账户诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：学生分期",
+            "关键词命中：清掉"
+          ],
+          "matched_keywords": [
+            "学生分期",
+            "清掉"
+          ],
+          "explanation": "以学生身份、旧校园额度或年费为由要求借新额度并转入清算账户，符合注销账户诈骗链。",
+          "suggested_action": "不要申请新贷款或把额度转出，直接通过原金融机构官方渠道查询账户和征信。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.391375029925257,
+      "error": "",
+      "text": "user：有人说我毕业后学生分期身份还挂着，不清掉每年都会扣管理费。他让我先申请一笔新额度，把旧记录对冲掉。"
+    },
+    {
+      "sample_id": "AF-REAL-0026",
+      "case_family_id": "realistic_v1_family_0026",
+      "focus_category": "校园贷",
+      "test_dimension": "尚未转账",
+      "expected_type": "网络贷款诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "要求垫付资金"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_LOAN_OFFLINE_TRANSFER_001",
+          "rule_name": "贷款放款前线下资产转移组合",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：学费周转",
+            "关键词命中：公司"
+          ],
+          "matched_keywords": [
+            "学费周转",
+            "公司"
+          ],
+          "explanation": "贷款或分期场景叠加购物卡、现金跑腿、包装流水、公司代收或撤合同收费，属于放款前异常资金操作。",
+          "suggested_action": "停止购买购物卡、取现交付、刷流水或继续交费，向持牌机构官方渠道核验合同和放款状态。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.3622500118799508,
+      "error": "",
+      "text": "user：社团学长说能帮我办临时学费周转，收款卡先填他们公司的，到账后我留三成、剩下转回去。我还没提交。"
+    },
+    {
+      "sample_id": "AF-REAL-0027",
+      "case_family_id": "realistic_v1_family_0027",
+      "focus_category": "校园贷",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "网络贷款诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_LOAN_OFFLINE_TRANSFER_001",
+          "rule_name": "贷款放款前线下资产转移组合",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：器材分期",
+            "关键词命中：撤合同"
+          ],
+          "matched_keywords": [
+            "器材分期",
+            "撤合同"
+          ],
+          "explanation": "贷款或分期场景叠加购物卡、现金跑腿、包装流水、公司代收或撤合同收费，属于放款前异常资金操作。",
+          "suggested_action": "停止购买购物卡、取现交付、刷流水或继续交费，向持牌机构官方渠道核验合同和放款状态。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_ACTIVE_ESCALATION_001",
+          "rule_name": "已进入资金或账户控制的复合高危操作",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：器材分期",
+            "关键词命中：撤合同"
+          ],
+          "matched_keywords": [
+            "器材分期",
+            "撤合同"
+          ],
+          "explanation": "已出现资金被占用、远程/短信控制、追加担保、清算转出或亲友否认等事中信号。",
+          "suggested_action": "立即停止继续付款、共享、验证码或代转操作；如已付款，马上联系银行止付并保存证据报警。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.2879580026492476,
+      "error": "",
+      "text": "user：摄影社招新让我签了个器材分期，东西没拿到，App里却多了12000欠款。商家说再交1500才能撤合同，我快崩了。"
+    },
+    {
+      "sample_id": "AF-REAL-0028",
+      "case_family_id": "realistic_v1_family_0028",
+      "focus_category": "校园贷",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.7422079797834158,
+      "error": "",
+      "text": "user：我在国家开发银行助学贷款系统办的，学校老师核过回执，钱直接冲学费，毕业后按合同还。这个算校园贷风险吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0029",
+      "case_family_id": "realistic_v1_family_0029",
+      "focus_category": "校园贷",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.6773329805582762,
+      "error": "",
+      "text": "user：学校群有人说能领一笔助学额度，真的假的？"
+    },
+    {
+      "sample_id": "AF-REAL-0030",
+      "case_family_id": "realistic_v1_family_0030",
+      "focus_category": "校园贷",
+      "test_dimension": "混合困难",
+      "expected_type": "征信修复/注销账户诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "征信修复/注销账户诈骗",
+      "candidate_types": [
+        "征信修复/注销账户诈骗",
+        "网络贷款诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "校园贷包装"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CAMPUS_CREDIT_001",
+          "rule_name": "校园额度注销与借新还旧组合",
+          "fraud_type": "征信修复/注销账户诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：校园贷",
+            "关键词命中：销户"
+          ],
+          "matched_keywords": [
+            "校园贷",
+            "销户"
+          ],
+          "explanation": "以学生身份、旧校园额度或年费为由要求借新额度并转入清算账户，符合注销账户诈骗链。",
+          "suggested_action": "不要申请新贷款或把额度转出，直接通过原金融机构官方渠道查询账户和征信。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_ACTIVE_ESCALATION_001",
+          "rule_name": "已进入资金或账户控制的复合高危操作",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：清算卡",
+            "关键词命中：转到"
+          ],
+          "matched_keywords": [
+            "清算卡",
+            "转到"
+          ],
+          "explanation": "已出现资金被占用、远程/短信控制、追加担保、清算转出或亲友否认等事中信号。",
+          "suggested_action": "立即停止继续付款、共享、验证码或代转操作；如已付款，马上联系银行止付并保存证据报警。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.5550829702988267,
+      "error": "",
+      "text": "user：‘教育金融中心’给我打电话，说以前注册过校园贷，开腾讯会议看着我从三个平台把额度借出来，再统一转到清算卡就能销户。"
+    },
+    {
+      "sample_id": "AF-REAL-0031",
+      "case_family_id": "realistic_v1_family_0031",
+      "focus_category": "冒充客服",
+      "test_dimension": "明确诈骗",
+      "expected_type": "冒充客服诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CUSTOMER_OPERATION_001",
+          "rule_name": "客服赔付与账户操作组合",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：批次有问题",
+            "关键词命中：视频软件"
+          ],
+          "matched_keywords": [
+            "批次有问题",
+            "视频软件"
+          ],
+          "explanation": "客服或赔付身份叠加安装软件、开钱包、读取短信、借款并转入清算户等账户操作。",
+          "suggested_action": "挂断来电，不安装软件、不提供钱包或短信信息，也不要从借款页面提现转账；从订单官方入口核验。",
+          "intervention_goal": "stop_sensitive_info",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.4628329663537443,
+      "error": "",
+      "text": "user：卖电热毯的店突然通知批次有问题，说给我三倍补偿，但得装一个视频软件让‘保险专员’看订单。"
+    },
+    {
+      "sample_id": "AF-REAL-0032",
+      "case_family_id": "realistic_v1_family_0032",
+      "focus_category": "冒充客服",
+      "test_dimension": "尚未转账",
+      "expected_type": "冒充客服诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CUSTOMER_OPERATION_001",
+          "rule_name": "客服赔付与账户操作组合",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：赔付组",
+            "关键词命中：钱包编号"
+          ],
+          "matched_keywords": [
+            "赔付组",
+            "钱包编号"
+          ],
+          "explanation": "客服或赔付身份叠加安装软件、开钱包、读取短信、借款并转入清算户等账户操作。",
+          "suggested_action": "挂断来电，不安装软件、不提供钱包或短信信息，也不要从借款页面提现转账；从订单官方入口核验。",
+          "intervention_goal": "stop_sensitive_info",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.2475000112317502,
+      "error": "",
+      "text": "user：外卖平台的‘赔付组’让我先开数字人民币钱包，说不往里充钱，只要把钱包编号发他。我还没弄。"
+    },
+    {
+      "sample_id": "AF-REAL-0033",
+      "case_family_id": "realistic_v1_family_0033",
+      "focus_category": "冒充客服",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "冒充客服诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "已发生转账",
+        "冒充客服"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CUSTOMER_OPERATION_001",
+          "rule_name": "客服赔付与账户操作组合",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：银行售后",
+            "关键词命中：短信数字"
+          ],
+          "matched_keywords": [
+            "银行售后",
+            "短信数字"
+          ],
+          "explanation": "客服或赔付身份叠加安装软件、开钱包、读取短信、借款并转入清算户等账户操作。",
+          "suggested_action": "挂断来电，不安装软件、不提供钱包或短信信息，也不要从借款页面提现转账；从订单官方入口核验。",
+          "intervention_goal": "stop_sensitive_info",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 1.2066669878549874,
+      "error": "",
+      "text": "user：自称银行售后的说帮我撤销一笔扣费，让我先转1块测试退款通道。我转了以后，他又让我把收到的短信数字念过去。"
+    },
+    {
+      "sample_id": "AF-REAL-0034",
+      "case_family_id": "realistic_v1_family_0034",
+      "focus_category": "冒充客服",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.7763329776935279,
+      "error": "",
+      "text": "user：网购退货后，平台App里显示原路退回信用卡，商家没私聊我要任何信息，今天账单已经冲正。"
+    },
+    {
+      "sample_id": "AF-REAL-0035",
+      "case_family_id": "realistic_v1_family_0035",
+      "focus_category": "冒充客服",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.5970420315861702,
+      "error": "",
+      "text": "user：客服说能退，我咋整？"
+    },
+    {
+      "sample_id": "AF-REAL-0036",
+      "case_family_id": "realistic_v1_family_0036",
+      "focus_category": "冒充客服",
+      "test_dimension": "混合困难",
+      "expected_type": "冒充客服诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗",
+        "网络贷款诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "要求垫付资金",
+        "贷款前收费"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_CUSTOMER_OPERATION_001",
+          "rule_name": "客服赔付与账户操作组合",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：商户保障",
+            "关键词命中：借款页面"
+          ],
+          "matched_keywords": [
+            "商户保障",
+            "借款页面"
+          ],
+          "explanation": "客服或赔付身份叠加安装软件、开钱包、读取短信、借款并转入清算户等账户操作。",
+          "suggested_action": "挂断来电，不安装软件、不提供钱包或短信信息，也不要从借款页面提现转账；从订单官方入口核验。",
+          "intervention_goal": "stop_sensitive_info",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 1.5313749900087714,
+      "error": "",
+      "text": "user：来电说我误开了商户保障，每月扣800。要取消就先在借款页面把可用额度截屏，再把借出来的钱退回他们的‘银联清算户’。"
+    },
+    {
+      "sample_id": "AF-REAL-0037",
+      "case_family_id": "realistic_v1_family_0037",
+      "focus_category": "虚假贷款",
+      "test_dimension": "明确诈骗",
+      "expected_type": "网络贷款诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 93,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "要求垫付资金",
+        "贷款前收费"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "PKG_LOAN_PRE_FEE_001",
+          "rule_name": "网络贷款贷前收费规则",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "高风险",
+          "risk_score": 93,
+          "matched_features": [
+            "贷款前收费",
+            "要求垫付资金"
+          ],
+          "matched_keywords": [],
+          "explanation": "贷前收费叠加解冻费或陌生App，触发强劝阻。",
+          "suggested_action": "停止缴费和提交敏感信息。",
+          "intervention_goal": "stop_transfer",
+          "source": "scam_package:scam_fake_loan"
+        },
+        {
+          "rule_id": "RULE_LOAN_CORE_001",
+          "rule_name": "网络贷款诈骗核心高危规则",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "高风险",
+          "risk_score": 92,
+          "matched_features": [
+            "贷款前收费",
+            "要求垫付资金"
+          ],
+          "matched_keywords": [],
+          "explanation": "同时命中网络贷款诈骗的核心条件：贷款前收费，并出现要求垫付资金, 诱导下载陌生APP, 索要银行卡或身份信息, 要求缴纳解冻费, 无法提现中的至少1项。",
+          "suggested_action": "停止缴费，不再提交身份证、银行卡、验证码和人脸识别。",
+          "intervention_goal": "stop_transfer",
+          "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_LOAN_OFFLINE_TRANSFER_001",
+          "rule_name": "贷款放款前线下资产转移组合",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：贷款审核",
+            "关键词命中：购物卡"
+          ],
+          "matched_keywords": [
+            "贷款审核",
+            "购物卡"
+          ],
+          "explanation": "贷款或分期场景叠加购物卡、现金跑腿、包装流水、公司代收或撤合同收费，属于放款前异常资金操作。",
+          "suggested_action": "停止购买购物卡、取现交付、刷流水或继续交费，向持牌机构官方渠道核验合同和放款状态。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.22991600073874,
+      "error": "",
+      "text": "user：贷款审核的人说不用交手续费，只要先买两张购物卡拍卡密，证明我有还款能力，审核完卡还能自己用。"
+    },
+    {
+      "sample_id": "AF-REAL-0038",
+      "case_family_id": "realistic_v1_family_0038",
+      "focus_category": "虚假贷款",
+      "test_dimension": "尚未转账",
+      "expected_type": "网络贷款诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 100,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "无法提现",
+        "索要银行卡或身份信息",
+        "贷款前收费"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_LOAN_CORE_001",
+          "rule_name": "网络贷款诈骗核心高危规则",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "高风险",
+          "risk_score": 92,
+          "matched_features": [
+            "贷款前收费",
+            "索要银行卡或身份信息",
+            "无法提现"
+          ],
+          "matched_keywords": [],
+          "explanation": "同时命中网络贷款诈骗的核心条件：贷款前收费，并出现要求垫付资金, 诱导下载陌生APP, 索要银行卡或身份信息, 要求缴纳解冻费, 无法提现中的至少1项。",
+          "suggested_action": "停止缴费，不再提交身份证、银行卡、验证码和人脸识别。",
+          "intervention_goal": "stop_transfer",
+          "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_LOAN_OFFLINE_TRANSFER_001",
+          "rule_name": "贷款放款前线下资产转移组合",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：放款通过",
+            "关键词命中：跑腿"
+          ],
+          "matched_keywords": [
+            "放款通过",
+            "跑腿"
+          ],
+          "explanation": "贷款或分期场景叠加购物卡、现金跑腿、包装流水、公司代收或撤合同收费，属于放款前异常资金操作。",
+          "suggested_action": "停止购买购物卡、取现交付、刷流水或继续交费，向持牌机构官方渠道核验合同和放款状态。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.4732080162502825,
+      "error": "",
+      "text": "user：App里显示放款通过，但专员说银行卡风控，叫我去柜台取一万现金，交给同城跑腿送去复核。我还没取。"
+    },
+    {
+      "sample_id": "AF-REAL-0039",
+      "case_family_id": "realistic_v1_family_0039",
+      "focus_category": "虚假贷款",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "网络贷款诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 80,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "贷款前收费",
+        "已发生转账"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_LOAN_OFFLINE_TRANSFER_001",
+          "rule_name": "贷款放款前线下资产转移组合",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：中介",
+            "关键词命中：包装费"
+          ],
+          "matched_keywords": [
+            "中介",
+            "包装费"
+          ],
+          "explanation": "贷款或分期场景叠加购物卡、现金跑腿、包装流水、公司代收或撤合同收费，属于放款前异常资金操作。",
+          "suggested_action": "停止购买购物卡、取现交付、刷流水或继续交费，向持牌机构官方渠道核验合同和放款状态。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.3646669685840607,
+      "error": "",
+      "text": "user：中介收了我2800包装费，说银行没批是流水还差点，让我再凑5000放他账上过一晚上。我已经付过一次了。"
+    },
+    {
+      "sample_id": "AF-REAL-0040",
+      "case_family_id": "realistic_v1_family_0040",
+      "focus_category": "虚假贷款",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.7149999728426337,
+      "error": "",
+      "text": "user：我在银行网点申请装修贷，经理让我在柜台面签，合同写清利率和提前还款规则，钱进我本人卡，没有先交保证金。"
+    },
+    {
+      "sample_id": "AF-REAL-0041",
+      "case_family_id": "realistic_v1_family_0041",
+      "focus_category": "虚假贷款",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.651499954983592,
+      "error": "",
+      "text": "user：额度批了，说还差一步，能继续不？"
+    },
+    {
+      "sample_id": "AF-REAL-0042",
+      "case_family_id": "realistic_v1_family_0042",
+      "focus_category": "虚假贷款",
+      "test_dimension": "混合困难",
+      "expected_type": "网络贷款诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "网络贷款诈骗",
+      "candidate_types": [
+        "网络贷款诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "贷款前收费"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_LOAN_OFFLINE_TRANSFER_001",
+          "rule_name": "贷款放款前线下资产转移组合",
+          "fraud_type": "网络贷款诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：贷款平台",
+            "关键词命中：店铺码"
+          ],
+          "matched_keywords": [
+            "贷款平台",
+            "店铺码"
+          ],
+          "explanation": "贷款或分期场景叠加购物卡、现金跑腿、包装流水、公司代收或撤合同收费，属于放款前异常资金操作。",
+          "suggested_action": "停止购买购物卡、取现交付、刷流水或继续交费，向持牌机构官方渠道核验合同和放款状态。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_ACTIVE_ESCALATION_001",
+          "rule_name": "已进入资金或账户控制的复合高危操作",
+          "fraud_type": "",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：商户评分",
+            "关键词命中：扫出去"
+          ],
+          "matched_keywords": [
+            "商户评分",
+            "扫出去"
+          ],
+          "explanation": "已出现资金被占用、远程/短信控制、追加担保、清算转出或亲友否认等事中信号。",
+          "suggested_action": "立即停止继续付款、共享、验证码或代转操作；如已付款，马上联系银行止付并保存证据报警。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.3645829749293625,
+      "error": "",
+      "text": "user：贷款平台说想提额就得做‘商户评分’，先收一笔钱到我卡里，我再按客服给的店铺码分三次扫出去。"
+    },
+    {
+      "sample_id": "AF-REAL-0043",
+      "case_family_id": "realistic_v1_family_0043",
+      "focus_category": "冒充熟人",
+      "test_dimension": "明确诈骗",
+      "expected_type": "冒充领导或熟人借钱诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "冒充领导或熟人借钱诈骗",
+      "candidate_types": [
+        "冒充领导或熟人借钱诈骗",
+        "冒充熟人诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_ACQUAINTANCE_VERIFY_001",
+          "rule_name": "熟人异常联系与第三方收款组合",
+          "fraud_type": "冒充领导或熟人借钱诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：室友",
+            "关键词命中：不方便视频"
+          ],
+          "matched_keywords": [
+            "室友",
+            "不方便视频"
+          ],
+          "explanation": "熟人身份叠加拒绝原渠道核验、充值卡付款或第三方收款，身份与资金对象不一致。",
+          "suggested_action": "先不要付款或发送卡密，用原手机号、当面或共同联系人核验，并确认收款账户本人身份。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.3991669984534383,
+      "error": "",
+      "text": "user：以前的室友用新号找我，说在急诊不方便视频，发了张缴费单让我先垫。他连我们宿舍住几楼都说得对。"
+    },
+    {
+      "sample_id": "AF-REAL-0044",
+      "case_family_id": "realistic_v1_family_0044",
+      "focus_category": "冒充熟人",
+      "test_dimension": "尚未转账",
+      "expected_type": "冒充领导或熟人借钱诈骗",
+      "expected_risk_level": "中风险警示",
+      "actual_type": "冒充领导或熟人借钱诈骗",
+      "candidate_types": [
+        "冒充领导或熟人借钱诈骗",
+        "虚假投资理财诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "陌生人引导",
+        "要求垫付资金"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_ACQUAINTANCE_VERIFY_001",
+          "rule_name": "熟人异常联系与第三方收款组合",
+          "fraud_type": "冒充领导或熟人借钱诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：导师",
+            "关键词命中：不接电话"
+          ],
+          "matched_keywords": [
+            "导师",
+            "不接电话"
+          ],
+          "explanation": "熟人身份叠加拒绝原渠道核验、充值卡付款或第三方收款，身份与资金对象不一致。",
+          "suggested_action": "先不要付款或发送卡密，用原手机号、当面或共同联系人核验，并确认收款账户本人身份。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.2562500196509063,
+      "error": "",
+      "text": "user：导师发语音说临时替我交会议注册费，让我买三张充值卡把号码拍过去，语气挺像，但他不接电话。"
+    },
+    {
+      "sample_id": "AF-REAL-0045",
+      "case_family_id": "realistic_v1_family_0045",
+      "focus_category": "冒充熟人",
+      "test_dimension": "正在操作或已付款",
+      "expected_type": "冒充领导或熟人借钱诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充领导或熟人借钱诈骗",
+      "candidate_types": [
+        "冒充领导或熟人借钱诈骗"
+      ],
+      "risk_score": 75,
+      "actual_risk_level": "高风险",
+      "risk_features": [
+        "陌生人引导",
+        "已发生转账"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_ACQUAINTANCE_VERIFY_001",
+          "rule_name": "熟人异常联系与第三方收款组合",
+          "fraud_type": "冒充领导或熟人借钱诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：表哥",
+            "关键词命中：尾款"
+          ],
+          "matched_keywords": [
+            "表哥",
+            "尾款"
+          ],
+          "explanation": "熟人身份叠加拒绝原渠道核验、充值卡付款或第三方收款，身份与资金对象不一致。",
+          "suggested_action": "先不要付款或发送卡密，用原手机号、当面或共同联系人核验，并确认收款账户本人身份。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": false,
+      "latency_ms": 1.7233340186066926,
+      "error": "",
+      "text": "user：家族群里‘表哥’让我替婚庆付尾款，我按他发的账户转了8800。刚才真表哥说婚礼早结完了，我现在手都在抖。"
+    },
+    {
+      "sample_id": "AF-REAL-0046",
+      "case_family_id": "realistic_v1_family_0046",
+      "focus_category": "冒充熟人",
+      "test_dimension": "正常对照",
+      "expected_type": null,
+      "expected_risk_level": "无明显风险",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": true,
+      "normal_type_clean": true,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 0.6850420031696558,
+      "error": "",
+      "text": "user：朋友当面跟我借两万，我们核对了身份证和本人银行卡，也写了借条，转账备注借款。他后来按约还了第一期。"
+    },
+    {
+      "sample_id": "AF-REAL-0047",
+      "case_family_id": "realistic_v1_family_0047",
+      "focus_category": "冒充熟人",
+      "test_dimension": "信息不足",
+      "expected_type": null,
+      "expected_risk_level": "信息不足",
+      "actual_type": "未知",
+      "candidate_types": [
+        "未知"
+      ],
+      "risk_score": 0,
+      "actual_risk_level": "风险未知",
+      "risk_features": [],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": false,
+      "type_topk_pass": false,
+      "risk_detection_pass": false,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": true,
+      "risk_level_pass": true,
+      "latency_ms": 0.5354590248316526,
+      "error": "",
+      "text": "user：他换号了问我借点，能给吗？"
+    },
+    {
+      "sample_id": "AF-REAL-0048",
+      "case_family_id": "realistic_v1_family_0048",
+      "focus_category": "冒充熟人",
+      "test_dimension": "混合困难",
+      "expected_type": "AI换脸冒充熟人诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "AI换脸冒充熟人诈骗",
+      "candidate_types": [
+        "AI换脸冒充熟人诈骗"
+      ],
+      "risk_score": 100,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "要求垫付资金",
+        "已发生转账",
+        "AI换脸冒充"
+      ],
+      "matched_rules": [],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 2.0572500070557,
+      "error": "",
+      "text": "user：舅舅视频说有个私募名额，让我先替他打款。\nassistant：视频中能正常交流吗？\nuser：脸有点卡，只会点头，还不肯说我们家的暗号，收款人也不是他。"
+    },
+    {
+      "sample_id": "AF-REAL-0049",
+      "case_family_id": "realistic_v1_family_0049",
+      "focus_category": "冒充客服",
+      "test_dimension": "跨轮状态变化",
+      "expected_type": "冒充客服诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充客服诈骗",
+      "candidate_types": [
+        "冒充客服诈骗"
+      ],
+      "risk_score": 94,
+      "actual_risk_level": "极高风险",
+      "risk_features": [
+        "冒充客服",
+        "屏幕共享"
+      ],
+      "matched_rules": [
+        {
+          "rule_id": "PKG_SERVICE_SCREEN_001",
+          "rule_name": "冒充客服屏幕共享规则",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "高风险",
+          "risk_score": 94,
+          "matched_features": [
+            "冒充客服",
+            "屏幕共享"
+          ],
+          "matched_keywords": [],
+          "explanation": "客服身份叠加屏幕共享或远程控制，触发实时劝阻。",
+          "suggested_action": "立即退出会议软件并停止屏幕共享或远程控制。",
+          "intervention_goal": "stop_screen_share",
+          "source": "scam_package:scam_fake_customer_service"
+        },
+        {
+          "rule_id": "RULE_SERVICE_CORE_001",
+          "rule_name": "冒充客服诈骗核心高危规则",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "高风险",
+          "risk_score": 91,
+          "matched_features": [
+            "冒充客服",
+            "屏幕共享"
+          ],
+          "matched_keywords": [],
+          "explanation": "同时命中冒充客服诈骗的核心条件：冒充客服，并出现索要验证码, 屏幕共享, 点击陌生链接, 索要银行卡或身份信息, 远程控制, 要求垫付资金中的至少1项。",
+          "suggested_action": "挂断陌生客服，停止共享屏幕和验证码发送，通过官方订单入口核实。",
+          "intervention_goal": "stop_code_leak",
+          "source": "自建反诈知识库 2026-05-19：基于公开反诈提示、法律法规和项目规则人工整理"
+        },
+        {
+          "rule_id": "RULE_REALISTIC_CUSTOMER_OPERATION_001",
+          "rule_name": "客服赔付与账户操作组合",
+          "fraud_type": "冒充客服诈骗",
+          "risk_level": "中风险",
+          "risk_score": 75,
+          "matched_features": [
+            "关键词命中：快递",
+            "关键词命中：手机钱包"
+          ],
+          "matched_keywords": [
+            "快递",
+            "手机钱包"
+          ],
+          "explanation": "客服或赔付身份叠加安装软件、开钱包、读取短信、借款并转入清算户等账户操作。",
+          "suggested_action": "挂断来电，不安装软件、不提供钱包或短信信息，也不要从借款页面提现转账；从订单官方入口核验。",
+          "intervention_goal": "stop_sensitive_info",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.4168330235406756,
+      "error": "",
+      "text": "user：快递晚了两天，平台里只显示运输中。\nassistant：是否有人主动联系你处理赔付？\nuser：刚有个私人号说全赔，让我开手机钱包，他看着我操作。"
+    },
+    {
+      "sample_id": "AF-REAL-0050",
+      "case_family_id": "realistic_v1_family_0050",
+      "focus_category": "冒充公检法",
+      "test_dimension": "语音转写混合",
+      "expected_type": "冒充公检法诈骗",
+      "expected_risk_level": "高风险立即劝阻",
+      "actual_type": "冒充公检法诈骗",
+      "candidate_types": [
+        "冒充公检法诈骗"
+      ],
+      "risk_score": 90,
+      "actual_risk_level": "极高风险",
+      "risk_features": [],
+      "matched_rules": [
+        {
+          "rule_id": "RULE_REALISTIC_POLICE_ISOLATION_001",
+          "rule_name": "线上办案隔离与资金处置组合",
+          "fraud_type": "冒充公检法诈骗",
+          "risk_level": "高风险",
+          "risk_score": 90,
+          "matched_features": [
+            "关键词命中：市局",
+            "关键词命中：飞书"
+          ],
+          "matched_keywords": [
+            "市局",
+            "飞书"
+          ],
+          "explanation": "办案身份或线上笔录叠加隔离、查看资金、购金取证、借贷归集等要求，是高危冒充公检法组合。",
+          "suggested_action": "立即退出会议并停止购金、借贷、归集或展示账户，通过 110 或属地公安公开电话独立核验。",
+          "intervention_goal": "stop_transfer",
+          "source": "realistic_behavior_combinations_v1"
+        }
+      ],
+      "warnings": [],
+      "type_top1_pass": true,
+      "type_topk_pass": true,
+      "risk_detection_pass": true,
+      "normal_pass": false,
+      "normal_type_clean": false,
+      "clarification_pass": false,
+      "risk_level_pass": true,
+      "latency_ms": 1.3343329774215817,
+      "error": "",
+      "text": "user：他说要清一下，我没听明白。\nassistant：是清查资金吗？对方自称什么身份？\nuser：嗯说自己市局的，让我开飞书给他看卡里还有多钱。"
+    }
+  ]
+}

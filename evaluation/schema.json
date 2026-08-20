@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AntiFraudDirection3EvaluationSample",
+  "type": "object",
+  "required": ["sample_id", "case_family_id", "source", "conversation", "split"],
+  "properties": {
+    "sample_id": {"type": "string", "pattern": "^AF-[A-Z]+-[0-9]{4}$"},
+    "case_family_id": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "required": ["source_type", "license_status", "collected_at"],
+      "properties": {
+        "source_type": {"enum": ["official_public_case", "public_news_rewrite", "anonymous_user_prompt", "expert_adversarial", "team_authored_synthetic", "llm_augmented"]},
+        "source_url": {"type": ["string", "null"]},
+        "publisher": {"type": ["string", "null"]},
+        "published_at": {"type": ["string", "null"]},
+        "collected_at": {"type": "string"},
+        "collector_id": {"type": ["string", "null"]},
+        "license_status": {"enum": ["public_facts_rewritten", "permission_granted", "internal_synthetic", "needs_review"]},
+        "content_hash": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "conversation": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "content"],
+        "properties": {
+          "role": {"enum": ["user", "assistant"]},
+          "content": {"type": "string", "minLength": 1, "maxLength": 3000}
+        }
+      }
+    },
+    "turn_under_test": {"type": "integer", "minimum": 0},
+    "labels": {
+      "type": "object",
+      "properties": {
+        "workflow": {"enum": ["knowledge_answer", "risk_case_flow", "fallback", "clarification"]},
+        "is_personal_risk": {"type": "boolean"},
+        "fraud_type": {"type": ["string", "null"]},
+        "candidate_fraud_types": {"type": "array", "maxItems": 3, "items": {"type": "string"}},
+        "risk_stage": {"enum": ["knowledge_only", "contacted", "requested_action", "active_operation", "exposed", "paid", "post_loss", "resolved", "unknown"]},
+        "risk_level": {"enum": ["none", "medium_low", "medium", "high", "critical"]},
+        "risk_features": {"type": "array", "items": {"type": "string"}},
+        "required_actions": {"type": "array", "items": {"enum": ["stop_operation", "stop_transfer", "disconnect_remote_control", "do_not_share_code", "contact_bank", "change_password", "check_account_bindings", "preserve_evidence", "contact_official_platform", "call_96110_or_110", "education_only", "ask_clarification"]}},
+        "knowledge_intent": {"type": ["string", "null"], "enum": ["definition", "technique", "case", "prevention", "law", "compare", "summary", "general", null]}
+      },
+      "additionalProperties": false
+    },
+    "annotation": {
+      "type": "object",
+      "properties": {
+        "annotator_id": {"type": "string"},
+        "annotated_at": {"type": "string"},
+        "difficulty": {"enum": ["easy", "medium", "hard"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "privacy_review": {
+      "type": "object",
+      "properties": {
+        "status": {"enum": ["pending", "passed", "blocked"]},
+        "reason": {"type": "string"}
+      },
+      "required": ["status", "reason"]
+    },
+    "split": {"enum": ["unassigned", "development", "validation", "blind_test"]}
+  },
+  "additionalProperties": false
+}

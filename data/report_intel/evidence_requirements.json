@@ -1,0 +1,62 @@
+[
+  {
+    "scam_id": "scam_brush_rebate",
+    "required_items": ["任务群/派单记录", "返佣承诺", "充值或转账凭证", "提现失败截图", "对方收款账号"],
+    "urgent_actions": ["停止补单和继续充值", "保留完整聊天记录", "如已转账及时联系支付平台或银行"]
+  },
+  {
+    "scam_id": "scam_fake_loan",
+    "required_items": ["贷款 App 或下载链接", "收费名目截图", "身份/银行卡索取记录", "转账凭证", "对方客服账号"],
+    "urgent_actions": ["停止继续交费", "联系银行核查银行卡安全", "不要再提供验证码或人脸识别"]
+  },
+  {
+    "scam_id": "scam_fake_investment",
+    "required_items": ["投资群聊天记录", "平台链接或 App", "充值记录", "收款账户", "提现失败提示"],
+    "urgent_actions": ["停止继续充值", "不要相信解冻费或税费", "导出交易流水和聊天记录"]
+  },
+  {
+    "scam_id": "scam_ecommerce_customer_service",
+    "required_items": ["来电号码", "客服账号", "订单信息", "退款/理赔链接", "验证码索取记录"],
+    "urgent_actions": ["通过官方 App 核实", "停止屏幕共享", "修改平台和支付密码"]
+  },
+  {
+    "scam_id": "scam_fake_shopping_service",
+    "required_items": ["商品页面", "卖家账号", "私下付款要求", "收款账号", "付款凭证"],
+    "urgent_actions": ["不要脱离平台继续付款", "保存交易页面", "在平台内举报卖家账号"]
+  },
+  {
+    "scam_id": "scam_impersonate_police",
+    "required_items": ["来电号码", "所谓警官信息", "伪造文书", "会议软件记录", "转账凭证"],
+    "urgent_actions": ["立即挂断并拨打 110 或 96110 核实", "停止屏幕共享", "不要转入安全账户"]
+  },
+  {
+    "scam_id": "scam_credit_cleanup",
+    "required_items": ["对方身份材料", "征信/注销话术截图", "借款记录", "转账凭证", "链接或 App"],
+    "urgent_actions": ["不要按对方要求借款转账", "通过征信中心或官方金融机构核实", "联系银行保护账户"]
+  },
+  {
+    "scam_id": "scam_game_trade",
+    "required_items": ["游戏账号/角色信息", "交易平台链接", "账号交付记录", "聊天记录", "收款信息"],
+    "urgent_actions": ["停止交保证金或解冻费", "联系游戏平台客服", "保存虚拟资产交付记录"]
+  },
+  {
+    "scam_id": "scam_impersonate_acquaintance",
+    "required_items": ["聊天记录", "收款账户", "被冒充人原联系方式核实记录", "转账凭证"],
+    "urgent_actions": ["通过原号码或当面核实身份", "未核实前不转账", "提醒被冒充人账号可能被盗"]
+  },
+  {
+    "scam_id": "scam_prize_phishing",
+    "required_items": ["中奖通知", "领奖链接或二维码", "对方微信/QQ账号", "信息填写页面", "收费或验证码索取记录"],
+    "urgent_actions": ["不要添加陌生私域账号继续领奖", "不要填写身份证银行卡验证码", "通过官方 App 或官网核实活动真实性"]
+  },
+  {
+    "scam_id": "scam_phishing_link",
+    "required_items": ["完整链接", "短信或聊天来源", "页面截图", "跳转目标", "输入过的信息说明"],
+    "urgent_actions": ["不要继续打开链接", "修改可能泄露的账号密码", "联系平台冻结异常操作"]
+  },
+  {
+    "scam_id": "scam_code_account_theft",
+    "required_items": ["验证码索取记录", "屏幕共享记录", "账户变动记录", "平台通知", "来电号码"],
+    "urgent_actions": ["停止屏幕共享", "修改密码并解绑银行卡", "联系银行或平台冻结异常交易"]
+  }
+]

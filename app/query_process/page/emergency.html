@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>紧急风险劝阻</title>
+  <style>
+    :root { --bg:#eef2f5; --panel:#fff; --soft:#f7f9fb; --line:#d8e0e7; --text:#182230; --muted:#637083; --primary:#116d7a; --danger:#b53b43; --header:#17212b; --radius:8px; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:var(--bg); color:var(--text); font-family:"Microsoft YaHei","Segoe UI",Arial,sans-serif; letter-spacing:0; }
+    button, textarea { font:inherit; }
+    .app { min-height:100vh; display:grid; grid-template-rows:50px minmax(0,1fr); }
+    .topbar { background:var(--header); color:#fff; display:flex; align-items:center; gap:12px; padding:0 14px; border-bottom:1px solid #0e151d; }
+    .mark { width:28px; height:28px; border-radius:7px; display:grid; place-items:center; background:#e4aa31; color:#17212b; font-weight:800; flex:0 0 auto; }
+    .brand { line-height:1.15; min-width:0; }
+    .brand strong { display:block; font-size:15px; white-space:nowrap; }
+    .brand span { display:block; font-size:11px; color:#b9c5d1; white-space:nowrap; }
+    .nav { display:flex; align-items:center; gap:8px; margin-left:10px; overflow-x:auto; }
+    .nav a, .profile-link { min-height:30px; border:1px solid rgba(255,255,255,.22); border-radius:7px; padding:0 10px; color:#d9e4ef; text-decoration:none; display:inline-flex; align-items:center; white-space:nowrap; font-size:12px; }
+    .nav a.active { background:var(--danger); border-color:var(--danger); color:#fff; }
+    .top-spacer { flex:1; }
+    .profile-link { width:34px; justify-content:center; border-radius:50%; padding:0; font-weight:700; }
+    .main { min-height:0; display:grid; grid-template-columns:320px minmax(0,1fr) 340px; gap:10px; padding:10px; }
+    .panel { min-width:0; min-height:0; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+    .panel-head { height:44px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:0 12px; background:var(--soft); border-bottom:1px solid var(--line); }
+    .panel-head strong { font-size:14px; }
+    .panel-head span { color:var(--muted); font-size:12px; }
+    .status-panel { padding:12px; overflow:auto; }
+    .quick { display:grid; gap:8px; }
+    .quick button { min-height:38px; border:1px solid var(--line); border-radius:7px; background:#fff; color:var(--text); cursor:pointer; text-align:left; padding:0 10px; }
+    .quick button:hover { border-color:var(--danger); color:var(--danger); }
+    .warn-box { border:1px solid rgba(181,59,67,.28); border-radius:8px; background:#fff3f4; padding:10px; line-height:1.55; font-size:13px; color:#7d252b; margin-bottom:12px; }
+    .chat { display:grid; grid-template-rows:44px minmax(0,1fr) 106px; }
+    .messages { overflow:auto; padding:12px 14px; background:linear-gradient(180deg,#fff 0%,#f8fafc 100%); }
+    .msg { display:flex; gap:8px; align-items:flex-start; margin:10px 0; }
+    .msg.user { justify-content:flex-end; }
+    .avatar { width:28px; height:28px; border-radius:7px; display:grid; place-items:center; background:#e7edf3; font-size:12px; font-weight:700; flex:0 0 auto; }
+    .avatar.bot { background:#fff0c4; color:#5d4206; }
+    .msg.user .avatar { order:2; }
+    .body { max-width:82%; min-width:0; }
+    .bubble { border:1px solid var(--line); border-radius:8px; padding:9px 10px; background:#fff; white-space:pre-wrap; line-height:1.65; word-break:break-word; font-size:14px; }
+    .msg.user .bubble { background:var(--danger); color:#fff; border-color:var(--danger); }
+    .meta { margin-top:3px; color:var(--muted); font-size:11px; }
+    .composer { border-top:1px solid var(--line); background:var(--soft); padding:8px; display:grid; grid-template-columns:minmax(0,1fr) 100px; gap:8px; }
+    textarea { width:100%; min-height:88px; resize:none; outline:none; border:1px solid var(--line); border-radius:7px; padding:9px 10px; line-height:1.55; }
+    .send-btn { border:1px solid var(--danger); border-radius:7px; background:var(--danger); color:#fff; cursor:pointer; font-weight:700; }
+    .send-btn:disabled { opacity:.65; cursor:not-allowed; }
+    .summary { padding:12px; overflow:auto; }
+    .metric { border:1px solid var(--line); border-radius:7px; padding:10px; margin-bottom:8px; background:#fff; }
+    .metric span { display:block; color:var(--muted); font-size:12px; margin-bottom:5px; }
+    .metric strong { display:block; line-height:1.35; word-break:break-word; }
+    .actions .item { border:1px solid var(--line); border-radius:7px; padding:8px; margin-bottom:7px; background:#fff; line-height:1.5; font-size:13px; }
+    @media (max-width:1000px) { .main { grid-template-columns:1fr; } .panel { min-height:260px; } .brand span { display:none; } }
+  
+    /* 柔色扁平主题覆盖 */
+    :root {
+      --bg: #f6f4ef;
+      --panel: #fffdf9;
+      --panel-2: #fbf7ef;
+      --panel-3: #f8f2e9;
+      --soft: #fbf7ef;
+      --line: #e3ded5;
+      --line-soft: #e9e3d8;
+      --text: #263238;
+      --muted: #6c7875;
+      --primary: #4b9a96;
+      --primary-hover: #3f8581;
+      --cyan: #6faeaa;
+      --success: #4d8b63;
+      --warning: #b4863f;
+      --danger: #c55a62;
+      --header: #fbf7ef;
+      --radius: 8px;
+    }
+
+    body {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+    }
+
+    .topbar,
+    .sidebar,
+    .side-foot,
+    .panel-head,
+    .toolbar,
+    .main-head,
+    .header,
+    .card-head {
+      background: #fbf7ef !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+      box-shadow: none !important;
+    }
+
+    .shell,
+    .app,
+    .main,
+    .login-view,
+    .content,
+    .messages {
+      background: var(--bg) !important;
+    }
+
+    .panel,
+    .card,
+    .login-box,
+    .step,
+    .metric,
+    .feedback,
+    .scenario,
+    .warn-box,
+    .actions .item,
+    .table-wrap,
+    .upload-card,
+    .form-card,
+    .result-card,
+    .side-card,
+    .stat-card,
+    .review-card,
+    .profile-card,
+    .bubble {
+      background: var(--panel) !important;
+      color: var(--text) !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    input,
+    textarea,
+    select {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #8cc8c2 !important;
+      outline: 2px solid rgba(75, 154, 150, 0.14) !important;
+      outline-offset: 0;
+    }
+
+    button,
+    .nav a,
+    .profile-link,
+    .ghost-btn,
+    .option-btn,
+    .secondary-btn,
+    .link-btn {
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    .primary-btn,
+    .send-btn,
+    .nav a.active,
+    .submit-btn,
+    .login-btn,
+    .import-btn,
+    .save-btn,
+    .option-btn.selected {
+      background: var(--primary) !important;
+      border-color: var(--primary) !important;
+      color: #fff !important;
+      box-shadow: none !important;
+    }
+
+    .primary-btn:hover,
+    .send-btn:hover,
+    .submit-btn:hover,
+    .login-btn:hover,
+    .import-btn:hover,
+    .save-btn:hover {
+      background: var(--primary-hover) !important;
+      border-color: var(--primary-hover) !important;
+    }
+
+    .ghost-btn,
+    .option-btn,
+    .secondary-btn,
+    .quick button,
+    .nav a,
+    .profile-link,
+    .link-btn {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+    }
+
+    .ghost-btn:hover,
+    .option-btn:hover,
+    .quick button:hover,
+    .nav a:hover,
+    .profile-link:hover,
+    .link-btn:hover {
+      background: #e7f3f0 !important;
+      color: #1d5f5b !important;
+      border-color: #bcdcd7 !important;
+    }
+
+    .mark,
+    .avatar,
+    .badge {
+      background: #e7f3f0 !important;
+      color: #1d5f5b !important;
+      border-color: #bcdcd7 !important;
+    }
+
+    .avatar.bot,
+    .warn-box,
+    .nav a.emergency,
+    .msg.user .bubble {
+      background: #fff0e9 !important;
+      color: #8b3b42 !important;
+      border-color: #f0c9bd !important;
+    }
+
+    .msg.user .bubble,
+    .send-btn.danger,
+    .nav a.active.emergency {
+      background: var(--danger) !important;
+      border-color: var(--danger) !important;
+      color: #fff !important;
+    }
+
+    label,
+    .muted,
+    .meta,
+    .brand span,
+    .panel-head span,
+    .metric span,
+    .step span {
+      color: var(--muted) !important;
+    }
+
+    table,
+    th,
+    td {
+      border-color: var(--line) !important;
+    }
+
+    th {
+      background: #fbf7ef !important;
+      color: var(--text) !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="mark">盾</div>
+      <div class="brand"><strong>紧急风险劝阻</strong><span>实时风险劝阻场</span></div>
+      <nav class="nav">
+        <a href="/chat.html">智能反诈助手</a>
+        <a class="active" href="/emergency.html">紧急风险劝阻</a>
+        <a href="/training.html">防骗训练营</a>
+      </nav>
+      <div class="top-spacer"></div>
+      <a class="profile-link" href="/profile.html" title="个人中心">我</a>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <div class="panel-head"><strong>紧急状态</strong><span>先止损</span></div>
+        <div class="status-panel">
+          <div class="warn-box">如果你已经转账、给验证码、共享屏幕、下载对方 App，先停止操作，再描述情况。</div>
+          <div class="quick">
+            <button data-text="我已经转账了，现在怎么办？">已转账</button>
+            <button data-text="我已经把验证码发给对方了">已给验证码</button>
+            <button data-text="我现在正在和对方屏幕共享">正在屏幕共享</button>
+            <button data-text="我已经下载了对方发来的App">已下载陌生 App</button>
+            <button data-text="我点了链接并填写了银行卡、身份证或密码">已填写敏感信息</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel chat">
+        <div class="panel-head"><strong>实时劝阻对话</strong><span>独立会话</span></div>
+        <div class="messages" id="messages"></div>
+        <form class="composer" id="emergencyForm">
+          <textarea id="queryInput" placeholder="直接描述正在发生什么：对方是谁、让你做什么、是否已经转账/给验证码/共享屏幕。"></textarea>
+          <button class="send-btn" id="sendBtn" type="submit">求助</button>
+        </form>
+      </section>
+
+      <aside class="panel">
+        <div class="panel-head"><strong>风险摘要</strong><span id="intentLabel">未开始</span></div>
+        <div class="summary">
+          <div class="metric"><span>风险等级</span><strong id="riskLevel">-</strong></div>
+          <div class="metric"><span>风险分</span><strong id="riskScore">-</strong></div>
+          <div class="metric"><span>诈骗类型</span><strong id="fraudType">-</strong></div>
+          <div class="actions" id="actions"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    const sessionId = localStorage.getItem("antiFraudEmergencySessionId") || crypto.randomUUID();
+    localStorage.setItem("antiFraudEmergencySessionId", sessionId);
+    const $ = (id) => document.getElementById(id);
+    const messagesEl = $("messages");
+    const inputEl = $("queryInput");
+    const sendBtn = $("sendBtn");
+
+    function nowTime() { return new Date().toLocaleTimeString("zh-CN", { hour:"2-digit", minute:"2-digit" }); }
+    function addMessage(role, text) {
+      const row = document.createElement("div");
+      row.className = `msg ${role}`;
+      const avatar = document.createElement("div");
+      avatar.className = `avatar ${role === "bot" ? "bot" : ""}`;
+      avatar.textContent = role === "bot" ? "盾" : "我";
+      const body = document.createElement("div");
+      body.className = "body";
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+      bubble.textContent = text;
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      meta.textContent = nowTime();
+      body.appendChild(bubble);
+      body.appendChild(meta);
+      row.appendChild(avatar);
+      row.appendChild(body);
+      messagesEl.appendChild(row);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+    function setText(id, value) { $(id).textContent = value === undefined || value === null || value === "" ? "-" : String(value); }
+    function renderSummary(data) {
+      const summary = data.summary || {};
+      const rd = summary.route_decision || data.route_decision || {};
+      setText("intentLabel", rd.primary_intent || "risk_case_flow");
+      setText("riskLevel", data.risk_level || summary.risk_level);
+      setText("riskScore", data.risk_score ?? summary.risk_score);
+      setText("fraudType", data.fraud_type || summary.fraud_type || (summary.scam_understanding || {}).primary_scam_type);
+      const actions = ((summary.intervention || {}).actions || summary.pending_resolution_actions || []).filter(Boolean);
+      const el = $("actions");
+      el.innerHTML = "";
+      actions.slice(0, 5).forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.textContent = typeof item === "string" ? item : JSON.stringify(item);
+        el.appendChild(div);
+      });
+    }
+    async function sendEmergency(text) {
+      const query = text.trim();
+      if (!query || sendBtn.disabled) return;
+      inputEl.value = "";
+      addMessage("user", query);
+      sendBtn.disabled = true;
+      sendBtn.textContent = "处理中";
+      try {
+        const resp = await fetch("/emergency/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query, session_id: sessionId, is_stream: false, intent_hint: "emergency_help" })
+        });
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(data.detail || `HTTP ${resp.status}`);
+        addMessage("bot", data.answer || "没有返回回答。");
+        renderSummary(data);
+      } catch (error) {
+        addMessage("bot", `请求失败：${error.message}`);
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "求助";
+      }
+    }
+    document.querySelectorAll(".quick button").forEach((btn) => {
+      btn.addEventListener("click", () => sendEmergency(btn.dataset.text || btn.textContent));
+    });
+    $("emergencyForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendEmergency(inputEl.value);
+    });
+    inputEl.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        sendEmergency(inputEl.value);
+      }
+    });
+    addMessage("bot", "这里是紧急风险劝阻。请优先说明你是否已经转账、给验证码、共享屏幕、下载对方 App 或填写敏感信息。");
+  </script>
+</body>
+</html>

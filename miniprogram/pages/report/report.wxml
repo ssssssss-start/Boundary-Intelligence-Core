@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="section">
+    <view class="title">举报研判</view>
+    <view class="subtitle">粘贴可疑短信、链接、账号、App 名称或聊天记录，生成举报前研判。</view>
+  </view>
+
+  <view class="surface section">
+    <textarea class="textarea" maxlength="1600" placeholder="例如：对方让我下载某 App，先垫付刷单返利..." value="{{content}}" bindinput="onInput"></textarea>
+    <view class="button-row">
+      <button class="ghost-btn" bindtap="clear">清空</button>
+      <button class="primary-btn" loading="{{loading}}" disabled="{{loading || !content}}" bindtap="analyze">开始研判</button>
+    </view>
+    <view class="status {{error ? 'error' : ''}}" wx:if="{{statusText}}">{{statusText}}</view>
+  </view>
+
+  <view class="surface result" wx:if="{{analysis}}">
+    <view class="result-head">
+      <view>
+        <view class="result-title">{{analysis.risk_level || '研判结果'}}</view>
+        <view class="subtitle">{{analysis.suspected_type || analysis.fraud_type || '类型待确认'}}</view>
+      </view>
+      <view class="score">{{analysis.risk_score || 0}}</view>
+    </view>
+    <view class="summary">{{analysis.display_summary || analysis.answer || analysis.message}}</view>
+    <view class="list" wx:if="{{matchedRules.length}}">
+      <view class="label">命中规则</view>
+      <block wx:for="{{matchedRules}}" wx:key="*this">
+        <view class="item">{{item}}</view>
+      </block>
+    </view>
+    <view class="list" wx:if="{{advice.length}}">
+      <view class="label">建议</view>
+      <block wx:for="{{advice}}" wx:key="*this">
+        <view class="item">{{item}}</view>
+      </block>
+    </view>
+    <button class="primary-btn confirm-btn" loading="{{confirming}}" disabled="{{confirming || confirmed}}" bindtap="confirmReport">{{confirmed ? '已确认举报' : '确认举报'}}</button>
+  </view>
+</view>

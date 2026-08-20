@@ -1,0 +1,7 @@
+<view class="page emergency-page">
+  <view class="loading-card">
+    <view class="loading-mark"></view>
+    <view class="loading-title">正在进入反诈助手</view>
+    <view class="loading-copy">紧急风险和反诈咨询已合并到同一个智能体入口。</view>
+  </view>
+</view>

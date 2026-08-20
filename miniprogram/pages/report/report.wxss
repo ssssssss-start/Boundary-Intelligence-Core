@@ -1,0 +1,55 @@
+.result-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20rpx;
+  align-items: flex-start;
+}
+
+.result-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #162c28;
+}
+
+.score {
+  flex-shrink: 0;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  background: #e7f3ef;
+  color: #23645c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.summary {
+  margin-top: 22rpx;
+  color: #263238;
+  font-size: 28rpx;
+  line-height: 1.65;
+}
+
+.list {
+  margin-top: 22rpx;
+}
+
+.item {
+  margin-top: 12rpx;
+  border-radius: 12rpx;
+  background: #f7f1e8;
+  color: #40534f;
+  padding: 16rpx;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.button-row button {
+  flex: 1;
+}
+
+.confirm-btn {
+  margin-top: 22rpx;
+}

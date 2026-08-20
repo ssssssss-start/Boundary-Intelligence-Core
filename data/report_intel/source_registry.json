@@ -1,0 +1,44 @@
+[
+  {
+    "source_id": "src_mps_high_frequency",
+    "name": "公安部/国家反诈中心高发电信网络诈骗类型与案例宣传",
+    "url": "https://www.mps.gov.cn/",
+    "source_type": "official",
+    "usage": "诈骗类型、常见话术、劝阻方向"
+  },
+  {
+    "source_id": "src_anti_fraud_law",
+    "name": "中华人民共和国反电信网络诈骗法",
+    "url": "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+    "source_type": "legal",
+    "usage": "账号、链接、个人信息保护与举报处置原则"
+  },
+  {
+    "source_id": "src_12321",
+    "name": "12321 网络不良与垃圾信息举报受理中心",
+    "url": "https://www.12321.cn/",
+    "source_type": "official",
+    "usage": "可疑短信、电话、网站、App 举报渠道参考"
+  },
+  {
+    "source_id": "src_safe_browsing",
+    "name": "Google Safe Browsing URL 安全风险特征文档",
+    "url": "https://developers.google.com/safe-browsing/reference/rest",
+    "source_type": "technical_reference",
+    "usage": "URL 安全检测的技术型观察项参考"
+  },
+  {
+    "source_id": "src_operator_review",
+    "name": "项目运营人工复核白名单",
+    "url": "local:operator-reviewed-allowlist",
+    "source_type": "internal_review",
+    "usage": "降低常见官方和正常业务域名误报"
+  },
+  {
+    "source_id": "src_negative_sample_review",
+    "name": "项目负样本回归集",
+    "url": "local:report-intel-negative-samples",
+    "source_type": "internal_review",
+    "usage": "验证普通链接、普通客服描述、教育性内容不被高危误判"
+  }
+]

@@ -1,0 +1,38 @@
+.emergency-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.loading-card {
+  text-align: center;
+}
+
+.loading-mark {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #ffffff 0 22%, transparent 23%),
+    conic-gradient(from 0deg, #111111 0 25%, #777777 25% 50%, #111111 50% 75%, #777777 75% 100%);
+  margin: 0 auto 30rpx;
+}
+
+.loading-title {
+  color: #111111;
+  font-size: 34rpx;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.loading-copy {
+  margin-top: 14rpx;
+  color: #777777;
+  font-size: 26rpx;
+  line-height: 1.55;
+}

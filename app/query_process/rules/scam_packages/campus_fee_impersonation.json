@@ -1,0 +1,110 @@
+{
+  "scam_id": "scam_campus_fee_impersonation",
+  "name": "冒充老师辅导员收费诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "冒充老师",
+    "冒充辅导员",
+    "班干部收费",
+    "班费",
+    "资料费",
+    "考试费",
+    "补课费",
+    "进群缴费"
+  ],
+  "features": [
+    {
+      "feature_name": "冒充老师辅导员",
+      "keywords": [
+        "老师",
+        "辅导员",
+        "班主任",
+        "班干部",
+        "家委",
+        "教务"
+      ],
+      "weight": 35,
+      "explanation": "利用校园身份降低学生和家长警惕。"
+    },
+    {
+      "feature_name": "班级费用名目",
+      "keywords": [
+        "班费",
+        "资料费",
+        "考试费",
+        "补课费",
+        "教材费",
+        "报名费"
+      ],
+      "weight": 35,
+      "explanation": "用常见校园收费项目包装转账请求。"
+    },
+    {
+      "feature_name": "群内扫码缴费",
+      "keywords": [
+        "扫码缴费",
+        "收款码",
+        "二维码",
+        "进群扫码",
+        "群收款"
+      ],
+      "weight": 35,
+      "explanation": "陌生二维码可能绕开学校正规缴费渠道。"
+    },
+    {
+      "feature_name": "催促限时缴费",
+      "keywords": [
+        "今天截止",
+        "马上交",
+        "名额有限",
+        "逾期不收",
+        "统一缴费"
+      ],
+      "weight": 20,
+      "explanation": "制造紧迫感降低核验意愿。"
+    },
+    {
+      "feature_name": "拒绝官方核验",
+      "keywords": [
+        "不要打电话",
+        "别问老师",
+        "群里统一",
+        "直接转",
+        "不能走学校系统"
+      ],
+      "weight": 35,
+      "explanation": "拒绝电话、当面或学校系统核验是高危信号。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_CAMPUS_FEE_HIGH_001",
+      "rule_name": "冒充老师辅导员收费诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "冒充老师辅导员",
+          "班级费用名目"
+        ],
+        "any": [
+          "群内扫码缴费",
+          "催促限时缴费",
+          "拒绝官方核验"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 91,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "校园身份收费叠加二维码、限时催促或拒绝核验，疑似冒充老师辅导员收费。",
+      "suggested_action": "先不缴费，电话或当面向老师、辅导员、学校财务核实。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+    "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html"
+  ]
+}

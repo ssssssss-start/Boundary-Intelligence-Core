@@ -1,0 +1,107 @@
+[
+  {
+    "rule_id": "URL_HTTP_SCHEME",
+    "matcher": "raw_http_scheme",
+    "label": "链接使用明文 HTTP，页面内容更容易被伪装或篡改",
+    "feature_name": "非 HTTPS 链接",
+    "score": 10,
+    "scam_id": "scam_phishing_link",
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_SHORT_LINK",
+    "matcher": "short_link_host",
+    "label": "短链接隐藏真实跳转目标，需谨慎打开",
+    "feature_name": "短链接跳转不透明",
+    "score": 20,
+    "scam_id": "scam_phishing_link",
+    "params": {"hosts": ["bit.ly", "tinyurl.com", "t.cn", "dwz.cn", "suo.im", "url.cn", "is.gd", "reurl.cc", "cutt.ly"]},
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_SENSITIVE_PATH",
+    "matcher": "sensitive_path_token",
+    "label": "链接路径包含登录、验证、安全、支付等诱导性字段",
+    "feature_name": "敏感操作路径",
+    "score": 18,
+    "scam_id": "scam_phishing_link",
+    "params": {"tokens": ["login", "verify", "security", "safe", "auth", "password", "pay", "account", "bank", "wallet", "unlock", "freeze"]},
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_RISKY_SUFFIX",
+    "matcher": "risky_suffix",
+    "label": "域名后缀属于钓鱼和临时站点中较常见的观察项",
+    "feature_name": "高风险参考后缀",
+    "score": 16,
+    "scam_id": "scam_phishing_link",
+    "params": {"suffixes": [".top", ".xyz", ".vip", ".click", ".icu", ".cc", ".shop", ".site", ".online", ".store", ".live"]},
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_RANDOM_DOMAIN",
+    "matcher": "random_domain_segment",
+    "label": "域名中出现较长随机字符，像临时注册或批量生成域名",
+    "feature_name": "随机化域名",
+    "score": 15,
+    "scam_id": "scam_phishing_link",
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_IP_HOST",
+    "matcher": "ip_host",
+    "label": "链接直接使用 IP 地址作为访问入口",
+    "feature_name": "IP 直连链接",
+    "score": 20,
+    "scam_id": "scam_phishing_link",
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_DEEP_SUBDOMAIN",
+    "matcher": "deep_subdomain",
+    "label": "链接包含过多子域名层级，可能用于混淆真实域名",
+    "feature_name": "多层子域名混淆",
+    "score": 10,
+    "scam_id": "scam_phishing_link",
+    "params": {"min_dot_count": 4},
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_PUNYCODE",
+    "matcher": "punycode_host",
+    "label": "域名包含 punycode，可能利用相似字符伪装品牌",
+    "feature_name": "相似字符域名",
+    "score": 22,
+    "scam_id": "scam_phishing_link",
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_BRAND_IMPERSONATION",
+    "matcher": "brand_impersonation",
+    "label": "域名包含金融、支付或电商品牌词，但不是登记的官方域名",
+    "feature_name": "疑似仿冒品牌域名",
+    "score": 26,
+    "scam_id": "scam_phishing_link",
+    "source_refs": ["src_safe_browsing", "src_12321"]
+  },
+  {
+    "rule_id": "URL_REDIRECT_PARAM",
+    "matcher": "redirect_parameter",
+    "label": "链接参数包含跳转字段，可能把用户带到二次页面",
+    "feature_name": "跳转参数",
+    "score": 12,
+    "scam_id": "scam_phishing_link",
+    "params": {"tokens": ["redirect", "redirect_uri", "returnurl", "callback", "target", "to=", "url="]},
+    "source_refs": ["src_safe_browsing"]
+  },
+  {
+    "rule_id": "URL_APP_PACKAGE",
+    "matcher": "app_download_hint",
+    "label": "链接或上下文出现 App 安装包、下载或更新提示",
+    "feature_name": "诱导下载陌生 App",
+    "score": 25,
+    "scam_id": "scam_phishing_link",
+    "params": {"tokens": [".apk", "download", "install", "app", "安装包", "下载APP", "下载App", "更新认证"]},
+    "source_refs": ["src_mps_high_frequency", "src_safe_browsing"]
+  }
+]

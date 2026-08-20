@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/chat/chat",
+    "pages/home/home",
+    "pages/risk/risk",
+    "pages/training/training",
+    "pages/profile/profile",
+    "pages/simulation/simulation",
+    "pages/report/report",
+    "pages/emergency/emergency",
+    "pages/video-webview/video-webview"
+  ],
+  "window": {
+    "navigationBarTitleText": "反诈助手",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ffffff"
+  },
+  "permission": {
+    "scope.record": {
+      "desc": "用于语音输入、骗局模拟电话对练和语音识别"
+    }
+  }
+}

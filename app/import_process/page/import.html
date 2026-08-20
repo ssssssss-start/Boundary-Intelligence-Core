@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新增骗局材料提交</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --panel: #101827;
+      --panel-2: #0f172a;
+      --panel-3: #111d31;
+      --line: #263247;
+      --text: #f8fafc;
+      --muted: #8a94a6;
+      --primary: #2563eb;
+      --primary-hover: #3478ff;
+      --cyan: #22d3ee;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background: var(--bg);
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+      overflow-x: hidden;
+    }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      min-width: 0;
+    }
+    .sidebar {
+      min-width: 0;
+      min-height: 100vh;
+      background: #080c13;
+      border-right: 1px solid #1d283a;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+    .brand {
+      min-width: 0;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #1d283a;
+    }
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #05070b;
+      border: 1px solid rgba(255,255,255,0.14);
+      flex: 0 0 auto;
+    }
+    .brand strong { display: block; font-size: 16px; }
+    .brand span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .side-content {
+      min-width: 0;
+      padding: 16px;
+      display: grid;
+      align-content: start;
+      gap: 12px;
+    }
+    .step {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel-2);
+      padding: 12px;
+      display: grid;
+      gap: 6px;
+    }
+    .step strong { font-size: 13px; }
+    .step span { color: var(--muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; word-break: break-all; }
+    .side-foot {
+      border-top: 1px solid #1d283a;
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .main {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+    }
+    .topbar {
+      min-width: 0;
+      min-height: 66px;
+      border-bottom: 1px solid #1d283a;
+      background: rgba(15, 23, 42, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .top-title strong { display: block; font-size: 18px; }
+    .top-title span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+    .content {
+      min-width: 0;
+      width: min(1180px, calc(100% - 40px));
+      margin: 18px auto 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 380px;
+      gap: 14px;
+      align-items: start;
+    }
+    .panel {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      overflow: hidden;
+    }
+    .panel-head {
+      min-height: 48px;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .panel-head strong { font-size: 14px; }
+    .panel-body {
+      padding: 14px;
+      display: grid;
+      gap: 14px;
+    }
+    .section-title {
+      margin: 6px 0 0;
+      color: #dbe6f4;
+      font-size: 14px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .field { display: grid; gap: 7px; }
+    label { color: #c7d0dd; font-size: 13px; }
+    .required::after { content: " *"; color: #fca5a5; }
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #0c1220;
+      color: var(--text);
+      outline: none;
+    }
+    input, select { height: 40px; padding: 0 12px; }
+    textarea {
+      min-height: 116px;
+      resize: vertical;
+      padding: 11px 12px;
+      line-height: 1.55;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      min-height: 40px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      background: var(--primary);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 14px;
+      white-space: nowrap;
+    }
+    .btn:hover { background: var(--primary-hover); }
+    .btn.secondary { background: #0c1220; border-color: var(--line); color: #d7deea; }
+    .btn.secondary:hover { background: #111a2b; }
+    .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+    .hint { color: var(--muted); font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; word-break: break-word; }
+    .hint, label, .btn, input, textarea, select { min-width: 0; }
+    .badge {
+      min-height: 24px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #0b111d;
+      color: #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 9px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .badge.ok { color: #bbf7d0; border-color: rgba(34, 197, 94, 0.5); }
+    .badge.warn { color: #fde68a; border-color: rgba(245, 158, 11, 0.5); }
+    .badge.bad { color: #fecaca; border-color: rgba(239, 68, 68, 0.5); }
+    .result {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #0c1220;
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      min-height: 160px;
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #080c13;
+      padding: 10px;
+      min-height: 64px;
+    }
+    .metric span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 7px; }
+    .metric strong { font-size: 16px; word-break: break-word; }
+    .code {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #080c13;
+      color: #cbd5e1;
+      padding: 10px;
+      max-height: 360px;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .empty {
+      min-height: 150px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 22px;
+    }
+
+    @media (max-width: 1040px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { min-height: auto; }
+      .side-content { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .content { grid-template-columns: 1fr; width: min(100% - 24px, 920px); }
+    }
+    @media (max-width: 680px) {
+      .shell, .sidebar, .main {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      .brand, .side-content, .side-foot, .topbar, .content {
+        width: 100%;
+        max-width: 100vw;
+      }
+      .side-content { padding: 12px; }
+      .step, .panel { max-width: calc(100vw - 24px); }
+      .step span { display: block; max-width: 100%; }
+      .topbar .row { width: 100%; }
+      .grid-2, .side-content, .metric-grid { grid-template-columns: 1fr; }
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .side-foot .btn, .row .btn { width: 100%; }
+      .panel-head { align-items: flex-start; flex-direction: column; }
+    }
+  
+    /* 柔色扁平主题覆盖 */
+    :root {
+      --bg: #f6f4ef;
+      --panel: #fffdf9;
+      --panel-2: #fbf7ef;
+      --panel-3: #f8f2e9;
+      --soft: #fbf7ef;
+      --line: #e3ded5;
+      --line-soft: #e9e3d8;
+      --text: #263238;
+      --muted: #6c7875;
+      --primary: #4b9a96;
+      --primary-hover: #3f8581;
+      --cyan: #6faeaa;
+      --success: #4d8b63;
+      --warning: #b4863f;
+      --danger: #c55a62;
+      --header: #fbf7ef;
+      --radius: 8px;
+    }
+
+    body {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+    }
+
+    .topbar,
+    .sidebar,
+    .side-foot,
+    .panel-head,
+    .toolbar,
+    .main-head,
+    .header,
+    .card-head {
+      background: #fbf7ef !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+      box-shadow: none !important;
+    }
+
+    .shell,
+    .app,
+    .main,
+    .login-view,
+    .content,
+    .messages {
+      background: var(--bg) !important;
+    }
+
+    .panel,
+    .card,
+    .login-box,
+    .step,
+    .metric,
+    .feedback,
+    .scenario,
+    .warn-box,
+    .actions .item,
+    .table-wrap,
+    .upload-card,
+    .form-card,
+    .result-card,
+    .side-card,
+    .stat-card,
+    .review-card,
+    .profile-card,
+    .bubble {
+      background: var(--panel) !important;
+      color: var(--text) !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    input,
+    textarea,
+    select {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #8cc8c2 !important;
+      outline: 2px solid rgba(75, 154, 150, 0.14) !important;
+      outline-offset: 0;
+    }
+
+    button,
+    .nav a,
+    .profile-link,
+    .ghost-btn,
+    .option-btn,
+    .secondary-btn,
+    .link-btn {
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    .primary-btn,
+    .send-btn,
+    .nav a.active,
+    .submit-btn,
+    .login-btn,
+    .import-btn,
+    .save-btn,
+    .option-btn.selected {
+      background: var(--primary) !important;
+      border-color: var(--primary) !important;
+      color: #fff !important;
+      box-shadow: none !important;
+    }
+
+    .primary-btn:hover,
+    .send-btn:hover,
+    .submit-btn:hover,
+    .login-btn:hover,
+    .import-btn:hover,
+    .save-btn:hover {
+      background: var(--primary-hover) !important;
+      border-color: var(--primary-hover) !important;
+    }
+
+    .ghost-btn,
+    .option-btn,
+    .secondary-btn,
+    .quick button,
+    .nav a,
+    .profile-link,
+    .link-btn {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+    }
+
+    .ghost-btn:hover,
+    .option-btn:hover,
+    .quick button:hover,
+    .nav a:hover,
+    .profile-link:hover,
+    .link-btn:hover {
+      background: #e7f3f0 !important;
+      color: #1d5f5b !important;
+      border-color: #bcdcd7 !important;
+    }
+
+    .mark,
+    .avatar,
+    .badge {
+      background: #e7f3f0 !important;
+      color: #1d5f5b !important;
+      border-color: #bcdcd7 !important;
+    }
+
+    .avatar.bot,
+    .warn-box,
+    .nav a.emergency,
+    .msg.user .bubble {
+      background: #fff0e9 !important;
+      color: #8b3b42 !important;
+      border-color: #f0c9bd !important;
+    }
+
+    .msg.user .bubble,
+    .send-btn.danger,
+    .nav a.active.emergency {
+      background: var(--danger) !important;
+      border-color: var(--danger) !important;
+      color: #fff !important;
+    }
+
+    label,
+    .muted,
+    .meta,
+    .brand span,
+    .panel-head span,
+    .metric span,
+    .step span {
+      color: var(--muted) !important;
+    }
+
+    table,
+    th,
+    td {
+      border-color: var(--line) !important;
+    }
+
+    th {
+      background: #fbf7ef !important;
+      color: var(--text) !important;
+    }
+
+    .result,
+    .status,
+    .metric,
+    .progress,
+    .log,
+    pre,
+    code {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+      box-shadow: none !important;
+    }
+
+    .btn.secondary {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+    }
+
+    .btn.secondary:hover {
+      background: #e7f3f0 !important;
+      color: #1d5f5b !important;
+      border-color: #bcdcd7 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="avatar" src="/assets/owl-shield-avatar.png" alt="智能反诈助手头像">
+        <div>
+          <strong>新增骗局快速接入</strong>
+          <span>提交材料 · 人工审核</span>
+        </div>
+      </div>
+      <div class="side-content">
+        <div class="step"><strong>1. 填写材料</strong><span>只需要填写骗局基础信息、流程描述、典型话术与关键词。</span></div>
+        <div class="step"><strong>2. 生成草稿</strong><span>系统会整理成待审核草稿，并自动做基础脱敏和质量检查。</span></div>
+        <div class="step"><strong>3. 人工审核</strong><span>提交后进入管理员审核后台，审核通过后才会进入发布流程。</span></div>
+      </div>
+      <div class="side-foot">
+        <a class="btn secondary" href="http://127.0.0.1:8001/admin/review.html" target="_blank" rel="noopener">管理员审核后台</a>
+        <a class="btn secondary" href="http://127.0.0.1:8001/chat.html?module=knowledge">返回聊天助手</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="top-title">
+          <strong>新增骗局材料提交</strong>
+          <span>提交后进入管理员审核队列，不会直接导入正式知识库</span>
+        </div>
+        <div class="row">
+          <span class="badge" id="apiStatus">服务检查中</span>
+          <button class="btn secondary" id="healthBtn" type="button">检查服务</button>
+        </div>
+      </header>
+
+      <section class="content">
+        <form class="panel" id="intakeForm">
+          <div class="panel-head">
+            <strong>材料表单</strong>
+            <span class="badge warn">待审核提交</span>
+          </div>
+          <div class="panel-body">
+            <h2 class="section-title">骗局基础信息</h2>
+            <div class="grid-2">
+              <div class="field">
+                <label class="required" for="fraud_name">骗局名称</label>
+                <input id="fraud_name" name="fraud_name" placeholder="例如：刷单返利诱导垫付">
+              </div>
+              <div class="field">
+                <label class="required" for="target_users">目标人群</label>
+                <input id="target_users" name="target_users" placeholder="例如：学生、宝妈、求职者、老年人">
+              </div>
+            </div>
+            <div class="field">
+              <label class="required" for="scam_scene">诈骗场景</label>
+              <textarea id="scam_scene" name="scam_scene" placeholder="说明骗局发生在什么场景，例如兼职群、贷款 App、冒充客服退款、投资群带单等。"></textarea>
+            </div>
+
+            <h2 class="section-title">骗局流程描述</h2>
+            <div class="field">
+              <label class="required" for="incident_process">流程描述</label>
+              <textarea id="incident_process" name="incident_process" placeholder="按顺序写清楚：骗子如何接触用户、如何建立信任、如何诱导操作、最后让用户做什么。"></textarea>
+            </div>
+
+            <h2 class="section-title">典型话术与关键词</h2>
+            <div class="field">
+              <label class="required" for="raw_dialogue">典型话术</label>
+              <textarea id="raw_dialogue" name="raw_dialogue" placeholder="粘贴典型短信、聊天话术、电话摘要或广告文案。系统会自动脱敏手机号、身份证、银行卡等敏感信息。"></textarea>
+            </div>
+            <div class="field">
+              <label class="required" for="keywords">关键词</label>
+              <input id="keywords" name="keywords" placeholder="多个关键词用逗号隔开，例如：垫付、补单、解冻费、保证金、验证码">
+            </div>
+
+            <div class="row">
+              <button class="btn" id="submitBtn" type="submit">提交人工审核</button>
+              <button class="btn secondary" id="resetBtn" type="reset">清空</button>
+            </div>
+            <div class="hint">提交后会进入管理员后台“人工审核”。审核通过并发布前，不会写入正式知识库。</div>
+          </div>
+        </form>
+
+        <aside class="panel">
+          <div class="panel-head">
+            <strong>提交结果</strong>
+            <span class="badge" id="resultState">未提交</span>
+          </div>
+          <div class="panel-body">
+            <div class="result" id="submitResult">
+              <div class="empty">提交成功后，这里会显示提交编号和审核编号。管理员可在审核后台查看。</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const defaultBase = location.protocol.startsWith('http') ? `${location.protocol}//${location.host}` : 'http://127.0.0.1:8000';
+    const $ = (id) => document.getElementById(id);
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    async function api(path, options = {}) {
+      const init = {
+        headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+        credentials: 'include',
+        ...options
+      };
+      if (init.body && typeof init.body !== 'string') init.body = JSON.stringify(init.body);
+      const res = await fetch(`${defaultBase}${path}`, init);
+      let data = {};
+      const text = await res.text();
+      if (text) {
+        try { data = JSON.parse(text); } catch { data = { detail: text }; }
+      }
+      if (!res.ok) throw new Error(data.detail || data.message || `HTTP ${res.status}`);
+      return data;
+    }
+
+    function collectMaterials() {
+      const form = $('intakeForm');
+      const data = new FormData(form);
+      const materials = {};
+      for (const [key, value] of data.entries()) {
+        materials[key] = String(value || '').trim();
+      }
+      materials.risk_tags = materials.keywords || '';
+      return {
+        materials,
+        submitter: {}
+      };
+    }
+
+    async function checkHealth() {
+      try {
+        await api('/health', { method: 'GET', headers: {} });
+        $('apiStatus').textContent = '提交服务已连接';
+        $('apiStatus').className = 'badge ok';
+      } catch (error) {
+        $('apiStatus').textContent = '提交服务未连接';
+        $('apiStatus').className = 'badge bad';
+      }
+    }
+
+    async function submit(event) {
+      event.preventDefault();
+      $('submitBtn').disabled = true;
+      try {
+        const data = await api('/intake/submit', { method: 'POST', body: collectMaterials() });
+        const submission = data.submission || {};
+        const review = data.review || {};
+        $('resultState').textContent = '已提交';
+        $('resultState').className = 'badge ok';
+        $('submitResult').innerHTML = `
+          <div class="metric-grid">
+            <div class="metric"><span>提交编号</span><strong>${escapeHtml(submission.submission_id || '')}</strong></div>
+            <div class="metric"><span>审核编号</span><strong>${escapeHtml(review.review_id || '')}</strong></div>
+            <div class="metric"><span>当前状态</span><strong>${escapeHtml(review.status || submission.status || '')}</strong></div>
+            <div class="metric"><span>提交时间</span><strong>${escapeHtml(submission.created_at || '')}</strong></div>
+          </div>
+          <div class="hint">已进入管理员后台“人工审核”。审核通过并发布前，不会写入正式知识库或 Milvus。</div>
+        `;
+      } catch (error) {
+        $('resultState').textContent = '提交失败';
+        $('resultState').className = 'badge bad';
+        $('submitResult').innerHTML = `<div class="code">${escapeHtml(error.message || String(error))}</div>`;
+      } finally {
+        $('submitBtn').disabled = false;
+      }
+    }
+
+    $('healthBtn').addEventListener('click', checkHealth);
+    $('intakeForm').addEventListener('submit', submit);
+    checkHealth();
+  </script>
+</body>
+</html>

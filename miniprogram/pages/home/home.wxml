@@ -1,0 +1,5 @@
+<view class="page home-page">
+  <view class="loading-card">
+    <view class="loading-title">正在进入反诈助手</view>
+  </view>
+</view>

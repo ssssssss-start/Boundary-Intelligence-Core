@@ -1,0 +1,151 @@
+name: anti-fraud-rag
+
+services:
+  query:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: anti-fraud-app:local
+    container_name: anti-fraud-query
+    env_file:
+      - .env
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      PROJECT_ROOT: /app
+      MONGO_DB_NAME: ${MONGO_DB_NAME:-anti_fraud_rag}
+      MILVUS_URL: http://milvus:19530
+      FUNASR_ASR_HOST: funasr
+      FUNASR_ASR_PORT: "10095"
+      FUNASR_ASR_SSL: "0"
+      KOKORO_TTS_PYTHON: /usr/local/bin/python
+      KOKORO_TTS_MODEL_DIR: /app/tts/kokoro/kokoro-int8-multi-lang-v1_1
+      KOKORO_TTS_WORKER: /app/tts/kokoro/kokoro_worker.py
+      BGE_M3_PATH: ${DOCKER_BGE_M3_PATH:-}
+      ANTI_FRAUD_EMBEDDING_BACKEND: ${ANTI_FRAUD_EMBEDDING_BACKEND:-auto}
+    command: ["python", "-m", "uvicorn", "app.query_process.api.app:app", "--host", "0.0.0.0", "--port", "8001"]
+    ports:
+      - "127.0.0.1:8001:8001"
+    depends_on:
+      mongo:
+        condition: service_healthy
+      milvus:
+        condition: service_started
+      funasr:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 45s
+    restart: unless-stopped
+
+  import:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: anti-fraud-app:local
+    container_name: anti-fraud-import
+    env_file:
+      - .env
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      PROJECT_ROOT: /app
+      MONGO_DB_NAME: ${MONGO_DB_NAME:-anti_fraud_rag}
+      MILVUS_URL: http://milvus:19530
+      FUNASR_ASR_HOST: funasr
+      FUNASR_ASR_PORT: "10095"
+      KOKORO_TTS_PYTHON: /usr/local/bin/python
+      KOKORO_TTS_MODEL_DIR: /app/tts/kokoro/kokoro-int8-multi-lang-v1_1
+      KOKORO_TTS_WORKER: /app/tts/kokoro/kokoro_worker.py
+      BGE_M3_PATH: ${DOCKER_BGE_M3_PATH:-}
+      ANTI_FRAUD_EMBEDDING_BACKEND: ${ANTI_FRAUD_EMBEDDING_BACKEND:-auto}
+      KOKORO_TTS_STARTUP_WARMUP: "0"
+    command: ["python", "-m", "uvicorn", "app.import_process.api.file_import_service:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      mongo:
+        condition: service_healthy
+      milvus:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    restart: unless-stopped
+
+  milvus:
+    image: milvusdb/milvus:v2.6.0
+    container_name: anti-fraud-milvus
+    command: ["milvus", "run", "standalone"]
+    environment:
+      DEPLOY_MODE: STANDALONE
+      ETCD_USE_EMBED: "true"
+      ETCD_DATA_DIR: /var/lib/milvus/etcd
+      COMMON_STORAGETYPE: local
+    ports:
+      # Data-plane and management ports stay host-local by default. Expose
+      # them through an authenticated TLS gateway for cross-node/cloud use.
+      - "127.0.0.1:19530:19530"
+      - "127.0.0.1:9091:9091"
+    volumes:
+      - milvus_data:/var/lib/milvus
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:7
+    container_name: anti-fraud-mongo
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+
+  funasr:
+    image: registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.13
+    container_name: anti-fraud-funasr
+    working_dir: /workspace
+    command:
+      - bash
+      - -lc
+      - |
+        cd /workspace/FunASR/runtime
+        touch /workspace/models/hotwords.txt
+        : > log.txt
+        nohup bash run_server_2pass.sh \
+          --download-model-dir /workspace/models \
+          --vad-dir damo/speech_fsmn_vad_zh-cn-16k-common-onnx \
+          --model-dir damo/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-onnx \
+          --online-model-dir damo/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online-onnx \
+          --punc-dir damo/punc_ct-transformer_zh-cn-common-vad_realtime-vocab272727-onnx \
+          --itn-dir thuduj12/fst_itn_zh \
+          --hotword /workspace/models/hotwords.txt \
+          --certfile 0 \
+          >> log.txt 2>&1 &
+        tail -F log.txt
+    ports:
+      # FunASR runs without an in-container certificate in this local profile,
+      # therefore it must never listen on a non-loopback host interface.
+      - "127.0.0.1:10096:10095"
+    volumes:
+      - ${FUNASR_MODELS_DIR:-/Users/sss/asr/funasr-runtime-resources/models}:/workspace/models
+    healthcheck:
+      test: ["CMD-SHELL", "bash -lc '</dev/tcp/127.0.0.1/10095'"]
+      interval: 10s
+      timeout: 3s
+      retries: 30
+      start_period: 120s
+    restart: unless-stopped
+
+volumes:
+  milvus_data:
+  mongo_data:

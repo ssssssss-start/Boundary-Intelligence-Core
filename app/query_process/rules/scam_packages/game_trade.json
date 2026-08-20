@@ -1,0 +1,174 @@
+{
+  "scam_id": "scam_game_trade",
+  "name": "游戏交易诈骗",
+  "version": "1.0",
+  "updated_at": "2026-05-20",
+  "aliases": [
+    "游戏装备",
+    "游戏账号",
+    "皮肤交易",
+    "点券代充",
+    "代练押金",
+    "虚拟资产",
+    "游戏币"
+  ],
+  "features": [
+    {
+      "feature_name": "私下游戏交易",
+      "keywords": [
+        "游戏交易",
+        "游戏装备",
+        "游戏的装备",
+        "游戏账号",
+        "皮肤交易",
+        "点券",
+        "代练"
+      ],
+      "weight": 35,
+      "explanation": "对方把游戏装备、账号、皮肤或点券交易转到平台外处理。"
+    },
+    {
+      "feature_name": "虚拟资产已交付",
+      "keywords": [
+        "装备给他了",
+        "装备给了",
+        "已经都给",
+        "都给他了",
+        "游戏装备给了",
+        "账号给他了",
+        "皮肤给他了",
+        "交给他了"
+      ],
+      "weight": 55,
+      "explanation": "用户已把游戏装备、账号或其他虚拟资产交给对方，按财产损失处理。"
+    },
+    {
+      "feature_name": "交易对象失联",
+      "keywords": [
+        "失联",
+        "拉黑",
+        "不回消息",
+        "删好友",
+        "联系不上",
+        "跑路"
+      ],
+      "weight": 45,
+      "explanation": "收取资产或钱款后失联是游戏交易诈骗的高危后果。"
+    },
+    {
+      "feature_name": "高价值虚拟资产",
+      "keywords": [
+        "价值20w",
+        "20w",
+        "20万",
+        "十万",
+        "几万",
+        "高价值",
+        "价值"
+      ],
+      "weight": 30,
+      "explanation": "虚拟资产价值较高，需要保存估值、交易记录和账号归属证据。"
+    },
+    {
+      "feature_name": "低价代充装备诱导",
+      "keywords": [
+        "低价代充",
+        "低价皮肤",
+        "半价点券",
+        "内部点券",
+        "便宜充值"
+      ],
+      "weight": 30,
+      "explanation": "低价代充和内部渠道常用于引导平台外付款或套取账号。"
+    },
+    {
+      "feature_name": "交付虚拟资产要求",
+      "keywords": [
+        "先给他验货",
+        "先给装备",
+        "先交装备",
+        "先发账号",
+        "先给账号",
+        "验货"
+      ],
+      "weight": 42,
+      "explanation": "要求先交付虚拟资产或账号再付款，容易导致资产直接被骗走。"
+    },
+    {
+      "feature_name": "游戏账号密码索取",
+      "keywords": [
+        "账号密码",
+        "验号",
+        "先给账号",
+        "登录游戏账号",
+        "扫码登录"
+      ],
+      "weight": 40,
+      "explanation": "要求账号密码、扫码登录或验号可能导致账号被盗。"
+    },
+    {
+      "feature_name": "游戏交易保证金解冻费",
+      "keywords": [
+        "保证金",
+        "解冻费",
+        "手续费",
+        "中介费",
+        "担保费",
+        "认证金"
+      ],
+      "weight": 42,
+      "explanation": "以担保、中介、解冻为名继续收费，是虚拟资产交易诈骗常见话术。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "PKG_GAME_ASSET_LOSS_001",
+      "rule_name": "游戏交易诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "虚拟资产已交付"
+        ],
+        "any": [
+          "交易对象失联",
+          "高价值虚拟资产",
+          "私下游戏交易"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 100,
+      "risk_level": "高风险",
+      "intervention_goal": "call_police",
+      "explanation": "游戏虚拟资产已经交付，且出现失联、高价值或平台外交易信号，应按已发生财产损失止损。",
+      "suggested_action": "停止继续给账号、装备或钱款，保存资产交付、账号归属、聊天和估值证据，尽快报警或向平台申诉。",
+      "enabled": true
+    },
+    {
+      "rule_id": "PKG_GAME_TRADE_PRELOSS_001",
+      "rule_name": "游戏交易诈骗配置化实时劝阻规则",
+      "conditions": {
+        "all": [
+          "私下游戏交易"
+        ],
+        "any": [
+          "低价代充装备诱导",
+          "交付虚拟资产要求",
+          "游戏账号密码索取",
+          "游戏交易保证金解冻费"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 92,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "游戏交易叠加平台外操作、低价代充、索要账号或费用名目，触发强劝阻。",
+      "suggested_action": "停止平台外交易，不交付账号密码、验证码、装备或保证金。",
+      "enabled": true
+    }
+  ],
+  "responses": [],
+  "game_scenarios": [],
+  "source_refs": [
+    "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+    "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html"
+  ]
+}

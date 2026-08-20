@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RealisticAntiFraudEvaluationV1",
+  "type": "object",
+  "required": [
+    "sample_id",
+    "case_family_id",
+    "conversation",
+    "user_intent",
+    "fraud_type",
+    "risk_level",
+    "current_stage",
+    "risk_evidence",
+    "confusable_types",
+    "expected_disposition",
+    "follow_up_questions",
+    "reference_response",
+    "difficulty",
+    "用户对话",
+    "用户意图",
+    "诈骗类型",
+    "风险等级",
+    "当前阶段",
+    "关键风险证据",
+    "容易混淆的类别",
+    "标准处理结果",
+    "建议追问",
+    "标准劝阻回复",
+    "难度等级"
+  ],
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "pattern": "^AF-REAL-[0-9]{4}$"
+    },
+    "case_family_id": {
+      "type": "string"
+    },
+    "conversation": {
+      "type": "array",
+      "minItems": 1
+    },
+    "user_intent": {
+      "enum": [
+        "风险咨询",
+        "紧急止损",
+        "损失处置",
+        "正常业务核验",
+        "信息不足待澄清"
+      ]
+    },
+    "fraud_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "risk_level": {
+      "enum": [
+        "无明显风险",
+        "信息不足",
+        "低风险提醒",
+        "中风险警示",
+        "高风险立即劝阻"
+      ]
+    },
+    "current_stage": {
+      "enum": [
+        "正常行为",
+        "信息不足",
+        "初步接触",
+        "被要求操作",
+        "正在操作",
+        "已泄露",
+        "已付款",
+        "已发生损失",
+        "已止损"
+      ]
+    },
+    "risk_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confusable_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_disposition": {
+      "type": "string"
+    },
+    "follow_up_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reference_response": {
+      "type": "string"
+    },
+    "difficulty": {
+      "enum": [
+        "易",
+        "中",
+        "难"
+      ]
+    },
+    "用户对话": {
+      "type": "array",
+      "minItems": 1
+    },
+    "用户意图": {
+      "type": "string"
+    },
+    "诈骗类型": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "风险等级": {
+      "enum": [
+        "无明显风险",
+        "信息不足",
+        "低风险提醒",
+        "中风险警示",
+        "高风险立即劝阻"
+      ]
+    },
+    "当前阶段": {
+      "enum": [
+        "正常行为",
+        "信息不足",
+        "初步接触",
+        "被要求操作",
+        "正在操作",
+        "已泄露",
+        "已付款",
+        "已发生损失",
+        "已止损"
+      ]
+    },
+    "关键风险证据": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "容易混淆的类别": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "标准处理结果": {
+      "type": "string"
+    },
+    "建议追问": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "标准劝阻回复": {
+      "type": "string"
+    },
+    "难度等级": {
+      "enum": [
+        "易",
+        "中",
+        "难"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

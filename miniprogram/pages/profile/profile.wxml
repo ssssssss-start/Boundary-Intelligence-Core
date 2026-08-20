@@ -1,0 +1,84 @@
+<view class="page">
+  <view class="section">
+    <view class="title">我的设置</view>
+    <view class="subtitle">开发工具可用 127.0.0.1；真机需要填写电脑局域网 IP，例如 http://192.168.1.8:8001。</view>
+  </view>
+
+  <view class="surface section">
+    <label class="label">后端地址</label>
+    <input class="input" value="{{baseUrl}}" placeholder="http://127.0.0.1:8001" bindinput="onBaseUrlInput" />
+    <label class="label second">用户 ID</label>
+    <input class="input" value="{{userId}}" placeholder="demo_user" bindinput="onUserInput" />
+    <view class="button-row">
+      <button class="ghost-btn" bindtap="checkHealth">测试连接</button>
+      <button class="primary-btn" bindtap="saveSettings">保存</button>
+    </view>
+    <view class="status {{error ? 'error' : ''}}" wx:if="{{statusText}}">{{statusText}}</view>
+  </view>
+
+  <view class="surface" wx:if="{{summary}}">
+    <view class="metric">
+      <text>积分</text>
+      <text>{{training.score || 0}}</text>
+    </view>
+    <view class="metric">
+      <text>段位</text>
+      <text>{{training.rank_badge || training.assessment_level || '未测评'}}</text>
+    </view>
+    <view class="metric">
+      <text>完成题数</text>
+      <text>{{training.answered_count || 0}}/{{training.total_levels || 0}}</text>
+    </view>
+    <view class="metric">
+      <text>正确率</text>
+      <text>{{accuracyText}}</text>
+    </view>
+  </view>
+
+  <view class="surface section" wx:if="{{badges.length}}">
+    <view class="record-head">
+      <view class="label">勋章</view>
+    </view>
+    <view class="badge-list">
+      <block wx:for="{{badges}}" wx:key="*this">
+        <view class="badge">{{item}}</view>
+      </block>
+    </view>
+  </view>
+
+  <view class="surface section">
+    <view class="record-head">
+      <view class="label">学习记录</view>
+      <button class="small-btn" bindtap="clearLearningRecords">清空</button>
+    </view>
+    <block wx:if="{{learningRecords.length}}">
+      <block wx:for="{{learningRecords}}" wx:key="id">
+        <view class="record-card">
+          <view class="record-title">{{item.type}} · {{item.title}}</view>
+          <view class="record-time">{{item.timeText}}</view>
+          <view class="record-content">{{item.content}}</view>
+          <view class="record-result" wx:if="{{item.result}}">{{item.result}}</view>
+        </view>
+      </block>
+    </block>
+    <view class="empty" wx:else>暂无学习记录</view>
+  </view>
+
+  <view class="surface section">
+    <view class="record-head">
+      <view class="label">举报记录</view>
+      <button class="small-btn" bindtap="clearReportRecords">清空</button>
+    </view>
+    <block wx:if="{{reportRecords.length}}">
+      <block wx:for="{{reportRecords}}" wx:key="id">
+        <view class="record-card">
+          <view class="record-title">{{item.type}} · {{item.title}}</view>
+          <view class="record-time">{{item.timeText}}</view>
+          <view class="record-content">{{item.content}}</view>
+          <view class="record-result" wx:if="{{item.result}}">{{item.result}}</view>
+        </view>
+      </block>
+    </block>
+    <view class="empty" wx:else>暂无举报记录</view>
+  </view>
+</view>

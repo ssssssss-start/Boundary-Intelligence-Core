@@ -1,0 +1,4066 @@
+[
+  {
+    "rule_id": "RULE_BRUSH_KB_HIGH_001",
+    "fraud_type": "刷单返利诈骗",
+    "stages": [
+      "资金转账前阶段",
+      "提现受阻阶段"
+    ],
+    "conditions": {
+      "all": [
+        "任务返佣",
+        "要求垫付资金"
+      ],
+      "any": [
+        "承诺返利",
+        "小额返利",
+        "无法提现",
+        "要求缴纳解冻费"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 96,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "任务返佣叠加垫付、返利或提现受阻，符合刷单返利诈骗高危模式。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "任务返佣",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_TASK"
+            ]
+          },
+          {
+            "term": "要求垫付资金",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_ADVANCE_PAY"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "承诺返利",
+            "condition_type": "semantic",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "小额返利",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_SMALL_RETURN"
+            ]
+          },
+          {
+            "term": "无法提现",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_WITHDRAW_BLOCKED"
+            ]
+          },
+          {
+            "term": "要求缴纳解冻费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_WITHDRAW_BLOCKED",
+              "FEATURE_BRUSH_EXTRA_FEE"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "任务返佣",
+        "要求垫付资金"
+      ],
+      "any": [
+        "小额返利",
+        "无法提现",
+        "要求缴纳解冻费"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_BRUSH_TASK",
+        "FEATURE_BRUSH_ADVANCE_PAY",
+        "FEATURE_BRUSH_SMALL_RETURN",
+        "FEATURE_BRUSH_WITHDRAW_BLOCKED",
+        "FEATURE_BRUSH_EXTRA_FEE"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [
+      "承诺返利"
+    ],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_BRUSH_KB_LOSS_001",
+    "fraud_type": "刷单返利诈骗",
+    "stages": [
+      "已损失阶段",
+      "提现受阻阶段"
+    ],
+    "conditions": {
+      "all": [
+        "已发生转账"
+      ],
+      "any": [
+        "任务返佣",
+        "要求继续补单",
+        "无法提现",
+        "要求缴纳解冻费"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 98,
+    "risk_level": "高风险",
+    "intervention_goal": "call_police",
+    "explanation": "刷单场景已经转账后仍被要求继续补单或缴费，应立即止付、报警并保存证据。",
+    "escalation_policy": "emergency",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "已发生转账",
+            "condition_type": "fact",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "任务返佣",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_TASK"
+            ]
+          },
+          {
+            "term": "要求继续补单",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_ADVANCE_PAY"
+            ]
+          },
+          {
+            "term": "无法提现",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_WITHDRAW_BLOCKED"
+            ]
+          },
+          {
+            "term": "要求缴纳解冻费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_BRUSH_WITHDRAW_BLOCKED",
+              "FEATURE_BRUSH_EXTRA_FEE"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [],
+      "any": [
+        "任务返佣",
+        "要求继续补单",
+        "无法提现",
+        "要求缴纳解冻费"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_BRUSH_TASK",
+        "FEATURE_BRUSH_ADVANCE_PAY",
+        "FEATURE_BRUSH_WITHDRAW_BLOCKED",
+        "FEATURE_BRUSH_EXTRA_FEE"
+      ]
+    },
+    "fact_conditions": [
+      "已发生转账"
+    ],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_SERVICE_KB_SCREEN_001",
+    "fraud_type": "冒充客服诈骗",
+    "stages": [
+      "屏幕共享阶段",
+      "验证码索取阶段"
+    ],
+    "conditions": {
+      "all": [
+        "冒充客服"
+      ],
+      "any": [
+        "屏幕共享",
+        "远程控制"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 94,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "冒充客服叠加屏幕共享或远程控制，可能导致账户和资金暴露。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "冒充客服",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SERVICE_REFUND"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "屏幕共享",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SERVICE_SCREEN",
+              "FEAT_SERVICE_REFUND_003"
+            ]
+          },
+          {
+            "term": "远程控制",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SERVICE_REMOTE"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "冒充客服"
+      ],
+      "any": [
+        "屏幕共享",
+        "远程控制"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_SERVICE_REFUND",
+        "FEATURE_SERVICE_SCREEN",
+        "FEAT_SERVICE_REFUND_003",
+        "FEATURE_SERVICE_REMOTE"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_SERVICE_KB_CODE_001",
+    "fraud_type": "冒充客服诈骗",
+    "stages": [
+      "验证码索取阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "索要验证码"
+      ],
+      "any": [
+        "冒充客服",
+        "点击陌生链接",
+        "屏幕共享",
+        "索要银行卡或身份信息"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 92,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "验证码与冒充客服、链接或屏幕共享同时出现，属于账户授权高危场景。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "索要验证码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SERVICE_CODE",
+              "FEAT_SERVICE_REFUND_004"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "冒充客服",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SERVICE_REFUND"
+            ]
+          },
+          {
+            "term": "点击陌生链接",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SERVICE_LINK"
+            ]
+          },
+          {
+            "term": "屏幕共享",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SERVICE_SCREEN",
+              "FEAT_SERVICE_REFUND_003"
+            ]
+          },
+          {
+            "term": "索要银行卡或身份信息",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "索要验证码"
+      ],
+      "any": [
+        "冒充客服",
+        "点击陌生链接",
+        "屏幕共享"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_SERVICE_CODE",
+        "FEAT_SERVICE_REFUND_004",
+        "FEATURE_SERVICE_REFUND",
+        "FEATURE_SERVICE_LINK",
+        "FEATURE_SERVICE_SCREEN",
+        "FEAT_SERVICE_REFUND_003"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [
+      "索要银行卡或身份信息"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_POLICE_KB_HIGH_001",
+    "fraud_type": "冒充公检法诈骗",
+    "stages": [
+      "资金转账前阶段",
+      "屏幕共享阶段"
+    ],
+    "conditions": {
+      "all": [
+        "冒充公检法"
+      ],
+      "any": [
+        "安全账户",
+        "要求垫付资金",
+        "屏幕共享",
+        "要求删除证据"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 99,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "自称公检法并要求转账到安全账户、保密或屏幕共享，是高危冒充公检法诈骗。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "冒充公检法",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_POLICE_IDENTITY"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "安全账户",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_POLICE_SAFE_ACCOUNT"
+            ]
+          },
+          {
+            "term": "要求垫付资金",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "屏幕共享",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_POLICE_SCREEN"
+            ]
+          },
+          {
+            "term": "要求删除证据",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "冒充公检法"
+      ],
+      "any": [
+        "安全账户",
+        "屏幕共享"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_POLICE_IDENTITY",
+        "FEATURE_POLICE_SAFE_ACCOUNT",
+        "FEATURE_POLICE_SCREEN"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [
+      "要求垫付资金",
+      "要求删除证据"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_POLICE_KB_LOSS_001",
+    "fraud_type": "冒充公检法诈骗",
+    "stages": [
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "已发生转账"
+      ],
+      "any": [
+        "冒充公检法",
+        "安全账户",
+        "要求删除证据"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 100,
+    "risk_level": "高风险",
+    "intervention_goal": "call_police",
+    "explanation": "已向所谓安全账户转账，应停止联系对方并立即止付、报警、保存证据。",
+    "escalation_policy": "emergency",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "已发生转账",
+            "condition_type": "fact",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "冒充公检法",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_POLICE_IDENTITY"
+            ]
+          },
+          {
+            "term": "安全账户",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_POLICE_SAFE_ACCOUNT"
+            ]
+          },
+          {
+            "term": "要求删除证据",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [],
+      "any": [
+        "冒充公检法",
+        "安全账户"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_POLICE_IDENTITY",
+        "FEATURE_POLICE_SAFE_ACCOUNT"
+      ]
+    },
+    "fact_conditions": [
+      "已发生转账"
+    ],
+    "action_conditions": [
+      "要求删除证据"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_INVEST_KB_HIGH_001",
+    "fraud_type": "虚假投资理财诈骗",
+    "stages": [
+      "资金转账前阶段",
+      "提现受阻阶段"
+    ],
+    "conditions": {
+      "all": [
+        "陌生投资平台",
+        "高收益诱导"
+      ],
+      "any": [
+        "保本稳赚承诺",
+        "无法提现",
+        "要求缴纳解冻费",
+        "诱导下载陌生APP"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 95,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "陌生投资平台叠加高收益和提现受阻，符合虚假投资理财诈骗。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "陌生投资平台",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_PLATFORM"
+            ]
+          },
+          {
+            "term": "高收益诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_HIGH_RETURN"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "保本稳赚承诺",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_HIGH_RETURN"
+            ]
+          },
+          {
+            "term": "无法提现",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_WITHDRAW_BLOCKED"
+            ]
+          },
+          {
+            "term": "要求缴纳解冻费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_TAX"
+            ]
+          },
+          {
+            "term": "诱导下载陌生APP",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "陌生投资平台",
+        "高收益诱导"
+      ],
+      "any": [
+        "保本稳赚承诺",
+        "无法提现",
+        "要求缴纳解冻费"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_INVEST_PLATFORM",
+        "FEATURE_INVEST_HIGH_RETURN",
+        "FEATURE_INVEST_WITHDRAW_BLOCKED",
+        "FEATURE_INVEST_TAX"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [
+      "诱导下载陌生APP"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_INVEST_KB_APP_001",
+    "fraud_type": "虚假投资理财诈骗",
+    "stages": [
+      "下载陌生 App 阶段",
+      "资金转账前阶段"
+    ],
+    "conditions": {
+      "all": [
+        "诱导下载陌生APP"
+      ],
+      "any": [
+        "高收益诱导",
+        "陌生投资平台",
+        "保本稳赚承诺"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 82,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_app_install",
+    "explanation": "要求安装陌生投资App并承诺收益，可能是虚假平台。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "诱导下载陌生APP",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "高收益诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_HIGH_RETURN"
+            ]
+          },
+          {
+            "term": "陌生投资平台",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_PLATFORM"
+            ]
+          },
+          {
+            "term": "保本稳赚承诺",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_INVEST_HIGH_RETURN"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [],
+      "any": [
+        "高收益诱导",
+        "陌生投资平台",
+        "保本稳赚承诺"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_INVEST_HIGH_RETURN",
+        "FEATURE_INVEST_PLATFORM"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [
+      "诱导下载陌生APP"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_LOAN_KB_HIGH_001",
+    "fraud_type": "网络贷款诈骗",
+    "stages": [
+      "资金转账前阶段",
+      "提现受阻阶段"
+    ],
+    "conditions": {
+      "all": [
+        "贷款前收费"
+      ],
+      "any": [
+        "要求垫付资金",
+        "要求缴纳解冻费",
+        "诱导下载陌生APP",
+        "索要银行卡或身份信息"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 93,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "贷款前收费、保证金、解冻费或刷流水是网络贷款诈骗高危特征。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "贷款前收费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_LOAN_PRE_FEE"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "要求垫付资金",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "要求缴纳解冻费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_LOAN_FREEZE"
+            ]
+          },
+          {
+            "term": "诱导下载陌生APP",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_LOAN_APP"
+            ]
+          },
+          {
+            "term": "索要银行卡或身份信息",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_LOAN_ID_BANK"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "贷款前收费"
+      ],
+      "any": [
+        "要求缴纳解冻费",
+        "诱导下载陌生APP",
+        "索要银行卡或身份信息"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_LOAN_PRE_FEE",
+        "FEATURE_LOAN_FREEZE",
+        "FEATURE_LOAN_APP",
+        "FEATURE_LOAN_ID_BANK"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [
+      "要求垫付资金"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_LOAN_KB_APP_001",
+    "fraud_type": "网络贷款诈骗",
+    "stages": [
+      "下载陌生 App 阶段"
+    ],
+    "conditions": {
+      "all": [
+        "诱导下载陌生APP"
+      ],
+      "any": [
+        "贷款前收费",
+        "索要银行卡或身份信息"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 80,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_app_install",
+    "explanation": "陌生贷款App叠加收费或索要身份银行卡信息，风险很高。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "诱导下载陌生APP",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_LOAN_APP"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "贷款前收费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_LOAN_PRE_FEE"
+            ]
+          },
+          {
+            "term": "索要银行卡或身份信息",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_LOAN_ID_BANK"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "诱导下载陌生APP"
+      ],
+      "any": [
+        "贷款前收费",
+        "索要银行卡或身份信息"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_LOAN_APP",
+        "FEATURE_LOAN_PRE_FEE",
+        "FEATURE_LOAN_ID_BANK"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_PHISH_KB_HIGH_001",
+    "fraud_type": "钓鱼链接诈骗",
+    "stages": [
+      "验证码索取阶段",
+      "接触引流阶段"
+    ],
+    "conditions": {
+      "all": [
+        "点击陌生链接"
+      ],
+      "any": [
+        "索要验证码",
+        "索要银行卡或身份信息",
+        "仿冒异常域名"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 90,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_click_link",
+    "explanation": "陌生链接要求银行卡、身份信息或验证码，符合钓鱼链接诈骗高危模式。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "点击陌生链接",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_PHISH_LINK"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "索要验证码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_PHISH_CODE"
+            ]
+          },
+          {
+            "term": "索要银行卡或身份信息",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_PHISH_BANK"
+            ]
+          },
+          {
+            "term": "仿冒异常域名",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_PHISH_FAKE_DOMAIN"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "点击陌生链接"
+      ],
+      "any": [
+        "索要验证码",
+        "索要银行卡或身份信息",
+        "仿冒异常域名"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_PHISH_LINK",
+        "FEATURE_PHISH_CODE",
+        "FEATURE_PHISH_BANK",
+        "FEATURE_PHISH_FAKE_DOMAIN"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_PHISH_KB_CODE_001",
+    "fraud_type": "钓鱼链接诈骗",
+    "stages": [
+      "验证码索取阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "索要验证码"
+      ],
+      "any": [
+        "点击陌生链接",
+        "索要银行卡或身份信息"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 92,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "在陌生链接页面填写验证码可能导致账户被盗或转账授权。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "索要验证码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_PHISH_CODE"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "点击陌生链接",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_PHISH_LINK"
+            ]
+          },
+          {
+            "term": "索要银行卡或身份信息",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_PHISH_BANK"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "索要验证码"
+      ],
+      "any": [
+        "点击陌生链接",
+        "索要银行卡或身份信息"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_PHISH_CODE",
+        "FEATURE_PHISH_LINK",
+        "FEATURE_PHISH_BANK"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_AI_FACE_KB_HIGH_001",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "stages": [
+      "资金转账前阶段"
+    ],
+    "conditions": {
+      "all": [
+        "AI换脸冒充",
+        "冒充熟人借钱"
+      ],
+      "any": [
+        "要求垫付资金",
+        "要求保密催促",
+        "非本人账户收款",
+        "拒绝二次核验"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 88,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "视频或声音相似叠加借钱、催促或拒绝核验，符合AI换脸冒充熟人诈骗。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "AI换脸冒充",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_VIDEO",
+              "FEAT_AI_FACE_ENRICH_001"
+            ]
+          },
+          {
+            "term": "冒充熟人借钱",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_BORROW",
+              "FEAT_AI_FACE_ENRICH_002"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "要求垫付资金",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "要求保密催促",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_SECRET",
+              "FEAT_AI_FACE_ENRICH_003"
+            ]
+          },
+          {
+            "term": "非本人账户收款",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_ACCOUNT"
+            ]
+          },
+          {
+            "term": "拒绝二次核验",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_NO_VERIFY"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "AI换脸冒充",
+        "冒充熟人借钱"
+      ],
+      "any": [
+        "要求保密催促",
+        "非本人账户收款",
+        "拒绝二次核验"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_AI_VIDEO",
+        "FEAT_AI_FACE_ENRICH_001",
+        "FEATURE_AI_BORROW",
+        "FEAT_AI_FACE_ENRICH_002",
+        "FEATURE_AI_SECRET",
+        "FEAT_AI_FACE_ENRICH_003",
+        "FEATURE_AI_ACCOUNT",
+        "FEATURE_AI_NO_VERIFY"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [
+      "要求垫付资金"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_AI_FACE_KB_LOSS_001",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "stages": [
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "已发生转账"
+      ],
+      "any": [
+        "AI换脸冒充",
+        "冒充熟人借钱",
+        "要求保密催促"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 95,
+    "risk_level": "高风险",
+    "intervention_goal": "call_police",
+    "explanation": "已向疑似冒充熟人的对象转账，应立即保存证据并报警止付。",
+    "escalation_policy": "emergency",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "已发生转账",
+            "condition_type": "fact",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "AI换脸冒充",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_VIDEO",
+              "FEAT_AI_FACE_ENRICH_001"
+            ]
+          },
+          {
+            "term": "冒充熟人借钱",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_BORROW",
+              "FEAT_AI_FACE_ENRICH_002"
+            ]
+          },
+          {
+            "term": "要求保密催促",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_AI_SECRET",
+              "FEAT_AI_FACE_ENRICH_003"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [],
+      "any": [
+        "AI换脸冒充",
+        "冒充熟人借钱",
+        "要求保密催促"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_AI_VIDEO",
+        "FEAT_AI_FACE_ENRICH_001",
+        "FEATURE_AI_BORROW",
+        "FEAT_AI_FACE_ENRICH_002",
+        "FEATURE_AI_SECRET",
+        "FEAT_AI_FACE_ENRICH_003"
+      ]
+    },
+    "fact_conditions": [
+      "已发生转账"
+    ],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_ACQ_KB_HIGH_001",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "stages": [
+      "资金转账前阶段"
+    ],
+    "conditions": {
+      "all": [
+        "冒充熟人借钱"
+      ],
+      "any": [
+        "熟人新账号联系",
+        "不方便电话核实",
+        "要求保密催促",
+        "非本人账户收款"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 86,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "熟人或领导借钱叠加新账号、拒绝电话核实、催促或非本人账户收款，风险很高。",
+    "escalation_policy": "strong_dissuasion",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "冒充熟人借钱",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_BORROW"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "熟人新账号联系",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_NEW_ACCOUNT"
+            ]
+          },
+          {
+            "term": "不方便电话核实",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_NO_CALL",
+              "FEAT_ACQ_BORROW_ENRICH_003"
+            ]
+          },
+          {
+            "term": "要求保密催促",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_URGENT"
+            ]
+          },
+          {
+            "term": "非本人账户收款",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_ACCOUNT"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "冒充熟人借钱"
+      ],
+      "any": [
+        "熟人新账号联系",
+        "不方便电话核实",
+        "要求保密催促",
+        "非本人账户收款"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_ACQ_BORROW",
+        "FEATURE_ACQ_NEW_ACCOUNT",
+        "FEATURE_ACQ_NO_CALL",
+        "FEAT_ACQ_BORROW_ENRICH_003",
+        "FEATURE_ACQ_URGENT",
+        "FEATURE_ACQ_ACCOUNT"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_ACQ_KB_LOSS_001",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "stages": [
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "已发生转账"
+      ],
+      "any": [
+        "冒充熟人借钱",
+        "熟人新账号联系",
+        "非本人账户收款"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 94,
+    "risk_level": "高风险",
+    "intervention_goal": "call_police",
+    "explanation": "已向疑似冒充领导或熟人的账户转账，应立即止付、报警并核验真实身份。",
+    "escalation_policy": "emergency",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "已发生转账",
+            "condition_type": "fact",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "冒充熟人借钱",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_BORROW"
+            ]
+          },
+          {
+            "term": "熟人新账号联系",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_NEW_ACCOUNT"
+            ]
+          },
+          {
+            "term": "非本人账户收款",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_ACQ_ACCOUNT"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [],
+      "any": [
+        "冒充熟人借钱",
+        "熟人新账号联系",
+        "非本人账户收款"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_ACQ_BORROW",
+        "FEATURE_ACQ_NEW_ACCOUNT",
+        "FEATURE_ACQ_ACCOUNT"
+      ]
+    },
+    "fact_conditions": [
+      "已发生转账"
+    ],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_COMMON_CODE_LEAK_001",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "stages": [
+      "已损失阶段",
+      "验证码索取阶段"
+    ],
+    "conditions": {
+      "all": [
+        "索要验证码"
+      ],
+      "any": [
+        "已泄露验证码",
+        "已发生转账"
+      ],
+      "min_any": 0
+    },
+    "risk_score": 96,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "验证码泄露会导致登录、绑卡、盗刷或转账授权，应立即停止并做账户保护。",
+    "escalation_policy": "emergency",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "索要验证码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_CODE_REQUEST"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "已泄露验证码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_CODE_REQUEST",
+              "FEATURE_CODE_SENT"
+            ]
+          },
+          {
+            "term": "已发生转账",
+            "condition_type": "fact",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "索要验证码"
+      ],
+      "any": [
+        "已泄露验证码"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_CODE_REQUEST",
+        "FEATURE_CODE_SENT"
+      ]
+    },
+    "fact_conditions": [
+      "已发生转账"
+    ],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_COMMON_SCREEN_ACTIVE_001",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "stages": [
+      "屏幕共享阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "屏幕共享"
+      ],
+      "any": [
+        "远程控制",
+        "索要验证码",
+        "索要银行卡或身份信息"
+      ],
+      "min_any": 0
+    },
+    "risk_score": 95,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "屏幕共享或远程控制会让对方看到和操控支付、验证码、银行卡页面。",
+    "escalation_policy": "emergency",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "屏幕共享",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SCREEN_SHARE_ACTIVE",
+              "FEAT_SCREEN_SHARE_ENRICH_001",
+              "FEAT_SCREEN_SHARE_ENRICH_005"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "远程控制",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEATURE_SCREEN_REMOTE_CONTROL",
+              "FEAT_SCREEN_SHARE_ENRICH_002"
+            ]
+          },
+          {
+            "term": "索要验证码",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "索要银行卡或身份信息",
+            "condition_type": "action",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "屏幕共享"
+      ],
+      "any": [
+        "远程控制"
+      ],
+      "matched_feature_ids": [
+        "FEATURE_SCREEN_SHARE_ACTIVE",
+        "FEAT_SCREEN_SHARE_ENRICH_001",
+        "FEAT_SCREEN_SHARE_ENRICH_005",
+        "FEATURE_SCREEN_REMOTE_CONTROL",
+        "FEAT_SCREEN_SHARE_ENRICH_002"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [
+      "索要验证码",
+      "索要银行卡或身份信息"
+    ],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_GAME_ASSET_LOSS_001",
+    "fraud_type": "游戏交易诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "虚拟资产已交付"
+      ],
+      "any": [
+        "交易对象失联",
+        "高价值虚拟资产",
+        "私下游戏交易"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 100,
+    "risk_level": "高风险",
+    "intervention_goal": "call_police",
+    "explanation": "游戏虚拟资产已经交付，且出现失联、高价值或平台外交易信号，应按已发生财产损失止损。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": true,
+      "next_step": "停止继续给账号、装备或钱款，保存资产交付、账号归属、聊天和估值证据，尽快报警或向平台申诉。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "虚拟资产已交付",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_002"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "交易对象失联",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_003"
+            ]
+          },
+          {
+            "term": "高价值虚拟资产",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_004"
+            ]
+          },
+          {
+            "term": "私下游戏交易",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_001"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "虚拟资产已交付"
+      ],
+      "any": [
+        "交易对象失联",
+        "高价值虚拟资产",
+        "私下游戏交易"
+      ],
+      "matched_feature_ids": [
+        "FEAT_GAME_002",
+        "FEAT_GAME_003",
+        "FEAT_GAME_004",
+        "FEAT_GAME_001"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_GAME_TRADE_PRELOSS_001",
+    "fraud_type": "游戏交易诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "私下游戏交易"
+      ],
+      "any": [
+        "低价代充装备诱导",
+        "交付虚拟资产要求",
+        "游戏账号密码索取",
+        "游戏交易保证金解冻费"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 92,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "游戏交易叠加平台外操作、低价代充、索要账号或费用名目，触发强劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止平台外交易，不交付账号密码、验证码、装备或保证金。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "私下游戏交易",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "低价代充装备诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_005"
+            ]
+          },
+          {
+            "term": "交付虚拟资产要求",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_006"
+            ]
+          },
+          {
+            "term": "游戏账号密码索取",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_001",
+              "FEAT_GAME_007"
+            ]
+          },
+          {
+            "term": "游戏交易保证金解冻费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_GAME_001",
+              "FEAT_GAME_008"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "私下游戏交易"
+      ],
+      "any": [
+        "低价代充装备诱导",
+        "交付虚拟资产要求",
+        "游戏账号密码索取",
+        "游戏交易保证金解冻费"
+      ],
+      "matched_feature_ids": [
+        "FEAT_GAME_001",
+        "FEAT_GAME_005",
+        "FEAT_GAME_006",
+        "FEAT_GAME_007",
+        "FEAT_GAME_008"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_CAMPUS_FEE_HIGH_001",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "冒充老师辅导员",
+        "班级费用名目"
+      ],
+      "any": [
+        "群内扫码缴费",
+        "催促限时缴费",
+        "拒绝官方核验"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 91,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "校园身份收费叠加二维码、限时催促或拒绝核验，疑似冒充老师辅导员收费。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "先不缴费，电话或当面向老师、辅导员、学校财务核实。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "冒充老师辅导员",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CAMPUS_FEE_001"
+            ]
+          },
+          {
+            "term": "班级费用名目",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CAMPUS_FEE_002"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "群内扫码缴费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CAMPUS_FEE_003"
+            ]
+          },
+          {
+            "term": "催促限时缴费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CAMPUS_FEE_004"
+            ]
+          },
+          {
+            "term": "拒绝官方核验",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CAMPUS_FEE_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "冒充老师辅导员",
+        "班级费用名目"
+      ],
+      "any": [
+        "群内扫码缴费",
+        "催促限时缴费",
+        "拒绝官方核验"
+      ],
+      "matched_feature_ids": [
+        "FEAT_CAMPUS_FEE_001",
+        "FEAT_CAMPUS_FEE_002",
+        "FEAT_CAMPUS_FEE_003",
+        "FEAT_CAMPUS_FEE_004",
+        "FEAT_CAMPUS_FEE_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_JOB_FEE_HIGH_001",
+    "fraud_type": "求职实习招聘诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "入职前收费"
+      ],
+      "any": [
+        "轻松高薪诱导",
+        "收费内推保offer",
+        "培训贷上岗",
+        "脱离招聘平台私聊"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 93,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "求职招聘中出现入职前收费、保offer或培训贷，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止缴费或贷款，回到正规招聘平台核实企业和岗位。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "入职前收费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_JOB_002"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "轻松高薪诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_JOB_001"
+            ]
+          },
+          {
+            "term": "收费内推保offer",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_JOB_003"
+            ]
+          },
+          {
+            "term": "培训贷上岗",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_JOB_004"
+            ]
+          },
+          {
+            "term": "脱离招聘平台私聊",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_JOB_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "入职前收费"
+      ],
+      "any": [
+        "轻松高薪诱导",
+        "收费内推保offer",
+        "培训贷上岗",
+        "脱离招聘平台私聊"
+      ],
+      "matched_feature_ids": [
+        "FEAT_JOB_002",
+        "FEAT_JOB_001",
+        "FEAT_JOB_003",
+        "FEAT_JOB_004",
+        "FEAT_JOB_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_SCHOLARSHIP_CODE_HIGH_001",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "奖助学金异常通知"
+      ],
+      "any": [
+        "索要银行卡和身份信息",
+        "补贴验证码索取",
+        "先转账激活补贴",
+        "学费退费话术"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 94,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "奖助学金、退费或补贴话术叠加银行卡/验证码/先缴费，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "不要填验证码和银行卡，改向学校官网、辅导员、财务处核实。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "奖助学金异常通知",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SCHOLAR_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "索要银行卡和身份信息",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SCHOLAR_003"
+            ]
+          },
+          {
+            "term": "补贴验证码索取",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SCHOLAR_004"
+            ]
+          },
+          {
+            "term": "先转账激活补贴",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SCHOLAR_005"
+            ]
+          },
+          {
+            "term": "学费退费话术",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SCHOLAR_002"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "奖助学金异常通知"
+      ],
+      "any": [
+        "索要银行卡和身份信息",
+        "补贴验证码索取",
+        "先转账激活补贴",
+        "学费退费话术"
+      ],
+      "matched_feature_ids": [
+        "FEAT_SCHOLAR_001",
+        "FEAT_SCHOLAR_003",
+        "FEAT_SCHOLAR_004",
+        "FEAT_SCHOLAR_005",
+        "FEAT_SCHOLAR_002"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_EXAM_SERVICE_HIGH_001",
+    "fraud_type": "考试考证论文服务诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "违规保过服务"
+      ],
+      "any": [
+        "论文代写降重",
+        "先交定金尾款",
+        "继续加价保密费",
+        "拒绝正规合同平台"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 88,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "考试论文违规服务叠加定金、加价或私下交易，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止付款，保留聊天和转账要求，不参与违规服务。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "违规保过服务",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_EXAM_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "论文代写降重",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_EXAM_002"
+            ]
+          },
+          {
+            "term": "先交定金尾款",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_EXAM_003"
+            ]
+          },
+          {
+            "term": "继续加价保密费",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_EXAM_004"
+            ]
+          },
+          {
+            "term": "拒绝正规合同平台",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_EXAM_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "违规保过服务"
+      ],
+      "any": [
+        "论文代写降重",
+        "先交定金尾款",
+        "继续加价保密费",
+        "拒绝正规合同平台"
+      ],
+      "matched_feature_ids": [
+        "FEAT_EXAM_001",
+        "FEAT_EXAM_002",
+        "FEAT_EXAM_003",
+        "FEAT_EXAM_004",
+        "FEAT_EXAM_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_SECONDHAND_TICKET_HIGH_001",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "内部低价票货"
+      ],
+      "any": [
+        "私下转账定金",
+        "脱离担保平台",
+        "卖家催促抢名额",
+        "票务退款屏幕共享"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 90,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "低价二手/票务叠加定金、平台外交易或催促付款，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止私下转账，只使用官方票务或有担保平台。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "内部低价票货",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SECONDHAND_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "私下转账定金",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SECONDHAND_002"
+            ]
+          },
+          {
+            "term": "脱离担保平台",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SECONDHAND_003"
+            ]
+          },
+          {
+            "term": "卖家催促抢名额",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SECONDHAND_005"
+            ]
+          },
+          {
+            "term": "票务退款屏幕共享",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_SECONDHAND_004"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "内部低价票货"
+      ],
+      "any": [
+        "私下转账定金",
+        "脱离担保平台",
+        "卖家催促抢名额",
+        "票务退款屏幕共享"
+      ],
+      "matched_feature_ids": [
+        "FEAT_SECONDHAND_001",
+        "FEAT_SECONDHAND_002",
+        "FEAT_SECONDHAND_003",
+        "FEAT_SECONDHAND_005",
+        "FEAT_SECONDHAND_004"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_RENTAL_DEPOSIT_HIGH_001",
+    "fraud_type": "租房合租押金诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "未看房先付押金"
+      ],
+      "any": [
+        "低价房源诱导",
+        "房东身份未核验",
+        "拒绝合同收据",
+        "平台外租房付款"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 89,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "未看房先付押金叠加低价、无法核验或平台外付款，触发租房押金诈骗劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止付款，先核验房东身份、产权/租赁授权和合同收据。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "未看房先付押金",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_RENTAL_002"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "低价房源诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_RENTAL_001"
+            ]
+          },
+          {
+            "term": "房东身份未核验",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_RENTAL_003"
+            ]
+          },
+          {
+            "term": "拒绝合同收据",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_RENTAL_004"
+            ]
+          },
+          {
+            "term": "平台外租房付款",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_RENTAL_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "未看房先付押金"
+      ],
+      "any": [
+        "低价房源诱导",
+        "房东身份未核验",
+        "拒绝合同收据",
+        "平台外租房付款"
+      ],
+      "matched_feature_ids": [
+        "FEAT_RENTAL_002",
+        "FEAT_RENTAL_001",
+        "FEAT_RENTAL_003",
+        "FEAT_RENTAL_004",
+        "FEAT_RENTAL_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_NUDE_EXTORTION_HIGH_001",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "隐私视频威胁"
+      ],
+      "any": [
+        "窃取通讯录威胁",
+        "要求转账删视频",
+        "已付款仍继续勒索",
+        "诱导下载交友直播App"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 100,
+    "risk_level": "高风险",
+    "intervention_goal": "call_police",
+    "explanation": "私密影像威胁叠加通讯录、转账删视频或持续勒索，必须按紧急敲诈止损处理。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": true,
+      "next_step": "不要继续转账，不回应威胁，保存证据并报警。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "隐私视频威胁",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_NUDE_003"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "窃取通讯录威胁",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_NUDE_002"
+            ]
+          },
+          {
+            "term": "要求转账删视频",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_NUDE_004"
+            ]
+          },
+          {
+            "term": "已付款仍继续勒索",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_NUDE_005"
+            ]
+          },
+          {
+            "term": "诱导下载交友直播App",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_NUDE_001"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "隐私视频威胁"
+      ],
+      "any": [
+        "窃取通讯录威胁",
+        "要求转账删视频",
+        "已付款仍继续勒索",
+        "诱导下载交友直播App"
+      ],
+      "matched_feature_ids": [
+        "FEAT_NUDE_003",
+        "FEAT_NUDE_002",
+        "FEAT_NUDE_004",
+        "FEAT_NUDE_005",
+        "FEAT_NUDE_001"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_TWO_CARDS_HIGH_001",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "出租出借两卡"
+      ],
+      "any": [
+        "帮忙收款跑分",
+        "日结高薪诱导",
+        "出租账号收款码",
+        "账户被冻结或涉案"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 96,
+    "risk_level": "高风险",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "出租出借两卡叠加跑分、收款返佣或账户涉案，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "立即停止出租出借卡、码、账号，保存招募和转账证据，必要时报警或咨询学校/警方。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "出租出借两卡",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TWO_CARDS_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "帮忙收款跑分",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TWO_CARDS_002"
+            ]
+          },
+          {
+            "term": "日结高薪诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TWO_CARDS_003"
+            ]
+          },
+          {
+            "term": "出租账号收款码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TWO_CARDS_004"
+            ]
+          },
+          {
+            "term": "账户被冻结或涉案",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TWO_CARDS_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "出租出借两卡"
+      ],
+      "any": [
+        "帮忙收款跑分",
+        "日结高薪诱导",
+        "出租账号收款码",
+        "账户被冻结或涉案"
+      ],
+      "matched_feature_ids": [
+        "FEAT_TWO_CARDS_001",
+        "FEAT_TWO_CARDS_002",
+        "FEAT_TWO_CARDS_003",
+        "FEAT_TWO_CARDS_004",
+        "FEAT_TWO_CARDS_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_TRAVEL_REFUND_SCREEN_001",
+    "fraud_type": "机票火车票退改签诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "航班车票取消延误"
+      ],
+      "any": [
+        "退改签屏幕共享",
+        "下载App办理退票",
+        "退改签索要验证码银行卡",
+        "退改签先交手续费保证金"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 95,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "退改签理赔叠加屏幕共享、陌生App、验证码或手续费，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止共享屏幕和下载App，只通过航空公司/铁路官方渠道核实。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "航班车票取消延误",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TRAVEL_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "退改签屏幕共享",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TRAVEL_001",
+              "FEAT_TRAVEL_003"
+            ]
+          },
+          {
+            "term": "下载App办理退票",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TRAVEL_002"
+            ]
+          },
+          {
+            "term": "退改签索要验证码银行卡",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TRAVEL_001",
+              "FEAT_TRAVEL_004"
+            ]
+          },
+          {
+            "term": "退改签先交手续费保证金",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_TRAVEL_001",
+              "FEAT_TRAVEL_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "航班车票取消延误"
+      ],
+      "any": [
+        "退改签屏幕共享",
+        "下载App办理退票",
+        "退改签索要验证码银行卡",
+        "退改签先交手续费保证金"
+      ],
+      "matched_feature_ids": [
+        "FEAT_TRAVEL_001",
+        "FEAT_TRAVEL_003",
+        "FEAT_TRAVEL_002",
+        "FEAT_TRAVEL_004",
+        "FEAT_TRAVEL_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_PRIZE_GIFT_HIGH_001",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "中奖免费礼品诱导"
+      ],
+      "any": [
+        "中奖先交税费保证金",
+        "领奖填写银行卡验证码",
+        "抽奖陌生链接二维码",
+        "领奖名额限时催促"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 90,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "中奖免费礼品叠加先付款、验证码或陌生链接，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止付款和填写信息，通过官方活动页面核实。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "中奖免费礼品诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_PRIZE_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "中奖先交税费保证金",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_PRIZE_001",
+              "FEAT_PRIZE_002"
+            ]
+          },
+          {
+            "term": "领奖填写银行卡验证码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_PRIZE_003"
+            ]
+          },
+          {
+            "term": "抽奖陌生链接二维码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_PRIZE_004"
+            ]
+          },
+          {
+            "term": "领奖名额限时催促",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_PRIZE_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "中奖免费礼品诱导"
+      ],
+      "any": [
+        "中奖先交税费保证金",
+        "领奖填写银行卡验证码",
+        "抽奖陌生链接二维码",
+        "领奖名额限时催促"
+      ],
+      "matched_feature_ids": [
+        "FEAT_PRIZE_001",
+        "FEAT_PRIZE_002",
+        "FEAT_PRIZE_003",
+        "FEAT_PRIZE_004",
+        "FEAT_PRIZE_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_CREDIT_REPAIR_HIGH_001",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "征信会员恐吓"
+      ],
+      "any": [
+        "注销账户修复征信",
+        "转账刷流水验证",
+        "征信客服屏幕共享",
+        "征信客服索要验证码"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 96,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "征信、注销、会员扣费恐吓叠加转账/屏幕共享/验证码，触发高危劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止转账刷流水，不共享屏幕，通过官方金融机构或平台核实。"
+    },
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "征信会员恐吓",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CREDIT_001"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "注销账户修复征信",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CREDIT_002"
+            ]
+          },
+          {
+            "term": "转账刷流水验证",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CREDIT_003"
+            ]
+          },
+          {
+            "term": "征信客服屏幕共享",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CREDIT_004"
+            ]
+          },
+          {
+            "term": "征信客服索要验证码",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_CREDIT_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "征信会员恐吓"
+      ],
+      "any": [
+        "注销账户修复征信",
+        "转账刷流水验证",
+        "征信客服屏幕共享",
+        "征信客服索要验证码"
+      ],
+      "matched_feature_ids": [
+        "FEAT_CREDIT_001",
+        "FEAT_CREDIT_002",
+        "FEAT_CREDIT_003",
+        "FEAT_CREDIT_004",
+        "FEAT_CREDIT_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_ROMANCE_INVEST_HIGH_001",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段",
+      "验证码索取阶段",
+      "屏幕共享阶段",
+      "下载陌生 App 阶段",
+      "提现受阻阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "情感关系建立",
+        "引导投资博彩刷单"
+      ],
+      "any": [
+        "保本高收益承诺",
+        "提现失败继续入金",
+        "拒绝现实核验"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 97,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "情感信任叠加投资博彩刷单、高收益或提现受阻，触发杀猪盘强劝阻。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "停止入金和缴费，不进入对方推荐平台，保存聊天与平台证据。"
+    },
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "情感关系建立",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_ROMANCE_001"
+            ]
+          },
+          {
+            "term": "引导投资博彩刷单",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_ROMANCE_002"
+            ]
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "保本高收益承诺",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_ROMANCE_003"
+            ]
+          },
+          {
+            "term": "提现失败继续入金",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_ROMANCE_004"
+            ]
+          },
+          {
+            "term": "拒绝现实核验",
+            "condition_type": "feature",
+            "matched_feature_ids": [
+              "FEAT_ROMANCE_005"
+            ]
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "情感关系建立",
+        "引导投资博彩刷单"
+      ],
+      "any": [
+        "保本高收益承诺",
+        "提现失败继续入金",
+        "拒绝现实核验"
+      ],
+      "matched_feature_ids": [
+        "FEAT_ROMANCE_001",
+        "FEAT_ROMANCE_002",
+        "FEAT_ROMANCE_003",
+        "FEAT_ROMANCE_004",
+        "FEAT_ROMANCE_005"
+      ]
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "rule_id": "RULE_CROSS_BORDER_HIGH_SALARY_001",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段"
+    ],
+    "conditions": {
+      "all": [
+        "境外高薪诱导"
+      ],
+      "any": [
+        "私下跨境联系",
+        "出境前收费",
+        "索要证件材料",
+        "边境集合出境"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 94,
+    "risk_level": "极高风险",
+    "intervention_goal": "stop_contact",
+    "explanation": "境外高薪叠加私下联系、收费、证件或出境安排，触发人身和诈骗双重风险。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": true,
+      "next_step": "先停止付款、转账、填码、共享屏幕或继续联系，再通过官方渠道核验并保存证据。"
+    },
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "境外高薪诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "私下跨境联系",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "出境前收费",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "索要证件材料",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "边境集合出境",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "境外高薪诱导"
+      ],
+      "any": [
+        "私下跨境联系",
+        "出境前收费",
+        "索要证件材料",
+        "边境集合出境"
+      ],
+      "matched_feature_ids": []
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享、陌生App或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "rule_id": "RULE_HEALTH_PRODUCT_ELDERLY_001",
+    "fraud_type": "养老保健品诈骗",
+    "stages": [
+      "建立信任阶段",
+      "资金转账前阶段"
+    ],
+    "conditions": {
+      "all": [
+        "夸大治疗功效"
+      ],
+      "any": [
+        "免费讲座义诊",
+        "假专家背书",
+        "高价预存套餐",
+        "诱导隐瞒家人"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 82,
+    "risk_level": "中高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "保健品宣称治疗疾病并催促高价购买，属于老年消费诈骗高危模式。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "先停止付款、转账、填码、共享屏幕或继续联系，再通过官方渠道核验并保存证据。"
+    },
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "夸大治疗功效",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "免费讲座义诊",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "假专家背书",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "高价预存套餐",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "诱导隐瞒家人",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "夸大治疗功效"
+      ],
+      "any": [
+        "免费讲座义诊",
+        "假专家背书",
+        "高价预存套餐",
+        "诱导隐瞒家人"
+      ],
+      "matched_feature_ids": []
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享、陌生App或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "rule_id": "RULE_NATIONAL_ASSET_PROJECT_001",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段"
+    ],
+    "conditions": {
+      "all": [
+        "国家项目包装"
+      ],
+      "any": [
+        "伪造红头文件",
+        "缴费领取补贴",
+        "巨额分红承诺",
+        "拉人头扩散"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 90,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "国家项目包装叠加先缴费领巨额收益，符合民族资产解冻类诈骗特征。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": true,
+      "next_step": "先停止付款、转账、填码、共享屏幕或继续联系，再通过官方渠道核验并保存证据。"
+    },
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "国家项目包装",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "伪造红头文件",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "缴费领取补贴",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "巨额分红承诺",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "拉人头扩散",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "国家项目包装"
+      ],
+      "any": [
+        "伪造红头文件",
+        "缴费领取补贴",
+        "巨额分红承诺",
+        "拉人头扩散"
+      ],
+      "matched_feature_ids": []
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享、陌生App或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "rule_id": "RULE_MEDICARE_FUND_FRAUD_001",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "stages": [
+      "身份信息暴露阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "外借医保凭证"
+      ],
+      "any": [
+        "刷医保返钱",
+        "倒卖医保药品",
+        "虚假诊疗购药",
+        "医保身份信息泄露"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 86,
+    "risk_level": "中高风险",
+    "intervention_goal": "stop_identity_exposure",
+    "explanation": "外借医保凭证并参与返钱、倒卖或虚假诊疗，既有被骗风险也有法律责任风险。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "先停止付款、转账、填码、共享屏幕或继续联系，再通过官方渠道核验并保存证据。"
+    },
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "外借医保凭证",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "刷医保返钱",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "倒卖医保药品",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "虚假诊疗购药",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "医保身份信息泄露",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "外借医保凭证"
+      ],
+      "any": [
+        "刷医保返钱",
+        "倒卖医保药品",
+        "虚假诊疗购药",
+        "医保身份信息泄露"
+      ],
+      "matched_feature_ids": []
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享、陌生App或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "rule_id": "RULE_VIRTUAL_CURRENCY_LAUNDERING_001",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "stages": [
+      "资金转账前阶段",
+      "已损失阶段"
+    ],
+    "conditions": {
+      "all": [
+        "高佣金跑分"
+      ],
+      "any": [
+        "出借账户收付款",
+        "虚拟币转移资金",
+        "资金来源不明",
+        "账户被冻结"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 96,
+    "risk_level": "高风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "高佣金跑分叠加账户出借或虚拟币转移，可能帮助电诈资金转移。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": true,
+      "next_step": "先停止付款、转账、填码、共享屏幕或继续联系，再通过官方渠道核验并保存证据。"
+    },
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "高佣金跑分",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "出借账户收付款",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "虚拟币转移资金",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "资金来源不明",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "账户被冻结",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "高佣金跑分"
+      ],
+      "any": [
+        "出借账户收付款",
+        "虚拟币转移资金",
+        "资金来源不明",
+        "账户被冻结"
+      ],
+      "matched_feature_ids": []
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享、陌生App或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "rule_id": "RULE_LIVE_PRIVATE_TRADE_001",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "stages": [
+      "接触引流阶段",
+      "资金转账前阶段"
+    ],
+    "conditions": {
+      "all": [
+        "私下扫码付款"
+      ],
+      "any": [
+        "明显低价诱导",
+        "引导私域下单",
+        "拒绝售后退款",
+        "虚假授权背书"
+      ],
+      "min_any": 1
+    },
+    "risk_score": 78,
+    "risk_level": "中风险",
+    "intervention_goal": "stop_transfer",
+    "explanation": "直播购物脱离平台私下付款，会显著增加货不对板、拒不退款和失联风险。",
+    "escalation_policy": {
+      "realtime_dissuasion": true,
+      "emergency_if_already_lost": false,
+      "next_step": "先停止付款、转账、填码、共享屏幕或继续联系，再通过官方渠道核验并保存证据。"
+    },
+    "condition_schema_version": "v2",
+    "semantic_condition_groups": [
+      {
+        "operator": "all",
+        "terms": [
+          {
+            "term": "私下扫码付款",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      },
+      {
+        "operator": "any",
+        "terms": [
+          {
+            "term": "明显低价诱导",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "引导私域下单",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "拒绝售后退款",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          },
+          {
+            "term": "虚假授权背书",
+            "condition_type": "feature",
+            "matched_feature_ids": []
+          }
+        ]
+      }
+    ],
+    "feature_conditions": {
+      "all": [
+        "私下扫码付款"
+      ],
+      "any": [
+        "明显低价诱导",
+        "引导私域下单",
+        "拒绝售后退款",
+        "虚假授权背书"
+      ],
+      "matched_feature_ids": []
+    },
+    "fact_conditions": [],
+    "action_conditions": [],
+    "semantic_conditions": [],
+    "risk_reasoning_steps": [
+      "识别用户描述的诈骗类型和阶段",
+      "确认是否出现资金、账号、验证码、屏幕共享、陌生App或个人信息暴露",
+      "优先阻止当前最危险动作，再给止损、取证和报警建议"
+    ],
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  }
+]

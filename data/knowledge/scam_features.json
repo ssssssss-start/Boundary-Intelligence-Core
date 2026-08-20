@@ -1,0 +1,4561 @@
+[
+  {
+    "feature_id": "FEATURE_BRUSH_TASK",
+    "scam_id": "scam_brush_rebate",
+    "feature_name": "任务返佣",
+    "keywords": [
+      "刷单",
+      "做任务",
+      "点赞",
+      "关注",
+      "抢单",
+      "返佣"
+    ],
+    "risk_weight": 25,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以任务返佣包装兼职，是刷单返利诈骗的入口特征。",
+    "evidence_extract_hint": "提取任务名称、群名、佣金承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "刷单返利诈骗"
+  },
+  {
+    "feature_id": "FEATURE_BRUSH_SMALL_RETURN",
+    "scam_id": "scam_brush_rebate",
+    "feature_name": "小额返利",
+    "keywords": [
+      "前两单返了",
+      "试单返现",
+      "小额返利",
+      "返了钱"
+    ],
+    "risk_weight": 20,
+    "stage": "建立信任阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "先给小额返利是建立信任、诱导大额垫付的常见手法。",
+    "evidence_extract_hint": "提取返利次数和返利金额。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "刷单返利诈骗"
+  },
+  {
+    "feature_id": "FEATURE_BRUSH_ADVANCE_PAY",
+    "scam_id": "scam_brush_rebate",
+    "feature_name": "要求垫付资金",
+    "keywords": [
+      "垫付",
+      "充值",
+      "补单",
+      "保证金",
+      "联单"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "要求用户先垫钱、充值或补单，是刷单诈骗高危信号。",
+    "evidence_extract_hint": "提取垫付金额和付款理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "刷单返利诈骗"
+  },
+  {
+    "feature_id": "FEATURE_BRUSH_WITHDRAW_BLOCKED",
+    "scam_id": "scam_brush_rebate",
+    "feature_name": "无法提现",
+    "keywords": [
+      "不能提现",
+      "提现失败",
+      "冻结",
+      "解冻",
+      "任务未完成"
+    ],
+    "risk_weight": 40,
+    "stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "提现受阻后继续收费通常是扩大损失的节点。",
+    "evidence_extract_hint": "提取提现失败原因和继续缴费要求。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "刷单返利诈骗"
+  },
+  {
+    "feature_id": "FEATURE_BRUSH_EXTRA_FEE",
+    "scam_id": "scam_brush_rebate",
+    "feature_name": "要求缴纳解冻费",
+    "keywords": [
+      "解冻费",
+      "认证费",
+      "税费",
+      "通道费"
+    ],
+    "risk_weight": 40,
+    "stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "所谓解冻费、认证费、税费通常是继续诈骗借口。",
+    "evidence_extract_hint": "提取费用名目和金额。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "刷单返利诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SERVICE_REFUND",
+    "scam_id": "scam_fake_customer_service",
+    "feature_name": "冒充客服退款理赔",
+    "keywords": [
+      "客服退款",
+      "快递理赔",
+      "售后",
+      "取消会员",
+      "百万保障"
+    ],
+    "risk_weight": 30,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "冒充客服以退款理赔为由发起联系，是常见诈骗入口。",
+    "evidence_extract_hint": "提取客服身份和退款理赔理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充客服诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SERVICE_SCREEN",
+    "scam_id": "scam_fake_customer_service",
+    "feature_name": "屏幕共享",
+    "keywords": [
+      "屏幕共享",
+      "共享屏幕",
+      "会议软件",
+      "视频会议"
+    ],
+    "risk_weight": 45,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "客服要求屏幕共享会暴露验证码、银行卡和支付页面。",
+    "evidence_extract_hint": "提取软件名、会议号和共享状态。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充客服诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SERVICE_CODE",
+    "scam_id": "scam_fake_customer_service",
+    "feature_name": "索要验证码",
+    "keywords": [
+      "验证码",
+      "短信码",
+      "动态码",
+      "登录码",
+      "支付码"
+    ],
+    "risk_weight": 45,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "验证码等同于账户或支付授权，不能提供给任何人。",
+    "evidence_extract_hint": "提取验证码用途和是否已发送。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充客服诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SERVICE_REMOTE",
+    "scam_id": "scam_fake_customer_service",
+    "feature_name": "远程控制",
+    "keywords": [
+      "远程控制",
+      "远程协助",
+      "控制手机",
+      "控制电脑"
+    ],
+    "risk_weight": 45,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "远程控制可能直接操作用户设备和支付App。",
+    "evidence_extract_hint": "提取远程软件和授权状态。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充客服诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SERVICE_LINK",
+    "scam_id": "scam_fake_customer_service",
+    "feature_name": "点击陌生链接",
+    "keywords": [
+      "链接",
+      "网址",
+      "二维码",
+      "账户验证"
+    ],
+    "risk_weight": 25,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "冒充客服常用链接收集账号、银行卡或验证码。",
+    "evidence_extract_hint": "提取链接或二维码来源。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充客服诈骗"
+  },
+  {
+    "feature_id": "FEATURE_POLICE_IDENTITY",
+    "scam_id": "scam_fake_police",
+    "feature_name": "冒充公检法",
+    "keywords": [
+      "公安",
+      "警察",
+      "检察院",
+      "法院",
+      "公检法"
+    ],
+    "risk_weight": 40,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "公检法机关不会通过电话要求转账或远程办案。",
+    "evidence_extract_hint": "提取自称机关和人员身份。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充公检法诈骗"
+  },
+  {
+    "feature_id": "FEATURE_POLICE_SAFE_ACCOUNT",
+    "scam_id": "scam_fake_police",
+    "feature_name": "安全账户",
+    "keywords": [
+      "安全账户",
+      "资金清查",
+      "资金审查",
+      "转到指定账户"
+    ],
+    "risk_weight": 50,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "不存在个人转账自证清白或安全账户核查。",
+    "evidence_extract_hint": "提取收款账户和转账理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充公检法诈骗"
+  },
+  {
+    "feature_id": "FEATURE_POLICE_THREAT",
+    "scam_id": "scam_fake_police",
+    "feature_name": "涉案恐吓",
+    "keywords": [
+      "涉案",
+      "洗钱",
+      "通缉",
+      "逮捕",
+      "冻结银行卡"
+    ],
+    "risk_weight": 30,
+    "stage": "建立信任阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "制造恐慌会迫使用户按骗子指令行动。",
+    "evidence_extract_hint": "提取威胁话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充公检法诈骗"
+  },
+  {
+    "feature_id": "FEATURE_POLICE_SECRET",
+    "scam_id": "scam_fake_police",
+    "feature_name": "要求保密",
+    "keywords": [
+      "不要告诉别人",
+      "保密",
+      "不能报警",
+      "别告诉家人"
+    ],
+    "risk_weight": 30,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "要求保密是阻断外界劝阻和证据保存的典型信号。",
+    "evidence_extract_hint": "提取保密要求。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充公检法诈骗"
+  },
+  {
+    "feature_id": "FEATURE_POLICE_SCREEN",
+    "scam_id": "scam_fake_police",
+    "feature_name": "屏幕共享",
+    "keywords": [
+      "屏幕共享",
+      "会议软件",
+      "远程会议"
+    ],
+    "risk_weight": 45,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "冒充公检法要求共享屏幕会进一步控制用户操作。",
+    "evidence_extract_hint": "提取会议软件和共享状态。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充公检法诈骗"
+  },
+  {
+    "feature_id": "FEATURE_INVEST_TEACHER",
+    "scam_id": "scam_fake_investment",
+    "feature_name": "投资老师带单",
+    "keywords": [
+      "老师带单",
+      "导师",
+      "内部消息",
+      "带我投资"
+    ],
+    "risk_weight": 30,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "所谓老师带单和内部消息常用于包装虚假投资。",
+    "evidence_extract_hint": "提取老师身份和投资项目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "虚假投资理财诈骗"
+  },
+  {
+    "feature_id": "FEATURE_INVEST_HIGH_RETURN",
+    "scam_id": "scam_fake_investment",
+    "feature_name": "高收益诱导",
+    "keywords": [
+      "高收益",
+      "稳赚",
+      "保本",
+      "翻倍",
+      "无风险"
+    ],
+    "risk_weight": 35,
+    "stage": "建立信任阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "高收益、保本、无风险承诺不符合正常投资规律。",
+    "evidence_extract_hint": "提取收益承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "虚假投资理财诈骗"
+  },
+  {
+    "feature_id": "FEATURE_INVEST_PLATFORM",
+    "scam_id": "scam_fake_investment",
+    "feature_name": "陌生投资平台",
+    "keywords": [
+      "投资App",
+      "交易平台",
+      "虚拟币平台",
+      "陌生平台"
+    ],
+    "risk_weight": 35,
+    "stage": "下载陌生 App 阶段",
+    "intervention_goal": "stop_app_install",
+    "explanation": "陌生投资平台可能由诈骗团伙控制后台数据。",
+    "evidence_extract_hint": "提取平台或App名称。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "虚假投资理财诈骗"
+  },
+  {
+    "feature_id": "FEATURE_INVEST_WITHDRAW_BLOCKED",
+    "scam_id": "scam_fake_investment",
+    "feature_name": "无法提现",
+    "keywords": [
+      "不能提现",
+      "提现失败",
+      "账户冻结",
+      "风控"
+    ],
+    "risk_weight": 45,
+    "stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "虚假平台常用提现失败诱导继续交税费和保证金。",
+    "evidence_extract_hint": "提取提现失败提示。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "虚假投资理财诈骗"
+  },
+  {
+    "feature_id": "FEATURE_INVEST_TAX",
+    "scam_id": "scam_fake_investment",
+    "feature_name": "要求缴纳解冻费",
+    "keywords": [
+      "税费",
+      "保证金",
+      "解冻费",
+      "认证金"
+    ],
+    "risk_weight": 40,
+    "stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "为提现继续交费是虚假投资平台扩大损失的常见方式。",
+    "evidence_extract_hint": "提取费用名目和金额。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "虚假投资理财诈骗"
+  },
+  {
+    "feature_id": "FEATURE_LOAN_PRE_FEE",
+    "scam_id": "scam_fake_loan",
+    "feature_name": "贷款前收费",
+    "keywords": [
+      "保证金",
+      "包装费",
+      "会员费",
+      "资料费",
+      "刷流水"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "正规贷款不会在放款前要求先交保证金或刷流水。",
+    "evidence_extract_hint": "提取收费名目和放款承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "网络贷款诈骗"
+  },
+  {
+    "feature_id": "FEATURE_LOAN_FREEZE",
+    "scam_id": "scam_fake_loan",
+    "feature_name": "要求缴纳解冻费",
+    "keywords": [
+      "银行卡填错",
+      "账户冻结",
+      "解冻费",
+      "认证费"
+    ],
+    "risk_weight": 45,
+    "stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以银行卡填错、账户冻结要求解冻费，是网络贷款诈骗常见套路。",
+    "evidence_extract_hint": "提取冻结理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "网络贷款诈骗"
+  },
+  {
+    "feature_id": "FEATURE_LOAN_APP",
+    "scam_id": "scam_fake_loan",
+    "feature_name": "诱导下载陌生APP",
+    "keywords": [
+      "贷款App",
+      "下载App",
+      "安装软件",
+      "贷款软件"
+    ],
+    "risk_weight": 35,
+    "stage": "下载陌生 App 阶段",
+    "intervention_goal": "stop_app_install",
+    "explanation": "陌生贷款App可能收集隐私并诱导缴费。",
+    "evidence_extract_hint": "提取App名称。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "网络贷款诈骗"
+  },
+  {
+    "feature_id": "FEATURE_LOAN_ID_BANK",
+    "scam_id": "scam_fake_loan",
+    "feature_name": "索要银行卡或身份信息",
+    "keywords": [
+      "身份证",
+      "银行卡",
+      "人脸识别",
+      "账号密码"
+    ],
+    "risk_weight": 35,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "过度索要身份和银行卡信息会带来账户和身份风险。",
+    "evidence_extract_hint": "提取已提交的信息种类。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "网络贷款诈骗"
+  },
+  {
+    "feature_id": "FEATURE_LOAN_FAST",
+    "scam_id": "scam_fake_loan",
+    "feature_name": "快速放款诱导",
+    "keywords": [
+      "秒放款",
+      "低门槛",
+      "无抵押",
+      "黑户可贷"
+    ],
+    "risk_weight": 20,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_app_install",
+    "explanation": "极低门槛和快速放款承诺常用于引流。",
+    "evidence_extract_hint": "提取贷款宣传话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "网络贷款诈骗"
+  },
+  {
+    "feature_id": "FEATURE_PHISH_LINK",
+    "scam_id": "scam_phishing_link",
+    "feature_name": "点击陌生链接",
+    "keywords": [
+      "链接",
+      "网址",
+      "二维码",
+      "http",
+      "https"
+    ],
+    "risk_weight": 30,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "陌生链接和二维码可能指向钓鱼页面。",
+    "evidence_extract_hint": "提取URL或二维码来源。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "钓鱼链接诈骗"
+  },
+  {
+    "feature_id": "FEATURE_PHISH_BANK",
+    "scam_id": "scam_phishing_link",
+    "feature_name": "索要银行卡或身份信息",
+    "keywords": [
+      "银行卡",
+      "身份证",
+      "实名信息",
+      "人脸识别"
+    ],
+    "risk_weight": 40,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "钓鱼页面常诱导填写银行卡、身份证和实名信息。",
+    "evidence_extract_hint": "提取页面要求填写的信息。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "钓鱼链接诈骗"
+  },
+  {
+    "feature_id": "FEATURE_PHISH_CODE",
+    "scam_id": "scam_phishing_link",
+    "feature_name": "索要验证码",
+    "keywords": [
+      "验证码",
+      "短信码",
+      "动态码"
+    ],
+    "risk_weight": 45,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "在陌生页面输入验证码可能导致账户被盗或资金转出。",
+    "evidence_extract_hint": "提取验证码用途。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "钓鱼链接诈骗"
+  },
+  {
+    "feature_id": "FEATURE_PHISH_FAKE_DOMAIN",
+    "scam_id": "scam_phishing_link",
+    "feature_name": "仿冒异常域名",
+    "keywords": [
+      "login",
+      "verify",
+      "security",
+      ".top",
+      ".xyz",
+      ".vip"
+    ],
+    "risk_weight": 25,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "异常字段或域名后缀可作为钓鱼风险参考。",
+    "evidence_extract_hint": "提取域名。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "钓鱼链接诈骗"
+  },
+  {
+    "feature_id": "FEATURE_PHISH_APK",
+    "scam_id": "scam_phishing_link",
+    "feature_name": "诱导下载陌生APP",
+    "keywords": [
+      "下载APK",
+      "安装包",
+      "安全控件",
+      "认证App"
+    ],
+    "risk_weight": 35,
+    "stage": "下载陌生 App 阶段",
+    "intervention_goal": "stop_app_install",
+    "explanation": "钓鱼页面诱导安装未知程序可能带来设备和账户风险。",
+    "evidence_extract_hint": "提取下载链接和安装包名称。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "钓鱼链接诈骗"
+  },
+  {
+    "feature_id": "FEATURE_AI_VIDEO",
+    "scam_id": "scam_ai_face_family",
+    "feature_name": "AI换脸冒充",
+    "keywords": [
+      "AI换脸",
+      "视频通话",
+      "声音很像",
+      "脸很像"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "视频或声音相似不能直接证明身份。",
+    "evidence_extract_hint": "提取视频或声音相似描述。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "AI换脸冒充熟人诈骗"
+  },
+  {
+    "feature_id": "FEATURE_AI_BORROW",
+    "scam_id": "scam_ai_face_family",
+    "feature_name": "冒充熟人借钱",
+    "keywords": [
+      "朋友借钱",
+      "亲友借钱",
+      "急用钱",
+      "借钱"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "冒充熟人提出借款是转账前高危场景。",
+    "evidence_extract_hint": "提取冒充对象和借款理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "AI换脸冒充熟人诈骗"
+  },
+  {
+    "feature_id": "FEATURE_AI_SECRET",
+    "scam_id": "scam_ai_face_family",
+    "feature_name": "要求保密催促",
+    "keywords": [
+      "不要告诉别人",
+      "马上转",
+      "很急",
+      "急用"
+    ],
+    "risk_weight": 25,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "催促和保密会阻止用户通过其他渠道核验身份。",
+    "evidence_extract_hint": "提取催促话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "AI换脸冒充熟人诈骗"
+  },
+  {
+    "feature_id": "FEATURE_AI_ACCOUNT",
+    "scam_id": "scam_ai_face_family",
+    "feature_name": "非本人账户收款",
+    "keywords": [
+      "转到这个账户",
+      "帮别人收",
+      "不是本人账户"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "熟人借款却要求转入陌生账户风险很高。",
+    "evidence_extract_hint": "提取收款账户归属。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "AI换脸冒充熟人诈骗"
+  },
+  {
+    "feature_id": "FEATURE_AI_NO_VERIFY",
+    "scam_id": "scam_ai_face_family",
+    "feature_name": "拒绝二次核验",
+    "keywords": [
+      "不方便电话",
+      "别打电话",
+      "先转再说"
+    ],
+    "risk_weight": 30,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "拒绝通过原手机号或共同联系人核验，是冒充熟人诈骗信号。",
+    "evidence_extract_hint": "提取拒绝核验理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "AI换脸冒充熟人诈骗"
+  },
+  {
+    "feature_id": "FEATURE_ACQ_NEW_ACCOUNT",
+    "scam_id": "scam_acquaintance_borrow",
+    "feature_name": "熟人新账号联系",
+    "keywords": [
+      "新账号",
+      "换号了",
+      "领导新加我",
+      "同事新号"
+    ],
+    "risk_weight": 25,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "熟人突然使用新账号联系需要二次核验。",
+    "evidence_extract_hint": "提取新账号来源。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充领导或熟人借钱诈骗"
+  },
+  {
+    "feature_id": "FEATURE_ACQ_BORROW",
+    "scam_id": "scam_acquaintance_borrow",
+    "feature_name": "冒充熟人借钱",
+    "keywords": [
+      "借钱",
+      "垫付",
+      "代付",
+      "周转"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "熟人借款、代付、周转必须通过原渠道核验。",
+    "evidence_extract_hint": "提取金额和理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充领导或熟人借钱诈骗"
+  },
+  {
+    "feature_id": "FEATURE_ACQ_NO_CALL",
+    "scam_id": "scam_acquaintance_borrow",
+    "feature_name": "不方便电话核实",
+    "keywords": [
+      "不方便电话",
+      "别打电话",
+      "开会",
+      "信号不好"
+    ],
+    "risk_weight": 30,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "不让电话核实是冒充熟人诈骗常见阻断核验手段。",
+    "evidence_extract_hint": "提取拒绝核验话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充领导或熟人借钱诈骗"
+  },
+  {
+    "feature_id": "FEATURE_ACQ_URGENT",
+    "scam_id": "scam_acquaintance_borrow",
+    "feature_name": "要求保密催促",
+    "keywords": [
+      "很急",
+      "马上转",
+      "不要告诉别人",
+      "急用"
+    ],
+    "risk_weight": 25,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "紧迫感会压缩用户核验时间。",
+    "evidence_extract_hint": "提取催促程度。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充领导或熟人借钱诈骗"
+  },
+  {
+    "feature_id": "FEATURE_ACQ_ACCOUNT",
+    "scam_id": "scam_acquaintance_borrow",
+    "feature_name": "非本人账户收款",
+    "keywords": [
+      "转到别人账户",
+      "收款人不是他",
+      "公司账户",
+      "私人账户"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "收款账户与熟人身份不一致必须停止转账。",
+    "evidence_extract_hint": "提取收款账户和姓名。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "冒充领导或熟人借钱诈骗"
+  },
+  {
+    "feature_id": "FEATURE_CODE_REQUEST",
+    "scam_id": "scam_code_account_theft",
+    "feature_name": "索要验证码",
+    "keywords": [
+      "验证码",
+      "短信码",
+      "动态码",
+      "登录码",
+      "支付码"
+    ],
+    "risk_weight": 45,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "验证码通常对应登录、绑卡、支付或找回密码授权，不能提供给任何人。",
+    "evidence_extract_hint": "提取对方索要验证码的理由和平台。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "验证码/账户盗刷诈骗"
+  },
+  {
+    "feature_id": "FEATURE_CODE_SENT",
+    "scam_id": "scam_code_account_theft",
+    "feature_name": "已泄露验证码",
+    "keywords": [
+      "已经发了验证码",
+      "告诉他验证码",
+      "填了验证码",
+      "验证码给了"
+    ],
+    "risk_weight": 55,
+    "stage": "已损失阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "验证码已泄露时应立即做账户保护、改密、解绑银行卡或冻结账户。",
+    "evidence_extract_hint": "提取验证码是否已发送和涉及平台。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "验证码/账户盗刷诈骗"
+  },
+  {
+    "feature_id": "FEATURE_CODE_FAKE_VERIFY",
+    "scam_id": "scam_code_account_theft",
+    "feature_name": "冒充核验身份",
+    "keywords": [
+      "身份核验",
+      "安全认证",
+      "账户验证",
+      "取消扣费",
+      "退款验证"
+    ],
+    "risk_weight": 30,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "骗子常把验证码包装成身份核验或退款验证。",
+    "evidence_extract_hint": "提取验证码用途包装话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "验证码/账户盗刷诈骗"
+  },
+  {
+    "feature_id": "FEATURE_CODE_PAYMENT_PAGE",
+    "scam_id": "scam_code_account_theft",
+    "feature_name": "支付或绑卡授权",
+    "keywords": [
+      "支付授权",
+      "绑卡",
+      "银行卡验证",
+      "免密支付",
+      "扣款"
+    ],
+    "risk_weight": 40,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "支付、绑卡或免密授权场景里的验证码风险尤其高。",
+    "evidence_extract_hint": "提取是否涉及支付、绑卡或扣款。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "验证码/账户盗刷诈骗"
+  },
+  {
+    "feature_id": "FEATURE_CODE_ACCOUNT_ABNORMAL",
+    "scam_id": "scam_code_account_theft",
+    "feature_name": "账户异常恐吓",
+    "keywords": [
+      "账户异常",
+      "风控",
+      "冻结",
+      "涉嫌违规",
+      "风险解除"
+    ],
+    "risk_weight": 25,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "账户异常恐吓常用于诱导用户提供验证码完成控制。",
+    "evidence_extract_hint": "提取异常或冻结理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "验证码/账户盗刷诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SCREEN_SHARE_ACTIVE",
+    "scam_id": "scam_screen_remote_control",
+    "feature_name": "屏幕共享",
+    "keywords": [
+      "屏幕共享",
+      "共享屏幕",
+      "开屏幕",
+      "会议共享"
+    ],
+    "risk_weight": 45,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "屏幕共享会暴露验证码、支付页面、银行卡和操作步骤。",
+    "evidence_extract_hint": "提取是否正在共享屏幕和会议软件名称。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "屏幕共享/远程控制诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SCREEN_REMOTE_CONTROL",
+    "scam_id": "scam_screen_remote_control",
+    "feature_name": "远程控制",
+    "keywords": [
+      "远程控制",
+      "远程协助",
+      "控制手机",
+      "控制电脑",
+      "辅助功能"
+    ],
+    "risk_weight": 50,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "远程控制可能让对方直接操作设备完成转账或授权。",
+    "evidence_extract_hint": "提取已授权的软件和权限。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "屏幕共享/远程控制诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SCREEN_MEETING_APP",
+    "scam_id": "scam_screen_remote_control",
+    "feature_name": "诱导下载会议软件",
+    "keywords": [
+      "会议软件",
+      "视频会议",
+      "腾讯会议",
+      "Zoom",
+      "会议号"
+    ],
+    "risk_weight": 35,
+    "stage": "下载陌生 App 阶段",
+    "intervention_goal": "stop_app_install",
+    "explanation": "诈骗分子常借会议软件引导共享屏幕或远程控制。",
+    "evidence_extract_hint": "提取会议软件、会议号和对方身份。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "屏幕共享/远程控制诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SCREEN_PAYMENT_VIEW",
+    "scam_id": "scam_screen_remote_control",
+    "feature_name": "要求打开支付银行页面",
+    "keywords": [
+      "打开银行App",
+      "打开支付宝",
+      "打开微信支付",
+      "看余额",
+      "查看银行卡"
+    ],
+    "risk_weight": 45,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "共享屏幕时打开支付或银行页面会暴露账户和资金信息。",
+    "evidence_extract_hint": "提取对方要求打开的页面。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "屏幕共享/远程控制诈骗"
+  },
+  {
+    "feature_id": "FEATURE_SCREEN_CODE_VISIBLE",
+    "scam_id": "scam_screen_remote_control",
+    "feature_name": "屏幕暴露验证码",
+    "keywords": [
+      "验证码给他看",
+      "短信给他看",
+      "验证码页面",
+      "短信内容"
+    ],
+    "risk_weight": 50,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "共享屏幕下验证码即使没有主动发送，也可能被对方看到。",
+    "evidence_extract_hint": "提取验证码是否在共享时出现。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "final_structured_kb_2026_06_05",
+    "fraud_type": "屏幕共享/远程控制诈骗"
+  },
+  {
+    "feature_id": "FEAT_GAME_001",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "私下游戏交易",
+    "keywords": [
+      "游戏交易",
+      "游戏装备",
+      "游戏的装备",
+      "游戏账号",
+      "皮肤交易",
+      "点券",
+      "代练"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "对方把游戏装备、账号、皮肤或点券交易转到平台外处理。",
+    "evidence_extract_hint": "提取游戏资产类型、交易平台、是否脱离平台。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_GAME_002",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "虚拟资产已交付",
+    "keywords": [
+      "装备给他了",
+      "装备给了",
+      "已经都给",
+      "都给他了",
+      "游戏装备给了",
+      "账号给他了",
+      "皮肤给他了",
+      "交给他了"
+    ],
+    "risk_weight": 55,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "用户已把游戏装备、账号或其他虚拟资产交给对方，按财产损失处理。",
+    "evidence_extract_hint": "提取已交付的资产名称、数量和估值。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_GAME_003",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "交易对象失联",
+    "keywords": [
+      "失联",
+      "拉黑",
+      "不回消息",
+      "删好友",
+      "联系不上",
+      "跑路"
+    ],
+    "risk_weight": 45,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "收取资产或钱款后失联是游戏交易诈骗的高危后果。",
+    "evidence_extract_hint": "提取失联、拉黑、删好友等原话。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_GAME_004",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "高价值虚拟资产",
+    "keywords": [
+      "价值20w",
+      "20w",
+      "20万",
+      "十万",
+      "几万",
+      "高价值",
+      "价值"
+    ],
+    "risk_weight": 30,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "虚拟资产价值较高，需要保存估值、交易记录和账号归属证据。",
+    "evidence_extract_hint": "提取用户自述估值。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_GAME_005",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "低价代充装备诱导",
+    "keywords": [
+      "低价代充",
+      "低价皮肤",
+      "半价点券",
+      "内部点券",
+      "便宜充值"
+    ],
+    "risk_weight": 30,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "低价代充和内部渠道常用于引导平台外付款或套取账号。",
+    "evidence_extract_hint": "提取低价、内部渠道等宣传词。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_GAME_006",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "交付虚拟资产要求",
+    "keywords": [
+      "先给他验货",
+      "先给装备",
+      "先交装备",
+      "先发账号",
+      "先给账号",
+      "验货"
+    ],
+    "risk_weight": 42,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "要求先交付虚拟资产或账号再付款，容易导致资产直接被骗走。",
+    "evidence_extract_hint": "提取对方要求先交付的资产。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_GAME_007",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "游戏账号密码索取",
+    "keywords": [
+      "账号密码",
+      "验号",
+      "先给账号",
+      "登录游戏账号",
+      "扫码登录"
+    ],
+    "risk_weight": 40,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "要求账号密码、扫码登录或验号可能导致账号被盗。",
+    "evidence_extract_hint": "提取对方索要的账号、密码、登录方式。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CAMPUS_FEE_001",
+    "scam_id": "scam_campus_fee_impersonation",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "feature_name": "冒充老师辅导员",
+    "keywords": [
+      "老师",
+      "辅导员",
+      "班主任",
+      "班干部",
+      "家委",
+      "教务"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "利用校园身份降低学生和家长警惕。",
+    "evidence_extract_hint": "提取对方自称身份。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CAMPUS_FEE_002",
+    "scam_id": "scam_campus_fee_impersonation",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "feature_name": "班级费用名目",
+    "keywords": [
+      "班费",
+      "资料费",
+      "考试费",
+      "补课费",
+      "教材费",
+      "报名费"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "用常见校园收费项目包装转账请求。",
+    "evidence_extract_hint": "提取收费名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CAMPUS_FEE_003",
+    "scam_id": "scam_campus_fee_impersonation",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "feature_name": "群内扫码缴费",
+    "keywords": [
+      "扫码缴费",
+      "收款码",
+      "二维码",
+      "进群扫码",
+      "群收款"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "陌生二维码可能绕开学校正规缴费渠道。",
+    "evidence_extract_hint": "提取二维码、群名和收款主体。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CAMPUS_FEE_004",
+    "scam_id": "scam_campus_fee_impersonation",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "feature_name": "催促限时缴费",
+    "keywords": [
+      "今天截止",
+      "马上交",
+      "名额有限",
+      "逾期不收",
+      "统一缴费"
+    ],
+    "risk_weight": 20,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "制造紧迫感降低核验意愿。",
+    "evidence_extract_hint": "提取催促语句。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CAMPUS_FEE_005",
+    "scam_id": "scam_campus_fee_impersonation",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "feature_name": "拒绝官方核验",
+    "keywords": [
+      "不要打电话",
+      "别问老师",
+      "群里统一",
+      "直接转",
+      "不能走学校系统"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "拒绝电话、当面或学校系统核验是高危信号。",
+    "evidence_extract_hint": "提取拒绝核验话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_JOB_001",
+    "scam_id": "scam_job_internship_recruitment",
+    "fraud_type": "求职实习招聘诈骗",
+    "feature_name": "轻松高薪诱导",
+    "keywords": [
+      "轻松高薪",
+      "日结",
+      "高薪兼职",
+      "无需经验",
+      "在家办公",
+      "轻松赚钱"
+    ],
+    "risk_weight": 25,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "用不合理高薪吸引求职者。",
+    "evidence_extract_hint": "提取招聘承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_JOB_002",
+    "scam_id": "scam_job_internship_recruitment",
+    "fraud_type": "求职实习招聘诈骗",
+    "feature_name": "入职前收费",
+    "keywords": [
+      "押金",
+      "服装费",
+      "培训费",
+      "资料费",
+      "体检费",
+      "报名费"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "正规招聘通常不要求入职前向私人账户缴费。",
+    "evidence_extract_hint": "提取费用名目和收款主体。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_JOB_003",
+    "scam_id": "scam_job_internship_recruitment",
+    "fraud_type": "求职实习招聘诈骗",
+    "feature_name": "收费内推保offer",
+    "keywords": [
+      "内推保offer",
+      "保offer",
+      "内部名额",
+      "保录用",
+      "保实习",
+      "付费内推"
+    ],
+    "risk_weight": 38,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "收费内推和保录用承诺高度可疑。",
+    "evidence_extract_hint": "提取保录用承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_JOB_004",
+    "scam_id": "scam_job_internship_recruitment",
+    "fraud_type": "求职实习招聘诈骗",
+    "feature_name": "培训贷上岗",
+    "keywords": [
+      "培训贷",
+      "先贷款培训",
+      "分期培训",
+      "贷款上岗",
+      "就业后还款"
+    ],
+    "risk_weight": 45,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以求职名义绑定贷款可能造成债务风险。",
+    "evidence_extract_hint": "提取贷款平台、合同和培训机构。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_JOB_005",
+    "scam_id": "scam_job_internship_recruitment",
+    "fraud_type": "求职实习招聘诈骗",
+    "feature_name": "脱离招聘平台私聊",
+    "keywords": [
+      "加微信详聊",
+      "私下聊",
+      "不走平台",
+      "平台审核慢",
+      "先交材料"
+    ],
+    "risk_weight": 28,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "脱离正规招聘平台会弱化审查和追责。",
+    "evidence_extract_hint": "提取私聊渠道。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCHOLAR_001",
+    "scam_id": "scam_scholarship_subsidy_phishing",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "feature_name": "奖助学金异常通知",
+    "keywords": [
+      "助学金异常",
+      "助学金到账异常",
+      "奖学金异常",
+      "补贴到账异常",
+      "资助金",
+      "奖助学金"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "以资助资金异常为由制造焦虑。",
+    "evidence_extract_hint": "提取通知来源和金额。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCHOLAR_002",
+    "scam_id": "scam_scholarship_subsidy_phishing",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "feature_name": "学费退费话术",
+    "keywords": [
+      "学费可退",
+      "退学费",
+      "教育退费",
+      "培训退费",
+      "退费到账"
+    ],
+    "risk_weight": 34,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "退费名义常用于诱导填写账户信息。",
+    "evidence_extract_hint": "提取退费原因。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCHOLAR_003",
+    "scam_id": "scam_scholarship_subsidy_phishing",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "feature_name": "索要银行卡和身份信息",
+    "keywords": [
+      "银行卡",
+      "身份证",
+      "学生证",
+      "开户行",
+      "卡号"
+    ],
+    "risk_weight": 40,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "奖助学金或退费核验不应通过陌生链接收集敏感信息。",
+    "evidence_extract_hint": "提取被要求填写的信息。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCHOLAR_004",
+    "scam_id": "scam_scholarship_subsidy_phishing",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "feature_name": "补贴验证码索取",
+    "keywords": [
+      "验证码",
+      "短信码",
+      "动态码",
+      "支付码"
+    ],
+    "risk_weight": 45,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "验证码可能用于登录、转账或绑卡授权。",
+    "evidence_extract_hint": "提取验证码索取话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCHOLAR_005",
+    "scam_id": "scam_scholarship_subsidy_phishing",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "feature_name": "先转账激活补贴",
+    "keywords": [
+      "先转账激活",
+      "认证金",
+      "保证金",
+      "手续费",
+      "激活费"
+    ],
+    "risk_weight": 45,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "凡领取补贴前要求先交钱都应按诈骗处理。",
+    "evidence_extract_hint": "提取费用名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_EXAM_001",
+    "scam_id": "scam_exam_thesis_service",
+    "fraud_type": "考试考证论文服务诈骗",
+    "feature_name": "违规保过服务",
+    "keywords": [
+      "包过",
+      "保过",
+      "内部答案",
+      "内部名额",
+      "包上岸"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以违规承诺吸引转账，后续往往失联或加价。",
+    "evidence_extract_hint": "提取保过承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_EXAM_002",
+    "scam_id": "scam_exam_thesis_service",
+    "fraud_type": "考试考证论文服务诈骗",
+    "feature_name": "论文代写降重",
+    "keywords": [
+      "论文代写",
+      "查重降重",
+      "包查重",
+      "论文保过",
+      "代写保过"
+    ],
+    "risk_weight": 32,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "论文代写降重服务存在违规和被骗双重风险。",
+    "evidence_extract_hint": "提取服务内容。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_EXAM_003",
+    "scam_id": "scam_exam_thesis_service",
+    "fraud_type": "考试考证论文服务诈骗",
+    "feature_name": "先交定金尾款",
+    "keywords": [
+      "定金",
+      "尾款",
+      "订金",
+      "先付",
+      "预付款"
+    ],
+    "risk_weight": 38,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "先收定金后加价或失联是常见手法。",
+    "evidence_extract_hint": "提取付款节点。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_EXAM_004",
+    "scam_id": "scam_exam_thesis_service",
+    "fraud_type": "考试考证论文服务诈骗",
+    "feature_name": "继续加价保密费",
+    "keywords": [
+      "保密费",
+      "修改费",
+      "加急费",
+      "解锁费",
+      "二次收费"
+    ],
+    "risk_weight": 42,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以保密、加急、修改为名继续收费。",
+    "evidence_extract_hint": "提取新增费用。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_EXAM_005",
+    "scam_id": "scam_exam_thesis_service",
+    "fraud_type": "考试考证论文服务诈骗",
+    "feature_name": "拒绝正规合同平台",
+    "keywords": [
+      "私下交易",
+      "微信转账",
+      "不能走平台",
+      "删记录",
+      "不要告诉老师"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "拒绝正规渠道并要求保密是高危信号。",
+    "evidence_extract_hint": "提取交易方式。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SECONDHAND_001",
+    "scam_id": "scam_secondhand_ticket_trade",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "feature_name": "内部低价票货",
+    "keywords": [
+      "内部票",
+      "黄牛保真",
+      "低价出",
+      "低价手机",
+      "低价电脑",
+      "内部渠道"
+    ],
+    "risk_weight": 32,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "低价和内部渠道常用于引导私下交易。",
+    "evidence_extract_hint": "提取商品/票务类型。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SECONDHAND_002",
+    "scam_id": "scam_secondhand_ticket_trade",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "feature_name": "私下转账定金",
+    "keywords": [
+      "先付定金",
+      "订金",
+      "保证金",
+      "中介费",
+      "微信转账",
+      "支付宝转账"
+    ],
+    "risk_weight": 42,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "先转定金会失去平台担保。",
+    "evidence_extract_hint": "提取定金金额和收款账号。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SECONDHAND_003",
+    "scam_id": "scam_secondhand_ticket_trade",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "feature_name": "脱离担保平台",
+    "keywords": [
+      "不走平台",
+      "平台手续费高",
+      "加微信",
+      "私下交易",
+      "平台外"
+    ],
+    "risk_weight": 38,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "脱离平台交易是二手和票务诈骗高危信号。",
+    "evidence_extract_hint": "提取脱离平台话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SECONDHAND_004",
+    "scam_id": "scam_secondhand_ticket_trade",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "feature_name": "票务退款屏幕共享",
+    "keywords": [
+      "退票理赔",
+      "票务退款",
+      "屏幕共享",
+      "会议软件",
+      "远程协助"
+    ],
+    "risk_weight": 45,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "票务退款若要求屏幕共享，可能进一步盗刷账户。",
+    "evidence_extract_hint": "提取屏幕共享或退款话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SECONDHAND_005",
+    "scam_id": "scam_secondhand_ticket_trade",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "feature_name": "卖家催促抢名额",
+    "keywords": [
+      "马上付款",
+      "只剩一张",
+      "别人也要",
+      "限时",
+      "先款后发"
+    ],
+    "risk_weight": 24,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "催促抢名额会压缩核验时间。",
+    "evidence_extract_hint": "提取催促话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_RENTAL_001",
+    "scam_id": "scam_rental_deposit",
+    "fraud_type": "租房合租押金诈骗",
+    "feature_name": "低价房源诱导",
+    "keywords": [
+      "低价好房",
+      "远低于市场",
+      "急租",
+      "便宜房",
+      "特价房"
+    ],
+    "risk_weight": 28,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "明显低价房源可能是诱饵。",
+    "evidence_extract_hint": "提取房源价格和位置。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_RENTAL_002",
+    "scam_id": "scam_rental_deposit",
+    "fraud_type": "租房合租押金诈骗",
+    "feature_name": "未看房先付押金",
+    "keywords": [
+      "先交定金",
+      "先付押金",
+      "留房",
+      "占房",
+      "锁房"
+    ],
+    "risk_weight": 44,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "不看房先交押金是租房诈骗常见步骤。",
+    "evidence_extract_hint": "提取付款原因和金额。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_RENTAL_003",
+    "scam_id": "scam_rental_deposit",
+    "fraud_type": "租房合租押金诈骗",
+    "feature_name": "房东身份未核验",
+    "keywords": [
+      "房东在外地",
+      "没空看房",
+      "朋友代收",
+      "中介代收",
+      "看不了房"
+    ],
+    "risk_weight": 36,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "不能核验房东身份和房源权属时不应付款。",
+    "evidence_extract_hint": "提取房东解释。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_RENTAL_004",
+    "scam_id": "scam_rental_deposit",
+    "fraud_type": "租房合租押金诈骗",
+    "feature_name": "拒绝合同收据",
+    "keywords": [
+      "先不签合同",
+      "之后补合同",
+      "没收据",
+      "先转再说"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "拒绝合同收据会增加维权难度。",
+    "evidence_extract_hint": "提取合同/收据情况。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_RENTAL_005",
+    "scam_id": "scam_rental_deposit",
+    "fraud_type": "租房合租押金诈骗",
+    "feature_name": "平台外租房付款",
+    "keywords": [
+      "加微信",
+      "私下转账",
+      "平台外",
+      "微信付押金",
+      "支付宝押金"
+    ],
+    "risk_weight": 32,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "平台外付款缺少担保和投诉链路。",
+    "evidence_extract_hint": "提取支付渠道。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_NUDE_001",
+    "scam_id": "scam_nude_chat_extortion",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "feature_name": "诱导下载交友直播App",
+    "keywords": [
+      "下载直播App",
+      "交友App",
+      "裸聊App",
+      "安装包",
+      "陌生安装包"
+    ],
+    "risk_weight": 38,
+    "stage": "下载陌生 App 阶段",
+    "intervention_goal": "stop_app_install",
+    "explanation": "陌生安装包可能窃取通讯录或权限。",
+    "evidence_extract_hint": "提取App名称和下载来源。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_NUDE_002",
+    "scam_id": "scam_nude_chat_extortion",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "feature_name": "窃取通讯录威胁",
+    "keywords": [
+      "通讯录",
+      "发给家人",
+      "发给同学",
+      "群发",
+      "联系人"
+    ],
+    "risk_weight": 50,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "以通讯录威胁是裸聊敲诈典型手段。",
+    "evidence_extract_hint": "提取威胁对象。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_NUDE_003",
+    "scam_id": "scam_nude_chat_extortion",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "feature_name": "隐私视频威胁",
+    "keywords": [
+      "裸聊",
+      "偷拍视频",
+      "隐私视频",
+      "不雅视频",
+      "公开视频"
+    ],
+    "risk_weight": 48,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "以私密影像威胁转账属于紧急止损场景。",
+    "evidence_extract_hint": "提取威胁内容。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_NUDE_004",
+    "scam_id": "scam_nude_chat_extortion",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "feature_name": "要求转账删视频",
+    "keywords": [
+      "转账删视频",
+      "给钱删除",
+      "封口费",
+      "删视频费",
+      "不转就发"
+    ],
+    "risk_weight": 52,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "付款不会真正消除威胁，常导致连续勒索。",
+    "evidence_extract_hint": "提取要求金额和收款账号。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_NUDE_005",
+    "scam_id": "scam_nude_chat_extortion",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "feature_name": "已付款仍继续勒索",
+    "keywords": [
+      "又要钱",
+      "继续要",
+      "还要转",
+      "已经转了",
+      "再给"
+    ],
+    "risk_weight": 45,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "已付款后继续索要是二次勒索信号。",
+    "evidence_extract_hint": "提取已付款金额和新要求。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TWO_CARDS_001",
+    "scam_id": "scam_two_cards_rent",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "feature_name": "出租出借两卡",
+    "keywords": [
+      "出租银行卡",
+      "出借银行卡",
+      "出租电话卡",
+      "卖银行卡",
+      "卖电话卡",
+      "两卡"
+    ],
+    "risk_weight": 50,
+    "stage": "接触引流阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "出租出借实名卡可能被用于违法犯罪活动。",
+    "evidence_extract_hint": "提取出租/出借对象。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TWO_CARDS_002",
+    "scam_id": "scam_two_cards_rent",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "feature_name": "帮忙收款跑分",
+    "keywords": [
+      "跑分",
+      "帮忙收款",
+      "刷流水",
+      "过账",
+      "转一圈",
+      "代收款"
+    ],
+    "risk_weight": 52,
+    "stage": "接触引流阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "帮忙转移资金或跑分是高危违法风险信号。",
+    "evidence_extract_hint": "提取资金流转方式。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TWO_CARDS_003",
+    "scam_id": "scam_two_cards_rent",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "feature_name": "日结高薪诱导",
+    "keywords": [
+      "一天几百",
+      "日结",
+      "高佣金",
+      "躺赚",
+      "无风险兼职"
+    ],
+    "risk_weight": 28,
+    "stage": "接触引流阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "用高额日结诱导出租实名工具。",
+    "evidence_extract_hint": "提取佣金承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TWO_CARDS_004",
+    "scam_id": "scam_two_cards_rent",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "feature_name": "出租账号收款码",
+    "keywords": [
+      "收款码",
+      "微信账号",
+      "支付宝账号",
+      "实名账号",
+      "平台账号"
+    ],
+    "risk_weight": 42,
+    "stage": "接触引流阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "实名账号和收款码也可能被用于收赃转账。",
+    "evidence_extract_hint": "提取账号类型。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TWO_CARDS_005",
+    "scam_id": "scam_two_cards_rent",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "feature_name": "账户被冻结或涉案",
+    "keywords": [
+      "账户被冻结",
+      "涉案账户",
+      "公安冻结",
+      "银行卡冻结",
+      "资金被冻结"
+    ],
+    "risk_weight": 45,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "账户被冻结说明风险已经外溢，需要保留证据并按官方通知处理。",
+    "evidence_extract_hint": "提取冻结通知来源。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TRAVEL_001",
+    "scam_id": "scam_travel_ticket_refund",
+    "fraud_type": "机票火车票退改签诈骗",
+    "feature_name": "航班车票取消延误",
+    "keywords": [
+      "航班取消",
+      "航班延误",
+      "火车票退票",
+      "车次取消",
+      "退改签"
+    ],
+    "risk_weight": 34,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "用真实出行场景降低警惕。",
+    "evidence_extract_hint": "提取航班/车次信息。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TRAVEL_002",
+    "scam_id": "scam_travel_ticket_refund",
+    "fraud_type": "机票火车票退改签诈骗",
+    "feature_name": "下载App办理退票",
+    "keywords": [
+      "下载App",
+      "下载软件",
+      "退票App",
+      "理赔App",
+      "安装会议软件"
+    ],
+    "risk_weight": 42,
+    "stage": "下载陌生 App 阶段",
+    "intervention_goal": "stop_app_install",
+    "explanation": "正规退改签不需要下载陌生App或会议软件。",
+    "evidence_extract_hint": "提取App名称。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TRAVEL_003",
+    "scam_id": "scam_travel_ticket_refund",
+    "fraud_type": "机票火车票退改签诈骗",
+    "feature_name": "退改签屏幕共享",
+    "keywords": [
+      "屏幕共享",
+      "共享屏幕",
+      "远程协助",
+      "会议软件",
+      "我教你操作"
+    ],
+    "risk_weight": 52,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "屏幕共享会暴露验证码、支付页面和银行卡信息。",
+    "evidence_extract_hint": "提取屏幕共享话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TRAVEL_004",
+    "scam_id": "scam_travel_ticket_refund",
+    "fraud_type": "机票火车票退改签诈骗",
+    "feature_name": "退改签索要验证码银行卡",
+    "keywords": [
+      "验证码",
+      "银行卡",
+      "身份证",
+      "支付密码",
+      "动态码"
+    ],
+    "risk_weight": 48,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "退票理赔不应索要验证码或支付密码。",
+    "evidence_extract_hint": "提取索要信息。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_TRAVEL_005",
+    "scam_id": "scam_travel_ticket_refund",
+    "fraud_type": "机票火车票退改签诈骗",
+    "feature_name": "退改签先交手续费保证金",
+    "keywords": [
+      "手续费",
+      "保证金",
+      "认证金",
+      "刷流水",
+      "先转"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以理赔退票为由先收费是高危信号。",
+    "evidence_extract_hint": "提取费用名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_PRIZE_001",
+    "scam_id": "scam_fake_prize_gift",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "feature_name": "中奖免费礼品诱导",
+    "keywords": [
+      "中奖",
+      "免费领",
+      "抽中",
+      "福利礼品",
+      "盲盒",
+      "领手机"
+    ],
+    "risk_weight": 32,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "免费/中奖是常见诱饵。",
+    "evidence_extract_hint": "提取奖品和活动来源。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_PRIZE_002",
+    "scam_id": "scam_fake_prize_gift",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "feature_name": "中奖先交税费保证金",
+    "keywords": [
+      "税费",
+      "保证金",
+      "运费",
+      "手续费",
+      "激活费"
+    ],
+    "risk_weight": 45,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "中奖领奖前先付款是高危信号。",
+    "evidence_extract_hint": "提取费用名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_PRIZE_003",
+    "scam_id": "scam_fake_prize_gift",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "feature_name": "领奖填写银行卡验证码",
+    "keywords": [
+      "银行卡",
+      "验证码",
+      "身份证",
+      "支付密码",
+      "动态码"
+    ],
+    "risk_weight": 48,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "领奖不应索要验证码或支付密码。",
+    "evidence_extract_hint": "提取被要求填写的信息。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_PRIZE_004",
+    "scam_id": "scam_fake_prize_gift",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "feature_name": "抽奖陌生链接二维码",
+    "keywords": [
+      "陌生链接",
+      "二维码",
+      "领奖页面",
+      "填写资料",
+      "http"
+    ],
+    "risk_weight": 34,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "陌生领奖页面可能是钓鱼页面。",
+    "evidence_extract_hint": "提取链接或二维码。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_PRIZE_005",
+    "scam_id": "scam_fake_prize_gift",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "feature_name": "领奖名额限时催促",
+    "keywords": [
+      "限时领取",
+      "过期作废",
+      "名额有限",
+      "马上填",
+      "最后机会"
+    ],
+    "risk_weight": 22,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "限时催促降低核验意愿。",
+    "evidence_extract_hint": "提取催促话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CREDIT_001",
+    "scam_id": "scam_credit_repair_cancel_account",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "feature_name": "征信会员恐吓",
+    "keywords": [
+      "影响征信",
+      "征信异常",
+      "百万保障",
+      "会员扣费",
+      "不取消会扣费"
+    ],
+    "risk_weight": 40,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "用征信或自动扣费恐吓用户。",
+    "evidence_extract_hint": "提取恐吓理由。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CREDIT_002",
+    "scam_id": "scam_credit_repair_cancel_account",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "feature_name": "注销账户修复征信",
+    "keywords": [
+      "注销账户",
+      "注销校园贷",
+      "修复征信",
+      "关闭额度",
+      "清除记录"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "征信不能由陌生客服私下修复。",
+    "evidence_extract_hint": "提取要求操作。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CREDIT_003",
+    "scam_id": "scam_credit_repair_cancel_account",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "feature_name": "转账刷流水验证",
+    "keywords": [
+      "刷流水",
+      "转账验证",
+      "安全账户",
+      "资金清查",
+      "认证金"
+    ],
+    "risk_weight": 48,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "刷流水或安全账户是高危资金转移话术。",
+    "evidence_extract_hint": "提取转账理由。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CREDIT_004",
+    "scam_id": "scam_credit_repair_cancel_account",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "feature_name": "征信客服屏幕共享",
+    "keywords": [
+      "屏幕共享",
+      "会议软件",
+      "远程协助",
+      "共享屏幕",
+      "我教你关闭"
+    ],
+    "risk_weight": 50,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "屏幕共享会暴露账户和验证码。",
+    "evidence_extract_hint": "提取会议软件/共享要求。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CREDIT_005",
+    "scam_id": "scam_credit_repair_cancel_account",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "feature_name": "征信客服索要验证码",
+    "keywords": [
+      "验证码",
+      "短信码",
+      "动态码",
+      "支付密码"
+    ],
+    "risk_weight": 48,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "验证码等同账户授权。",
+    "evidence_extract_hint": "提取验证码话术。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ROMANCE_001",
+    "scam_id": "scam_romance_investment",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "feature_name": "情感关系建立",
+    "keywords": [
+      "网恋",
+      "对象",
+      "恋爱",
+      "交友",
+      "暧昧",
+      "每天关心"
+    ],
+    "risk_weight": 28,
+    "stage": "建立信任阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "先建立情感信任再谈钱是杀猪盘常见过程。",
+    "evidence_extract_hint": "提取关系建立方式。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ROMANCE_002",
+    "scam_id": "scam_romance_investment",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "feature_name": "引导投资博彩刷单",
+    "keywords": [
+      "带我投资",
+      "一起赚钱",
+      "博彩",
+      "虚拟币",
+      "刷单",
+      "平台赚钱"
+    ],
+    "risk_weight": 45,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "情感对象推荐投资博彩返利平台高度危险。",
+    "evidence_extract_hint": "提取平台名称和操作方式。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ROMANCE_003",
+    "scam_id": "scam_romance_investment",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "feature_name": "保本高收益承诺",
+    "keywords": [
+      "稳赚",
+      "内幕",
+      "高收益",
+      "保证赚钱",
+      "带单",
+      "老师"
+    ],
+    "risk_weight": 38,
+    "stage": "建立信任阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "保本高收益承诺不可信。",
+    "evidence_extract_hint": "提取收益承诺。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ROMANCE_004",
+    "scam_id": "scam_romance_investment",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "feature_name": "提现失败继续入金",
+    "keywords": [
+      "提现失败",
+      "账户冻结",
+      "税费",
+      "解冻费",
+      "继续入金",
+      "保证金"
+    ],
+    "risk_weight": 50,
+    "stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "提现失败后继续缴费是二次压榨信号。",
+    "evidence_extract_hint": "提取提现受阻和费用名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ROMANCE_005",
+    "scam_id": "scam_romance_investment",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "feature_name": "拒绝现实核验",
+    "keywords": [
+      "不视频",
+      "不见面",
+      "别告诉家人",
+      "保密",
+      "马上操作"
+    ],
+    "risk_weight": 32,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "拒绝线下核验并要求保密会增加风险。",
+    "evidence_extract_hint": "提取拒绝核验话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SERVICE_REFUND_001",
+    "scam_id": "scam_fake_customer_service",
+    "fraud_type": "冒充客服诈骗",
+    "feature_name": "快递商品退款理赔",
+    "keywords": [
+      "快递丢了",
+      "三倍赔付",
+      "商品质量问题",
+      "退款理赔",
+      "售后退款"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_click_link",
+    "explanation": "以退款理赔诱导进入非官方流程。",
+    "evidence_extract_hint": "提取退款/理赔原因。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SERVICE_REFUND_002",
+    "scam_id": "scam_fake_customer_service",
+    "fraud_type": "冒充客服诈骗",
+    "feature_name": "误开会员扣费恐吓",
+    "keywords": [
+      "误开会员",
+      "百万保障",
+      "自动扣费",
+      "不取消会扣费",
+      "关闭会员"
+    ],
+    "risk_weight": 38,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "用扣费恐吓催促用户操作。",
+    "evidence_extract_hint": "提取扣费名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SERVICE_REFUND_003",
+    "scam_id": "scam_fake_customer_service",
+    "fraud_type": "冒充客服诈骗",
+    "feature_name": "客服诱导屏幕共享",
+    "keywords": [
+      "屏幕共享",
+      "会议软件",
+      "共享屏幕",
+      "远程协助"
+    ],
+    "risk_weight": 50,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "退款客服要求屏幕共享是高危信号。",
+    "evidence_extract_hint": "提取会议软件/共享要求。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SERVICE_REFUND_004",
+    "scam_id": "scam_fake_customer_service",
+    "fraud_type": "冒充客服诈骗",
+    "feature_name": "客服索要验证码",
+    "keywords": [
+      "验证码",
+      "短信码",
+      "动态码",
+      "支付码"
+    ],
+    "risk_weight": 48,
+    "stage": "验证码索取阶段",
+    "intervention_goal": "stop_code_leak",
+    "explanation": "退款不需要验证码。",
+    "evidence_extract_hint": "提取验证码话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SERVICE_REFUND_005",
+    "scam_id": "scam_fake_customer_service",
+    "fraud_type": "冒充客服诈骗",
+    "feature_name": "客服要求先交钱",
+    "keywords": [
+      "保证金",
+      "手续费",
+      "认证金",
+      "解冻费",
+      "刷流水"
+    ],
+    "risk_weight": 45,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "正规退款不会要求先交钱。",
+    "evidence_extract_hint": "提取费用名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_AI_FACE_ENRICH_001",
+    "scam_id": "scam_ai_face_family",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "feature_name": "视频语音像本人",
+    "keywords": [
+      "视频通话",
+      "声音很像",
+      "脸很像",
+      "AI换脸",
+      "拟声"
+    ],
+    "risk_weight": 38,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "视频或声音相似不能作为唯一身份依据。",
+    "evidence_extract_hint": "提取视频/语音证据。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_AI_FACE_ENRICH_002",
+    "scam_id": "scam_ai_face_family",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "feature_name": "熟人紧急借钱",
+    "keywords": [
+      "急用钱",
+      "借钱",
+      "马上转",
+      "临时周转",
+      "帮我垫付"
+    ],
+    "risk_weight": 42,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "熟人视频借钱仍需二次核验。",
+    "evidence_extract_hint": "提取借款金额和理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_AI_FACE_ENRICH_003",
+    "scam_id": "scam_ai_face_family",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "feature_name": "要求保密转账",
+    "keywords": [
+      "不要告诉别人",
+      "保密",
+      "马上",
+      "别打电话",
+      "不方便说"
+    ],
+    "risk_weight": 30,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "要求保密和快速转账降低核验机会。",
+    "evidence_extract_hint": "提取保密话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_AI_FACE_ENRICH_004",
+    "scam_id": "scam_ai_face_family",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "feature_name": "拒绝原号码核实",
+    "keywords": [
+      "手机坏了",
+      "换号",
+      "不方便接电话",
+      "别打原号码",
+      "新号"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "拒绝原渠道核验是冒充熟人风险信号。",
+    "evidence_extract_hint": "提取拒绝核验原因。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_AI_FACE_ENRICH_005",
+    "scam_id": "scam_ai_face_family",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "feature_name": "熟人收款账户异常",
+    "keywords": [
+      "转到别人卡",
+      "朋友账户",
+      "第三方账户",
+      "收款码"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "转入陌生第三方账户应立即停止。",
+    "evidence_extract_hint": "提取收款账户主体。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ACQ_BORROW_ENRICH_001",
+    "scam_id": "scam_acquaintance_borrow",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "feature_name": "盗号冒充同学亲友",
+    "keywords": [
+      "同学借钱",
+      "室友借钱",
+      "好友借钱",
+      "QQ被盗",
+      "微信被盗"
+    ],
+    "risk_weight": 42,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "头像昵称和语气可被盗号者伪装。",
+    "evidence_extract_hint": "提取被冒充对象。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ACQ_BORROW_ENRICH_002",
+    "scam_id": "scam_acquaintance_borrow",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "feature_name": "突发急事借款",
+    "keywords": [
+      "出车祸",
+      "住院",
+      "手机坏了",
+      "急需转账",
+      "先垫一下"
+    ],
+    "risk_weight": 38,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "突发急事常用于催促转账。",
+    "evidence_extract_hint": "提取急事理由。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ACQ_BORROW_ENRICH_003",
+    "scam_id": "scam_acquaintance_borrow",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "feature_name": "拒绝电话视频核验",
+    "keywords": [
+      "不方便电话",
+      "别视频",
+      "开不了语音",
+      "信号不好",
+      "等会解释"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "拒绝二次核验是高危信号。",
+    "evidence_extract_hint": "提取拒绝核验话术。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ACQ_BORROW_ENRICH_004",
+    "scam_id": "scam_acquaintance_borrow",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "feature_name": "新账号冒充熟人",
+    "keywords": [
+      "新号",
+      "换号了",
+      "加我这个号",
+      "小号",
+      "临时号"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "新账号冒充熟人需要原渠道核实。",
+    "evidence_extract_hint": "提取新账号信息。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_ACQ_BORROW_ENRICH_005",
+    "scam_id": "scam_acquaintance_borrow",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "feature_name": "第三方收款",
+    "keywords": [
+      "转到朋友卡",
+      "老板账户",
+      "别人的码",
+      "代收",
+      "第三方账户"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "要求转入第三方账户应暂停。",
+    "evidence_extract_hint": "提取收款方。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCREEN_SHARE_ENRICH_001",
+    "scam_id": "scam_screen_remote_control",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "feature_name": "陌生人要求共享屏幕",
+    "keywords": [
+      "屏幕共享",
+      "共享屏幕",
+      "共享一下",
+      "我教你操作"
+    ],
+    "risk_weight": 50,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "屏幕共享会暴露验证码和支付页面。",
+    "evidence_extract_hint": "提取共享要求。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCREEN_SHARE_ENRICH_002",
+    "scam_id": "scam_screen_remote_control",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "feature_name": "远程协助控制设备",
+    "keywords": [
+      "远程控制",
+      "远程协助",
+      "控制手机",
+      "控制电脑"
+    ],
+    "risk_weight": 50,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "远程控制可能直接操作账户。",
+    "evidence_extract_hint": "提取远程工具。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCREEN_SHARE_ENRICH_003",
+    "scam_id": "scam_screen_remote_control",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "feature_name": "会议软件办理业务",
+    "keywords": [
+      "会议软件",
+      "腾讯会议",
+      "云会议",
+      "视频会议"
+    ],
+    "risk_weight": 40,
+    "stage": "下载陌生 App 阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "陌生业务要求会议软件很可疑。",
+    "evidence_extract_hint": "提取软件名。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCREEN_SHARE_ENRICH_004",
+    "scam_id": "scam_screen_remote_control",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "feature_name": "共享时打开支付银行",
+    "keywords": [
+      "打开银行",
+      "打开支付宝",
+      "打开微信支付",
+      "看验证码"
+    ],
+    "risk_weight": 50,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "共享时打开支付和验证码页面极高危。",
+    "evidence_extract_hint": "提取被要求打开的页面。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_SCREEN_SHARE_ENRICH_005",
+    "scam_id": "scam_screen_remote_control",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "feature_name": "屏幕共享绑定退款贷款",
+    "keywords": [
+      "退款",
+      "注销贷款",
+      "提升额度",
+      "取消会员",
+      "退票"
+    ],
+    "risk_weight": 40,
+    "stage": "屏幕共享阶段",
+    "intervention_goal": "stop_screen_share",
+    "explanation": "退款、贷款、退票场景绑定屏幕共享常见于诈骗。",
+    "evidence_extract_hint": "提取业务名目。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_GAME_008",
+    "scam_id": "scam_game_trade",
+    "fraud_type": "游戏交易诈骗",
+    "feature_name": "游戏交易保证金解冻费",
+    "keywords": [
+      "保证金",
+      "解冻费",
+      "手续费",
+      "中介费",
+      "担保费",
+      "认证金"
+    ],
+    "risk_weight": 42,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以担保、中介、解冻为名继续收费，是虚拟资产交易诈骗常见话术。",
+    "evidence_extract_hint": "提取费用名目和金额。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "feature_id": "FEAT_CROSS_BORDER_HIGH_PAY",
+    "scam_id": "scam_cross_border_high_salary",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "feature_name": "境外高薪诱导",
+    "keywords": [
+      "出国高工资",
+      "境外高薪",
+      "月入过万",
+      "包吃住",
+      "无需经验"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_contact",
+    "explanation": "用明显不合理的境外高薪吸引求职者脱离常规招聘渠道。",
+    "evidence_extract_hint": "提取薪资承诺、国家地区和招聘渠道。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_CROSS_BORDER_PRIVATE_CONTACT",
+    "scam_id": "scam_cross_border_high_salary",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "feature_name": "私下跨境联系",
+    "keywords": [
+      "加密聊天",
+      "私聊",
+      "不要告诉家人",
+      "熟人介绍",
+      "境外号码"
+    ],
+    "risk_weight": 30,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_contact",
+    "explanation": "要求私下联系和保密会削弱外部核验，是出境诱骗高危信号。",
+    "evidence_extract_hint": "提取联系软件、保密要求和介绍人身份。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_CROSS_BORDER_UPFRONT_FEE",
+    "scam_id": "scam_cross_border_high_salary",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "feature_name": "出境前收费",
+    "keywords": [
+      "签证费",
+      "路费",
+      "保证金",
+      "报名费",
+      "中介费"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以签证、路费、岗位保证等名义先收费，常用于持续控制或诈骗。",
+    "evidence_extract_hint": "提取费用名目和金额。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_CROSS_BORDER_ID_DOCS",
+    "scam_id": "scam_cross_border_high_salary",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "feature_name": "索要证件材料",
+    "keywords": [
+      "身份证",
+      "护照",
+      "银行卡",
+      "人脸识别",
+      "证件照"
+    ],
+    "risk_weight": 30,
+    "stage": "身份信息暴露阶段",
+    "intervention_goal": "stop_identity_exposure",
+    "explanation": "提前收集身份证、护照和银行卡可能导致身份冒用和控制风险。",
+    "evidence_extract_hint": "提取对方索要的证件和提交方式。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_CROSS_BORDER_ASSEMBLY",
+    "scam_id": "scam_cross_border_high_salary",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "feature_name": "边境集合出境",
+    "keywords": [
+      "边境集合",
+      "偷渡",
+      "过关",
+      "接应",
+      "护送"
+    ],
+    "risk_weight": 45,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "安排秘密集合或非正规出境可能伴随人身安全和强迫犯罪风险。",
+    "evidence_extract_hint": "提取集合地点、出行安排和同行人员。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_HEALTH_FREE_LECTURE",
+    "scam_id": "scam_elderly_health_product",
+    "fraud_type": "养老保健品诈骗",
+    "feature_name": "免费讲座义诊",
+    "keywords": [
+      "免费讲座",
+      "免费体检",
+      "专家义诊",
+      "健康讲座",
+      "送鸡蛋"
+    ],
+    "risk_weight": 25,
+    "stage": "接触引流阶段",
+    "intervention_goal": "verify_official",
+    "explanation": "用免费活动和赠品吸引老年人到场，是保健品诈骗常见入口。",
+    "evidence_extract_hint": "提取活动地点、主办方和赠品。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_HEALTH_CURE_CLAIM",
+    "scam_id": "scam_elderly_health_product",
+    "fraud_type": "养老保健品诈骗",
+    "feature_name": "夸大治疗功效",
+    "keywords": [
+      "包治百病",
+      "治癌",
+      "降糖降压",
+      "替代药物",
+      "根治"
+    ],
+    "risk_weight": 35,
+    "stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "explanation": "保健食品不得替代药品，宣称治疗疾病是明显风险信号。",
+    "evidence_extract_hint": "提取疗效承诺和疾病名称。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_HEALTH_FAKE_EXPERT",
+    "scam_id": "scam_elderly_health_product",
+    "fraud_type": "养老保健品诈骗",
+    "feature_name": "假专家背书",
+    "keywords": [
+      "院士",
+      "名医",
+      "专家推荐",
+      "内部产品",
+      "科研成果"
+    ],
+    "risk_weight": 30,
+    "stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "explanation": "冒用专家、医院或科研名义增强可信度。",
+    "evidence_extract_hint": "提取专家姓名、机构和证书。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_HEALTH_HIGH_PRICE_PREPAY",
+    "scam_id": "scam_elderly_health_product",
+    "fraud_type": "养老保健品诈骗",
+    "feature_name": "高价预存套餐",
+    "keywords": [
+      "预存",
+      "套餐",
+      "买十送十",
+      "限时优惠",
+      "会员价"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "现场高价预存和限时优惠会让老年人难以冷静核验。",
+    "evidence_extract_hint": "提取付款金额、套餐周期和收款方。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_HEALTH_HIDE_FAMILY",
+    "scam_id": "scam_elderly_health_product",
+    "fraud_type": "养老保健品诈骗",
+    "feature_name": "诱导隐瞒家人",
+    "keywords": [
+      "别告诉孩子",
+      "家人不懂",
+      "偷偷买",
+      "名额有限",
+      "今天必须定"
+    ],
+    "risk_weight": 30,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "要求隐瞒家人是阻断外部劝阻的典型话术。",
+    "evidence_extract_hint": "提取保密话术和催促方式。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_NATIONAL_PROJECT_NAME",
+    "scam_id": "scam_national_asset_project",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "feature_name": "国家项目包装",
+    "keywords": [
+      "国家项目",
+      "央企项目",
+      "扶贫款",
+      "共同富裕",
+      "内部名额"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "冒用国家机关或央企名义包装项目，增强可信度。",
+    "evidence_extract_hint": "提取项目名称和发起主体。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_NATIONAL_FAKE_DOC",
+    "scam_id": "scam_national_asset_project",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "feature_name": "伪造红头文件",
+    "keywords": [
+      "红头文件",
+      "授权书",
+      "证书",
+      "公章",
+      "批文"
+    ],
+    "risk_weight": 30,
+    "stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "explanation": "伪造公文、证书和印章是此类诈骗常见工具。",
+    "evidence_extract_hint": "提取文件名称、落款和编号。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_NATIONAL_UPFRONT_FEE",
+    "scam_id": "scam_national_asset_project",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "feature_name": "缴费领取补贴",
+    "keywords": [
+      "会员费",
+      "激活费",
+      "材料费",
+      "解冻费",
+      "手续费"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "让用户先缴小额费用领取大额资金，是核心高危信号。",
+    "evidence_extract_hint": "提取费用名目、金额和收款账户。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_NATIONAL_HUGE_RETURN",
+    "scam_id": "scam_national_asset_project",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "feature_name": "巨额分红承诺",
+    "keywords": [
+      "领几十万",
+      "分红",
+      "资产解冻",
+      "返利",
+      "补贴到账"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "承诺不合理巨额收益或补贴，常用于诱导缴费和拉人。",
+    "evidence_extract_hint": "提取收益金额和到账条件。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_NATIONAL_RECRUIT_DOWNLINE",
+    "scam_id": "scam_national_asset_project",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "feature_name": "拉人头扩散",
+    "keywords": [
+      "发展会员",
+      "拉人",
+      "团队",
+      "下线",
+      "推广奖励"
+    ],
+    "risk_weight": 30,
+    "stage": "建立信任阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "拉人头会扩大受害范围，也可能引发传销式扩散风险。",
+    "evidence_extract_hint": "提取拉人要求和奖励规则。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_MEDICARE_CARD_LENDING",
+    "scam_id": "scam_medical_insurance_fund",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "feature_name": "外借医保凭证",
+    "keywords": [
+      "医保卡借我",
+      "电子医保码",
+      "刷码",
+      "代刷",
+      "冒名就医"
+    ],
+    "risk_weight": 35,
+    "stage": "身份信息暴露阶段",
+    "intervention_goal": "stop_identity_exposure",
+    "explanation": "外借医保卡或医保码可能导致盗刷、骗保和个人责任风险。",
+    "evidence_extract_hint": "提取外借对象和使用场景。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_MEDICARE_CASHBACK",
+    "scam_id": "scam_medical_insurance_fund",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "feature_name": "刷医保返钱",
+    "keywords": [
+      "刷医保返钱",
+      "套现",
+      "返现",
+      "药店返钱",
+      "现金回收"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "医保个人账户不能用于违规套现，返钱诱导常伴随骗保。",
+    "evidence_extract_hint": "提取返钱比例和药店/诊所信息。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_MEDICARE_DRUG_RESALE",
+    "scam_id": "scam_medical_insurance_fund",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "feature_name": "倒卖医保药品",
+    "keywords": [
+      "收药",
+      "卖药",
+      "回收药品",
+      "慢病药",
+      "医保药倒卖"
+    ],
+    "risk_weight": 35,
+    "stage": "已损失阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "倒卖医保药品可能损害医保基金和个人用药安全。",
+    "evidence_extract_hint": "提取药品名称、数量和收购方。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_MEDICARE_FAKE_TREATMENT",
+    "scam_id": "scam_medical_insurance_fund",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "feature_name": "虚假诊疗购药",
+    "keywords": [
+      "虚假住院",
+      "虚假检查",
+      "挂床",
+      "假病历",
+      "空刷"
+    ],
+    "risk_weight": 40,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "虚假诊疗或购药是骗取医保基金的典型行为。",
+    "evidence_extract_hint": "提取医疗机构、诊疗项目和票据。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_MEDICARE_IDENTITY_LEAK",
+    "scam_id": "scam_medical_insurance_fund",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "feature_name": "医保身份信息泄露",
+    "keywords": [
+      "身份证",
+      "社保卡",
+      "医保账号",
+      "人脸认证",
+      "短信验证码"
+    ],
+    "risk_weight": 30,
+    "stage": "身份信息暴露阶段",
+    "intervention_goal": "stop_identity_exposure",
+    "explanation": "医保身份信息泄露可能被冒用就医、购药或盗刷。",
+    "evidence_extract_hint": "提取泄露信息类型和对方身份。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_VC_HIGH_COMMISSION",
+    "scam_id": "scam_virtual_currency_laundering",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "feature_name": "高佣金跑分",
+    "keywords": [
+      "高佣金",
+      "跑分",
+      "刷流水",
+      "日结",
+      "躺赚"
+    ],
+    "risk_weight": 35,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "用高佣金吸引用户提供账户或参与转账。",
+    "evidence_extract_hint": "提取佣金比例和任务要求。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_VC_ACCOUNT_LENDING",
+    "scam_id": "scam_virtual_currency_laundering",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "feature_name": "出借账户收付款",
+    "keywords": [
+      "银行卡",
+      "支付宝",
+      "微信收款",
+      "收款码",
+      "代收"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "出借账户或收款码可能帮助电诈资金转移。",
+    "evidence_extract_hint": "提取账户类型和收付款金额。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_VC_USDT_TRANSFER",
+    "scam_id": "scam_virtual_currency_laundering",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "feature_name": "虚拟币转移资金",
+    "keywords": [
+      "USDT",
+      "虚拟币",
+      "数字货币",
+      "钱包地址",
+      "链上转账"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "用虚拟货币转换资金可增加追赃难度，是洗钱跑分常见方式。",
+    "evidence_extract_hint": "提取币种、钱包地址和交易平台。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_VC_SOURCE_UNKNOWN",
+    "scam_id": "scam_virtual_currency_laundering",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "feature_name": "资金来源不明",
+    "keywords": [
+      "不用问来源",
+      "帮忙过账",
+      "临时周转",
+      "刷流水",
+      "客户款"
+    ],
+    "risk_weight": 35,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "资金来源解释不清时继续代收代付风险极高。",
+    "evidence_extract_hint": "提取对方对资金来源的解释。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_VC_ACCOUNT_FROZEN",
+    "scam_id": "scam_virtual_currency_laundering",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "feature_name": "账户被冻结",
+    "keywords": [
+      "银行卡冻结",
+      "支付宝冻结",
+      "司法冻结",
+      "止付",
+      "涉案账户"
+    ],
+    "risk_weight": 45,
+    "stage": "已损失阶段",
+    "intervention_goal": "call_police",
+    "explanation": "账户被冻结往往说明资金链条已被风控或司法机关关注。",
+    "evidence_extract_hint": "提取冻结平台、通知内容和涉案金额。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_LIVE_LOW_PRICE",
+    "scam_id": "scam_live_commerce_private_trade",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "feature_name": "明显低价诱导",
+    "keywords": [
+      "低价抢购",
+      "清仓",
+      "内部价",
+      "福利价",
+      "限时秒杀"
+    ],
+    "risk_weight": 25,
+    "stage": "接触引流阶段",
+    "intervention_goal": "verify_official",
+    "explanation": "明显低价和限时诱导会促使用户跳过核验。",
+    "evidence_extract_hint": "提取商品、价格差异和直播间名称。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_LIVE_PRIVATE_PAY",
+    "scam_id": "scam_live_commerce_private_trade",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "feature_name": "私下扫码付款",
+    "keywords": [
+      "扫码付款",
+      "微信转账",
+      "支付宝转账",
+      "私下付款",
+      "不走平台"
+    ],
+    "risk_weight": 40,
+    "stage": "资金转账前阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "脱离平台付款会失去订单、售后和支付保障。",
+    "evidence_extract_hint": "提取收款码、账户和付款理由。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_LIVE_OFF_PLATFORM_GROUP",
+    "scam_id": "scam_live_commerce_private_trade",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "feature_name": "引导私域下单",
+    "keywords": [
+      "加群",
+      "加客服微信",
+      "私域商城",
+      "小程序下单",
+      "群接龙"
+    ],
+    "risk_weight": 30,
+    "stage": "接触引流阶段",
+    "intervention_goal": "verify_official",
+    "explanation": "从平台直播间引流到私域交易，会降低平台监管和售后保障。",
+    "evidence_extract_hint": "提取群名、客服账号和下单入口。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_LIVE_NO_AFTERSALE",
+    "scam_id": "scam_live_commerce_private_trade",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "feature_name": "拒绝售后退款",
+    "keywords": [
+      "不退不换",
+      "售后拖延",
+      "客服失联",
+      "退款失败",
+      "补邮费"
+    ],
+    "risk_weight": 35,
+    "stage": "已损失阶段",
+    "intervention_goal": "preserve_evidence",
+    "explanation": "拒绝售后或拖延退款常见于货不对板和私域交易诈骗。",
+    "evidence_extract_hint": "提取售后沟通和退款记录。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEAT_LIVE_FAKE_AUTH",
+    "scam_id": "scam_live_commerce_private_trade",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "feature_name": "虚假授权背书",
+    "keywords": [
+      "官方授权",
+      "专柜同款",
+      "品牌尾货",
+      "正品保证",
+      "假一赔十"
+    ],
+    "risk_weight": 30,
+    "stage": "建立信任阶段",
+    "intervention_goal": "verify_official",
+    "explanation": "虚假授权和正品背书用于掩盖私下交易风险。",
+    "evidence_extract_hint": "提取授权证明和品牌信息。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "feature_id": "FEATURE_BRUSH_CONTINUE_ORDER",
+    "scam_id": "scam_brush_rebate",
+    "fraud_type": "刷单返利诈骗",
+    "feature_name": "要求继续补单",
+    "keywords": [
+      "继续补单",
+      "继续做单",
+      "连单",
+      "联单",
+      "任务没完成",
+      "补任务"
+    ],
+    "risk_weight": 40,
+    "stage": "提现受阻阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以任务未完成、连单或补单为由继续要求付款，是刷单返利升级信号。",
+    "evidence_extract_hint": "提取补单理由、订单金额和继续付款记录。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-08-02T00:00:00",
+    "updated_at": "2026-08-02T00:00:00",
+    "knowledge_version": "p0_behavior_rules_2026_08_02"
+  },
+  {
+    "feature_id": "FEATURE_SERVICE_IMPERSONATION",
+    "scam_id": "scam_fake_customer_service",
+    "fraud_type": "冒充客服诈骗",
+    "feature_name": "冒充客服",
+    "keywords": [
+      "自称客服",
+      "平台客服",
+      "快递客服",
+      "物流客服",
+      "电商客服",
+      "网店客服",
+      "退款理赔"
+    ],
+    "risk_weight": 30,
+    "stage": "接触引流阶段",
+    "intervention_goal": "stop_sensitive_info",
+    "explanation": "以客服、物流或售后身份包装退款、理赔和账户操作，是冒充客服的入口特征。",
+    "evidence_extract_hint": "提取来电号码、订单入口、退款理由和对方提供的链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-08-02T00:00:00",
+    "updated_at": "2026-08-02T00:00:00",
+    "knowledge_version": "p0_behavior_rules_2026_08_02"
+  },
+  {
+    "feature_id": "FEATURE_INVEST_GUARANTEED_RETURN",
+    "scam_id": "scam_fake_investment",
+    "fraud_type": "虚假投资理财诈骗",
+    "feature_name": "保本稳赚承诺",
+    "keywords": [
+      "保本",
+      "稳赚",
+      "稳赚不赔",
+      "无风险",
+      "保证赚钱",
+      "高收益"
+    ],
+    "risk_weight": 30,
+    "stage": "建立信任阶段",
+    "intervention_goal": "stop_transfer",
+    "explanation": "以保本、稳赚或无风险承诺掩盖投资损失可能，是虚假投资理财的典型诱导信号。",
+    "evidence_extract_hint": "提取收益承诺、平台名称、带单人员和入金要求。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-08-02T00:00:00",
+    "updated_at": "2026-08-02T00:00:00",
+    "knowledge_version": "p0_behavior_rules_2026_08_02"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "scam_id": "scam_ai_face_family",
+  "name": "AI换脸冒充熟人诈骗",
+  "version": "1.0",
+  "aliases": [
+    "AI换脸",
+    "视频通话借钱",
+    "声音很像",
+    "脸很像",
+    "冒充亲友"
+  ],
+  "features": [
+    {
+      "feature_name": "AI换脸冒充",
+      "keywords": [
+        "AI换脸",
+        "视频通话",
+        "声音很像",
+        "脸很像"
+      ],
+      "weight": 35,
+      "explanation": "视频或语音中身份相似但要求转账，可能是AI换脸或拟声冒充。"
+    },
+    {
+      "feature_name": "冒充熟人借钱",
+      "keywords": [
+        "朋友借钱",
+        "亲友借钱",
+        "领导借钱",
+        "同学借钱",
+        "急用钱",
+        "借钱"
+      ],
+      "weight": 35,
+      "explanation": "冒充熟人并提出借款或代付款要求，是常见转账前高危信号。"
+    },
+    {
+      "feature_name": "要求保密催促",
+      "keywords": [
+        "不要告诉别人",
+        "别告诉别人",
+        "马上转",
+        "很急",
+        "急用"
+      ],
+      "weight": 25,
+      "explanation": "要求保密并制造紧迫感，会削弱用户核验身份的机会。"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "RULE_AI_FACE_FAMILY_001",
+      "rule_name": "AI换脸冒充熟人借钱高危规则",
+      "conditions": {
+        "all": [
+          "AI换脸冒充",
+          "冒充熟人借钱"
+        ],
+        "any": [
+          "要求垫付资金",
+          "要求保密催促"
+        ],
+        "min_any": 1
+      },
+      "risk_score": 88,
+      "risk_level": "高风险",
+      "intervention_goal": "stop_transfer",
+      "explanation": "视频/语音相似身份叠加借钱和催促转账，符合AI换脸冒充熟人诈骗高危模式。",
+      "suggested_action": "先不要转账，通过原手机号、共同联系人或线下方式二次核验身份。"
+    }
+  ],
+  "responses": [
+    {
+      "template_id": "ADV_AI_FACE_HIGH_001",
+      "risk_level": "high",
+      "template_text": "这可能是AI换脸冒充熟人诈骗。涉及转账时，不要只凭视频或声音判断身份，请先通过原手机号、共同联系人或线下见面核验。"
+    }
+  ],
+  "game_scenarios": [
+    {
+      "scenario_id": "GAME_AI_FACE_001",
+      "scene_intro": "朋友突然视频说急用钱，让你马上转账且不要告诉别人。",
+      "learning_card": "AI换脸诈骗会利用视频和声音制造熟人可信感，转账前必须二次核验。"
+    }
+  ]
+}

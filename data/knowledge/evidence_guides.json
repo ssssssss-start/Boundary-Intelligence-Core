@@ -1,0 +1,848 @@
+[
+  {
+    "guide_id": "EVIDENCE_BRUSH_001",
+    "fraud_type": "刷单返利诈骗",
+    "scenario": "提现受阻阶段",
+    "evidence_items": [
+      "任务群聊天记录",
+      "任务页面",
+      "返利记录",
+      "收款账户",
+      "转账凭证"
+    ],
+    "collection_tips": [
+      "先截图群名、管理员账号和任务规则",
+      "保存每次转账金额和时间",
+      "不要删除App或聊天前忘记截图"
+    ],
+    "warning": "不要为了补齐证据继续和对方做任务或转账。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_SERVICE_001",
+    "fraud_type": "冒充客服诈骗",
+    "scenario": "屏幕共享阶段",
+    "evidence_items": [
+      "来电号码",
+      "会议号",
+      "客服账号",
+      "验证码索要记录",
+      "退款理赔话术"
+    ],
+    "collection_tips": [
+      "截图会议软件记录和对方账号",
+      "保留短信验证码时间",
+      "记录对方自称平台和工号"
+    ],
+    "warning": "保存证据前先退出屏幕共享。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_POLICE_001",
+    "fraud_type": "冒充公检法诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "来电号码",
+      "伪造文书",
+      "安全账户",
+      "会议链接",
+      "保密要求"
+    ],
+    "collection_tips": [
+      "保存伪造证件或通缉令截图",
+      "记录对方要求转账的账户",
+      "保存通话时间"
+    ],
+    "warning": "不要按对方要求删除记录或保密。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_INVEST_001",
+    "fraud_type": "虚假投资理财诈骗",
+    "scenario": "提现受阻阶段",
+    "evidence_items": [
+      "投资平台页面",
+      "导师话术",
+      "入金地址",
+      "提现失败提示",
+      "转账凭证"
+    ],
+    "collection_tips": [
+      "截图账户余额和提现失败页面",
+      "保存充值地址和客服话术",
+      "记录平台域名或App名称"
+    ],
+    "warning": "不要继续缴纳税费、保证金或解冻费。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_LOAN_001",
+    "fraud_type": "网络贷款诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "贷款App名称",
+      "合同页面",
+      "收费要求",
+      "银行卡填错提示",
+      "转账凭证"
+    ],
+    "collection_tips": [
+      "截图贷款额度和收费页面",
+      "保存对方客服账号",
+      "记录要求交费的理由"
+    ],
+    "warning": "不要为放款继续交任何费用。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_PHISH_001",
+    "fraud_type": "钓鱼链接诈骗",
+    "scenario": "验证码索取阶段",
+    "evidence_items": [
+      "完整URL",
+      "页面截图",
+      "发送者账号",
+      "要求填写的信息",
+      "验证码短信时间"
+    ],
+    "collection_tips": [
+      "复制完整URL",
+      "截图输入框和页面域名",
+      "保存发送链接的聊天记录"
+    ],
+    "warning": "不要再输入账号、密码、验证码或银行卡。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_AI_FACE_001",
+    "fraud_type": "AI换脸冒充熟人诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "视频通话记录",
+      "聊天记录",
+      "收款账户",
+      "对方催促话术",
+      "身份核验记录"
+    ],
+    "collection_tips": [
+      "截图通话时间和聊天记录",
+      "保存收款账户姓名",
+      "记录通过原手机号核验结果"
+    ],
+    "warning": "不要为了确认真假继续转账试探。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_CODE_001",
+    "fraud_type": "验证码/账户盗刷诈骗",
+    "scenario": "验证码索取阶段",
+    "evidence_items": [
+      "验证码短信时间",
+      "对方索要验证码的聊天或通话记录",
+      "异常登录记录",
+      "支付或绑卡记录",
+      "涉及平台名称"
+    ],
+    "collection_tips": [
+      "先停止继续发送验证码",
+      "截图保存对方索要验证码的话术",
+      "记录验证码对应的平台和时间"
+    ],
+    "warning": "不要为了截图再把新的验证码发给对方。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_SCREEN_001",
+    "fraud_type": "屏幕共享/远程控制诈骗",
+    "scenario": "屏幕共享阶段",
+    "evidence_items": [
+      "会议软件名称",
+      "会议号",
+      "对方账号或号码",
+      "屏幕共享时间",
+      "对方要求打开的页面"
+    ],
+    "collection_tips": [
+      "先退出会议和远程控制",
+      "再截图会议记录、对方账号和聊天记录",
+      "检查设备是否仍有远程控制权限"
+    ],
+    "warning": "保存证据前先关闭屏幕共享，避免继续暴露验证码和支付页面。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_COMMON_001",
+    "fraud_type": "通用",
+    "scenario": "证据保存与举报阶段",
+    "evidence_items": [
+      "聊天记录",
+      "对方账号",
+      "链接或二维码",
+      "App名称",
+      "转账凭证",
+      "通话记录"
+    ],
+    "collection_tips": [
+      "按时间线整理",
+      "同时保存账号主页和聊天上下文",
+      "保留原始文件不要只保存裁剪图"
+    ],
+    "warning": "不要删除原始聊天和交易记录。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_GAME_001",
+    "fraud_type": "游戏交易诈骗",
+    "scenario": "已损失阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_CAMPUS_FEE_001",
+    "fraud_type": "冒充老师辅导员收费诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_JOB_001",
+    "fraud_type": "求职实习招聘诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c9075076/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_SCHOLAR_001",
+    "fraud_type": "奖助学金/学费退费诈骗",
+    "scenario": "验证码索取阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_EXAM_001",
+    "fraud_type": "考试考证论文服务诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_SECONDHAND_001",
+    "fraud_type": "校园二手/票务交易诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c10152014/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_RENTAL_001",
+    "fraud_type": "租房合租押金诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_NUDE_001",
+    "fraud_type": "裸聊敲诈勒索诈骗",
+    "scenario": "已损失阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2255079/n4242954/n4841045/n4841055/c7375192/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_TWO_CARDS_001",
+    "fraud_type": "两卡出租出借与跑分诈骗",
+    "scenario": "接触引流阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n6557563/c10155981/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_TRAVEL_001",
+    "fraud_type": "机票火车票退改签诈骗",
+    "scenario": "屏幕共享阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c10461813/content.html",
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_PRIZE_001",
+    "fraud_type": "虚假中奖/免费礼品诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_CREDIT_001",
+    "fraud_type": "征信修复/注销账户诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964352.htm",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_ROMANCE_001",
+    "fraud_type": "情感交友诱导投资诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "聊天记录和语音/通话记录",
+      "对方账号、头像、昵称、群号、电话号码或链接",
+      "收款账户、二维码、转账凭证或订单记录",
+      "App名称、下载来源、会议号、页面截图",
+      "用户已交付的账号、装备、票据、合同或其他资产证明"
+    ],
+    "collection_tips": [
+      "先截图或录屏保存，再退出危险操作",
+      "按时间顺序整理接触渠道、对方身份、付款/交付节点",
+      "保存原始链接、二维码、短信号码，不要只保存转发图片"
+    ],
+    "warning": "不要为了取证继续转账、继续聊天试探、继续开屏幕共享或继续点击对方链接。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253535/c9629527/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-05-20",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_ACQ_FINAL",
+    "fraud_type": "冒充领导或熟人借钱诈骗",
+    "scenario": "通用取证",
+    "evidence_items": [
+      "完整聊天记录",
+      "对方账号/电话/群聊信息",
+      "链接、二维码、App或平台页面",
+      "收款账户和转账/充值凭证",
+      "对方催促、威胁或要求保密的原话"
+    ],
+    "collection_tips": [
+      "先停止危险操作再取证",
+      "截图要包含时间、账号、金额和平台名称",
+      "能导出原始账单或订单号时同时保存"
+    ],
+    "warning": "不要为了补齐证据继续转账、输入验证码、共享屏幕或联系对方。",
+    "source_refs": [
+      "https://www.mps.gov.cn/n2253534/n2253543/c8882901/content.html",
+      "https://www.mps.gov.cn/n2253534/n2253543/c8090077/content.html",
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "guide_id": "EVIDENCE_CROSS_BORDER_RECRUIT_001",
+    "fraud_type": "跨境高薪招工诱骗诈骗",
+    "scenario": "接触引流阶段",
+    "evidence_items": [
+      "广告照片",
+      "电话/微信/QQ",
+      "聊天记录",
+      "收费要求",
+      "证件提交记录",
+      "集合或出境安排"
+    ],
+    "collection_tips": [
+      "拍清广告位置和联系方式",
+      "保存对方让你保密、交钱、提交证件的原话",
+      "记录介绍人和集合地点"
+    ],
+    "warning": "先停止联系和出行，不要为了取证继续交钱或靠近边境集合点。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202407/content_6964837.htm",
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "EVIDENCE_HEALTH_PRODUCT_001",
+    "fraud_type": "养老保健品诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "宣传材料",
+      "产品包装",
+      "批准文号",
+      "收据发票",
+      "付款记录",
+      "销售人员联系方式"
+    ],
+    "collection_tips": [
+      "拍摄产品外包装和宣传承诺",
+      "保存讲座邀请、签到、收据",
+      "让家人陪同联系售后"
+    ],
+    "warning": "不要因销售人员催促继续购买或放弃正规治疗。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "EVIDENCE_NATIONAL_PROJECT_001",
+    "fraud_type": "民族资产解冻/虚假国家项目诈骗",
+    "scenario": "资金转账前阶段",
+    "evidence_items": [
+      "群名称",
+      "群公告",
+      "伪造文件",
+      "收款码",
+      "管理员账号",
+      "拉人返利规则"
+    ],
+    "collection_tips": [
+      "完整截图文件落款和转账要求",
+      "保存群成员和管理员账号",
+      "记录缴费名目和金额"
+    ],
+    "warning": "不要继续拉亲友入群，也不要转发伪造文件。",
+    "source_refs": [
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "EVIDENCE_MEDICARE_FUND_001",
+    "fraud_type": "医保骗保/医保卡倒卖诈骗",
+    "scenario": "身份信息暴露阶段",
+    "evidence_items": [
+      "医保消费明细",
+      "医保码外借记录",
+      "药品票据",
+      "返钱聊天",
+      "对方账号"
+    ],
+    "collection_tips": [
+      "通过国家医保服务平台或当地医保渠道查询异常记录",
+      "保存药店/诊所名称和时间",
+      "保留返钱或套现话术"
+    ],
+    "warning": "不要继续外借医保凭证或参与虚假购药。",
+    "source_refs": [
+      "https://www.nhsa.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "EVIDENCE_VIRTUAL_CURRENCY_LAUNDERING_001",
+    "fraud_type": "虚拟货币洗钱跑分诈骗",
+    "scenario": "已损失阶段",
+    "evidence_items": [
+      "银行卡流水",
+      "支付流水",
+      "钱包地址",
+      "交易哈希",
+      "任务群聊天",
+      "佣金记录"
+    ],
+    "collection_tips": [
+      "导出银行或支付平台官方流水",
+      "保存钱包地址和链上交易截图",
+      "记录对方要求代收代付的原话"
+    ],
+    "warning": "不要删除聊天记录，不要继续帮助转账或购买虚拟币。",
+    "source_refs": [
+      "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  },
+  {
+    "guide_id": "EVIDENCE_LIVE_PRIVATE_TRADE_001",
+    "fraud_type": "直播带货/私域交易诈骗",
+    "scenario": "已损失阶段",
+    "evidence_items": [
+      "直播间截图",
+      "主播账号",
+      "商品宣传",
+      "私下付款凭证",
+      "物流记录",
+      "售后聊天"
+    ],
+    "collection_tips": [
+      "保存从直播间跳转到私域的路径",
+      "拍摄收到商品和宣传差异",
+      "保存退款拒绝或失联证据"
+    ],
+    "warning": "不要为退款再补邮费、保证金或继续私下付款。",
+    "source_refs": [
+      "https://www.samr.gov.cn/xw/sj/art/2025/art_a5fe6982180c4219b263bbba42bfd77b.html",
+      "https://www.gov.cn/lianbo/bumen/202506/content_7028568.htm",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:official_expansion_2026_06_06"
+    ],
+    "created_at": "2026-06-06T14:10:00",
+    "updated_at": "2026-06-06T14:10:00",
+    "knowledge_version": "official_expansion_2026_06_06"
+  }
+]

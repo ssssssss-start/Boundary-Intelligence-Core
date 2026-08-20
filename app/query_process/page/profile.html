@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人中心</title>
+  <style>
+    :root {
+      --bg: #eef2f5;
+      --panel: #ffffff;
+      --soft: #f7f9fb;
+      --line: #d8e0e7;
+      --text: #182230;
+      --muted: #637083;
+      --primary: #116d7a;
+      --success: #2f7d4a;
+      --warning: #a86511;
+      --danger: #b53b43;
+      --header: #17212b;
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+    button { font: inherit; }
+    .app { min-height: 100vh; display: grid; grid-template-rows: 50px minmax(0, 1fr); }
+    .topbar {
+      background: var(--header);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 14px;
+      border-bottom: 1px solid #0e151d;
+    }
+    .mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      background: #e4aa31;
+      color: #17212b;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+    .brand { line-height: 1.15; min-width: 0; }
+    .brand strong { display: block; font-size: 15px; white-space: nowrap; }
+    .brand span { display: block; font-size: 11px; color: #b9c5d1; white-space: nowrap; }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 10px;
+      min-width: 0;
+      overflow-x: auto;
+    }
+    .nav a, .profile-link {
+      min-height: 30px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 7px;
+      padding: 0 10px;
+      color: #d9e4ef;
+      background: transparent;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+    .nav a:hover, .profile-link:hover { border-color: rgba(255,255,255,0.42); color: #fff; }
+    .nav a.emergency { border-color: rgba(255,182,186,0.48); color: #ffd8dc; }
+    .top-spacer { flex: 1; }
+    .profile-link {
+      width: 34px;
+      justify-content: center;
+      border-radius: 50%;
+      padding: 0;
+      font-weight: 700;
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .main {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+    .panel {
+      min-width: 0;
+      min-height: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .panel-head {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 12px;
+      background: var(--soft);
+      border-bottom: 1px solid var(--line);
+    }
+    .panel-head strong { font-size: 14px; }
+    .panel-head span { color: var(--muted); font-size: 12px; }
+    .scroll { min-height: 0; overflow: auto; padding: 12px; }
+    .profile-block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: #fff;
+      margin-bottom: 10px;
+    }
+    .user-row { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .avatar-large {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #fff0c4;
+      color: #5d4206;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+    .user-row strong { display: block; font-size: 16px; line-height: 1.35; word-break: break-word; }
+    .user-row span { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; word-break: break-all; }
+    .metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 10px;
+      min-height: 72px;
+      background: var(--soft);
+    }
+    .metric span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 5px; }
+    .metric strong { display: block; font-size: 18px; line-height: 1.25; word-break: break-word; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      border-radius: 999px;
+      background: #e8f6ed;
+      color: var(--success);
+      padding: 0 9px;
+      margin: 0 5px 5px 0;
+      font-size: 12px;
+    }
+    .empty {
+      color: var(--muted);
+      font-size: 13px;
+      padding: 10px;
+      border: 1px dashed var(--line);
+      border-radius: 7px;
+      background: #fff;
+      line-height: 1.5;
+    }
+    .quick-links { display: grid; gap: 8px; }
+    .quick-links a {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 0 10px;
+      background: #fff;
+      font-size: 13px;
+    }
+    .quick-links a:hover { border-color: var(--primary); color: var(--primary); }
+    .content-grid {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 10px;
+    }
+    .record-list { display: grid; gap: 8px; }
+    .record {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      padding: 9px;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+    .record strong { display: block; margin-bottom: 4px; word-break: break-word; }
+    .record span { display: block; color: var(--muted); font-size: 12px; word-break: break-word; }
+    .risk-high strong { color: var(--danger); }
+    .risk-warn strong { color: var(--warning); }
+    .clear-btn {
+      min-height: 28px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0 9px;
+      font-size: 12px;
+    }
+    .clear-btn:hover { color: var(--danger); border-color: rgba(181,59,67,0.35); }
+    @media (max-width: 900px) {
+      .main { grid-template-columns: 1fr; }
+      .content-grid { grid-template-rows: auto; }
+      .brand span { display: none; }
+    }
+  
+    /* 柔色扁平主题覆盖 */
+    :root {
+      --bg: #f6f4ef;
+      --panel: #fffdf9;
+      --panel-2: #fbf7ef;
+      --panel-3: #f8f2e9;
+      --soft: #fbf7ef;
+      --line: #e3ded5;
+      --line-soft: #e9e3d8;
+      --text: #263238;
+      --muted: #6c7875;
+      --primary: #4b9a96;
+      --primary-hover: #3f8581;
+      --cyan: #6faeaa;
+      --success: #4d8b63;
+      --warning: #b4863f;
+      --danger: #c55a62;
+      --header: #fbf7ef;
+      --radius: 8px;
+    }
+
+    body {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+    }
+
+    .topbar,
+    .sidebar,
+    .side-foot,
+    .panel-head,
+    .toolbar,
+    .main-head,
+    .header,
+    .card-head {
+      background: #fbf7ef !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+      box-shadow: none !important;
+    }
+
+    .shell,
+    .app,
+    .main,
+    .login-view,
+    .content,
+    .messages {
+      background: var(--bg) !important;
+    }
+
+    .panel,
+    .card,
+    .login-box,
+    .step,
+    .metric,
+    .feedback,
+    .scenario,
+    .warn-box,
+    .actions .item,
+    .table-wrap,
+    .upload-card,
+    .form-card,
+    .result-card,
+    .side-card,
+    .stat-card,
+    .review-card,
+    .profile-card,
+    .bubble {
+      background: var(--panel) !important;
+      color: var(--text) !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    input,
+    textarea,
+    select {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #8cc8c2 !important;
+      outline: 2px solid rgba(75, 154, 150, 0.14) !important;
+      outline-offset: 0;
+    }
+
+    button,
+    .nav a,
+    .profile-link,
+    .ghost-btn,
+    .option-btn,
+    .secondary-btn,
+    .link-btn {
+      border-radius: 8px !important;
+      box-shadow: none !important;
+    }
+
+    .primary-btn,
+    .send-btn,
+    .nav a.active,
+    .submit-btn,
+    .login-btn,
+    .import-btn,
+    .save-btn,
+    .option-btn.selected {
+      background: var(--primary) !important;
+      border-color: var(--primary) !important;
+      color: #fff !important;
+      box-shadow: none !important;
+    }
+
+    .primary-btn:hover,
+    .send-btn:hover,
+    .submit-btn:hover,
+    .login-btn:hover,
+    .import-btn:hover,
+    .save-btn:hover {
+      background: var(--primary-hover) !important;
+      border-color: var(--primary-hover) !important;
+    }
+
+    .ghost-btn,
+    .option-btn,
+    .secondary-btn,
+    .quick button,
+    .nav a,
+    .profile-link,
+    .link-btn {
+      background: #fffdf9 !important;
+      color: var(--text) !important;
+      border-color: var(--line) !important;
+    }
+
+    .ghost-btn:hover,
+    .option-btn:hover,
+    .quick button:hover,
+    .nav a:hover,
+    .profile-link:hover,
+    .link-btn:hover {
+      background: #e7f3f0 !important;
+      color: #1d5f5b !important;
+      border-color: #bcdcd7 !important;
+    }
+
+    .mark,
+    .avatar,
+    .badge {
+      background: #e7f3f0 !important;
+      color: #1d5f5b !important;
+      border-color: #bcdcd7 !important;
+    }
+
+    .avatar.bot,
+    .warn-box,
+    .nav a.emergency,
+    .msg.user .bubble {
+      background: #fff0e9 !important;
+      color: #8b3b42 !important;
+      border-color: #f0c9bd !important;
+    }
+
+    .msg.user .bubble,
+    .send-btn.danger,
+    .nav a.active.emergency {
+      background: var(--danger) !important;
+      border-color: var(--danger) !important;
+      color: #fff !important;
+    }
+
+    label,
+    .muted,
+    .meta,
+    .brand span,
+    .panel-head span,
+    .metric span,
+    .step span {
+      color: var(--muted) !important;
+    }
+
+    table,
+    th,
+    td {
+      border-color: var(--line) !important;
+    }
+
+    th {
+      background: #fbf7ef !important;
+      color: var(--text) !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="mark">盾</div>
+      <div class="brand"><strong>个人中心</strong><span>积分、勋章、学习与举报记录</span></div>
+      <nav class="nav">
+        <a href="/chat.html">智能反诈助手</a>
+        <a class="emergency" href="/emergency.html">紧急风险劝阻</a>
+        <a href="/training.html">防骗训练营</a>
+      </nav>
+      <div class="top-spacer"></div>
+      <a class="profile-link" href="/profile.html" title="个人中心">我</a>
+    </header>
+
+    <main class="main">
+      <aside class="panel">
+        <div class="panel-head"><strong>账户概览</strong><span id="profileStatus">加载中</span></div>
+        <div class="scroll">
+          <section class="profile-block">
+            <div class="user-row">
+              <div class="avatar-large">我</div>
+              <div>
+                <strong>反诈学习用户</strong>
+                <span id="userId">-</span>
+              </div>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span>积分</span><strong id="score">0</strong></div>
+              <div class="metric"><span>答题进度</span><strong id="answered">0/0</strong></div>
+              <div class="metric"><span>正确率</span><strong id="accuracy">0%</strong></div>
+              <div class="metric"><span>测评等级</span><strong id="assessment">未测评</strong></div>
+            </div>
+          </section>
+
+          <section class="profile-block">
+            <div class="panel-head" style="margin:-12px -12px 10px;"><strong>勋章</strong><span id="badgeCount">0 枚</span></div>
+            <div id="badges"><div class="empty">完成防骗训练后会显示勋章。</div></div>
+          </section>
+
+          <section class="profile-block">
+            <div class="panel-head" style="margin:-12px -12px 10px;"><strong>模块入口</strong><span>三个独立模块</span></div>
+            <div class="quick-links">
+              <a href="/chat.html"><span>智能反诈助手</span><span>知识普及</span></a>
+              <a href="/emergency.html"><span>紧急风险劝阻</span><span>实时止损</span></a>
+              <a href="/training.html"><span>防骗训练营</span><span>情景闯关</span></a>
+            </div>
+          </section>
+        </div>
+      </aside>
+
+      <section class="content-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <strong>学习记录</strong>
+            <button class="clear-btn" type="button" id="clearLearning">清空</button>
+          </div>
+          <div class="scroll">
+            <div class="record-list" id="learningList"></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <strong>举报记录</strong>
+            <button class="clear-btn" type="button" id="clearReports">清空</button>
+          </div>
+          <div class="scroll">
+            <div class="record-list" id="reportList"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const userId = localStorage.getItem("antiFraudUserId") || "demo_user";
+    localStorage.setItem("antiFraudUserId", userId);
+    const $ = (id) => document.getElementById(id);
+    $("userId").textContent = userId;
+
+    function readRecords(key) {
+      try {
+        const records = JSON.parse(localStorage.getItem(key) || "[]");
+        return Array.isArray(records) ? records : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function formatTime(value) {
+      if (!value) return "-";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "-";
+      return date.toLocaleString("zh-CN", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" });
+    }
+
+    function renderReport(report) {
+      const training = report.training || report;
+      $("score").textContent = training.score ?? 0;
+      $("answered").textContent = `${training.answered_count || 0}/${training.total_levels || 0}`;
+      $("accuracy").textContent = `${Math.round(Number(training.accuracy || 0) * 100)}%`;
+      $("assessment").textContent = training.assessment_level || "未测评";
+      const badges = Array.isArray(training.badges) ? training.badges.filter(Boolean) : [];
+      $("badgeCount").textContent = `${badges.length} 枚`;
+      const badgeBox = $("badges");
+      badgeBox.innerHTML = "";
+      if (!badges.length) {
+        badgeBox.innerHTML = `<div class="empty">完成防骗训练后会显示勋章。</div>`;
+        return;
+      }
+      badges.forEach((item) => {
+        const span = document.createElement("span");
+        span.className = "badge";
+        span.textContent = item;
+        badgeBox.appendChild(span);
+      });
+    }
+
+    function renderLearningRecords() {
+      const list = $("learningList");
+      const records = readRecords("antiFraudLearningRecords");
+      list.innerHTML = "";
+      if (!records.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = "暂无学习记录。进入“智能反诈助手”提问后会自动记录。";
+        list.appendChild(empty);
+        return;
+      }
+      records.slice(0, 20).forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "record";
+        const title = document.createElement("strong");
+        title.textContent = item.query || "知识问答";
+        const meta = document.createElement("span");
+        meta.textContent = `${formatTime(item.time)} · 命中 ${item.matched_count || 0} 条知识 · ${item.source || "none"}`;
+        div.appendChild(title);
+        div.appendChild(meta);
+        list.appendChild(div);
+      });
+    }
+
+    function renderReportRecords() {
+      const list = $("reportList");
+      const records = readRecords("antiFraudReportRecords");
+      list.innerHTML = "";
+      if (!records.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = "暂无举报记录。提交可疑内容后会自动记录最近结果。";
+        list.appendChild(empty);
+        return;
+      }
+      records.slice(0, 20).forEach((item) => {
+        const div = document.createElement("div");
+        const level = String(item.risk_level || "");
+        div.className = "record";
+        if (level.includes("高")) div.classList.add("risk-high");
+        else if (Number(item.risk_score || 0) > 0) div.classList.add("risk-warn");
+        const type = item.fraud_type || "暂未识出诈骗风险";
+        const title = document.createElement("strong");
+        title.textContent = type;
+        const meta = document.createElement("span");
+        meta.textContent = `${formatTime(item.time)} · ${level || "风险未知"} · ${item.risk_score ?? 0} 分 · ${item.report_id || "未生成编号"}`;
+        const content = document.createElement("span");
+        content.textContent = item.content || "";
+        div.appendChild(title);
+        div.appendChild(meta);
+        div.appendChild(content);
+        list.appendChild(div);
+      });
+    }
+
+    async function loadGameReport() {
+      try {
+        const resp = await fetch(`/profile/summary?user_id=${encodeURIComponent(userId)}`);
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(data.detail || `HTTP ${resp.status}`);
+        renderReport(data);
+        $("profileStatus").textContent = "已同步";
+      } catch (error) {
+        $("profileStatus").textContent = "训练数据未连接";
+      }
+    }
+
+    $("clearLearning").addEventListener("click", () => {
+      localStorage.removeItem("antiFraudLearningRecords");
+      renderLearningRecords();
+    });
+    $("clearReports").addEventListener("click", () => {
+      localStorage.removeItem("antiFraudReportRecords");
+      renderReportRecords();
+    });
+
+    renderLearningRecords();
+    renderReportRecords();
+    loadGameReport();
+  </script>
+</body>
+</html>

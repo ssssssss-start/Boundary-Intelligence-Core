@@ -1,0 +1,27 @@
+{
+  "brand_tokens": [
+    "bank",
+    "alipay",
+    "wechat",
+    "weixin",
+    "unionpay",
+    "icbc",
+    "ccb",
+    "abchina",
+    "boc",
+    "psbc",
+    "cmb",
+    "jd",
+    "taobao",
+    "tmall",
+    "refund",
+    "police",
+    "court",
+    "loan"
+  ],
+  "short_link_hosts": ["bit.ly", "tinyurl.com", "t.cn", "dwz.cn", "suo.im", "url.cn", "is.gd", "reurl.cc", "cutt.ly"],
+  "risky_suffixes": [".top", ".xyz", ".vip", ".click", ".icu", ".cc", ".shop", ".site", ".online", ".store", ".live"],
+  "sensitive_path_tokens": ["login", "verify", "security", "safe", "auth", "password", "pay", "account", "bank", "wallet", "unlock", "freeze"],
+  "app_download_tokens": [".apk", "download", "install", "安装包", "下载app", "下载APP", "下载App", "更新认证", "安全控件"],
+  "source_refs": ["src_safe_browsing", "src_12321"]
+}

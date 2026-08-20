@@ -1,0 +1,32 @@
+[
+  {
+    "sample_id": "NEG_OFFICIAL_GOV_LINK",
+    "content": "请查看公安部官网 https://www.mps.gov.cn/ 的反诈宣传。",
+    "expected_max_score": 20,
+    "reason": "官方域名链接不应因 URL 本身被误判高风险。"
+  },
+  {
+    "sample_id": "NEG_DEEPSEEK_SHARE_LINK",
+    "content": "https://chat.deepseek.com/a/chat/s/4be7f388-bc73-496c-ba38-0868289f4f68",
+    "expected_max_score": 25,
+    "reason": "普通 AI 对话分享链接没有诈骗话术时不应显示高风险。"
+  },
+  {
+    "sample_id": "NEG_NORMAL_REFUND_NOTICE",
+    "content": "我在官方 App 申请了退款，客服让我在订单页面查看进度，没有让我转账。",
+    "expected_max_score": 30,
+    "reason": "正常售后描述含退款客服词，但没有转账、验证码、链接等危险动作。"
+  },
+  {
+    "sample_id": "NEG_SECURITY_EDU_CODE",
+    "content": "反诈科普：验证码不要告诉任何人。",
+    "expected_max_score": 30,
+    "reason": "教育性语句不应触发高危举报。"
+  },
+  {
+    "sample_id": "NEG_NORMAL_SHOPPING",
+    "content": "我在京东 App 下单，订单号已生成，准备等官方物流配送。",
+    "expected_max_score": 20,
+    "reason": "正常电商购买不应被误判。"
+  }
+]

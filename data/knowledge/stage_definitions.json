@@ -1,0 +1,128 @@
+[
+  {
+    "stage_id": "stage_contact",
+    "name": "接触引流阶段",
+    "description": "用户刚被陌生人、群聊、链接、电话或广告接触。",
+    "risk_hint": "重点确认对方身份和渠道来源。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_trust",
+    "name": "建立信任阶段",
+    "description": "对方通过小额返利、盈利截图、身份包装或话术建立信任。",
+    "risk_hint": "重点识别小额利益、权威身份和关系压力。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_pre_transfer",
+    "name": "资金转账前阶段",
+    "description": "对方已经要求转账、垫付、保证金、解冻费、税费或安全账户。",
+    "risk_hint": "必须优先阻断转账。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_code",
+    "name": "验证码索取阶段",
+    "description": "对方要求验证码、短信码、动态码、支付码或登录码。",
+    "risk_hint": "必须阻止发送验证码。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_screen_share",
+    "name": "屏幕共享阶段",
+    "description": "对方要求打开会议软件、屏幕共享或远程控制。",
+    "risk_hint": "必须立即关闭共享和远程控制。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_app_install",
+    "name": "下载陌生 App 阶段",
+    "description": "对方要求安装陌生App、贷款App、投资App、会议软件或远程工具。",
+    "risk_hint": "必须阻止安装或继续授权。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_withdrawal_blocked",
+    "name": "提现受阻阶段",
+    "description": "平台显示不能提现、账户冻结、任务未完成，要求继续缴费。",
+    "risk_hint": "通常是继续诈骗，必须停止追加付款。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_loss",
+    "name": "已损失阶段",
+    "description": "用户已经转账、泄露验证码、提供敏感信息或设备已被远程控制。",
+    "risk_hint": "优先止付、冻结、报警和保存证据。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  },
+  {
+    "stage_id": "stage_report",
+    "name": "证据保存与举报阶段",
+    "description": "用户准备保存证据、报警、举报平台或提交线索。",
+    "risk_hint": "引导按证据清单整理，不删除聊天和转账记录。",
+    "source_refs": [
+      "https://www.mps.gov.cn/",
+      "https://www.npc.gov.cn/c2/c30834/202209/t20220902_319186.html",
+      "local:final_structured_kb_2026_06_05"
+    ],
+    "created_at": "2026-06-05T23:56:29",
+    "updated_at": "2026-06-06T00:00:48",
+    "knowledge_version": "final_structured_kb_2026_06_05"
+  }
+]
